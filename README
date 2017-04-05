@@ -1,0 +1,36 @@
+'ALVIS' Discord bot, by PacketCloud™
+
+Setting up the bot:
+You must have a Discord bot token. and bot licence key.
+You then enter these into the client_token and bot_key fields in the settings section constants.js, respectivley.
+
+Commands:
+!channelid
+!flip
+!help
+!mute
+!playmusic [?|song_name]
+!playsound [?|sound_name]
+!playstream <Youtube_URL>
+!restart
+!roll
+!serverid
+!stop
+!unmute
+!userid
+!whodis
+(To use, enter commands into any text channel the bot has access to.)
+
+Settings:
+You can change bot settings manually in constants.js
+Please do not mess with variables.js unless you know what you are doing.
+
+Adding Sounds:
+You can add music and sounds simply by adding files to the 'music' and 'sounds' directories.
+They MUST be .mp3 format, and their filenames MUST consist strictly alphanumeric characters and underscores.
+
+Future Changes:
+In the future, there may be configuration files instead of changing settings in a .js file.
+
+NOTE:
+Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to any of these sounds
