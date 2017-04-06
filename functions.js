@@ -123,6 +123,22 @@ class functions {
     return variables.bot_user_id;
   }
 
+  //constants
+  getClientTokenConstant() {
+    return constants.client_token;
+  }
+
+  getBotKeyConstant() {
+    return constants.bot_key;
+  }
+
+  getCommandPrefixConstant() {
+    return constants.command_prefix;
+  }
+
+  getClientGameConstant() {
+    return constants.client_game;
+  }
 
 
   //audio

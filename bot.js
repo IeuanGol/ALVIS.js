@@ -4,17 +4,16 @@ const Cleverbot = require('cleverbot');
 const ytdl = require('ytdl-core');
 var funct = require("./functions.js");
 let functions = new funct();
-var constants = require("./constants.js");
 
 let bot = new Cleverbot({
-	key: constants.bot_key
+	key: functions.getBotKeyConstant()
 });
 
 client = new Discord.Client();
 
 function startBot() {
 	functions.logger('Starting...');
-	client.login(constants.client_token);
+	client.login(functions.getClientTokenConstant());
 }
 
 startBot();
@@ -23,7 +22,7 @@ client.on('ready', () => {
 	functions.setBotNameVariable(client.user.username);
 	functions.setBotUserIdVariable(client.user.id);
 	functions.logger("Logged in to Discord as '" + functions.getBotNameVariable() + "'");
-	client.user.setGame(constants.client_game);
+	client.user.setGame(functions.getClientGameConstant());
 });
 
 client.on('disconnect', () => {
@@ -40,10 +39,10 @@ client.on('message', msg => {
 	if(msg.author.bot) return;
 	if(msg.mentions.users[functions.getBotUserIdVariable()] != null && msg.mentions.users.length == 1) return;
 	if(msg.channel instanceof Discord.DMChannel || msg.channel instanceof Discord.GroupDMChannel) return;
-	if(!msg.content.startsWith(constants.command_prefix)) return;
+	if(!msg.content.startsWith(functions.getCommandPrefixConstant())) return;
 	splitmessage = msg.content.split(" ");
 	let command = splitmessage[0];
-	command = command.slice(constants.command_prefix.length);
+	command = command.slice(functions.getCommandPrefixConstant().length);
 	let arg1 = splitmessage[1];
 	let arg2 = splitmessage[2];
 	let arg3 = splitmessage[3];
@@ -115,7 +114,7 @@ client.on('message', msg => {
 //keyword response
 client.on('message', msg => {
 	functions.keywordVariablesSetup(msg);
-	if(msg.content.startsWith(constants.command_prefix)) return;
+	if(msg.content.startsWith(functions.getCommandPrefixConstant())) return;
 	if(msg.author.bot) return;
 	if(msg.isMentioned(functions.getBotUserIdVariable()) || msg.channel instanceof Discord.DMChannel) {
 		if (functions.getSpamBlockedVariable()){
