@@ -24,7 +24,6 @@ client.on('ready', () => {
 	functions.setBotUserIdVariable(client.user.id);
 	functions.logger("Logged in to Discord as '" + functions.getBotNameVariable() + "'");
 	client.user.setGame(constants.client_game);
-	functions.setIsReadyVariable(true);
 });
 
 client.on('disconnect', () => {
