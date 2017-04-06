@@ -5,8 +5,6 @@ const ytdl = require('ytdl-core');
 var funct = require("./functions.js");
 let functions = new funct();
 var constants = require("./constants.js");
-var variables = require("./variables.js");
-var timeLog = require("./timeLog.js");
 
 let bot = new Cleverbot({
 	key: constants.bot_key
@@ -22,10 +20,11 @@ function startBot() {
 startBot();
 
 client.on('ready', () => {
-	variables.bot_name = client.user.username;
-	variables.bot_user_id = client.user.id;
-	functions.logger("Logged in to Discord as '" + variables.bot_name + "'");
+	functions.setBotNameVariable(client.user.username);
+	functions.setBotUserIdVariable(client.user.id);
+	functions.logger("Logged in to Discord as '" + functions.getBotNameVariable() + "'");
 	client.user.setGame(constants.client_game);
+	functions.setIsReadyVariable(true);
 });
 
 client.on('disconnect', () => {
@@ -40,7 +39,7 @@ client.on('reconnecting', () => {
 client.on('message', msg => {
 	functions.commandVariablesSetup(msg);
 	if(msg.author.bot) return;
-	if(msg.mentions.users[variables.bot_user_id] != null && msg.mentions.users.length == 1) return;
+	if(msg.mentions.users[functions.getBotUserIdVariable()] != null && msg.mentions.users.length == 1) return;
 	if(msg.channel instanceof Discord.DMChannel || msg.channel instanceof Discord.GroupDMChannel) return;
 	if(!msg.content.startsWith(constants.command_prefix)) return;
 	splitmessage = msg.content.split(" ");
@@ -54,8 +53,8 @@ client.on('message', msg => {
 		functions.helpCommand(msg);
 
 	}else if (command === 'restart') {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			if (functions.mediumClearance(msg.member)){
 				functions.logger('User ' + msg.author.username + ' requested restart on ' + msg.guild.name + ':' + msg.channel.name);
 				msg.delete();
@@ -117,10 +116,11 @@ client.on('message', msg => {
 //keyword response
 client.on('message', msg => {
 	functions.keywordVariablesSetup(msg);
+	if(msg.content.startsWith(constants.command_prefix)) return;
 	if(msg.author.bot) return;
-	if(msg.isMentioned(variables.bot_user_id) || msg.channel instanceof Discord.DMChannel) {
-		if (variables.spamBlocked){
-			messageSpam(msg.author);
+	if(msg.isMentioned(functions.getBotUserIdVariable()) || msg.channel instanceof Discord.DMChannel) {
+		if (functions.getSpamBlockedVariable()){
+			functions.messageSpam(msg.author);
 			if (msg.channel instanceof Discord.TextChannel) {
 				functions.logger("Ignored mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam.");
 			} else if (msg.channel instanceof Discord.DMChannel) {
@@ -128,7 +128,7 @@ client.on('message', msg => {
 			}
 			return;
 		}
-		if (variables.blacklisted){
+		if (functions.getBlacklistedVariable()){
 			messageBlacklisted(msg.author);
 			if (msg.channel instanceof Discord.TextChannel) {
 				functions.logger("Ignored mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to blacklist.");
@@ -142,8 +142,8 @@ client.on('message', msg => {
 		}else {
 			functions.logger("Replied to mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}
-		variables.blocked = true;
-		bot.query(msg.content.replace("<@" + variables.bot_user_id + "> ", ""))
+		functions.setBlockedVariable(true);
+		bot.query(msg.content.replace("<@" + functions.getBotUserIdVariable() + "> ", ""))
 		.then(function (response) {
 			msg.reply(response.output);
 		});
@@ -153,77 +153,77 @@ client.on('message', msg => {
 	let rawcontent = msg.content.toLowerCase();
 
 	if (rawcontent.includes('trump')) {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("You must know a lot about trucks!");
 		}
 	}
 
 	if (rawcontent.includes('tachanka')) {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("**LMG MOUNTED AND LOADED!**");
 		}
 	}
 
 	if (rawcontent == 'bing') {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("Bong!");
 		}
 	}
 
 	if (rawcontent == 'nein') {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("Ja!");
 		}
 	}
 
 	if (rawcontent.includes('adrian')) {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my creator's name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
 		}
 	}
 
-	if (rawcontent.includes(variables.bot_name.toLowerCase())) {
-		variables.generated_response = true;
-		if (!variables.blocked){
+	if (rawcontent.includes(functions.getBotNameVariable().toLowerCase())) {
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
 		}
 	}
 
 	if (rawcontent.includes('blitz')) {
-		variables.generated_response = true;
-		if (!variables.blocked){
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
 			msg.reply("**#BuffBlitz2K17**");
 		}
 	}
 
 	if (rawcontent.includes('reddit.com/r/funny/')) {
-		if (!variables.blocked){
+		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1,2) == 1){
 				msg.reply(functions.rFunnyResponse());
-				variables.generated_response = true;
+				functions.setGeneratedResponseVariable(true);
 			}
 		}
 	}
 
 	if (rawcontent.includes('imgur.com/')) {
-		if (!variables.blocked){
+		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1,5) == 1){
 				msg.reply(functions.imgurResponse());
-				variables.generated_response = true;
+				functions.setGeneratedResponseVariable(true);
 			}
 		}
 	}
 
 	if (rawcontent.includes('youtube.com/watch')) {
-		if (!variables.blocked){
+		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1,5) == 1){
 				msg.reply(functions.youtubeResponse());
-				variables.generated_response = true;
+				functions.setGeneratedResponseVariable(true);
 			}
 		}
 	}

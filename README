@@ -1,7 +1,7 @@
 'ALVIS' Discord bot, by PacketCloud™
 
 Setting up the bot:
-You must have a Discord bot token. and bot licence key.
+You must have a Discord bot token and bot licence key.
 You then enter these into the client_token and bot_key fields in the settings section constants.js, respectivley.
 
 Commands:

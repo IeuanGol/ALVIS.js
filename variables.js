@@ -9,6 +9,8 @@ variables = {
   blacklisted: false,
   generated_response: false,
 
+  isReady: false,
+
   //You can retrieve channel/server/user id values using !channelid, !serverid or !userid commands.
 
   voiceChannelBlacklist: [

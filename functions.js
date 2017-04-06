@@ -23,7 +23,7 @@ class functions {
   		if (variables.blacklisted) {
   			this.logger("Blocked command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to blacklist");
   			this.messageBlacklisted(msg.author);
-  		}else if (this.spamBlocked) {
+  		}else if (variables.spamBlocked) {
   			this.logger("Blocked command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
   			this.messageSpam(msg.author);
   		}else{
@@ -45,23 +45,7 @@ class functions {
     variables.blocked = false;
 		variables.spamBlocked = false;
 		variables.blacklisted = false;
-    if (this.blockForSpam(msg)){
-      variables.blocked = true;
-      variables.spamBlocked = true;
-      }
-      if (msg.channel instanceof Discord.TextChannel) {
-		      if (this.userIsBlacklisted(msg.author.id, msg.guild.id)){
-			         variables.blocked = true;
-			         variables.blacklisted = true;
-		      }
-	    }
-      variables.generated_response = false;
-  }
-
-  keywordVariablesSetup(msg) {
-    variables.blocked = false;
-		variables.spamBlocked = false;
-		variables.blacklisted = false;
+    variables.generated_response = false;
     if (this.blockForSpam(msg)){
       variables.blocked = true;
       variables.spamBlocked = true;
@@ -72,8 +56,82 @@ class functions {
         variables.blacklisted = true;
       }
     }
-    variables.generated_response = false;
   }
+
+  keywordVariablesSetup(msg) {
+    variables.blocked = false;
+		variables.spamBlocked = false;
+		variables.blacklisted = false;
+    variables.generated_response = false;
+    if (this.blockForSpam(msg)){
+      variables.blocked = true;
+      variables.spamBlocked = true;
+    }
+    if (msg.channel instanceof Discord.TextChannel) {
+      if (this.userIsBlacklisted(msg.author.id, msg.guild.id)){
+        variables.blocked = true;
+        variables.blacklisted = true;
+      }
+    }
+  }
+
+  setGeneratedResponseVariable(state) {
+    variables.generated_response = state;
+  }
+
+  setBlockedVariable(state) {
+    variables.blocked = state;
+  }
+
+  setSpamBlockedVariable(state) {
+    variables.spamBlocked = state;
+  }
+
+  setBlacklistedVariable(state) {
+    variables.blacklisted = state;
+  }
+
+  setBotNameVariable(name) {
+    variables.bot_name = name;
+  }
+
+  setBotUserIdVariable(id) {
+    variables.bot_user_id = id;
+  }
+
+  setIsReadyVariable(state) {
+    variables.isReady = state;
+  }
+
+  getGeneratedResponseVariable() {
+    return variables.generated_response;
+  }
+
+  getBlockedVariable() {
+    return variables.blocked;
+  }
+
+  getSpamBlockedVariable() {
+    return variables.spamBlocked;
+  }
+
+  getBlacklistedVariable() {
+    return variables.blacklisted;
+  }
+
+  getBotNameVariable() {
+    return variables.bot_name;
+  }
+
+  getBotUserIdVariable() {
+    return variables.bot_user_id;
+  }
+
+  getIsReadyVariable() {
+    return variables.isReady;
+  }
+
+
 
   //audio
   playSound(member, soundpath) {
@@ -99,6 +157,11 @@ class functions {
 
   //commands
   channelidCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (msg.member.voiceChannel == null){
 			msg.reply("You are not in a voice channel on this server.");
@@ -106,26 +169,44 @@ class functions {
 			msg.reply("This voice channel's id is: '" + msg.member.voiceChannel.name + "'.");
 		}
     msg.delete();
+    variables.isReady = true;
   }
 
   flipCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		let outcome = ["heads", "tails"];
 		if (!variables.blocked){
 			msg.reply("You flipped " + outcome[this.getRandomInt(0, 1)] + ".");
 		}
 		msg.delete();
+    variables.isReady = true;
 	}
 
   helpCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			msg.reply('**Bot Commands:**\n' + constants.cmdList);
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   muteCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			if (this.voiceChannelBlacklistAdd(msg.member)){
@@ -133,12 +214,18 @@ class functions {
 			}
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   playmusicCommand(msg, arg1) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (arg1 == '?' && !variables.blocked){
-			msg.author.send("Song names:\n" + fs.readdirSync(constants.music_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).then().catch(console.error);
+			msg.author.send("Song names:\n" + fs.readdirSync(constants.music_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
 		}else if (!this.voiceChannelIsBlacklisted(msg.member)){
 			if (!msg.guild.voiceConnection){
 				if (!variables.blocked){
@@ -161,12 +248,19 @@ class functions {
 			msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   playsoundCommand(msg, arg1) {
+    if (!variables.isReady){
+      msg.delete();
+      this.logger("BLOCKED OVERLOAD!!!======================================================================================");
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (arg1 == '?' && !variables.blocked){
-			msg.author.send("Sound names:\n" + fs.readdirSync(constants.sound_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(console.error);
+			msg.author.send("Sound names:\n" + fs.readdirSync(constants.sound_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
 		}else if (!this.voiceChannelIsBlacklisted(msg.member)){
 			if (!msg.guild.voiceConnection){
 				if (!variables.blocked){
@@ -182,6 +276,7 @@ class functions {
 				}
 			}else{
 				msg.delete();
+        variables.isReady = true;
 				return;
 			}
 		}else{
@@ -189,9 +284,16 @@ class functions {
 			msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   playstreamCommand(msg, arg1) {
+    if (!variables.isReady){
+      msg.delete();
+      this.logger("BLOCKED OVERLOAD!!!======================================================================================");
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!this.voiceChannelIsBlacklisted(msg.member)){
 			if (!msg.guild.voiceConnection){
@@ -207,6 +309,7 @@ class functions {
 				}
 			}else{
 				msg.delete();
+        variables.isReady = true;
 				return;
 			}
 		}else{
@@ -214,17 +317,29 @@ class functions {
 				msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   rollCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			msg.reply("You rolled a " + this.getRandomInt(1, 6));
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   sayCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked && this.topClearance(msg.member)){
 			this.logger("Said on command by " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
@@ -232,17 +347,29 @@ class functions {
 			msg.channel.send(custom_message);
 			msg.delete();
 		}
+    variables.isReady = true;
   }
 
   serveridCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			msg.reply("This server's id is: " + msg.guild.id);
 		}
     msg.delete();
+    variables.isReady = true;
   }
 
   stopCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			if (msg.guild.voiceConnection){
@@ -253,9 +380,15 @@ class functions {
 			}
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   unmuteCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			if (this.voiceChannelBlacklistRemove(msg.member)){
@@ -263,22 +396,35 @@ class functions {
 			}
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   useridCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			msg.reply("Your universal user id is: " + msg.author.id);
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   whodisCommand(msg) {
+    if (!variables.isReady){
+      msg.delete();
+      return;
+    }
+    variables.isReady = false;
     variables.generated_response = true;
 		if (!variables.blocked){
 			msg.reply(constants.whodis_response);
 		}
 		msg.delete();
+    variables.isReady = true;
   }
 
   //math

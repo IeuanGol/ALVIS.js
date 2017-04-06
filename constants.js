@@ -37,7 +37,7 @@ constants = {
   whodis_response: 'Greetings! I am ALVIS (Always Listening Virtual IntelligenceSystem).\n\n\
   I am currently still under development by **PacketCloud** [http://www.packetcloud.com].\n\
   My code is availabe at [https://github.com/packetcloud]\n\
-  Please put up with my bugs, as I am still in my early stages.\n\n\
+  Please put up with my bugs, as I am still in my early builds.\n\n\
   Type **!help** for commands, or you can **@mention** or **DM** me to converse.\n\nv1.5.4',
 
   //responses
