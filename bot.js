@@ -47,8 +47,26 @@ client.on('message', msg => {
 	let arg2 = splitmessage[2];
 	let arg3 = splitmessage[3];
 
-	if (command == 'help') {
+	if (command === 'channelid') {
+		functions.channelidCommand(msg);
+
+	}else if (command === 'flip') {
+		functions.flipCommand(msg);
+
+	}else if (command == 'help') {
 		functions.helpCommand(msg);
+
+	}else if (command === 'mute') {
+		functions.muteCommand(msg);
+
+	}else if (command === 'playmusic') {
+		functions.playmusicCommand(msg, arg1);
+
+	}else if (command === 'playsound') {
+		functions.playsoundCommand(msg, arg1);
+
+	}else if (command === 'playstream') {
+		functions.playstreamCommand(msg, arg1);
 
 	}else if (command === 'restart') {
 		functions.setGeneratedResponseVariable(true);
@@ -68,44 +86,26 @@ client.on('message', msg => {
 		}
 		msg.delete();
 
-	}else if (command === 'stop') {
-		functions.stopCommand(msg);
-
-	}else if (command === 'mute') {
-		functions.muteCommand(msg);
-
-	}else if (command === 'unmute') {
-		functions.unmuteCommand(msg);
-
-	}else if (command === 'whodis') {
-		functions.whodisCommand(msg);
-
-	}else if (command === 'playsound') {
-		functions.playsoundCommand(msg, arg1);
-
-	}else if (command === 'playmusic') {
-		functions.playmusicCommand(msg, arg1);
-
-	}else if (command === 'playstream') {
-		functions.playstreamCommand(msg, arg1);
-
-	}else if (command === 'serverid') {
-		functions.serveridCommand(msg);
-
-	}else if (command === 'userid') {
-		functions.useridCommand(msg);
+	}else if (command === 'roll') {
+		functions.rollCommand(msg);
 
 	}else if (command === 'say') {
 		functions.sayCommand(msg);
 
-	}else if (command === 'channelid') {
-		functions.channelidCommand(msg);
+	}else if (command === 'serverid') {
+		functions.serveridCommand(msg);
 
-	}else if (command === 'roll') {
-		functions.rollCommand(msg);
+	}else if (command === 'stop') {
+		functions.stopCommand(msg);
 
-	}else if (command === 'flip') {
-		functions.flipCommand(msg);
+	}else if (command === 'unmute') {
+		functions.unmuteCommand(msg);
+
+	}else if (command === 'userid') {
+		functions.useridCommand(msg);
+
+	}else if (command === 'whodis') {
+		functions.whodisCommand(msg);
 	}
 
 	functions.commandLogger(msg, command);
@@ -181,7 +181,7 @@ client.on('message', msg => {
 	if (rawcontent.includes('adrian')) {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
-			msg.reply("I heard my creator's name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
+			msg.reply("I heard the name of my creator, Adrian! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
 		}
 	}
 
@@ -189,6 +189,13 @@ client.on('message', msg => {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
+		}
+	}
+
+	if (rawcontent.includes('packetcloud')) {
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
+			msg.reply("I heard the name of my developer, PacketCloud! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
 		}
 	}
 
