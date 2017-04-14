@@ -145,25 +145,23 @@ class functions {
   playSound(member, soundpath) {
   	let channel = member.voiceChannel;
   	if (channel == null) return;
-  	this.logger("Playing audio file: '" + soundpath +"' to " + member.guild.name + ":" + channel.name);
   	channel.join().then(connection => {
   		let dispatcher = connection.playFile(soundpath);
   		dispatcher.on('end', end => {
         channel.leave();
-        this.logger("Audio file stopped playing on " + member.guild.name + ":" + channel.name)});
+      });
   	}).catch(err => this.logger(err));
   }
 
   playStream(member, url) {
   	let channel = member.voiceChannel;
   	if (channel == null) return;
-  	this.logger("Playing audio stream: '" + url +"' to " + member.guild.name + ":" + channel.name);
   	channel.join().then(connection => {
   		let stream = ytdl(url, {filter : 'audioonly'});
   		let dispatcher = connection.playStream(stream, constants.streamOptions);
   		dispatcher.on('end', end => {
         channel.leave();
-        this.logger("Audio stream stopped playing on " + member.guild.name + ":" + channel.name)});
+      });
   	}).catch(err => this.logger(err));
   }
 
