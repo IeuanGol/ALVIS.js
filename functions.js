@@ -148,7 +148,9 @@ class functions {
   	this.logger("Playing audio file: '" + soundpath +"' to " + member.guild.name + ":" + channel.name);
   	channel.join().then(connection => {
   		let dispatcher = connection.playFile(soundpath);
-  		dispatcher.on('end', end => {channel.leave()});
+  		dispatcher.on('end', end => {
+        channel.leave();
+        this.logger("Audio file stopped playing on " + member.guild.name + ":" + channel.name)});
   	}).catch(err => this.logger(err));
   }
 
@@ -159,7 +161,9 @@ class functions {
   	channel.join().then(connection => {
   		let stream = ytdl(url, {filter : 'audioonly'});
   		let dispatcher = connection.playStream(stream, constants.streamOptions);
-  		dispatcher.on('end', end => {channel.leave()});
+  		dispatcher.on('end', end => {
+        channel.leave();
+        this.logger("Audio stream stopped playing on " + member.guild.name + ":" + channel.name)});
   	}).catch(err => this.logger(err));
   }
 
@@ -294,7 +298,7 @@ class functions {
     variables.generated_response = true;
 		if (!variables.blocked && this.topClearance(msg.member)){
 			this.logger("Said on command by " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
-			custom_message = msg.content.slice(4);
+			let custom_message = msg.content.slice(4);
 			msg.channel.send(custom_message);
 			msg.delete();
 		}

@@ -171,6 +171,13 @@ client.on('message', msg => {
 		}
 	}
 
+	if (rawcontent == 'ping') {
+		functions.setGeneratedResponseVariable(true);
+		if (!functions.getBlockedVariable()){
+			msg.reply("Pong!");
+		}
+	}
+
 	if (rawcontent == 'nein') {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
