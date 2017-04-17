@@ -3,7 +3,7 @@ constants = {
   //settings
   client_token: "YOUR_DISCORD_TOKEN", //Discord bot token
   bot_key: "YOUR_CHATBOT_KEY", //chat bot key
-  allowSpam: false, //Controls if spam filter is active
+  allowSpam: true, //Controls if spam filter is active
   muteTime: 900000, //Mute command duration (ms)
   command_prefix: '!', //prefix that must preceed a command
 
