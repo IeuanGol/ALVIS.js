@@ -166,6 +166,14 @@ class functions {
   }
 
   //commands
+  aboutCommand(msg) {
+    variables.generated_response = true;
+		if (!variables.blocked){
+			msg.reply(constants.about_response);
+		}
+		msg.delete();
+  }
+
   channelidCommand(msg) {
     variables.generated_response = true;
 		if (msg.member.voiceChannel == null){
@@ -274,15 +282,6 @@ class functions {
     msg.delete();
   }
 
-  rollidCommand(msg) {
-    variables.generated_response = true;
-    if (!variables.blocked){
-      msg.reply("Your role identifiers are: " + msg.member.roles);
-      console.log(msg.member.roles);
-    }
-    msg.delete();
-  }
-
   rollCommand(msg) {
     variables.generated_response = true;
 		if (!variables.blocked){
@@ -328,22 +327,6 @@ class functions {
 			if (this.voiceChannelBlacklistRemove(msg.member)){
 				msg.reply('Sound commands unmuted on ' + msg.member.voiceChannel.name + ".");
 			}
-		}
-		msg.delete();
-  }
-
-  useridCommand(msg) {
-    variables.generated_response = true;
-		if (!variables.blocked){
-			msg.reply("Your universal user id is: " + msg.author.id);
-		}
-		msg.delete();
-  }
-
-  whodisCommand(msg) {
-    variables.generated_response = true;
-		if (!variables.blocked){
-			msg.reply(constants.whodis_response);
 		}
 		msg.delete();
   }

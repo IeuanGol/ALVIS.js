@@ -47,7 +47,10 @@ client.on('message', msg => {
 	let arg2 = splitmessage[2];
 	let arg3 = splitmessage[3];
 
-	if (command === 'channelid') {
+	if (command === 'about') {
+		functions.aboutCommand(msg);
+
+	}else if (command === 'channelid') {
 		functions.channelidCommand(msg);
 
 	}else if (command === 'flip') {
@@ -86,9 +89,6 @@ client.on('message', msg => {
 		}
 		msg.delete();
 
-	}else if (command === 'roleid') {
-		functions.rollidCommand(msg);
-
 	}else if (command === 'roll') {
 		functions.rollCommand(msg);
 
@@ -103,12 +103,6 @@ client.on('message', msg => {
 
 	}else if (command === 'unmute') {
 		functions.unmuteCommand(msg);
-
-	}else if (command === 'userid') {
-		functions.useridCommand(msg);
-
-	}else if (command === 'whodis') {
-		functions.whodisCommand(msg);
 	}
 
 	functions.commandLogger(msg, command);

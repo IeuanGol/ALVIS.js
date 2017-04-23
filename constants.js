@@ -17,7 +17,8 @@ constants = {
   streamOptions: {seek: 0, volume: 1},
 
   //command list
-  cmdList: "`!channelid` *Returns unique channel identifier.*\n\
+  cmdList: "`!about` *Displays bot information.*\n\
+  `!channelid` *Returns unique channel identifier.*\n\
   `!flip` *Flips a coin.*\n\
   `!help` *Lists available commands.*\n\
   `!mute` *Blocks sound commands on a voice channel for 15 minutes.*\n\
@@ -28,13 +29,11 @@ constants = {
   `!roll` *Rolls a die.*\n\
   `!serverid` *Returns unique server identifier.*\n\
   `!stop` *Stops sound playback on voice channel.*\n\
-  `!unmute` *Stops 15 minute sound block by !mute command.*\n\
-  `!userid` *Returns unique user identifier.*\n\
-  `!whodis` *Displays bot information.*\n\n\
+  `!unmute` *Stops 15 minute sound block by !mute command.*\n\n\
   Alternatively you can **@mention** or **DM** me, and we can converse.",
 
   //bot identity
-  whodis_response: 'Greetings! I am ALVIS (Always Listening Virtual IntelligenceSystem).\n\n\
+  about_response: 'Greetings! I am ALVIS (Always Listening Virtual IntelligenceSystem).\n\n\
   I am currently still under development by **PacketCloud** [http://www.packetcloud.com].\n\
   My code is availabe at [https://github.com/packetcloud]\n\
   Please put up with my bugs, as I am still in my early builds.\n\n\
