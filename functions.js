@@ -205,83 +205,82 @@ class functions {
 
   playmusicCommand(msg, arg1) {
     variables.generated_response = true;
-		if (arg1 == '?' && !variables.blocked){
-			msg.author.send("Song names:\n" + fs.readdirSync(constants.music_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
-		}else if (!this.voiceChannelIsBlacklisted(msg.member)){
-			if (!msg.guild.voiceConnection){
-				if (!variables.blocked){
-					if (msg.member.voiceChannel == null){
-						msg.author.send("**Invalid Command**");
-						msg.author.send("You must be in a voice channel to play music.");
-					}else if (arg1 == null){
-						let len = fs.readdirSync(constants.music_path).length;
-						this.playSound(msg.member, constants.music_path + "/" + fs.readdirSync(constants.music_path)[this.getRandomInt(1,len)-1]);
-					}else{
-						this.playSound(msg.member, constants.music_path + "/" + arg1 + '.mp3');
-					}
-				}
+    if (arg1 == '?' && !variables.blocked){
+			msg.author.send("**Song names:**\n" + fs.readdirSync(constants.music_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
+    }else if (msg.member.voiceChannel == null){
+      msg.author.send("**Invalid Command**");
+      msg.author.send("You must be in a voice channel to play music.");
+		}else if (this.voiceChannelIsBlacklisted(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("Sound commands are muted on this voice channel.");
+    }else if (!this.voiceAllowedToConnect(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("I do not have permission to join this voice channel.");
+    }else if (!msg.guild.voiceConnection && !variables.blocked){
+      if (arg1 == null){
+        let dir = fs.readdirSync(constants.music_path);
+        let len = dir.length;
+				this.playSound(msg.member, constants.music_path + "/" + dir[this.getRandomInt(1,len)-1].replace(",", ""));
 			}else{
-				msg.delete();
-				return;
+				this.playSound(msg.member, constants.music_path + "/" + arg1 + '.mp3');
 			}
-		}else{
-			msg.author.send("**Blocked Command**");
-			msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
 		}
 		msg.delete();
   }
 
   playsoundCommand(msg, arg1) {
     variables.generated_response = true;
-		if (arg1 == '?' && !variables.blocked){
-			msg.author.send("Sound names:\n" + fs.readdirSync(constants.sound_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
-		}else if (!this.voiceChannelIsBlacklisted(msg.member)){
-			if (!msg.guild.voiceConnection){
-				if (!variables.blocked){
-					if (msg.member.voiceChannel == null){
-						msg.author.send("**Invalid Command**");
-						msg.author.send("You must be in a voice channel to play sounds.");
-					}else if (arg1 == null){
-						let len = fs.readdirSync(constants.sound_path).length;
-						this.playSound(msg.member, constants.sound_path + "/" + fs.readdirSync('./sounds/')[this.getRandomInt(1,len)-1].replace(",", ""));
-					}else{
-						this.playSound(msg.member, constants.sound_path + "/" + arg1 + '.mp3');
-					}
-				}
+    if (arg1 == '?' && !variables.blocked){
+			msg.author.send("**Sound names:**\n" + fs.readdirSync(constants.sound_path).join().replace(/.mp3/g,"\n").replace(/,/g, ""), {split:true}).catch(err => this.logger(err));//if list is over 2000 characters, will complain in console, but works anyway.
+    }else if (msg.member.voiceChannel == null){
+      msg.author.send("**Invalid Command**");
+      msg.author.send("You must be in a voice channel to play sounds.");
+		}else if (this.voiceChannelIsBlacklisted(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("Sound commands are muted on this voice channel.");
+    }else if (!this.voiceAllowedToConnect(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("I do not have permission to join this voice channel.");
+    }else if (!msg.guild.voiceConnection && !variables.blocked){
+      if (arg1 == null){
+        let dir = fs.readdirSync(constants.sound_path);
+        let len = dir.length;
+				this.playSound(msg.member, constants.sound_path + "/" + dir[this.getRandomInt(1,len)-1].replace(",", ""));
 			}else{
-				msg.delete();
-				return;
+				this.playSound(msg.member, constants.sound_path + "/" + arg1 + '.mp3');
 			}
-		}else{
-			msg.author.send("**Blocked Command**");
-			msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
 		}
 		msg.delete();
   }
 
   playstreamCommand(msg, arg1) {
     variables.generated_response = true;
-		if (!this.voiceChannelIsBlacklisted(msg.member)){
-			if (!msg.guild.voiceConnection){
-				if (!variables.blocked){
-					if (msg.member.voiceChannel == null){
-						msg.author.send("**Invalid Command**");
-						msg.author.send("You must be in a voice channel to play audio stream.");
-					}else if (arg1 == null){
-						msg.author.send("Please provide a URL to a video/audio stream you wish to play.");
-					}else{
-						this.playStream(msg.member, arg1);
-					}
-				}
+    if (msg.member.voiceChannel == null){
+      msg.author.send("**Invalid Command**");
+      msg.author.send("You must be in a voice channel to play audio stream.");
+    }else if (this.voiceChannelIsBlacklisted(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("Sound commands are muted on this voice channel.");
+    }else if (!this.voiceAllowedToConnect(msg.member)){
+      msg.author.send("**Blocked Command**");
+      msg.author.send("I do not have permission to join that voice channel.");
+    }else if (!msg.guild.voiceConnection && !variables.blocked){
+			if (arg1 == null){
+				msg.author.send("Please provide a URL to a video/audio stream you wish to play.");
 			}else{
-				msg.delete();
-				return;
+				this.playStream(msg.member, arg1);
 			}
-		}else{
-				msg.author.send("**Blocked Command**");
-				msg.author.send("Sound commands are not allowed on this voice channel, or it has been muted temporarily.");
-		}
-		msg.delete();
+    }
+    msg.delete();
+  }
+
+  rollidCommand(msg) {
+    variables.generated_response = true;
+    if (!variables.blocked){
+      msg.reply("Your role identifiers are: " + msg.member.roles);
+      console.log(msg.member.roles);
+    }
+    msg.delete();
   }
 
   rollCommand(msg) {
@@ -294,7 +293,7 @@ class functions {
 
   sayCommand(msg) {
     variables.generated_response = true;
-		if (!variables.blocked && this.topClearance(msg.member)){
+		if (!variables.blocked && this.isManager(msg.member)){
 			this.logger("Said on command by " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			let custom_message = msg.content.slice(4);
 			msg.channel.send(custom_message);
@@ -396,13 +395,17 @@ class functions {
   }
 
   //voice channel blacklist
+  voiceAllowedToConnect(member){
+    if (member.voiceChannel == null) return false;
+    return member.voiceChannel.joinable;
+  }
+
   voiceChannelIsBlacklisted(member){
   	let currentDate = new Date();
   	if (member.voiceChannel == null) return false;
     let srvr = null;
   	for (srvr in variables.voiceChannelBlacklist){
   		if (member.guild.id == variables.voiceChannelBlacklist[srvr].server && member.voiceChannel.name == variables.voiceChannelBlacklist[srvr].channel){
-  			if (variables.voiceChannelBlacklist[srvr].noExpire == true) return true;
   			if (variables.voiceChannelBlacklist[srvr].expiration > currentDate){
   				return true;
   			}else{
@@ -421,16 +424,21 @@ class functions {
   	}
   	if (this.voiceChannelIsBlacklisted(member)){
   		member.send("**Invalid Command**");
-  		member.send("Sound commands are already muted or blacklisted on this channel.");
+  		member.send("Sound commands are already muted on this channel.");
   		return false;
   	}
+    if (!this.voiceAllowedToConnect(member)){
+      member.send("**Invalid Command**");
+      member.send("I do not have permission to join that voice channel.");
+      return false;
+    }
   	let currentDate = new Date();
   	variables.voiceChannelBlacklist[variables.voiceChannelBlacklist.length] = {server:member.guild.id, channel:member.voiceChannel.name, expiration:new Date(currentDate.getTime() + constants.muteTime)};
   	return true;
   }
 
   voiceChannelBlacklistRemove(member){
-  	if (!this.mediumClearance(member)){
+  	if (!this.isAdmin(member)){
   		member.send("**Blocked Comamand**")
   		member.send("You do not have permission to use this command");
   		return false;
@@ -447,7 +455,7 @@ class functions {
   	}
     let srvr = null;
   	for (srvr in variables.voiceChannelBlacklist){
-  		if (variables.voiceChannelBlacklist[srvr].server == member.guild.id && variables.voiceChannelBlacklist[srvr].channel == member.voiceChannel.name && !variables.voiceChannelBlacklist[srvr].noExpire){
+  		if (variables.voiceChannelBlacklist[srvr].server == member.guild.id && variables.voiceChannelBlacklist[srvr].channel == member.voiceChannel.name){
   			variables.voiceChannelBlacklist.splice(srvr, 1);
   			return true;
   		}
@@ -481,19 +489,19 @@ class functions {
   }
 
   //permissions
-  topClearance(member) {
+  isManager(member) {
     let i = null;
-  	for (i in variables.topClearanceList){
-  		if (variables.topClearanceList[i].user == member.id && variables.topClearanceList[i].server == member.guild.id) return true;
+  	for (i in variables.managerRolesList){
+  		if (member.roles.has(variables.managerRolesList[i].role) && variables.managerRolesList[i].server == member.guild.id) return true;
   	}
   	return false;
   }
 
-  mediumClearance(member) {
-  	if (this.topClearance(member)) return true;
+  isAdmin(member) {
+  	if (this.isManager(member)) return true;
     let i = null;
-  	for (i in variables.mediumClearanceList){
-  		if (variables.mediumClearanceList[i].user == member.id && variables.mediumClearanceList[i].server == member.guild.id) return true;
+  	for (i in variables.adminRolesList){
+  		if (member.roles.has(variables.adminRolesList[i].role) && variables.adminRolesList[i].server == member.guild.id) return true;
   	}
   	return false;
   }

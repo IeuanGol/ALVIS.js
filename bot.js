@@ -42,7 +42,7 @@ client.on('message', msg => {
 	if(!msg.content.startsWith(functions.getCommandPrefixConstant())) return;
 	splitmessage = msg.content.split(" ");
 	let command = splitmessage[0];
-	command = command.slice(functions.getCommandPrefixConstant().length);
+	command = command.slice(functions.getCommandPrefixConstant().length).toLowerCase();
 	let arg1 = splitmessage[1];
 	let arg2 = splitmessage[2];
 	let arg3 = splitmessage[3];
@@ -71,7 +71,7 @@ client.on('message', msg => {
 	}else if (command === 'restart') {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
-			if (functions.mediumClearance(msg.member)){
+			if (functions.isAdmin(msg.member)){
 				functions.logger('User ' + msg.author.username + ' requested restart on ' + msg.guild.name + ':' + msg.channel.name);
 				msg.delete();
 				client.destroy();
@@ -85,6 +85,9 @@ client.on('message', msg => {
 			}
 		}
 		msg.delete();
+
+	}else if (command === 'roleid') {
+		functions.rollidCommand(msg);
 
 	}else if (command === 'roll') {
 		functions.rollCommand(msg);
@@ -185,24 +188,10 @@ client.on('message', msg => {
 		}
 	}
 
-	if (rawcontent.includes('adrian')) {
-		functions.setGeneratedResponseVariable(true);
-		if (!functions.getBlockedVariable()){
-			msg.reply("I heard the name of my creator, Adrian! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
-		}
-	}
-
 	if (rawcontent.includes(functions.getBotNameVariable().toLowerCase())) {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
-		}
-	}
-
-	if (rawcontent.includes('packetcloud')) {
-		functions.setGeneratedResponseVariable(true);
-		if (!functions.getBlockedVariable()){
-			msg.reply("I heard the name of my developer, PacketCloud! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
 		}
 	}
 

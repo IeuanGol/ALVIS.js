@@ -1,8 +1,8 @@
 constants = {
 
   //settings
-  client_token: "YOUR_DISCORD_TOKEN", //Discord bot token
-  bot_key: "YOUR_CHATBOT_KEY", //chat bot key
+  client_token: "YOUR_DISCORD_TOKEN_HERE", //Discord bot token
+  bot_key: "YOUR_BOT_KEY_HERE", //cleverbot key
   allowSpam: false, //Controls if spam filter is active
   muteTime: 900000, //Mute command duration (ms)
   command_prefix: '!', //prefix that must preceed a command
