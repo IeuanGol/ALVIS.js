@@ -16,6 +16,9 @@ class functions {
   	let currentSecond = currentTime.getSeconds();
   	let time = "[" + ("0" + currentHour).slice(-2) + ":" + ("0" + currentMinute).slice(-2) + ":" + ("0" + currentSecond).slice(-2) + "] ";
   	console.log(time + string);
+    if (variables.log_channel) {
+      variables.log_channel.sendMessage(time + string);
+    }
   }
 
   commandLogger(msg, command) {
@@ -39,6 +42,7 @@ class functions {
   		this.logger("Ignored keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam.");
   	}
   }
+
 
   //variables
   commandVariablesSetup(msg) {
@@ -123,6 +127,7 @@ class functions {
     return variables.bot_user_id;
   }
 
+
   //constants
   getClientTokenConstant() {
     return constants.client_token;
@@ -184,6 +189,17 @@ class functions {
     msg.delete();
   }
 
+  displaylogsCommand(msg) {
+    variables.generated_response = true;
+    if (this.isAdmin(msg.member)){
+      variables.log_channel = msg.channel;
+    }else{
+      msg.author.send("**Blocked Comamand**")
+  		msg.author.send("You do not have permission to use this command");
+    }
+    msg.delete();
+  }
+
   flipCommand(msg) {
     variables.generated_response = true;
 		let outcome = ["heads", "tails"];
@@ -225,12 +241,17 @@ class functions {
       msg.author.send("**Blocked Command**");
       msg.author.send("I do not have permission to join this voice channel.");
     }else if (!msg.guild.voiceConnection && !variables.blocked){
+      let dir = fs.readdirSync(constants.music_path);
+      let len = dir.length;
       if (arg1 == null){
-        let dir = fs.readdirSync(constants.music_path);
-        let len = dir.length;
 				this.playSound(msg.member, constants.music_path + "/" + dir[this.getRandomInt(1,len)-1].replace(",", ""));
 			}else{
-				this.playSound(msg.member, constants.music_path + "/" + arg1 + '.mp3');
+        if (dir.indexOf(arg1 + '.mp3') == -1) {
+          msg.author.send("**Invalid Command**");
+          msg.author.send("Requested song does not exist.");
+        }else{
+          this.playSound(msg.member, constants.music_path + "/" + arg1 + ".mp3");
+        }
 			}
 		}
 		msg.delete();
@@ -250,12 +271,17 @@ class functions {
       msg.author.send("**Blocked Command**");
       msg.author.send("I do not have permission to join this voice channel.");
     }else if (!msg.guild.voiceConnection && !variables.blocked){
+      let dir = fs.readdirSync(constants.sound_path);
+      let len = dir.length;
       if (arg1 == null){
-        let dir = fs.readdirSync(constants.sound_path);
-        let len = dir.length;
 				this.playSound(msg.member, constants.sound_path + "/" + dir[this.getRandomInt(1,len)-1].replace(",", ""));
 			}else{
-				this.playSound(msg.member, constants.sound_path + "/" + arg1 + '.mp3');
+        if (dir.indexOf(arg1 + '.mp3') == -1) {
+          msg.author.send("**Invalid Command**");
+          msg.author.send("Requested sound does not exist.");
+        }else{
+          this.playSound(msg.member, constants.sound_path + "/" + arg1 + ".mp3");
+        }
 			}
 		}
 		msg.delete();
@@ -321,6 +347,17 @@ class functions {
 		msg.delete();
   }
 
+  stopdisplaylogsCommand(msg) {
+    variables.generated_response = true;
+    if (this.isAdmin(msg.member)){
+      variables.log_channel = null;
+    }else{
+      msg.author.send("**Blocked Comamand**")
+  		msg.author.send("You do not have permission to use this command");
+    }
+    msg.delete();
+  }
+
   unmuteCommand(msg) {
     variables.generated_response = true;
 		if (!variables.blocked){
@@ -361,20 +398,20 @@ class functions {
 
   messageSpam(recipient) {
   	recipient.send("**Blocked for Spam**");
-  	recipient.send(constants.spamResponses[this.getRandomInt(1,10)]);
+  	recipient.send(constants.spamResponses[this.getRandomInt(1, constants.spamResponses['length'])]);
   }
 
   //media responses
   rFunnyResponse() {
-  	return constants.rFunnyResponses[this.getRandomInt(1,8)];
+  	return constants.rFunnyResponses[this.getRandomInt(1, constants.rFunnyResponses['length'])];
   }
 
   imgurResponse() {
-  	return constants.imgurResponses[this.getRandomInt(1,4)];
+  	return constants.imgurResponses[this.getRandomInt(1, constants.imgurResponses['length'])];
   }
 
   youtubeResponse() {
-  	return constants.youtubeResponses[this.getRandomInt(1,4)];
+  	return constants.youtubeResponses[this.getRandomInt(1, constants.youtubeResponses['length'])];
   }
 
   //voice channel blacklist

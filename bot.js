@@ -53,6 +53,9 @@ client.on('message', msg => {
 	}else if (command === 'channelid') {
 		functions.channelidCommand(msg);
 
+	}else if (command === 'displaylogs') {
+		functions.displaylogsCommand(msg);
+
 	}else if (command === 'flip') {
 		functions.flipCommand(msg);
 
@@ -101,6 +104,9 @@ client.on('message', msg => {
 	}else if (command === 'stop') {
 		functions.stopCommand(msg);
 
+	}else if (command === 'stopdisplaylogs') {
+		functions.stopdisplaylogsCommand(msg);
+
 	}else if (command === 'unmute') {
 		functions.unmuteCommand(msg);
 	}
@@ -147,13 +153,6 @@ client.on('message', msg => {
 	if(msg.channel instanceof Discord.DMChannel || msg.channel instanceof Discord.GroupDMChannel) return;
 	let rawcontent = msg.content.toLowerCase();
 
-	if (rawcontent.includes('trump')) {
-		functions.setGeneratedResponseVariable(true);
-		if (!functions.getBlockedVariable()){
-			msg.reply("You must know a lot about trucks!");
-		}
-	}
-
 	if (rawcontent.includes('tachanka')) {
 		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
@@ -198,7 +197,7 @@ client.on('message', msg => {
 
 	if (rawcontent.includes('reddit.com/r/funny/')) {
 		if (!functions.getBlockedVariable()){
-			if (functions.getRandomInt(1,2) == 1){
+			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.rFunnyResponse());
 				functions.setGeneratedResponseVariable(true);
 			}
@@ -207,7 +206,7 @@ client.on('message', msg => {
 
 	if (rawcontent.includes('imgur.com/')) {
 		if (!functions.getBlockedVariable()){
-			if (functions.getRandomInt(1,5) == 1){
+			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.imgurResponse());
 				functions.setGeneratedResponseVariable(true);
 			}
@@ -216,7 +215,7 @@ client.on('message', msg => {
 
 	if (rawcontent.includes('youtube.com/watch')) {
 		if (!functions.getBlockedVariable()){
-			if (functions.getRandomInt(1,5) == 1){
+			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.youtubeResponse());
 				functions.setGeneratedResponseVariable(true);
 			}
