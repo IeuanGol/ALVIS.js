@@ -47,71 +47,86 @@ client.on('message', msg => {
 	let arg2 = splitmessage[2];
 	let arg3 = splitmessage[3];
 
-	if (command === 'about') {
-		functions.aboutCommand(msg);
+	switch(command) {
+		case 'about':
+			functions.aboutCommand(msg, command);
+			break;
 
-	}else if (command === 'channelid') {
-		functions.channelidCommand(msg);
+		case 'channelid':
+			functions.channelidCommand(msg, command);
+			break;
 
-	}else if (command === 'displaylogs') {
-		functions.displaylogsCommand(msg);
+		case 'displaylogs':
+			functions.displaylogsCommand(msg, command);
+			break;
 
-	}else if (command === 'flip') {
-		functions.flipCommand(msg);
+		case 'flip':
+			functions.flipCommand(msg, command);
+			break;
 
-	}else if (command == 'help') {
-		functions.helpCommand(msg);
+		case 'help':
+			functions.helpCommand(msg, command);
+			break;
 
-	}else if (command === 'mute') {
-		functions.muteCommand(msg);
+		case 'mute':
+			functions.muteCommand(msg, command);
+			break;
 
-	}else if (command === 'playmusic') {
-		functions.playmusicCommand(msg, arg1);
+		case 'playmusic':
+			functions.playmusicCommand(msg, arg1, command);
+			break;
 
-	}else if (command === 'playsound') {
-		functions.playsoundCommand(msg, arg1);
+		case 'playsound':
+			functions.playsoundCommand(msg, arg1, command);
+			break;
 
-	}else if (command === 'playstream') {
-		functions.playstreamCommand(msg, arg1);
+		case 'playstream':
+			functions.playstreamCommand(msg, arg1, command);
+			break;
 
-	}else if (command === 'restart') {
-		functions.setGeneratedResponseVariable(true);
-		if (!functions.getBlockedVariable()){
-			if (functions.isAdmin(msg.member)){
-				functions.logger('User ' + msg.author.username + ' requested restart on ' + msg.guild.name + ':' + msg.channel.name);
-				msg.delete();
-				client.destroy();
-				startBot();
-				return;
-			}else{
-				functions.logger('Denied requested restart by ' + msg.author.name + ' on ' + msg.guild.name + ':' + msg.channel.name + ' due to insufficient privilege');
-				msg.author.send("**Blocked Command**");
-				msg.author.send("You do not have permission to use this command.");
-				return;
+		case 'restart':
+			if (!functions.getBlockedVariable()){
+				if (functions.isAdmin(msg.member)){
+					functions.logger('User ' + msg.author.username + ' requested restart on ' + msg.guild.name + ':' + msg.channel.name);
+					msg.delete();
+					client.destroy();
+					startBot();
+					return;
+				}else{
+					msg.author.send("**Blocked Command**");
+					msg.author.send("You do not have permission to use this command.");
+					functions.logger('Denied requested restart by ' + msg.author.name + ' on ' + msg.guild.name + ':' + msg.channel.name + ' due to insufficient privileges');
+					return;
+				}
 			}
-		}
-		msg.delete();
+			msg.delete();
+			break;
 
-	}else if (command === 'roll') {
-		functions.rollCommand(msg);
+		case 'roll':
+			functions.rollCommand(msg, arg1, command);
+			break;
 
-	}else if (command === 'say') {
-		functions.sayCommand(msg);
+		case 'say':
+			functions.sayCommand(msg, command);
+			break;
 
-	}else if (command === 'serverid') {
-		functions.serveridCommand(msg);
+		case 'serverid':
+			functions.serveridCommand(msg, command);
+			break;
 
-	}else if (command === 'stop') {
-		functions.stopCommand(msg);
+		case 'stop':
+			functions.stopCommand(msg, command);
+			break;
 
-	}else if (command === 'stopdisplaylogs') {
-		functions.stopdisplaylogsCommand(msg);
+		case 'stopdisplaylogs':
+			functions.stopdisplaylogsCommand(msg, command);
+			break;
 
-	}else if (command === 'unmute') {
-		functions.unmuteCommand(msg);
+		case 'unmute':
+			functions.unmuteCommand(msg, command);
+			break;
 	}
 
-	functions.commandLogger(msg, command);
 });
 
 //keyword response
@@ -154,44 +169,68 @@ client.on('message', msg => {
 	let rawcontent = msg.content.toLowerCase();
 
 	if (rawcontent.includes('tachanka')) {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("**LMG MOUNTED AND LOADED!**");
+			this.logger("Responded to 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
 	if (rawcontent == 'bing') {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("Bong!");
+			this.logger("Responded to 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
 	if (rawcontent == 'ping') {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("Pong!");
+			this.logger("Responded to 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
 	if (rawcontent == 'nein') {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("Ja!");
+			this.logger("Responded to 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
 	if (rawcontent.includes(functions.getBotNameVariable().toLowerCase())) {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
+			this.logger("Responded to name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
 	if (rawcontent.includes('blitz')) {
-		functions.setGeneratedResponseVariable(true);
 		if (!functions.getBlockedVariable()){
 			msg.reply("**#BuffBlitz2K17**");
+			this.logger("Responded to 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+			}
 		}
 	}
 
@@ -199,7 +238,13 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.rFunnyResponse());
-				functions.setGeneratedResponseVariable(true);
+				this.logger("Responded to 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}else{
+				this.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -208,7 +253,13 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.imgurResponse());
-				functions.setGeneratedResponseVariable(true);
+				this.logger("Responded to 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}else{
+				this.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -217,10 +268,15 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.youtubeResponse());
-				functions.setGeneratedResponseVariable(true);
+				this.logger("Responded to 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}else{
+				this.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			}
+		}else{
+			if (functions.getSpamBlockedVariable()){
+				this.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
 
-	functions.keywordLogger(msg);
 });

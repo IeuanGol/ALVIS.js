@@ -7,7 +7,6 @@ variables = {
   blocked: false,
   spamBlocked: false,
   blacklisted: false,
-  generated_response: false,
 
   isReady: false,
 
@@ -21,15 +20,17 @@ variables = {
   ],
 
   managerRolesList: [
+  	{server: "226460261513560065", role: "279448976070279168"}
   ],
 
   adminRolesList: [
+  	{server: "226460261513560065", role: "228312334878113792"}
   ],
 
 
   requestDictionary: {},
 
-  lastResponse: null,
+  log_channel: null,
 
 }
 
