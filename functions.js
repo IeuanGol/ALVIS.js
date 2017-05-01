@@ -359,13 +359,11 @@ class functions {
   }
 
   rollCommand(msg, arg1, command) {
-    if (!arg1) {
+    arg1 = parseInt(arg1);
+    if (isNaN(arg1)){
       arg1 = 6;
     }else{
-      arg1 = parseInt(arg1);
-      if (!arg1.isInteger()){
-        arg1 = 6;
-      }
+      arg1 = Math.round(arg1);
     }
 		if (!variables.blocked){
 			msg.reply("You rolled a " + this.getRandomInt(1, arg1));
