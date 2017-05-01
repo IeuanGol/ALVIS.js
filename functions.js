@@ -344,7 +344,7 @@ class functions {
         this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
 			}else{
 				this.playStream(msg.member, arg1);
-        this.logger("Responded to '!" + command + " " + arg1 + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+        this.logger("Responded to '!" + command + " <" + arg1 + ">' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}
     }else{
       if (variables.spamBlocked){

@@ -171,10 +171,10 @@ client.on('message', msg => {
 	if (rawcontent.includes('tachanka')) {
 		if (!functions.getBlockedVariable()){
 			msg.reply("**LMG MOUNTED AND LOADED!**");
-			this.logger("Responded to 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'tachanka' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -182,10 +182,10 @@ client.on('message', msg => {
 	if (rawcontent == 'bing') {
 		if (!functions.getBlockedVariable()){
 			msg.reply("Bong!");
-			this.logger("Responded to 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'bing' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -193,10 +193,10 @@ client.on('message', msg => {
 	if (rawcontent == 'ping') {
 		if (!functions.getBlockedVariable()){
 			msg.reply("Pong!");
-			this.logger("Responded to 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'ping' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -204,10 +204,10 @@ client.on('message', msg => {
 	if (rawcontent == 'nein') {
 		if (!functions.getBlockedVariable()){
 			msg.reply("Ja!");
-			this.logger("Responded to 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'nein' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -215,10 +215,10 @@ client.on('message', msg => {
 	if (rawcontent.includes(functions.getBotNameVariable().toLowerCase())) {
 		if (!functions.getBlockedVariable()){
 			msg.reply("I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*");
-			this.logger("Responded to name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored name mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -226,10 +226,10 @@ client.on('message', msg => {
 	if (rawcontent.includes('blitz')) {
 		if (!functions.getBlockedVariable()){
 			msg.reply("**#BuffBlitz2K17**");
-			this.logger("Responded to 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+			functions.logger("Responded to 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'blitz' keyword from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -238,13 +238,13 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.rFunnyResponse());
-				this.logger("Responded to 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Responded to 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}else{
-				this.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'reddit.com/r/funny/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -253,13 +253,13 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.imgurResponse());
-				this.logger("Responded to 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Responded to 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}else{
-				this.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'imgur.com/' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}
@@ -268,13 +268,13 @@ client.on('message', msg => {
 		if (!functions.getBlockedVariable()){
 			if (functions.getRandomInt(1, 10) == 1){
 				msg.reply(functions.youtubeResponse());
-				this.logger("Responded to 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Responded to 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}else{
-				this.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+				functions.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}
 		}else{
 			if (functions.getSpamBlockedVariable()){
-				this.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
+				functions.logger("Ignored 'youtube.com/watch' link from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to spam");
 			}
 		}
 	}

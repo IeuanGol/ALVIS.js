@@ -1,8 +1,8 @@
 constants = {
 
   //settings
-  client_token: "<YOUR_BOT_TOKEN_HERE>", //Discord bot token
-  bot_key: "<YOUR_CLECERBOT_KEY_HERE>", //cleverbot key
+  client_token: "<YOUR_DISCORD_TOKEN_HERE>", //Discord bot token
+  bot_key: "<YOUR_CLEVERBOT_KEY_HERE>", //cleverbot key
   allowSpam: false, //Controls if spam filter is active
   muteTime: 900000, //Mute command duration (ms)
   command_prefix: '!', //prefix that must preceed a command
@@ -35,7 +35,7 @@ constants = {
   Alternatively you can **@mention** or **DM** me, and we can converse.",
 
   //bot identity
-  about_response: 'Greetings! I am ALVIS (Always Listening Virtual IntelligenceSystem).\n\n\
+  about_response: 'Greetings! I am ALVIS (Always Listening Virtual Intelligence System).\n\n\
   I am currently still under development by **PacketCloud** [http://www.packetcloud.com].\n\
   My code is availabe at [https://github.com/packetcloud]\n\
   Please put up with my bugs, as I am still in my early builds.\n\n\

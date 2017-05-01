@@ -8,9 +8,7 @@ variables = {
   spamBlocked: false,
   blacklisted: false,
 
-  isReady: false,
-
-  //You can retrieve channel/server/user id values using !channelid, !serverid or !userid commands.
+  //You can retrieve server/role/user id using built-in Discord syntax, or context menus while in developer mode.
 
   voiceChannelBlacklist: [
   ],
@@ -20,13 +18,12 @@ variables = {
   ],
 
   managerRolesList: [
-  	{server: "226460261513560065", role: "279448976070279168"}
+  	{server: "", role: ""}
   ],
 
   adminRolesList: [
-  	{server: "226460261513560065", role: "228312334878113792"}
+  	{server: "", role: ""}
   ],
-
 
   requestDictionary: {},
 
