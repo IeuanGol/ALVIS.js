@@ -16,8 +16,21 @@ class functions {
   	let currentSecond = currentTime.getSeconds();
   	let time = "[" + ("0" + currentHour).slice(-2) + ":" + ("0" + currentMinute).slice(-2) + ":" + ("0" + currentSecond).slice(-2) + "] ";
   	console.log(time + string);
-    if (variables.log_channel) {
-      variables.log_channel.sendMessage(time + string);
+    if (variables.log_message) {
+      this.textChatLog(time + string);
+    }
+  }
+
+  textChatLog(string){
+    let old_content = variables.log_message.content;
+    let length = old_content.length;
+    let stripped_content = old_content.substring(0, length-13);
+    if (length + string.length >= 1800){
+      variables.log_message.edit(stripped_content + '\n' + string + "\n```:floppy_disk:");
+      let new_log_message_content = "**Bot Log:**\n```\n```:pencil2:";
+      variables.log_message.channel.send(new_log_message_content, {split: true}).then(message => this.setLogMessageVariable(message));
+    }else{
+      variables.log_message.edit(stripped_content + '\n' + string + "\n```:pencil2:");
     }
   }
 
@@ -73,6 +86,10 @@ class functions {
 
   setBotUserIdVariable(id) {
     variables.bot_user_id = id;
+  }
+
+  setLogMessageVariable(message) {
+    variables.log_message = message;
   }
 
   getBlockedVariable() {
@@ -176,7 +193,8 @@ class functions {
 
   displaylogsCommand(msg, command) {
     if (this.isAdmin(msg.member)){
-      variables.log_channel = msg.channel;
+      let new_log_message_content = "**Bot Log:**\n```\n```:pencil2:";
+      msg.channel.send(new_log_message_content, {split: true}).then(message => this.setLogMessageVariable(message));
       this.logger("Responded to '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
     }else{
       msg.author.send("**Blocked Comamand**")
@@ -435,7 +453,11 @@ class functions {
 
   stopdisplaylogsCommand(msg, command) {
     if (this.isAdmin(msg.member)){
-      variables.log_channel = null;
+      let old_content = variables.log_message.content;
+      let length = old_content.length;
+      let stripped_content = old_content.substring(0, length-9);
+      variables.log_message.edit(stripped_content + ":floppy_disk:");
+      variables.log_message = null;
       this.logger("Responded to '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
     }else{
       msg.author.send("**Blocked Comamand**")

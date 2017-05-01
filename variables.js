@@ -27,7 +27,7 @@ variables = {
 
   requestDictionary: {},
 
-  log_channel: null,
+  log_message: null,
 
 }
 
