@@ -175,7 +175,7 @@ class functions {
   channelidCommand(msg, command) {
 		if (msg.member.voiceChannel == null){
 			msg.reply("You are not in a voice channel on this server.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
 		}else if (!variables.blocked){
 			msg.reply("This voice channel's id is: '" + msg.member.voiceChannel.name + "'.");
       this.logger("Responded to '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
@@ -193,9 +193,14 @@ class functions {
 
   displaylogsCommand(msg, command) {
     if (this.isAdmin(msg.member)){
-      let new_log_message_content = "**Bot Log:**\n```\n```:pencil2:";
-      msg.channel.send(new_log_message_content, {split: true}).then(message => this.setLogMessageVariable(message));
-      this.logger("Responded to '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+      if (variables.log_message){
+        msg.author.send("**Invalid Command**");
+        msg.author.send("There is currently active logging to a text channel. Please close that log before starting a new one.");
+      }else{
+        let new_log_message_content = "**Bot Log:**\n```\n```:pencil2:";
+        msg.channel.send(new_log_message_content, {split: true}).then(message => this.setLogMessageVariable(message));
+        this.logger("Responded to '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+      }
     }else{
       msg.author.send("**Blocked Comamand**")
   		msg.author.send("You do not have permission to use this command");
@@ -262,15 +267,15 @@ class functions {
     }else if (msg.member.voiceChannel == null){
       msg.author.send("**Invalid Command**");
       msg.author.send("You must be in a voice channel to play music.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to invalid conditions");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to invalid conditions");
 		}else if (this.voiceChannelIsBlacklisted(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("Sound commands are muted on this voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
     }else if (!this.voiceAllowedToConnect(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("I do not have permission to join this voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
     }else if (!msg.guild.voiceConnection && !variables.blocked){
       let musicdir = fs.readdirSync(constants.music_path);
       let musicdirlen = musicdir.length;
@@ -281,7 +286,7 @@ class functions {
         if (musicdir.indexOf(arg1 + '.mp3') == -1) {
           msg.author.send("**Invalid Command**");
           msg.author.send("Requested song does not exist.");
-          this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
+          this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
         }else{
           this.playSound(msg.member, constants.music_path + "/" + arg1 + ".mp3");
           this.logger("Responded to '!" + command + " " + arg1 + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
@@ -306,15 +311,15 @@ class functions {
     }else if (msg.member.voiceChannel == null){
       msg.author.send("**Invalid Command**");
       msg.author.send("You must be in a voice channel to play sounds.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to invalid conditions");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to invalid conditions");
 		}else if (this.voiceChannelIsBlacklisted(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("Sound commands are muted on this voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
     }else if (!this.voiceAllowedToConnect(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("I do not have permission to join this voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
     }else if (!msg.guild.voiceConnection && !variables.blocked){
       let sounddir = fs.readdirSync(constants.sound_path);
       let sounddirlen = sounddir.length;
@@ -325,7 +330,7 @@ class functions {
         if (sounddir.indexOf(arg1 + '.mp3') == -1) {
           msg.author.send("**Invalid Command**");
           msg.author.send("Requested sound does not exist.");
-          this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
+          this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
         }else{
           this.playSound(msg.member, constants.sound_path + "/" + arg1 + ".mp3");
           this.logger("Responded to '!" + command + " " + arg1 + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
@@ -347,22 +352,22 @@ class functions {
     if (msg.member.voiceChannel == null){
       msg.author.send("**Invalid Command**");
       msg.author.send("You must be in a voice channel to play audio stream.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
     }else if (this.voiceChannelIsBlacklisted(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("Sound commands are muted on this voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because channel is muted");
     }else if (!this.voiceAllowedToConnect(msg.member)){
       msg.author.send("**Blocked Command**");
       msg.author.send("I do not have permission to join that voice channel.");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
     }else if (!msg.guild.voiceConnection && !variables.blocked){
 			if (arg1 == null){
 				msg.author.send("Please provide a URL to a video/audio stream you wish to play.");
-        this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
+        this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect argument(s)");
 			}else{
 				this.playStream(msg.member, arg1);
-        this.logger("Responded to '!" + command + " <" + arg1 + ">' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
+        this.logger("Responded to '!" + command + " " + arg1 + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 			}
     }else{
       if (variables.spamBlocked){
@@ -437,7 +442,7 @@ class functions {
 			}else{
 				msg.author.send("**Invalid Command**");
 				msg.author.send("No sound currently playing on server.");
-        this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
+        this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " due to incorrect conditions");
 			}
 		}else{
       if (variables.spamBlocked){
@@ -462,7 +467,7 @@ class functions {
     }else{
       msg.author.send("**Blocked Comamand**")
   		msg.author.send("You do not have permission to use this command");
-      this.logger("Blocked'!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
+      this.logger("Blocked '!" + command + "' command from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name + " because of insufficient bot privileges");
     }
     msg.delete();
   }

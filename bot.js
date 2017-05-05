@@ -159,7 +159,7 @@ client.on('message', msg => {
 			functions.logger("Replied to mention from " + msg.author.username + " on " + msg.guild.name + ":" + msg.channel.name);
 		}
 		functions.setBlockedVariable(true);
-		bot.query(msg.content.replace("<@" + functions.getBotUserIdVariable() + "> ", ""))
+		bot.query(msg.cleanContent.replace(functions.getBotNameVariable(), "").replace(/@/g, ""))
 		.then(function (response) {
 			msg.reply(response.output);
 		});
