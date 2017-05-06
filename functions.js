@@ -135,10 +135,10 @@ class functions {
   playSound(member, soundpath) {
   	let channel = member.voiceChannel;
   	if (channel == null) return;
-  	channel.join().then(connection => {
+  	channel.join().then((connection) => {
   		let dispatcher = connection.playFile(soundpath);
-  		dispatcher.on('end', end => {
-        channel.leave();
+  		dispatcher.on('end', () => {
+        connection.disconnect();
       });
   	}).catch(err => this.logger(err));
   }
@@ -146,11 +146,11 @@ class functions {
   playStream(member, url) {
   	let channel = member.voiceChannel;
   	if (channel == null) return;
-  	channel.join().then(connection => {
+  	channel.join().then((connection) => {
   		let stream = ytdl(url, {filter : 'audioonly'});
   		let dispatcher = connection.playStream(stream, constants.streamOptions);
-  		dispatcher.on('end', end => {
-        channel.leave();
+  		dispatcher.on('end', () => {
+        connection.disconnect();
       });
   	}).catch(err => this.logger(err));
   }
