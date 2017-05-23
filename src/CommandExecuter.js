@@ -349,6 +349,25 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
+  setusersoundCommand(message, arg1, arg2) {
+    if (!this.util.isAdmin(message.member)){
+      message.author.send("**Blocked Command**");
+      message.author.send("You do not have permission to use this command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    if (!arg1) {
+      message.author.send("**Invalid Command**");
+      message.author.send("Missing target user @mention.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    var id = arg1.replace("<@", "").replace("!", ""). replace(">", "");
+    this.util.setUserSound(id, arg2);
+    this.util.logStandardCommand(message, "setusersound");
+    this.util.cleanupMessage(message);
+  }
+
   stopCommand(message) {
     if (message.guild.voiceConnection){
       message.guild.voiceConnection.disconnect();

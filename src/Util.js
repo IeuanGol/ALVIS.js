@@ -105,9 +105,18 @@ class Util {
   }
 
   playSound(voiceChannel, filepath) {
+    if (voiceChannel.guild.voiceConnection) return;
     if (voiceChannel == null || filepath == null) return;
     voiceChannel.join().then((connection) => {
       const dispatcher = connection.playFile(filepath);
+      connection.on('error', () => {
+        this.logger("Connection with Discord voice servers has been interrupted.");
+        connection.disconnect();
+      });
+      connection.on('failed', () => {
+        this.logger("Connection with Discord voice servers has been interrupted.");
+        connection.disconnect();
+      });
       dispatcher.on('end', () => {
         connection.disconnect();
       });
@@ -122,6 +131,14 @@ class Util {
     voiceChannel.join().then((connection) => {
   		const stream = ytdl(url, {filter: 'audioonly'});
   		const dispatcher = connection.playStream(stream, this.bot.basic.stream_options);
+      connection.on('error', () => {
+        this.logger("Connection with Discord voice servers has been interrupted.");
+        connection.disconnect();
+      });
+      connection.on('failed', () => {
+        this.logger("Connection with Discord voice servers has been interrupted.");
+        connection.disconnect();
+      });
   		dispatcher.on('end', () => {
         connection.disconnect();
       });
@@ -137,6 +154,18 @@ class Util {
   setAudioData(json_data, file, sound_obj) {
     json_data[sound_obj.name] = sound_obj;
     fs.writeFile(file, JSON.stringify(json_data), function(err){
+      return;
+    });
+  }
+
+  setUserSound(id, sound) {
+    if (sound == null){
+      delete this.bot.userSounds[id];
+    }else{
+      this.bot.userSounds[id] = {};
+      this.bot.userSounds[id].sound = this.soundData[sound].file;
+    }
+    fs.writeFile("./config/userSounds.json", JSON.stringify(this.bot.userSounds), function(err){
       return;
     });
   }

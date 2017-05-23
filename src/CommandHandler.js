@@ -49,6 +49,8 @@ class CommandHandler {
       this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){
       this.commandExecuter.sayCommand(message);
+    }else if (command === "setusersound"){
+      this.commandExecuter.setusersoundCommand(message, arg1, arg2);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }

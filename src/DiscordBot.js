@@ -14,6 +14,7 @@ class DiscordBot extends Discord.Client {
     this.responses = require('../config/responses.json');
     this.basic = require('./basic.json');
     this.permissions = require('../config/permissions.json');
+    this.userSounds = require('../config/userSounds.json');
     this.botMessageHandler = new BotMessageHandler(this);
     this.commandHandler = new CommandHandler(this);
     this.chatHandler = new ChatHandler(this);
@@ -30,7 +31,8 @@ class DiscordBot extends Discord.Client {
     this.on('ready', this.readyListener);
     this.on('message', this.messageListener);
     this.on('disconnect', this.disconnectListener);
-    this.on('reconnecting', this.reconnectingListener)
+    this.on('reconnecting', this.reconnectingListener);
+    this.on('voiceStateUpdate', this.voiceStateUpdateListener);
   }
 
   readyListener() {
@@ -64,6 +66,14 @@ class DiscordBot extends Discord.Client {
 
   reconnectingListener() {
     this.util.logger('AutoReconnecting...');
+  }
+
+  voiceStateUpdateListener(oldMember, newMember) {
+    if (newMember.voiceChannel && !oldMember.voiceChannel){
+      if (newMember.voiceChannel.joinable && this.userSounds[newMember.id]){
+        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.userSounds[newMember.id].sound);
+      }
+    }
   }
 }
 
