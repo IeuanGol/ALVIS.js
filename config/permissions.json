@@ -1,0 +1,4 @@
+{
+  "manager_role_ids": ["YOUR_MANAGER_ROLE_ID_HERE"],
+  "admin_role_ids": ["YOUR_ADMIN_ROLE_ID_HERE"]
+}

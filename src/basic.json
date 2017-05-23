@@ -1,0 +1,9 @@
+{
+  "version": "1.7.0",
+  "username": "",
+  "user_id": "",
+  "command_prefix": "!",
+  "sound_path": "./sounds",
+  "music_path": "./music",
+  "stream_options": {"seek": 0, "volume": 1}
+}

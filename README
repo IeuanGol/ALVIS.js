@@ -1,36 +1,43 @@
 'ALVIS' Discord bot, by PacketCloud™
 
 Setting up the bot:
-You must have a Discord bot token and bot licence key.
-You then enter these into the client_token and bot_key fields in the settings section constants.js, respectivley.
+You must have a Discord bot token and Cleverbot licence key.
+You then enter these into the config JSON file within the config folder.
+Enter the unique role ids for specific server roles into the permissions JSON file to give these roles access to restricted commands.
 
-Commands:
-!channelid
+Public Commands:
+!about
 !flip
 !help
-!mute
 !playmusic [?|song_name]
 !playsound [?|sound_name]
 !playstream <Youtube_URL>
-!restart
 !roll
-!serverid
 !stop
-!unmute
-!userid
-!whodis
-(To use, enter commands into any text channel the bot has access to.)
+
+Admin Commands:
+!addmusic <song_name> <file_name_with_extension>
+!addsound <sound_name> <file_name_with_extension>
+!removemusic <song_name>
+!removesound <sound_name>
+
+Manager Commands:
+!addallmusic
+!addallsounds
+!purgemusic
+!purgesounds
+
+(To run commands, enter them into any text channel the bot has access to.)
 
 Settings:
-You can change bot settings manually in constants.js
-Please do not mess with variables.js unless you know what you are doing.
+You can change bot settings manually in the configuration files within the 'config' folder.
+Please do not mess with other files unless you know what you are doing.
 
 Adding Sounds:
 You can add music and sounds simply by adding files to the 'music' and 'sounds' directories.
-They MUST be .mp3 format, and their filenames MUST consist strictly alphanumeric characters and underscores.
+Their filenames MUST consist strictly alphanumeric characters and underscores.
+They must then be added to the sound/music database with !addsound or !addmusic commands.
 
-Future Changes:
-In the future, there may be configuration files instead of changing settings in a .js file.
 
 NOTE:
-Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to any of these sounds
+Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to all of these sounds.

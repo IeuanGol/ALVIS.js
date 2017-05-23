@@ -1,0 +1,10 @@
+{
+  "token": "YOUR_DISCORD_BOT_TOKEN",
+  "chatbot_key": "YOUR_CLEVERBOT_LICENSE_KEY",
+  "bot_name": "ALVIS",
+  "bot_game": "by PacketCloud™",
+  "bot_game_link": "",
+  "size": 1000000,
+  "mute_time": 900000,
+  "deleteMessages": true
+}
