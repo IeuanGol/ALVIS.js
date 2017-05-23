@@ -48,7 +48,7 @@ class CommandHandler {
     }else if (command === "roll"){
       this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){
-      bot.commandExecuter.sayCommand(message);
+      this.commandExecuter.sayCommand(message);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }

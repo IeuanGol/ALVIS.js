@@ -148,25 +148,31 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    if (arg1 == null){
-      var obj_keys = Object.keys(this.util.musicData);
-      var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
-      this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
-      if (message.channel instanceof Discord.TextChannel) {
-        this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-      }else {
-        this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic' command from " + message.author.username);
-      }
-    }else{
-      if (this.util.musicData[arg1] == null){
-        message.author.send("**Invalid Command**");
-        message.author.send("Requested song does not exist.");
-      }else{
-        this.playsound(channel, path + "/" + this.util.musicData[arg1].file);
+    if (!channel.joinable){
+      message.author.send("**Blocked Command**");
+      message.author.send("I do not have permission to join that channel.");
+    }
+    if (!message.guild.voiceConnection){
+      if (arg1 == null){
+        var obj_keys = Object.keys(this.util.musicData);
+        var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+        this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
         if (message.channel instanceof Discord.TextChannel) {
-          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+        }else {
+          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic' command from " + message.author.username);
+        }
+      }else{
+        if (this.util.musicData[arg1] == null){
+          message.author.send("**Invalid Command**");
+          message.author.send("Requested song does not exist.");
         }else{
-          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 +"' command from " + message.author.username);
+          this.playsound(channel, path + "/" + this.util.musicData[arg1].file);
+          if (message.channel instanceof Discord.TextChannel) {
+            this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+          }else{
+            this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 +"' command from " + message.author.username);
+          }
         }
       }
     }
@@ -192,25 +198,31 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    if (arg1 == null){
-      var obj_keys = Object.keys(this.util.soundData);
-      var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
-      this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file);
-      if (message.channel instanceof Discord.TextChannel) {
-        this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-      }else {
-        this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound' command from " + message.author.username);
-      }
-    }else{
-      if (this.util.soundData[arg1] == null){
-        message.author.send("**Invalid Command**");
-        message.author.send("Requested sound does not exist.");
-      }else{
-        this.util.playSound(channel, path + "/" + this.util.soundData[arg1].file);
+    if (!channel.joinable){
+      message.author.send("**Blocked Command**");
+      message.author.send("I do not have permission to join that channel.");
+    }
+    if (!message.guild.voiceConnection){
+      if (arg1 == null){
+        var obj_keys = Object.keys(this.util.soundData);
+        var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+        this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file);
         if (message.channel instanceof Discord.TextChannel) {
-          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+        }else {
+          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound' command from " + message.author.username);
+        }
+      }else{
+        if (this.util.soundData[arg1] == null){
+          message.author.send("**Invalid Command**");
+          message.author.send("Requested sound does not exist.");
         }else{
-          this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound " + arg1 +"' command from " + message.author.username);
+          this.util.playSound(channel, path + "/" + this.util.soundData[arg1].file);
+          if (message.channel instanceof Discord.TextChannel) {
+            this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+          }else{
+            this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound " + arg1 +"' command from " + message.author.username);
+          }
         }
       }
     }
@@ -225,8 +237,14 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    this.util.playStream(channel, arg1);
-    this.util.logStandardCommand(message, "playstream");
+    if (!channel.joinable){
+      message.author.send("**Blocked Command**");
+      message.author.send("I do not have permission to join that channel.");
+    }
+    if (!message.guild.voiceConnection){
+      this.util.playStream(channel, arg1);
+      this.util.logStandardCommand(message, "playstream");
+    }
     this.util.cleanupMessage(message);
   }
 
