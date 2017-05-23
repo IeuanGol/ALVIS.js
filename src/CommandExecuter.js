@@ -151,6 +151,8 @@ class CommandExecuter {
     if (!channel.joinable){
       message.author.send("**Blocked Command**");
       message.author.send("I do not have permission to join that channel.");
+      this.util.cleanupMessage(message);
+      return;
     }
     if (!message.guild.voiceConnection){
       if (arg1 == null){
@@ -201,6 +203,8 @@ class CommandExecuter {
     if (!channel.joinable){
       message.author.send("**Blocked Command**");
       message.author.send("I do not have permission to join that channel.");
+      this.util.cleanupMessage(message);
+      return;
     }
     if (!message.guild.voiceConnection){
       if (arg1 == null){
@@ -240,6 +244,8 @@ class CommandExecuter {
     if (!channel.joinable){
       message.author.send("**Blocked Command**");
       message.author.send("I do not have permission to join that channel.");
+      this.util.cleanupMessage(message);
+      return;
     }
     if (!message.guild.voiceConnection){
       this.util.playStream(channel, arg1);
