@@ -171,7 +171,7 @@ class CommandExecuter {
           message.author.send("**Invalid Command**");
           message.author.send("Song '" + arg1 + "' does not exist.");
         }else{
-          this.playsound(channel, path + "/" + this.util.musicData[arg1].file);
+          this.util.playSound(channel, path + "/" + this.util.musicData[arg1].file);
           if (message.channel instanceof Discord.TextChannel) {
             this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
           }else{
