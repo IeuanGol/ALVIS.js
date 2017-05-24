@@ -19,7 +19,8 @@ class CommandExecuter {
     var file_list = fs.readdirSync(this.bot.basic.music_path);
     for (var i in file_list){
       var sound = file_list[i];
-      var ext = sound.split(".")[1];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
       var name = sound.split(".")[0];
       if (ext != "json"){
         this.util.musicData[name] = {"name": name, "file": sound};
@@ -44,7 +45,8 @@ class CommandExecuter {
     var file_list = fs.readdirSync(this.bot.basic.sound_path);
     for (var i in file_list){
       var sound = file_list[i];
-      var ext = sound.split(".")[1];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
       var name = sound.split(".")[0];
       if (ext != "json"){
         this.util.soundData[name] = {"name": name, "file": sound};
@@ -167,7 +169,7 @@ class CommandExecuter {
       }else{
         if (this.util.musicData[arg1] == null){
           message.author.send("**Invalid Command**");
-          message.author.send("Requested song does not exist.");
+          message.author.send("Song '" + arg1 + "' does not exist.");
         }else{
           this.playsound(channel, path + "/" + this.util.musicData[arg1].file);
           if (message.channel instanceof Discord.TextChannel) {
@@ -219,7 +221,7 @@ class CommandExecuter {
       }else{
         if (this.util.soundData[arg1] == null){
           message.author.send("**Invalid Command**");
-          message.author.send("Requested sound does not exist.");
+          message.author.send("Sound '" + arg1 + "' does not exist.");
         }else{
           this.util.playSound(channel, path + "/" + this.util.soundData[arg1].file);
           if (message.channel instanceof Discord.TextChannel) {
@@ -363,8 +365,12 @@ class CommandExecuter {
       return;
     }
     var id = arg1.replace("<@", "").replace("!", ""). replace(">", "");
-    this.util.setUserSound(id, arg2);
-    this.util.logStandardCommand(message, "setusersound");
+    if (this.util.setUserSound(id, arg2)){
+      this.util.logStandardCommand(message, "setusersound");
+    }else{
+      message.author.send("**Invalid Command**");
+      message.author.send("Sound '" + arg2 + "' does not exist.");
+    }
     this.util.cleanupMessage(message);
   }
 

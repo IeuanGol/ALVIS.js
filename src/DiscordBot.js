@@ -72,6 +72,7 @@ class DiscordBot extends Discord.Client {
     if (newMember.voiceChannel && !oldMember.voiceChannel){
       if (newMember.voiceChannel.joinable && this.userSounds[newMember.id]){
         this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.userSounds[newMember.id].sound);
+        this.util.logger("Played user sound for " + newMember.user.username + " on " + newMember.guild.name + ":" + newMember.voiceChannel.name);
       }
     }
   }
