@@ -1,4 +1,5 @@
-'ALVIS' Discord bot, by PacketCloud™
+'ALVIS' Discord bot, by PacketCloudï¿½
+Version: 1.7.1
 
 Setting up the bot:
 You must have a Discord bot token and Cleverbot licence key.
@@ -20,6 +21,7 @@ Admin Commands:
 !addsound <sound_name> <file_name_with_extension>
 !removemusic <song_name>
 !removesound <sound_name>
+!setusersound <@mention_target_user> [sound_name]
 
 Manager Commands:
 !addallmusic
