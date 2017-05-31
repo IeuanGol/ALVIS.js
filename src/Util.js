@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 
+var username_holder = "";
+
 class Util {
   constructor(bot) {
     this.bot = bot;
@@ -106,6 +108,7 @@ class Util {
 
   playSound(voiceChannel, filepath) {
     if (voiceChannel.guild.voiceConnection) return;
+    if (!voiceChannel.joinable || !voiceChannel.speakable || voiceChannel.full) return;
     if (voiceChannel == null || filepath == null) return;
     voiceChannel.join().then((connection) => {
       const dispatcher = connection.playFile(filepath);
@@ -121,6 +124,7 @@ class Util {
         connection.disconnect();
       });
     }).catch((error) => {
+      channel.leave();
       this.logger("An error occured in sound playback:");
       console.log(error);
     })
@@ -143,6 +147,8 @@ class Util {
         connection.disconnect();
       });
   	}).catch((err) => {
+      channel.leave();
+      this.logger("An error occured in stream playback:");
       this.logger(err)
     });
   }
@@ -171,6 +177,19 @@ class Util {
       return;
     });
     return true;
+  }
+
+  sendUserSounds(message) {
+    var obj_keys = Object.keys(this.bot.userSounds);
+    var usersounds = this.bot.userSounds;
+    for (var i in obj_keys){
+      var user_id = obj_keys[i];
+      this.bot.fetchUser(user_id).then(function(user){
+        message.author.send("**" + user.username + ":** " + usersounds[user.id].sound);
+      }).catch((err) => {
+        console.log(err);
+      });
+    }
   }
 }
 

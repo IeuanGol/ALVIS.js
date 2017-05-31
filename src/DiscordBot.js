@@ -70,7 +70,7 @@ class DiscordBot extends Discord.Client {
 
   voiceStateUpdateListener(oldMember, newMember) {
     if (newMember.voiceChannel && !oldMember.voiceChannel){
-      if (newMember.voiceChannel.joinable && this.userSounds[newMember.id]){
+      if (newMember.voiceChannel.joinable && !newMember.voiceChannel.full && newMember.voiceChannel.speakable && (newMember.voiceChannel.members.array().length > 1) && this.userSounds[newMember.id] && !newMember.guild.voiceConnection){
         this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.userSounds[newMember.id].sound);
         this.util.logger("Played user sound for " + newMember.user.username + " on " + newMember.guild.name + ":" + newMember.voiceChannel.name);
       }

@@ -51,6 +51,8 @@ class CommandHandler {
       this.commandExecuter.sayCommand(message);
     }else if (command === "setusersound"){
       this.commandExecuter.setusersoundCommand(message, arg1, arg2);
+    }else if (command === "showusersounds"){
+      this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }

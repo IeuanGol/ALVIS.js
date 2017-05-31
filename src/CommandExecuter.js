@@ -365,12 +365,28 @@ class CommandExecuter {
       return;
     }
     var id = arg1.replace("<@", "").replace("!", ""). replace(">", "");
-    if (this.util.setUserSound(id, arg2)){
+    if (isNaN(id) || !(arg1.includes("<@") && arg1.includes(">"))){
+      message.author.send("**Invalid Command**");
+      message.author.send("First argument is not a proper @mention of target user.");
+    }else if (this.util.setUserSound(id, arg2)){
       this.util.logStandardCommand(message, "setusersound");
     }else{
       message.author.send("**Invalid Command**");
       message.author.send("Sound '" + arg2 + "' does not exist.");
     }
+    this.util.cleanupMessage(message);
+  }
+
+  showusersoundsCommand(message) {
+    if (!this.util.isAdmin(message.member)){
+      message.author.send("**Blocked Command**");
+      message.author.send("You do not have permission to use this command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    message.author.send("**__User Sounds:__**");
+    this.util.sendUserSounds(message);
+    this.util.logStandardCommand(message,"showusersounds");
     this.util.cleanupMessage(message);
   }
 
