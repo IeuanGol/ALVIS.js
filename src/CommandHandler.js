@@ -55,6 +55,10 @@ class CommandHandler {
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
+    }else{
+      message.author.send("**Invalid Command**");
+      message.author.send("Command not recognized.");
+      this.bot.util.cleanupMessage(message);
     }
   }
 }

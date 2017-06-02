@@ -10,7 +10,7 @@ class DMHandler {
       this.dmCommandHandler(message);
       return;
     }
-    this.bot.util.queryChatbotResponse(message);
+    this.bot.util.queryBotResponse(message);
   }
 
   dmCommandHandler(message){

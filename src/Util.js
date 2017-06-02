@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
-
-var username_holder = "";
+const ResponseHandler = require('./AI/ResponseHandler.js');
 
 class Util {
   constructor(bot) {
     this.bot = bot;
+    this.responseHandler = bot.responseHandler;
     this.musicData = require("." + this.bot.basic.music_path + "/music.json");
     this.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
   }
@@ -25,18 +25,21 @@ class Util {
     }
   }
 
-  queryChatbotResponse(message) {
-    this.bot.chatbot.query(message.cleanContent.replace(this.bot.basic.username, "").replace(/@/g, ""))
-    .then(function(response){
-      message.reply(response.output);
+  queryBotResponse(message) {
+    var query_message = message.cleanContent;
+    if (message.channel instanceof Discord.TextChannel) query_message = query_message.replace(this.bot.basic.username, "").replace(/@/g, "");
+    if (query_message.length < 1) query_message = "?";
+    var handler = this.responseHandler;
+    var request = this.bot.chatbot.textRequest(query_message, {
+      sessionId: message.author.id.toString()
     });
-    if (message.channel instanceof Discord.DMChannel){
-			this.logger("Replied to DM from " + message.author.username);
-		}else if (message.channel instanceof Discord.TextChannel) {
-			this.logger("Replied to mention from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-		}else {
-      this.logger("Replied to message from " + message.author.username);
-    }
+    request.on('response', function(response) {
+      handler.handle(message, response);
+    });
+    request.on('error', function(error) {
+      console.log(error);
+    });
+    request.end();
   }
 
   getRandomInt(min, max) {
@@ -114,17 +117,17 @@ class Util {
       const dispatcher = connection.playFile(filepath);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        connection.disconnect();
+        voiceChannel.leave();
       });
       connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        connection.disconnect();
+        voiceChannel.leave();
       });
       dispatcher.on('end', () => {
         connection.disconnect();
       });
     }).catch((error) => {
-      channel.leave();
+      voiceChannel.leave();
       this.logger("An error occured in sound playback:");
       console.log(error);
     })
@@ -137,19 +140,19 @@ class Util {
   		const dispatcher = connection.playStream(stream, this.bot.basic.stream_options);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        connection.disconnect();
+        voiceChannel.leave();
       });
       connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        connection.disconnect();
+        voiceChannel.leave();
       });
   		dispatcher.on('end', () => {
         connection.disconnect();
       });
   	}).catch((err) => {
-      channel.leave();
+      voiceChannel.leave();
       this.logger("An error occured in stream playback:");
-      this.logger(err)
+      console.log(err);
     });
   }
 

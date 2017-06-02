@@ -8,6 +8,7 @@ class CommandExecuter {
     this.bot = bot;
     this.util = new Util(bot);
   }
+  
   addallmusicCommand(message) {
     if (!this.util.isManager(message.member)){
       message.author.send("**Blocked Command**");
@@ -27,7 +28,7 @@ class CommandExecuter {
       }
     }
     var file = this.bot.basic.music_path + "/music.json";
-    fs.writeFile(file, JSON.stringify(this.util.musicData), function(err){
+    fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
       return;
     });
     this.util.logStandardCommand(message, "addallmusic");
@@ -53,7 +54,7 @@ class CommandExecuter {
       }
     }
     var file = this.bot.basic.sound_path + "/sounds.json";
-    fs.writeFile(file, JSON.stringify(this.util.soundData), function(err){
+    fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
       return;
     });
     this.util.logStandardCommand(message, "addallsounds");
@@ -265,7 +266,7 @@ class CommandExecuter {
     }
     var json_data = {};
     var file = this.bot.basic.music_path + "/music.json";
-    fs.writeFile(file, JSON.stringify(json_data), function(err){
+    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
     this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
@@ -283,7 +284,7 @@ class CommandExecuter {
     }
     var json_data = {};
     var file = this.bot.basic.sound_path + "/sounds.json";
-    fs.writeFile(file, JSON.stringify(json_data), function(err){
+    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
     this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
@@ -301,7 +302,7 @@ class CommandExecuter {
     var json_data = this.util.musicData;
     delete json_data[arg1];
     var file = this.bot.basic.music_path + "/music.json";
-    fs.writeFile(file, JSON.stringify(json_data), function(err){
+    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
     this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
@@ -320,7 +321,7 @@ class CommandExecuter {
     var json_data = this.util.soundData;
     delete json_data[arg1];
     var file = this.bot.basic.sound_path + "/sounds.json";
-    fs.writeFile(file, JSON.stringify(json_data), function(err){
+    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
     this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");

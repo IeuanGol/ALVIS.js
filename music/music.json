@@ -1,1 +1,194 @@
-{"allahu_trapbar":{"name":"allahu_trapbar","file":"allahu_trapbar.mp3"},"all_star":{"name":"all_star","file":"all_star.mp3"},"all_star_mlg":{"name":"all_star_mlg","file":"all_star_mlg.mp3"},"america":{"name":"america","file":"america.mp3"},"attack_on_titan":{"name":"attack_on_titan","file":"attack_on_titan.mp3"},"call_me_maybe":{"name":"call_me_maybe","file":"call_me_maybe.mp3"},"cantina_song":{"name":"cantina_song","file":"cantina_song.mp3"},"carrot_for_a_cock":{"name":"carrot_for_a_cock","file":"carrot_for_a_cock.mp3"},"danger_zone":{"name":"danger_zone","file":"danger_zone.mp3"},"diggy_diggy_hole":{"name":"diggy_diggy_hole","file":"diggy_diggy_hole.mp3"},"door":{"name":"door","file":"door.mp3"},"dora_the_explora":{"name":"dora_the_explora","file":"dora_the_explora.mp3"},"epic_sax":{"name":"epic_sax","file":"epic_sax.mp3"},"fun_song":{"name":"fun_song","file":"fun_song.mp3"},"goofy_goober_rock":{"name":"goofy_goober_rock","file":"goofy_goober_rock.mp3"},"grrreat":{"name":"grrreat","file":"grrreat.mp3"},"harder_better_faster_china":{"name":"harder_better_faster_china","file":"harder_better_faster_china.mp3"},"hoc_theme":{"name":"hoc_theme","file":"hoc_theme.mp3"},"just_do_it":{"name":"just_do_it","file":"just_do_it.mp3"},"kill_yourself":{"name":"kill_yourself","file":"kill_yourself.mp3"},"let_it_go_pg":{"name":"let_it_go_pg","file":"let_it_go_pg.mp3"},"my_heart_will_go_on":{"name":"my_heart_will_go_on","file":"my_heart_will_go_on.mp3"},"now_that_we're_men":{"name":"now_that_we're_men","file":"now_that_we're_men.mp3"},"numa_numa":{"name":"numa_numa","file":"numa_numa.mp3"},"number_one":{"name":"number_one","file":"number_one.mp3"},"please_stop_calling_me_gay":{"name":"please_stop_calling_me_gay","file":"please_stop_calling_me_gay.mp3"},"potatos":{"name":"potatos","file":"potatos.mp3"},"ppap":{"name":"ppap","file":"ppap.mp3"},"ramen_king":{"name":"ramen_king","file":"ramen_king.mp3"},"reposted":{"name":"reposted","file":"reposted.mp3"},"reposted_all_star":{"name":"reposted_all_star","file":"reposted_all_star.mp3"},"roundabout":{"name":"roundabout","file":"roundabout.mp3"},"space_oddity":{"name":"space_oddity","file":"space_oddity.mp3"},"stfu":{"name":"stfu","file":"stfu.mp3"},"still_alive":{"name":"still_alive","file":"still_alive.mp3"},"sweet_victory":{"name":"sweet_victory","file":"sweet_victory.mp3"},"troll":{"name":"troll","file":"troll.mp3"},"ultimate_showdown":{"name":"ultimate_showdown","file":"ultimate_showdown.mp3"},"you_are_a_pirate":{"name":"you_are_a_pirate","file":"you_are_a_pirate.mp3"},"z_deadshot":{"name":"z_deadshot","file":"z_deadshot.mp3"},"z_double_tap":{"name":"z_double_tap","file":"z_double_tap.mp3"},"z_juggernog":{"name":"z_juggernog","file":"z_juggernog.mp3"},"z_pack_a_punch":{"name":"z_pack_a_punch","file":"z_pack_a_punch.mp3"},"z_phd_flopper":{"name":"z_phd_flopper","file":"z_phd_flopper.mp3"},"z_quick_revive":{"name":"z_quick_revive","file":"z_quick_revive.mp3"},"z_speed_cola":{"name":"z_speed_cola","file":"z_speed_cola.mp3"},"z_stamin_up":{"name":"z_stamin_up","file":"z_stamin_up.mp3"},"z_widows_wine":{"name":"z_widows_wine","file":"z_widows_wine.mp3"}}
+{
+    "allahu_trapbar": {
+        "name": "allahu_trapbar",
+        "file": "allahu_trapbar.mp3"
+    },
+    "all_star": {
+        "name": "all_star",
+        "file": "all_star.mp3"
+    },
+    "all_star_mlg": {
+        "name": "all_star_mlg",
+        "file": "all_star_mlg.mp3"
+    },
+    "america": {
+        "name": "america",
+        "file": "america.mp3"
+    },
+    "attack_on_titan": {
+        "name": "attack_on_titan",
+        "file": "attack_on_titan.mp3"
+    },
+    "call_me_maybe": {
+        "name": "call_me_maybe",
+        "file": "call_me_maybe.mp3"
+    },
+    "cantina_song": {
+        "name": "cantina_song",
+        "file": "cantina_song.mp3"
+    },
+    "carrot_for_a_cock": {
+        "name": "carrot_for_a_cock",
+        "file": "carrot_for_a_cock.mp3"
+    },
+    "danger_zone": {
+        "name": "danger_zone",
+        "file": "danger_zone.mp3"
+    },
+    "diggy_diggy_hole": {
+        "name": "diggy_diggy_hole",
+        "file": "diggy_diggy_hole.mp3"
+    },
+    "door": {
+        "name": "door",
+        "file": "door.mp3"
+    },
+    "dora_the_explora": {
+        "name": "dora_the_explora",
+        "file": "dora_the_explora.mp3"
+    },
+    "epic_sax": {
+        "name": "epic_sax",
+        "file": "epic_sax.mp3"
+    },
+    "fun_song": {
+        "name": "fun_song",
+        "file": "fun_song.mp3"
+    },
+    "goofy_goober_rock": {
+        "name": "goofy_goober_rock",
+        "file": "goofy_goober_rock.mp3"
+    },
+    "grrreat": {
+        "name": "grrreat",
+        "file": "grrreat.mp3"
+    },
+    "harder_better_faster_china": {
+        "name": "harder_better_faster_china",
+        "file": "harder_better_faster_china.mp3"
+    },
+    "hoc_theme": {
+        "name": "hoc_theme",
+        "file": "hoc_theme.mp3"
+    },
+    "just_do_it": {
+        "name": "just_do_it",
+        "file": "just_do_it.mp3"
+    },
+    "kill_yourself": {
+        "name": "kill_yourself",
+        "file": "kill_yourself.mp3"
+    },
+    "let_it_go_pg": {
+        "name": "let_it_go_pg",
+        "file": "let_it_go_pg.mp3"
+    },
+    "my_heart_will_go_on": {
+        "name": "my_heart_will_go_on",
+        "file": "my_heart_will_go_on.mp3"
+    },
+    "now_that_we're_men": {
+        "name": "now_that_we're_men",
+        "file": "now_that_we're_men.mp3"
+    },
+    "numa_numa": {
+        "name": "numa_numa",
+        "file": "numa_numa.mp3"
+    },
+    "number_one": {
+        "name": "number_one",
+        "file": "number_one.mp3"
+    },
+    "please_stop_calling_me_gay": {
+        "name": "please_stop_calling_me_gay",
+        "file": "please_stop_calling_me_gay.mp3"
+    },
+    "potatos": {
+        "name": "potatos",
+        "file": "potatos.mp3"
+    },
+    "ppap": {
+        "name": "ppap",
+        "file": "ppap.mp3"
+    },
+    "ramen_king": {
+        "name": "ramen_king",
+        "file": "ramen_king.mp3"
+    },
+    "reposted": {
+        "name": "reposted",
+        "file": "reposted.mp3"
+    },
+    "reposted_all_star": {
+        "name": "reposted_all_star",
+        "file": "reposted_all_star.mp3"
+    },
+    "roundabout": {
+        "name": "roundabout",
+        "file": "roundabout.mp3"
+    },
+    "space_oddity": {
+        "name": "space_oddity",
+        "file": "space_oddity.mp3"
+    },
+    "stfu": {
+        "name": "stfu",
+        "file": "stfu.mp3"
+    },
+    "still_alive": {
+        "name": "still_alive",
+        "file": "still_alive.mp3"
+    },
+    "sweet_victory": {
+        "name": "sweet_victory",
+        "file": "sweet_victory.mp3"
+    },
+    "troll": {
+        "name": "troll",
+        "file": "troll.mp3"
+    },
+    "ultimate_showdown": {
+        "name": "ultimate_showdown",
+        "file": "ultimate_showdown.mp3"
+    },
+    "you_are_a_pirate": {
+        "name": "you_are_a_pirate",
+        "file": "you_are_a_pirate.mp3"
+    },
+    "z_deadshot": {
+        "name": "z_deadshot",
+        "file": "z_deadshot.mp3"
+    },
+    "z_double_tap": {
+        "name": "z_double_tap",
+        "file": "z_double_tap.mp3"
+    },
+    "z_juggernog": {
+        "name": "z_juggernog",
+        "file": "z_juggernog.mp3"
+    },
+    "z_pack_a_punch": {
+        "name": "z_pack_a_punch",
+        "file": "z_pack_a_punch.mp3"
+    },
+    "z_phd_flopper": {
+        "name": "z_phd_flopper",
+        "file": "z_phd_flopper.mp3"
+    },
+    "z_quick_revive": {
+        "name": "z_quick_revive",
+        "file": "z_quick_revive.mp3"
+    },
+    "z_speed_cola": {
+        "name": "z_speed_cola",
+        "file": "z_speed_cola.mp3"
+    },
+    "z_stamin_up": {
+        "name": "z_stamin_up",
+        "file": "z_stamin_up.mp3"
+    },
+    "z_widows_wine": {
+        "name": "z_widows_wine",
+        "file": "z_widows_wine.mp3"
+    }
+}

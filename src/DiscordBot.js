@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const fs = require('fs');
-const Cleverbot = require('cleverbot');
+const APIai = require('apiai');
 const BotMessageHandler = require('./BotMessageHandler.js');
+const ResponseHandler = require('./AI/ResponseHandler.js');
 const CommandHandler = require('./CommandHandler.js');
 const ChatHandler = require('./ChatHandler.js');
 const DMHandler = require('./DMHandler.js');
@@ -16,10 +17,11 @@ class DiscordBot extends Discord.Client {
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('../config/userSounds.json');
     this.botMessageHandler = new BotMessageHandler(this);
+    this.responseHandler = new ResponseHandler(this);
     this.commandHandler = new CommandHandler(this);
     this.chatHandler = new ChatHandler(this);
     this.dmHandler = new DMHandler(this);
-    this.chatbot = new Cleverbot({key: this.config.chatbot_key});
+    this.chatbot = APIai(this.config.chatbot_key);
     this.util = new Util(this);
 
     this.addEventListeners();

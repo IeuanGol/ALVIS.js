@@ -10,7 +10,7 @@ class ChatHandler {
       return;
     }
     if (message.isMentioned(this.bot.basic.user_id)){
-      this.bot.util.queryChatbotResponse(message);
+      this.bot.util.queryBotResponse(message);
       return;
     }
     const rawcontent = message.content.toLowerCase();

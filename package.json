@@ -4,12 +4,19 @@
   "description": "A Discord Bot to play sounds, manage servers and responds with chatbot",
   "main": "bot.js",
   "dependencies": {
-    "@google-cloud/speech": "^0.9.2",
     "Cleverbot": "^1.0.1",
-    "config": "^1.21.0",
-    "discord.js": "hydrabolt/discord.js",
+    "apiai": "^4.0.2",
+    "bufferutil": "^3.0.1",
+    "config": "^1.26.1",
+    "discord.js": "github:hydrabolt/discord.js",
+    "google-speech": "0.0.5",
+    "google-tts-api": "^0.0.1",
+    "libsodium-wrappers": "^0.5.1",
     "lowdb": "^0.14.0",
-    "node-opus": "^0.2.2"
+    "node-opus": "^0.2.2",
+    "opusscript": "0.0.3",
+    "uws": "^0.14.5",
+    "ytdl-core": "^0.14.2"
   },
   "optionalDependencies": {},
   "devDependencies": {},
