@@ -15,18 +15,25 @@ class DiscordBot extends Discord.Client {
     this.responses = require('../config/responses.json');
     this.basic = require('./basic.json');
     this.permissions = require('../config/permissions.json');
-    this.userSounds = require('../config/userSounds.json');
+    this.userSounds = require('./userSounds.json');
     this.botMessageHandler = new BotMessageHandler(this);
     this.responseHandler = new ResponseHandler(this);
     this.commandHandler = new CommandHandler(this);
     this.chatHandler = new ChatHandler(this);
     this.dmHandler = new DMHandler(this);
-    this.chatbot = APIai(this.config.chatbot_key);
     this.util = new Util(this);
+
+    this.startupIntegrityCheck();
+
+    this.chatbot = APIai(this.config.chatbot_key);
 
     this.addEventListeners();
 
     this.login(this.config.token);
+  }
+
+  startupIntegrityCheck() {
+    this.util.startupIntegrityCheck();
   }
 
   addEventListeners() {
@@ -73,8 +80,13 @@ class DiscordBot extends Discord.Client {
 
   guildMemberAddListener(newMember) {
     var defaultChannel = newMember.guild.defaultChannel;
-    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions.\n**@mention** or **DM** me for further assistance.\n\n<@&" + this.permissions.admin_role_id + "> <@&" + this.permissions.manager_role_id + ">, please configure their roles as needed.");
-    newMember.addRole(this.permissions.default_role_id);
+    var admin_role_id = newMember.guild.roles.find("name", this.permissions.admin_role).id;
+    var manager_role_id = newMember.guild.roles.find("name", this.permissions.manager_role).id;
+    var default_role_id = newMember.guild.roles.find("name", this.permissions.default_role).id;
+    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions.\n**@mention** or **DM** me for further assistance.\n\n<@&" + admin_role_id + "> <@&" + manager_role_id + ">, please configure their roles as needed.");
+    if (this.permissions.default_role !== ""){
+      newMember.addRole(this.permissions.default_role_id);
+    }
     this.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name);
   }
 

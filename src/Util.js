@@ -53,13 +53,13 @@ class Util {
   }
 
   isManager(member) {
-  	if (member.roles.has(this.bot.permissions.manager_role_id)) return true;
+  	if (member.roles.find("name", this.bot.permissions.manager_role)) return true;
   	return false;
   }
 
   isAdmin(member) {
     if (this.isManager(member)) return true;
-  	if (member.roles.has(this.bot.permissions.admin_role_id)) return true;
+  	if (member.roles.find("name", this.bot.permissions.admin_role)) return true;
   	return false;
   }
 
@@ -154,6 +154,97 @@ class Util {
     });
   }
 
+  setDefaultConfig() {
+    var json_data = {"token": "YOUR_DISCORD_BOT_TOKEN", "chatbot_key": "YOUR_API.AI_AGENT_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
+      if (err) console.log(err);
+    });
+  }
+
+  setDefaultPermissions() {
+    var json_data = {"manager_role": "", "admin_role": "", "default_role": ""};
+    fs.writeFile("./config/permissions.json", JSON.stringify(json_data, null, 4), function(err){
+      if (err) console.log(err);
+    });
+  }
+
+  startupIntegrityCheck() {
+    if (!this.bot.config.hasOwnProperty("token") || typeof this.bot.config.token !== 'string'){
+      this.setDefaultConfig();
+      return;
+    }
+    if (!this.bot.config.hasOwnProperty("chatbot_key") || typeof this.bot.config.chatbot_key !== 'string'){
+      this.setDefaultConfig();
+      return;
+    }
+    if (!this.bot.config.hasOwnProperty("bot_game") || typeof this.bot.config.bot_game !== 'string'){
+      this.setDefaultConfig();
+      return;
+    }
+    if (!this.bot.config.hasOwnProperty("bot_game_link") || typeof this.bot.config.bot_game_link !== 'string'){
+      this.setDefaultConfig();
+      return;
+    }
+    if (!this.bot.config.hasOwnProperty("deleteMessages") || typeof this.bot.config.deleteMessages !== 'boolean'){
+      this.setDefaultConfig();
+      return;
+    }
+    if (!this.bot.permissions.hasOwnProperty("manager_role") || typeof this.bot.permissions.manager_role !== 'string'){
+      this.setDefaultPermissions();
+      return;
+    }
+    if (!this.bot.permissions.hasOwnProperty("admin_role") || typeof this.bot.permissions.admin_role !== 'string'){
+      this.setDefaultPermissions();
+      return;
+    }
+    if (!this.bot.permissions.hasOwnProperty("default_role") || typeof this.bot.permissions.default_role !== 'string'){
+      this.setDefaultPermissions();
+      return;
+    }
+    if (this.bot.config.token == "" || this.bot.config.token == "YOUR_DISCORD_BOT_TOKEN"){
+      console.log("\n>>>>>>>>>> Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.\n");
+      setTimeout(function(){
+        throw new Error("Discord bot token not configured.");
+      }, 500);
+      return;
+    }
+    if (this.bot.config.chatbot_key == "" || this.bot.config.chatbot_key == "YOUR_API.AI_AGENT_KEY"){
+      console.log("\n>>>>>>>>>> API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.\n");
+      setTimeout(function(){
+        throw new Error("API.AI agent token not configured.");
+      }, 500);
+      return;
+    }
+    if (this.bot.permissions.manager_role == ""){
+      console.log("\n>>>>>>>>>> Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.\n");
+      setTimeout(function(){
+        throw new Error("Manager role not configured.");
+      }, 500);
+      return;
+    }
+    if (this.bot.permissions.admin_role == ""){
+      console.log("\n>>>>>>>>>> Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.\n");
+      setTimeout(function(){
+        throw new Error("Admin role not configured.");
+      }, 500);
+      return;
+    }
+  }
+
+  throwConfigError() {
+    console.log("\n>>>>>>>>>> There was a problem with your configuration file. It has been reset to default values. Please re-configure it in './config/config.json'. See README for more information.\n");
+    setTimeout(function(){
+      throw new Error("Problem with configuration file.");
+    }, 500);
+  }
+
+  throwPermissionsError() {
+    console.log("\n>>>>>>>>>> There was a problem with your permissions file. It has been reset to default values. Please re-configure it in './config/permissions.json'. See README for more information.\n");
+    setTimeout(function(){
+      throw new Error("Problem with permissions file.");
+    }, 500);
+  }
+
   getAudioData(json_file, sound_name) {
     return json_file.sound_name;
   }
@@ -162,7 +253,7 @@ class Util {
     json_data[sound_obj.name] = sound_obj;
     json_data = this.alphabetizeByKey(json_data);
     fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
-      return;
+      console.log(err);
     });
   }
 
@@ -188,7 +279,7 @@ class Util {
     }else{
       return false;
     }
-    fs.writeFile("./config/userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
+    fs.writeFile("./userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
       return;
     });
     return true;
