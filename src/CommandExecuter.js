@@ -8,7 +8,7 @@ class CommandExecuter {
     this.bot = bot;
     this.util = new Util(bot);
   }
-  
+
   addallmusicCommand(message) {
     if (!this.util.isManager(message.member)){
       message.author.send("**Blocked Command**");
@@ -16,17 +16,19 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    this.util.musicData = {};
     var file_list = fs.readdirSync(this.bot.basic.music_path);
     for (var i in file_list){
       var sound = file_list[i];
       var ext = sound.split(".");
       ext = ext[ext.length - 1];
-      var name = sound.split(".")[0];
-      if (ext != "json"){
-        this.util.musicData[name] = {"name": name, "file": sound};
+      var name = sound.slice(0, -ext.length - 1);
+      if (!this.util.musicData.hasOwnProperty(name)){
+        if (ext != "json"){
+          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artist": "", "aliases": [], "tags": []};
+        }
       }
     }
+    this.util.musicData = this.util.alphabetizeByKey(this.util.musicData);
     var file = this.bot.basic.music_path + "/music.json";
     fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
       return;
@@ -42,17 +44,19 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    this.util.soundData = {};
     var file_list = fs.readdirSync(this.bot.basic.sound_path);
     for (var i in file_list){
       var sound = file_list[i];
       var ext = sound.split(".");
       ext = ext[ext.length - 1];
-      var name = sound.split(".")[0];
-      if (ext != "json"){
-        this.util.soundData[name] = {"name": name, "file": sound};
+      var name = sound.slice(0, -ext.length - 1);
+      if (!this.util.soundData.hasOwnProperty(name)){
+        if (ext != "json"){
+          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artist": "", "aliases": [], "tags": []};
+        }
       }
     }
+    this.util.soundData = this.util.alphabetizeByKey(this.util.soundData);
     var file = this.bot.basic.sound_path + "/sounds.json";
     fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
       return;
@@ -80,7 +84,9 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    const sound_obj = {"name": arg1, "file": arg2};
+    var ext = arg2.split(".");
+    ext = ext[ext.length - 1];
+    const sound_obj = {"name": arg1, "file": arg2, "extension": ext, "artist": "", "aliases": [], "tags": []};
     this.util.setAudioData(this.util.musicData, this.bot.basic.music_path + "/music.json", sound_obj);
     this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
     this.util.logStandardCommand(message, "addmusic");
@@ -106,7 +112,9 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    const sound_obj = {"name": arg1, "file": arg2};
+    var ext = arg2.split(".");
+    ext = ext[ext.length - 1];
+    const sound_obj = {"name": arg1, "file": arg2, "extension": ext, "artist": "", "aliases": [], "tags": []};
     this.util.setAudioData(this.util.soundData, this.bot.basic.sound_path + "/sounds.json",sound_obj);
     this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
     this.util.logStandardCommand(message, "addsound");
@@ -132,7 +140,7 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  playmusicCommand(message, arg1, arg2) {
+  playmusicCommand(message, arg1, body) {
     const channel = message.member.voiceChannel;
     const path = this.bot.basic.music_path;
     if (arg1 === "?"){
@@ -168,11 +176,11 @@ class CommandExecuter {
           this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic' command from " + message.author.username);
         }
       }else{
-        if (this.util.musicData[arg1] == null){
+        if (this.util.musicData[body] == null){
           message.author.send("**Invalid Command**");
-          message.author.send("Song '" + arg1 + "' does not exist.");
+          message.author.send("Song '" + body + "' does not exist.");
         }else{
-          this.util.playSound(channel, path + "/" + this.util.musicData[arg1].file);
+          this.util.playSound(channel, path + "/" + this.util.musicData[body].file);
           if (message.channel instanceof Discord.TextChannel) {
             this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playmusic " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
           }else{
@@ -184,7 +192,7 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  playsoundCommand(message, arg1, arg2) {
+  playsoundCommand(message, arg1, body) {
     const channel = message.member.voiceChannel;
     const path = this.bot.basic.sound_path;
     if (arg1 === "?"){
@@ -220,11 +228,11 @@ class CommandExecuter {
           this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound' command from " + message.author.username);
         }
       }else{
-        if (this.util.soundData[arg1] == null){
+        if (this.util.soundData[body] == null){
           message.author.send("**Invalid Command**");
-          message.author.send("Sound '" + arg1 + "' does not exist.");
+          message.author.send("Sound '" + body + "' does not exist.");
         }else{
-          this.util.playSound(channel, path + "/" + this.util.soundData[arg1].file);
+          this.util.playSound(channel, path + "/" + this.util.soundData[body].file);
           if (message.channel instanceof Discord.TextChannel) {
             this.util.logger("Responded to '" + this.bot.basic.command_prefix + "playsound " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
           }else{
@@ -264,12 +272,11 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    var json_data = {};
+    this.util.musicData = {};
     var file = this.bot.basic.music_path + "/music.json";
-    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
+    fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
       return;
     });
-    this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
     this.util.logStandardCommand(message, "purgemusic");
     this.util.cleanupMessage(message);
   }
@@ -278,16 +285,15 @@ class CommandExecuter {
     if (!this.util.isManager(message.member)){
       message.author.send("**Blocked Command**");
       message.author.send("You do not have permission to use this command.");
-      this.util.logStandardCommand(message, "purgesounds");
       this.util.cleanupMessage(message);
       return;
     }
-    var json_data = {};
+    this.util.soundData = {};
     var file = this.bot.basic.sound_path + "/sounds.json";
-    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
+    fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
       return;
     });
-    this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
+    this.util.logStandardCommand(message, "purgesounds");
     this.util.cleanupMessage(message);
   }
 
@@ -295,7 +301,6 @@ class CommandExecuter {
     if (!this.util.isManager(message.member)){
       message.author.send("**Blocked Command**");
       message.author.send("You do not have permission to use this command.");
-      this.util.logStandardCommand(message, "removemusic");
       this.util.cleanupMessage(message);
       return;
     }
@@ -365,11 +370,13 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    var id = arg1.replace("<@", "").replace("!", ""). replace(">", "");
+    var user = message.mentions.users.first();
+    var id = user.id;
+    var username = user.username;
     if (isNaN(id) || !(arg1.includes("<@") && arg1.includes(">"))){
       message.author.send("**Invalid Command**");
       message.author.send("First argument is not a proper @mention of target user.");
-    }else if (this.util.setUserSound(id, arg2)){
+    }else if (this.util.setUserSound(id, username, arg2)){
       this.util.logStandardCommand(message, "setusersound");
     }else{
       message.author.send("**Invalid Command**");
@@ -385,7 +392,6 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    message.author.send("**__User Sounds:__**");
     this.util.sendUserSounds(message);
     this.util.logStandardCommand(message,"showusersounds");
     this.util.cleanupMessage(message);

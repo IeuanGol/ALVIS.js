@@ -34,6 +34,7 @@ class DiscordBot extends Discord.Client {
     this.on('message', this.messageListener);
     this.on('disconnect', this.disconnectListener);
     this.on('reconnecting', this.reconnectingListener);
+    this.on('guildMemberAdd', this.guildMemberAddListener);
     this.on('voiceStateUpdate', this.voiceStateUpdateListener);
   }
 
@@ -70,10 +71,17 @@ class DiscordBot extends Discord.Client {
     this.util.logger('AutoReconnecting...');
   }
 
+  guildMemberAddListener(newMember) {
+    var defaultChannel = newMember.guild.defaultChannel;
+    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions.\n**@mention** or **DM** me for further assistance.\n\n<@&" + this.permissions.admin_role_id + "> <@&" + this.permissions.manager_role_id + ">, please configure their roles as needed.");
+    newMember.addRole(this.permissions.default_role_id);
+    this.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name);
+  }
+
   voiceStateUpdateListener(oldMember, newMember) {
     if (newMember.voiceChannel && !oldMember.voiceChannel){
       if (newMember.voiceChannel.joinable && !newMember.voiceChannel.full && newMember.voiceChannel.speakable && (newMember.voiceChannel.members.array().length > 1) && this.userSounds[newMember.id] && !newMember.guild.voiceConnection){
-        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.userSounds[newMember.id].sound);
+        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.util.soundData[this.userSounds[newMember.id].sound].file);
         this.util.logger("Played user sound for " + newMember.user.username + " on " + newMember.guild.name + ":" + newMember.voiceChannel.name);
       }
     }

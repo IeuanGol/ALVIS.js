@@ -13,6 +13,7 @@ class CommandHandler {
     }
     const splitmessage = message.content.split(" ");
   	const command = splitmessage[0].slice(this.bot.basic.command_prefix.length).toLowerCase();;
+    const body = message.content.substring(message.content.indexOf(" ") + 1);
   	const arg1 = splitmessage[1];
   	const arg2 = splitmessage[2];
   	const arg3 = splitmessage[3];
@@ -32,9 +33,9 @@ class CommandHandler {
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
     }else if (command === "playmusic"){
-      this.commandExecuter.playmusicCommand(message, arg1, arg2);
+      this.commandExecuter.playmusicCommand(message, arg1, body);
     }else if (command === "playsound"){
-      this.commandExecuter.playsoundCommand(message, arg1, arg2);
+      this.commandExecuter.playsoundCommand(message, arg1, body);
     }else if (command === "playstream"){
       this.commandExecuter.playstreamCommand(message, arg1);
     }else if (command === "purgemusic"){

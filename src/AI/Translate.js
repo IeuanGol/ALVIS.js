@@ -7,7 +7,7 @@ class Translate extends DefaultResponse {
   }
 
   handle(message, response) {
-    message.reply("I am unable to answer translation queries at this time.\n\nThis feature is still in development.");
+    this.defaultHandler(message, response);
   }
 }
 

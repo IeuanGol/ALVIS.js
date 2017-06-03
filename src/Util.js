@@ -53,24 +53,20 @@ class Util {
   }
 
   isManager(member) {
-    for (var i in this.bot.permissions.manager_role_ids){
-  		if (member.roles.has(this.bot.permissions.manager_role_ids[i])) return true;
-  	}
+  	if (member.roles.has(this.bot.permissions.manager_role_id)) return true;
   	return false;
   }
 
   isAdmin(member) {
     if (this.isManager(member)) return true;
-    for (var i in this.bot.permissions.admin_role_ids){
-  		if (member.roles.has(this.bot.permissions.admin_role_ids[i])) return true;
-  	}
+  	if (member.roles.has(this.bot.permissions.admin_role_id)) return true;
   	return false;
   }
 
   sendMusicList(message, tag) {
     if (tag == null){
       const charlimit = 2000;
-      var Output = "**Songs:**";
+      var Output = "**Songs:**\n```\n";
       for (var key in this.musicData){
         if (this.musicData.hasOwnProperty(key)) {
           var nextsong = this.musicData[key];
@@ -78,10 +74,11 @@ class Util {
             message.author.send(Output);
             Output = nextsong.name;
           }else{
-            Output = Output + "\n" + nextsong.name;
+            Output = Output + nextsong.name + "\n";
           }
         }
       }
+      Output = Output + "```";
       message.author.send(Output);
     }else{
         //TODO: Tag Lookup
@@ -91,7 +88,7 @@ class Util {
   sendSoundList(message, tag) {
     if (tag == null){
       const charlimit = 2000;
-      var Output = "**Sounds:**";
+      var Output = "**Sounds:**\n```\n";
       for (var key in this.soundData){
         if (this.soundData.hasOwnProperty(key)) {
           var nextsound = this.soundData[key];
@@ -99,10 +96,11 @@ class Util {
             message.author.send(Output);
             Output = nextsound.name;
           }else{
-            Output = Output + "\n" + nextsound.name;
+            Output = Output + nextsound.name + "\n";
           }
         }
       }
+      Output = Output + "```";
       message.author.send(Output);
     }else{
         //TODO: Tag Lookup
@@ -162,21 +160,35 @@ class Util {
 
   setAudioData(json_data, file, sound_obj) {
     json_data[sound_obj.name] = sound_obj;
-    fs.writeFile(file, JSON.stringify(json_data), function(err){
+    json_data = this.alphabetizeByKey(json_data);
+    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
   }
 
-  setUserSound(id, sound) {
+  alphabetizeByKey(object) {
+    var newObject = {};
+    var keys = Object.keys(object);
+    var len = keys.length;
+
+    keys.sort();
+
+    for (var i = 0; i < len; i++) {
+      var k = keys[i];
+      newObject[k] = object[k];
+    }
+    return newObject;
+  }
+
+  setUserSound(id, username, sound) {
     if (sound == null){
       delete this.bot.userSounds[id];
     }else if (this.soundData[sound]){
-      this.bot.userSounds[id] = {};
-      this.bot.userSounds[id].sound = this.soundData[sound].file;
+      this.bot.userSounds[id] = {"id": id, "username":username ,"sound": sound};
     }else{
       return false;
     }
-    fs.writeFile("./config/userSounds.json", JSON.stringify(this.bot.userSounds), function(err){
+    fs.writeFile("./config/userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
       return;
     });
     return true;
@@ -185,14 +197,13 @@ class Util {
   sendUserSounds(message) {
     var obj_keys = Object.keys(this.bot.userSounds);
     var usersounds = this.bot.userSounds;
+    var sound_list = "**__User Sounds__:**\n```\n"
     for (var i in obj_keys){
       var user_id = obj_keys[i];
-      this.bot.fetchUser(user_id).then(function(user){
-        message.author.send("**" + user.username + ":** " + usersounds[user.id].sound);
-      }).catch((err) => {
-        console.log(err);
-      });
+      sound_list = sound_list + usersounds[user_id].username + " (" + user_id + "):\nSound: " + usersounds[user_id].sound + "\n\n";
     }
+    sound_list = sound_list + "```";
+    message.author.send(sound_list);
   }
 }
 

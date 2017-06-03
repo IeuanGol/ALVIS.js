@@ -6,11 +6,16 @@ class DefaultResponse {
     this.util = this.bot.util;
   }
 
-  handle(message, response){
+  handle(message, response) {
+    this.defaultHandler(message, response);
+  }
+
+  defaultHandler(message, response) {
     if (response.result.fulfillment.speech !== ""){
       message.reply(response.result.fulfillment.speech);
     }else{
-      this.bot.util.logger("Default Query Response was unable to handle query from " + message.author.username);
+      message.reply("I am unable to respond to your `" + response.result.action + "` query at this time. Perhaps this feature is still in development.");
+      this.bot.util.logger("Default Query Response was unable to handle " + response.result.action + " query from " + message.author.username);
     }
   }
 }
