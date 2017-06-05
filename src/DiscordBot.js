@@ -31,13 +31,15 @@ class DiscordBot extends Discord.Client {
       this.addEventListeners();
 
       this.login(this.config.token);
+
     }else{
-      this.util.logger("Error occured on startup check. Ensure settings are configured correctly then try again.");
+      this.util.logger("Startup Check FAILED! Ensure settings are configured correctly then try again.");
     }
   }
 
   startupIntegrityCheck() {
-    new StartupCheck(this).runCheck();
+    if (new StartupCheck(this).runCheck()) return true;
+    return false;
   }
 
   addEventListeners() {

@@ -41,19 +41,19 @@ class StartupCheck {
       return false;
     }
     if (this.bot.config.token == "" || this.bot.config.token == "YOUR_DISCORD_BOT_TOKEN"){
-      console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.\n");
+      console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
     if (this.bot.config.chatbot_key == "" || this.bot.config.chatbot_key == "YOUR_API.AI_AGENT_KEY"){
-      console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.\n");
+      console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
     if (this.bot.permissions.manager_role == ""){
-      console.log("ERROR: Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.\n");
+      console.log("ERROR: Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
     if (this.bot.permissions.admin_role == ""){
-      console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.\n");
+      console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
     this.bot.util.logger("Startup Check PASSED");
