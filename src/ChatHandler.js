@@ -14,7 +14,7 @@ class ChatHandler {
       return;
     }
     const rawcontent = message.content.toLowerCase();
-    if (rawcontent.includes(this.bot.config.bot_name.toLowerCase()) && !rawcontent.includes("\\" + this.bot.config.bot_name.toLowerCase()) && !rawcontent.includes("/" + this.bot.config.bot_name.toLowerCase())){
+    if (rawcontent.includes(this.bot.basic.username.toLowerCase()) && !rawcontent.includes("\\" + this.bot.basic.username.toLowerCase()) && !rawcontent.includes("/" + this.bot.basic.username.toLowerCase())){
       var response = this.bot.responses.name_mention_response;
       message.reply(response);
       this.bot.util.logger("Responded to name mention from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);

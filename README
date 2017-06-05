@@ -1,45 +1,97 @@
 'ALVIS' Discord bot, by PacketCloud�
 Version: 1.7.2
 
-Setting up the bot:
-You must have a Discord bot token and Cleverbot licence key.
-You then enter these into the config JSON file within the config folder.
-Enter the unique role ids for specific server roles into the permissions JSON file to give these roles access to restricted commands.
+Setting Up The Bot:
+    Before the bot will run, you must first set up a few values in the config files:
 
-Public Commands:
-!about
-!flip
-!help
-!playmusic [?|song_name]
-!playsound [?|sound_name]
-!playstream <Youtube_URL>
-!roll
-!stop
+    Requirements:
+      You must have a Discord bot token and Google API.AI key for an agent with proper Intents and Entities.
+      Please contact us if you need further information about the API.AI agent [https://packetcloud.com/about].
 
-Admin Commands:
-!addmusic <song_name> <file_name_with_extension>
-!addsound <sound_name> <file_name_with_extension>
-!removemusic <song_name>
-!removesound <sound_name>
-!setusersound <@mention_target_user> [sound_name]
+    Tokens:
+      Enter your Discord bot token and API.AI agent key into the config JSON file (./config/config.json).
 
-Manager Commands:
-!addallmusic
-!addallsounds
-!purgemusic
-!purgesounds
+    User Permissions:
+      In the permissions JSON file (./config/permissions.json), add the names of the roles on your Discord server(s) that you want associated to bot permissions.
+      People with manager_role will be allowed to use all bot commands, admin_role grants administrative commands.
+      Default_role is the name of the role you want the bot to assign all new users. This one is optional.
 
-(To run commands, enter them into any text channel the bot has access to.)
+Bot Commands:
+  Public Commands:
+    !about
+    !flip
+    !help
+    !playmusic [?|song_name]
+    !playsound [?|sound_name]
+    !playstream <Youtube_URL>
+    !r6stats <username> [platform]
+    !roll
+    !stop
 
-Settings:
-You can change bot settings manually in the configuration files within the 'config' folder.
-Please do not mess with other files unless you know what you are doing.
+  Admin Commands:
+    !addmusic <song_name> <file_name_with_extension>
+    !addsound <sound_name> <file_name_with_extension>
+    !removemusic <song_name>
+    !removesound <sound_name>
+    !setusersound <@mention_target_user> [sound_name]
+
+  Manager Commands:
+    !addallmusic
+    !addallsounds
+    !purgemusic
+    !purgesounds
+
+To run commands, enter them into any text channel the bot has access to. Certain commands also work in Direct Messages with the bot.
+
+Changing Settings:
+    You can change bot settings manually in the configuration files within the 'config' folder.
+    Please do not mess with other files unless you know what you are doing.
 
 Adding Sounds:
-You can add music and sounds simply by adding files to the 'music' and 'sounds' directories.
-Their filenames MUST consist strictly alphanumeric characters and underscores.
-They must then be added to the sound/music database with !addsound or !addmusic commands.
-
+    You can add music and sounds simply by adding audio files to the 'music' and 'sounds' directories. They must be in a format supported by Discord; we recommend MP3 or WAV.
+    New audio must then be added to the sound or music library with !addsound or !addmusic commands.
+    Alternatively, you can add all audio in the respective folders to the library with !addallsounds or !addallmusic, but then the audio file names will be used (instead of custom ones).
+    !purgesounds or !purgemusic can be used to clear the database.
 
 NOTE:
 Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to all of these sounds.
+
+Package:
+  Organization:
+    PacketCloud [https://packetcloud.com]
+
+    Authors:
+      Adrian Schuldhaus
+      Lucas Ciula
+      Cody Mendoza
+
+  Repository:
+    GitHub [https://github.com/packetcloud/alvis]
+
+  License:
+    Type: MIT
+    (see LICENSE file)
+
+  Credited Dependencies:
+      Discord.js:
+        We use the Discord Node.js API ('discord.js') for interfacing with Discord's servers.
+        [https://discord.js.org]
+
+      API.AI:
+        We make use of Google's Node.js 'apiai' package. This is used to interface with their servers to handle and classify bot chat queries.
+        [https://api.ai]
+
+      r6stats.com:
+        We send web requests to api.r6stats.com to retrieve player stats for Rainbow Six Siege.
+        [https://r6stats.com]
+        [https://rainbow6.ubisoft.com]
+
+    Other Dependencies:
+      bufferutil: ^3.0.1
+      libsodium: ^0.5.1
+      libsodium-wrappers: ^0.5.1
+      lowdb: ^0.14.0
+      node-opus: ^0.2.2
+      opusscript: 0.0.3
+      uws: ^0.14.5
+      ytdl-core: ^0.14.2

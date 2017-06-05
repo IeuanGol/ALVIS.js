@@ -1,12 +1,15 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
+
 const Util = require('./Util.js');
+const R6Siege = require('./Services/R6Siege.js');
 
 class CommandExecuter {
   constructor(bot) {
     this.bot = bot;
     this.util = new Util(bot);
+    this.r6Siege = new R6Siege(this.bot);
   }
 
   addallmusicCommand(message) {
@@ -294,6 +297,26 @@ class CommandExecuter {
       return;
     });
     this.util.logStandardCommand(message, "purgesounds");
+    this.util.cleanupMessage(message);
+  }
+
+  r6statsCommand(message, arg1, arg2) {
+    if (arg1 == null) {
+      message.author.send("**Invalid Command**");
+      message.author.send("Please provide a username.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    if (arg2 == "xbox") arg2 = "xone";
+    if (arg2 == "pc") arg2 = "uplay";
+    if (arg2 && arg2 != "xone" && arg2 != "uplay" && arg2 != "ps4"){
+      message.author.send("**Invalid Command**");
+      message.author.send("Invalid platform argument.\nValid platforms: `pc`, or `uplay`; `xbox`, or `xone`; `ps4`. Leaving it blank defaults to `pc`");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    this.r6Siege.getStats(message, arg1, arg2);
+    this.util.logStandardCommand(message, "r6stats");
     this.util.cleanupMessage(message);
   }
 

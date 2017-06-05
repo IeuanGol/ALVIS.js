@@ -4,6 +4,7 @@ const APIai = require('apiai');
 const BotMessageHandler = require('./BotMessageHandler.js');
 const ResponseHandler = require('./AI/ResponseHandler.js');
 const CommandHandler = require('./CommandHandler.js');
+const StartupCheck = require('./StartupCheck.js');
 const ChatHandler = require('./ChatHandler.js');
 const DMHandler = require('./DMHandler.js');
 const Util = require('./Util.js');
@@ -23,17 +24,20 @@ class DiscordBot extends Discord.Client {
     this.dmHandler = new DMHandler(this);
     this.util = new Util(this);
 
-    this.startupIntegrityCheck();
+    if (this.startupIntegrityCheck()){
 
-    this.chatbot = APIai(this.config.chatbot_key);
+      this.chatbot = APIai(this.config.chatbot_key);
 
-    this.addEventListeners();
+      this.addEventListeners();
 
-    this.login(this.config.token);
+      this.login(this.config.token);
+    }else{
+      this.util.logger("Error occured on startup check. Ensure settings are configured correctly then try again.");
+    }
   }
 
   startupIntegrityCheck() {
-    this.util.startupIntegrityCheck();
+    new StartupCheck(this).runCheck();
   }
 
   addEventListeners() {
@@ -83,9 +87,12 @@ class DiscordBot extends Discord.Client {
     var admin_role_id = newMember.guild.roles.find("name", this.permissions.admin_role).id;
     var manager_role_id = newMember.guild.roles.find("name", this.permissions.manager_role).id;
     var default_role_id = newMember.guild.roles.find("name", this.permissions.default_role).id;
-    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions.\n**@mention** or **DM** me for further assistance.\n\n<@&" + admin_role_id + "> <@&" + manager_role_id + ">, please configure their roles as needed.");
+    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions. Feel free to **@mention** or **DM** me for further assistance.\nUse **!help** for a list of commands.\n\n<@&" + admin_role_id + "> <@&" + manager_role_id + ">, please configure their roles as needed.");
     if (this.permissions.default_role !== ""){
-      newMember.addRole(this.permissions.default_role_id);
+      var defaultRole = newMember.guild.roles.find("name", this.permissions.default_role).id;
+      if (defaultRole){
+        newMember.addRole(defaultRole);
+      }
     }
     this.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name);
   }

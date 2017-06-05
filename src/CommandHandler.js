@@ -46,6 +46,8 @@ class CommandHandler {
       this.commandExecuter.removemusicCommand(message, arg1);
     }else if (command === "removesound"){
       this.commandExecuter.removesoundCommand(message, arg1);
+    }else if (command === "r6stats"){
+      this.commandExecuter.r6statsCommand(message, arg1, arg2);
     }else if (command === "roll"){
       this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){

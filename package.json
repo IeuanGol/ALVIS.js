@@ -4,13 +4,10 @@
   "description": "A Discord Bot to play sounds, manage servers and responds with chatbot",
   "main": "bot.js",
   "dependencies": {
-    "Cleverbot": "^1.0.1",
     "apiai": "^4.0.2",
     "bufferutil": "^3.0.1",
     "config": "^1.26.1",
     "discord.js": "github:hydrabolt/discord.js",
-    "google-speech": "0.0.5",
-    "google-tts-api": "^0.0.1",
     "libsodium-wrappers": "^0.5.1",
     "lowdb": "^0.14.0",
     "node-opus": "^0.2.2",
@@ -31,10 +28,10 @@
     "discord",
     "bot",
     "soundboard",
-    "mp3",
-    "sounds",
     "chatbot",
-    "management"
+    "management",
+    "ai",
+    "assistant"
   ],
   "authors": [
     "Adrian Schuldhaus"
