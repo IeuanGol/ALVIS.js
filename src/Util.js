@@ -127,7 +127,7 @@ class Util {
     }).catch((error) => {
       voiceChannel.leave();
       this.logger("An error occured in sound playback:");
-      console.log(error);
+      console.log(error.message);
     })
   }
 
@@ -147,10 +147,10 @@ class Util {
   		dispatcher.on('end', () => {
         connection.disconnect();
       });
-  	}).catch((err) => {
+  	}).catch((error) => {
       voiceChannel.leave();
       this.logger("An error occured in stream playback:");
-      console.log(err);
+      console.log(error.message);
     });
   }
 

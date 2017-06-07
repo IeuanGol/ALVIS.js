@@ -6,10 +6,14 @@ class R6Siege {
   }
 
   getStats(message, username, platform) {
+    var noplatform = false;
     var region = "ncsa";
     var currentSeason = "6";
     if (!message) return;
-    if (!platform) platform = "uplay";
+    if (!platform){
+      platform = "uplay";
+      noplatform = true;
+    }
     if (!username) return;
     var playtime_converter = this.convertPlaytime;
     var rank_converter = this.convertRank;
@@ -17,8 +21,11 @@ class R6Siege {
     request("https://api.r6stats.com/api/v1/players/" + username + "?platform=" + platform, function (error, response, body) {
       var playerData = JSON.parse(body).player;
       if (typeof playerData === "undefined"){
-        message.author.send("**Command Failed**");
-        message.author.send("Player data could not be located. Ensure the username is correct. If you are providing a platform, be sure it is also correct.");
+        if (noplatform){
+          message.reply("Player data could not be located. Ensure the username is correct.");
+        }else{
+          message.reply("Player data could not be located. Ensure the username is correct. If you are providing a platform, be sure it is also correct.");
+        }
         return;
       }
       var casual = playerData.stats.casual;
@@ -26,7 +33,7 @@ class R6Siege {
       var request2 = require('request');
       request2("https://api.r6stats.com/api/v1/players/" + username + "/seasons?platform=" + platform +"&season=" + currentSeason, function (error2, response2, body2) {
         var seasonData = JSON.parse(body2).seasons;
-        var replyContent = "```\nRAINBOW SIX SIEGE - PLAYER ACTION REPORT\n\nPlayer: " + playerData.username + "\nPlatform: " + playerData.platform + "\nDate: " + playerData.updated_at.slice(0, 10) + "\n\n";
+        var replyContent = "Here you go:\n```\nRAINBOW SIX SIEGE - PLAYER ACTION REPORT\n\nPlayer: " + playerData.username + "\nPlatform: " + playerData.platform + "\nDate: " + playerData.updated_at.slice(0, 10) + "\n\n";
         replyContent = replyContent + "Level: " + playerData.stats.progression.level + "\n\n";
         replyContent = replyContent + "Casual:\n    Wins:     " + casual.wins + "\n    Losses:   " + casual.losses + "\n    W/L:      " + casual.wlr + "\n    Kills:    " + casual.kills + "\n    Deaths:   " + casual.deaths + "\n    K/D:      " + casual.kd + "\n    Playtime: " + playtime_converter(casual.playtime) + "\n\n";
         replyContent = replyContent + "Ranked:\n    Wins:     " + ranked.wins + "\n    Losses:   " + ranked.losses + "\n    W/L:      " + ranked.wlr + "\n    Kills:    " + ranked.kills + "\n    Deaths:   " + ranked.deaths + "\n    K/D:      " + ranked.kd + "\n    Playtime: " + playtime_converter(ranked.playtime) + "\n";

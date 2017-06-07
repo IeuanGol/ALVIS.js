@@ -3,6 +3,7 @@ const fs = require('fs');
 const APIai = require('apiai');
 const BotMessageHandler = require('./BotMessageHandler.js');
 const ResponseHandler = require('./AI/ResponseHandler.js');
+const NewMemberHandler = require('./NewMemberHandler.js');
 const CommandHandler = require('./CommandHandler.js');
 const StartupCheck = require('./StartupCheck.js');
 const ChatHandler = require('./ChatHandler.js');
@@ -18,6 +19,7 @@ class DiscordBot extends Discord.Client {
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('./userSounds.json');
     this.botMessageHandler = new BotMessageHandler(this);
+    this.newMemberHandler = new NewMemberHandler(this);
     this.responseHandler = new ResponseHandler(this);
     this.commandHandler = new CommandHandler(this);
     this.chatHandler = new ChatHandler(this);
@@ -85,18 +87,7 @@ class DiscordBot extends Discord.Client {
   }
 
   guildMemberAddListener(newMember) {
-    var defaultChannel = newMember.guild.defaultChannel;
-    var admin_role_id = newMember.guild.roles.find("name", this.permissions.admin_role).id;
-    var manager_role_id = newMember.guild.roles.find("name", this.permissions.manager_role).id;
-    var default_role_id = newMember.guild.roles.find("name", this.permissions.default_role).id;
-    defaultChannel.send("**Welcome, <@" + newMember.user.id + ">, to the server!**\nI have set up your basic permissions. Feel free to **@mention** or **DM** me for further assistance.\nUse **!help** for a list of commands.\n\n<@&" + admin_role_id + "> <@&" + manager_role_id + ">, please configure their roles as needed.");
-    if (this.permissions.default_role !== ""){
-      var defaultRole = newMember.guild.roles.find("name", this.permissions.default_role).id;
-      if (defaultRole){
-        newMember.addRole(defaultRole);
-      }
-    }
-    this.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name);
+    this.newMemberHandler.handle(newMember);
   }
 
   voiceStateUpdateListener(oldMember, newMember) {

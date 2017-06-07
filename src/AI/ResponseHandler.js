@@ -3,6 +3,7 @@ const Util = require('../Util.js');
 const DefaultResponse = require('./DefaultResponse.js');
 const Music = require('./Music.js');
 const News = require('./News.js');
+const R6Siege = require('./R6Siege.js');
 const Smalltalk = require('./Smalltalk.js');
 const Translate = require('./Translate.js');
 const Weather = require('./Weather.js');
@@ -14,6 +15,7 @@ class ResponseHandler {
     this.defaultresponse = new DefaultResponse(this.bot);
     this.music = new Music(this.bot);
     this.news = new News(this.bot);
+    this.r6siege = new R6Siege(this.bot);
     this.smalltalk = new Smalltalk(this.bot);
     this.translate = new Translate(this.bot);
     this.weather = new Weather(this.bot);
@@ -26,6 +28,8 @@ class ResponseHandler {
       this.music.handle(message, response);
     }else if (actionType == "news"){
       this.news.handle(message, response);
+    }else if (actionType == "r6siege"){
+      this.r6siege.handle(message, response);
     }else if (actionType == "smalltalk"){
       this.smalltalk.handle(message, response);
     }else if (actionType == "translate"){

@@ -7,7 +7,7 @@ class StartupCheck {
   }
 
   runCheck() {
-    this.bot.util.logger("Startup Check Initiated....");
+    this.bot.util.logger("Startup Check Initiated");
     if (!this.bot.config.hasOwnProperty("token") || typeof this.bot.config.token !== 'string'){
       this.setDefaultConfig();
       return false;

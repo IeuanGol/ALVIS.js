@@ -12,7 +12,8 @@ class CommandHandler {
       return;
     }
     const splitmessage = message.content.split(" ");
-  	const command = splitmessage[0].slice(this.bot.basic.command_prefix.length).toLowerCase();;
+    const command_prefix = this.bot.basic.command_prefix;
+  	const command = splitmessage[0].slice(command_prefix.length).toLowerCase();;
     const body = message.content.substring(message.content.indexOf(" ") + 1);
   	const arg1 = splitmessage[1];
   	const arg2 = splitmessage[2];
@@ -59,8 +60,7 @@ class CommandHandler {
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }else{
-      message.author.send("**Invalid Command**");
-      message.author.send("Command not recognized.");
+      message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);
     }
   }
