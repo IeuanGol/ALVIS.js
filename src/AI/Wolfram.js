@@ -1,17 +1,16 @@
 const Discord = require('discord.js');
 const DefaultResponse = require('./DefaultResponse');
-//const WolframAPI = require('wolfram');
 
 class Wolfram extends DefaultResponse {
   constructor(bot) {
     super(bot);
-    //this.wolfram_client = WolframAPI.creatClient(this.bot.config.wolfram_key);
+    this.wolfram_client = require('wolfram').createClient(this.bot.config.wolfram_key);
   }
 
   handle(message, response) {
-    var topic = null;//response.result.parameters.topic;
+    var topic = response.result.parameters.topic;
     if (topic){
-      this.wolfram_client.query(topic, function(err, result) {
+      this.wolfram_client.query("what is " + topic, function(err, result) {
       var handler = this;
         if (err){
           console.log(err);
