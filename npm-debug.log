@@ -1,0 +1,2786 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\aschu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'wolfram' ]
+2 info using npm@2.15.11
+3 info using node@v8.0.0
+4 verbose install initial load of D:\Storage\Projects\PacketCloud\ALVIS\package.json
+5 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ajv\package.json
+6 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ansi-regex\package.json
+7 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\apiai\package.json
+8 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\aproba\package.json
+9 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\are-we-there-yet\package.json
+10 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\asn1\package.json
+11 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\assert-plus\package.json
+12 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\asynckit\package.json
+13 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\aws-sign2\package.json
+14 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\aws4\package.json
+15 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\balanced-match\package.json
+16 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\bcrypt-pbkdf\package.json
+17 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\bindings\package.json
+18 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\bl\package.json
+19 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\block-stream\package.json
+20 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\bluebird\package.json
+21 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\boom\package.json
+22 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\brace-expansion\package.json
+23 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\bufferutil\package.json
+24 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\caseless\package.json
+25 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\chownr\package.json
+26 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\co\package.json
+27 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\code-point-at\package.json
+28 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\combined-stream\package.json
+29 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\commander\package.json
+30 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\component-emitter\package.json
+31 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\concat-map\package.json
+32 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\console-control-strings\package.json
+33 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\cookiejar\package.json
+34 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\core-util-is\package.json
+35 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\cryptiles\package.json
+36 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\dashdash\package.json
+37 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\debug\package.json
+38 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\deep-extend\package.json
+39 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\delayed-stream\package.json
+40 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\delegates\package.json
+41 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\discord.js\package.json
+42 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ecc-jsbn\package.json
+43 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\end-of-stream\package.json
+44 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\expand-template\package.json
+45 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\extend\package.json
+46 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\extsprintf\package.json
+47 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ffmpeg\package.json
+48 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ffmpeg-binaries\package.json
+49 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\forever-agent\package.json
+50 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\form-data\package.json
+51 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\formidable\package.json
+52 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\fs.realpath\package.json
+53 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\fstream\package.json
+54 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\gauge\package.json
+55 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\getpass\package.json
+56 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\github-from-package\package.json
+57 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\glob\package.json
+58 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\graceful-fs\package.json
+59 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\graceful-readlink\package.json
+60 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\har-schema\package.json
+61 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\har-validator\package.json
+62 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\has-unicode\package.json
+63 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\hawk\package.json
+64 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\hoek\package.json
+65 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\html-entities\package.json
+66 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\http-signature\package.json
+67 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\inflight\package.json
+68 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\inherits\package.json
+69 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ini\package.json
+70 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\is-fullwidth-code-point\package.json
+71 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\is-promise\package.json
+72 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\is-typedarray\package.json
+73 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\isarray\package.json
+74 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\isstream\package.json
+75 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\jsbn\package.json
+76 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\json-schema\package.json
+77 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\json-stable-stringify\package.json
+78 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\json-stringify-safe\package.json
+79 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\jsonify\package.json
+80 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\jsprim\package.json
+81 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\lodash\package.json
+82 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\long\package.json
+83 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\lowdb\package.json
+84 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\m3u8stream\package.json
+85 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\methods\package.json
+86 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\mime\package.json
+87 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\mime-db\package.json
+88 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\mime-types\package.json
+89 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\miniget\package.json
+90 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\minimatch\package.json
+91 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\minimist\package.json
+92 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\mkdirp\package.json
+93 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\mout\package.json
+94 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ms\package.json
+95 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\nan\package.json
+96 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\node-abi\package.json
+97 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\noop-logger\package.json
+98 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\npmlog\package.json
+99 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\number-is-nan\package.json
+100 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\oauth-sign\package.json
+101 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\object-assign\package.json
+102 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\once\package.json
+103 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\opusscript\package.json
+104 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\os-homedir\package.json
+105 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\path-is-absolute\package.json
+106 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\performance-now\package.json
+107 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\prebuild-install\package.json
+108 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\prism-media\package.json
+109 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\process-nextick-args\package.json
+110 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\pump\package.json
+111 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\punycode\package.json
+112 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\qs\package.json
+113 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\rc\package.json
+114 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\readable-stream\package.json
+115 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\request\package.json
+116 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\rimraf\package.json
+117 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\safe-buffer\package.json
+118 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\sax\package.json
+119 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\set-blocking\package.json
+120 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\signal-exit\package.json
+121 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\simple-get\package.json
+122 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\snekfetch\package.json
+123 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\sntp\package.json
+124 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\sshpk\package.json
+125 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\steno\package.json
+126 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\string-width\package.json
+127 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\string_decoder\package.json
+128 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\stringstream\package.json
+129 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\strip-ansi\package.json
+130 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\strip-json-comments\package.json
+131 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\superagent\package.json
+132 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tar\package.json
+133 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tar-fs\package.json
+134 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tar-stream\package.json
+135 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tar.gz\package.json
+136 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tough-cookie\package.json
+137 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tunnel-agent\package.json
+138 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\tweetnacl\package.json
+139 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ultron\package.json
+140 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\unzip-response\package.json
+141 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\util-deprecate\package.json
+142 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\uuid\package.json
+143 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\uws\package.json
+144 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\verror\package.json
+145 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\when\package.json
+146 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wide-align\package.json
+147 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wrappy\package.json
+148 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ws\package.json
+149 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\xtend\package.json
+150 verbose installManyTop reading scoped package data from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\ytdl-core\package.json
+151 info package.json tar.gz@1.0.5 No README data
+152 info package.json ultron@1.1.0 No README data
+153 info package.json apiai@4.0.2 license should be a valid SPDX license expression
+154 info package.json bcrypt-pbkdf@1.0.1 No repository field.
+155 info package.json extsprintf@1.0.2 No license field.
+156 info package.json ffmpeg@0.0.4 No license field.
+157 info package.json json-schema@0.2.3 No license field.
+158 info package.json jsonify@0.0.0 license should be a valid SPDX license expression
+159 info package.json punycode@1.4.1 punycode is also the name of a node core module.
+160 info package.json sntp@1.0.9 No license field.
+161 info package.json string_decoder@1.0.2 string_decoder is also the name of a node core module.
+162 info package.json verror@1.3.6 No license field.
+163 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\package.json
+164 silly cache add args [ 'wolfram', null ]
+165 verbose cache add spec wolfram
+166 silly cache add parsed spec Result {
+166 silly cache add   raw: 'wolfram',
+166 silly cache add   scope: null,
+166 silly cache add   name: 'wolfram',
+166 silly cache add   rawSpec: '',
+166 silly cache add   spec: 'latest',
+166 silly cache add   type: 'tag' }
+167 silly addNamed wolfram@latest
+168 verbose addNamed "latest" is being treated as a dist-tag for wolfram
+169 info addNameTag [ 'wolfram', 'latest' ]
+170 silly mapToRegistry name wolfram
+171 silly mapToRegistry using default registry
+172 silly mapToRegistry registry https://registry.npmjs.org/
+173 silly mapToRegistry data Result {
+173 silly mapToRegistry   raw: 'wolfram',
+173 silly mapToRegistry   scope: null,
+173 silly mapToRegistry   name: 'wolfram',
+173 silly mapToRegistry   rawSpec: '',
+173 silly mapToRegistry   spec: 'latest',
+173 silly mapToRegistry   type: 'tag' }
+174 silly mapToRegistry uri https://registry.npmjs.org/wolfram
+175 verbose addNameTag registry:https://registry.npmjs.org/wolfram not in flight; fetching
+176 verbose request uri https://registry.npmjs.org/wolfram
+177 verbose request no auth needed
+178 info attempt registry request try #1 at 18:38:09
+179 verbose request id e855c58422888845
+180 verbose etag W/"590822ce-3fc6"
+181 verbose lastModified Tue, 02 May 2017 06:10:22 GMT
+182 http request GET https://registry.npmjs.org/wolfram
+183 http 304 https://registry.npmjs.org/wolfram
+184 verbose headers { date: 'Fri, 09 Jun 2017 00:38:08 GMT',
+184 verbose headers   via: '1.1 varnish',
+184 verbose headers   'cache-control': 'max-age=300',
+184 verbose headers   etag: 'W/"590822ce-3fc6"',
+184 verbose headers   age: '0',
+184 verbose headers   connection: 'keep-alive',
+184 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+184 verbose headers   'x-cache': 'MISS',
+184 verbose headers   'x-cache-hits': '0',
+184 verbose headers   'x-timer': 'S1496968688.142790,VS0,VE20',
+184 verbose headers   vary: 'Accept-Encoding' }
+185 silly get cb [ 304,
+185 silly get   { date: 'Fri, 09 Jun 2017 00:38:08 GMT',
+185 silly get     via: '1.1 varnish',
+185 silly get     'cache-control': 'max-age=300',
+185 silly get     etag: 'W/"590822ce-3fc6"',
+185 silly get     age: '0',
+185 silly get     connection: 'keep-alive',
+185 silly get     'x-served-by': 'cache-ord1725-ORD',
+185 silly get     'x-cache': 'MISS',
+185 silly get     'x-cache-hits': '0',
+185 silly get     'x-timer': 'S1496968688.142790,VS0,VE20',
+185 silly get     vary: 'Accept-Encoding' } ]
+186 verbose etag https://registry.npmjs.org/wolfram from cache
+187 verbose get saving wolfram to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\wolfram\.cache.json
+188 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+189 silly addNameTag next cb for wolfram with tag latest
+190 silly addNamed wolfram@0.3.4
+191 verbose addNamed "0.3.4" is a plain semver version for wolfram
+192 silly cache afterAdd wolfram@0.3.4
+193 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\wolfram\0.3.4\package\package.json not in flight; writing
+194 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+195 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\wolfram\0.3.4\package\package.json written
+196 silly install resolved [ { author: { name: 'Sami Kukkonen', email: 'sami@samikukkonen.fi' },
+196 silly install resolved     name: 'wolfram',
+196 silly install resolved     description: 'Wolfram Alpha API',
+196 silly install resolved     keywords: [ 'wolfram alpha api wolframalpha' ],
+196 silly install resolved     version: '0.3.4',
+196 silly install resolved     repository: { type: 'git', url: 'git://github.com/strax/wolfram.git' },
+196 silly install resolved     scripts: { test: 'tap test/*.js' },
+196 silly install resolved     main: 'index.js',
+196 silly install resolved     engines: { node: '>=0.8.0' },
+196 silly install resolved     dependencies: { request: '^2.0', libxmljs: '^0.18.0' },
+196 silly install resolved     devDependencies: { tap: '~> 0.4.0' },
+196 silly install resolved     license: 'MIT',
+196 silly install resolved     gitHead: 'c7792a16c4366475b1b83541f48cef7ee2ed373e',
+196 silly install resolved     bugs: { url: 'https://github.com/strax/wolfram/issues' },
+196 silly install resolved     homepage: 'https://github.com/strax/wolfram#readme',
+196 silly install resolved     _id: 'wolfram@0.3.4',
+196 silly install resolved     _shasum: '8698bfbea38749ba36d6623c839dbc657885ebde',
+196 silly install resolved     _from: 'wolfram@latest',
+196 silly install resolved     _npmVersion: '3.10.9',
+196 silly install resolved     _nodeVersion: '6.9.2',
+196 silly install resolved     _npmUser: { name: 'strax', email: 'sami.matias.kukkonen@gmail.com' },
+196 silly install resolved     dist:
+196 silly install resolved      { shasum: '8698bfbea38749ba36d6623c839dbc657885ebde',
+196 silly install resolved        tarball: 'https://registry.npmjs.org/wolfram/-/wolfram-0.3.4.tgz' },
+196 silly install resolved     maintainers: [ [Object] ],
+196 silly install resolved     _npmOperationalInternal:
+196 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+196 silly install resolved        tmp: 'tmp/wolfram-0.3.4.tgz_1487956558486_0.9830862213857472' },
+196 silly install resolved     directories: {},
+196 silly install resolved     _resolved: 'https://registry.npmjs.org/wolfram/-/wolfram-0.3.4.tgz',
+196 silly install resolved     readme: 'ERROR: No README data found!' } ]
+197 info install wolfram@0.3.4 into D:\Storage\Projects\PacketCloud\ALVIS
+198 info installOne wolfram@0.3.4
+199 verbose installOne of wolfram to D:\Storage\Projects\PacketCloud\ALVIS not in flight; installing
+200 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+201 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\wolfram-a493815ee3724351.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+202 silly install write writing wolfram 0.3.4 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+203 verbose unbuild node_modules\wolfram
+204 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+205 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+206 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\wolfram\0.3.4\package.tgz
+207 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+208 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram is being purged
+209 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+210 silly gunzTarPerm modes [ '777', '666' ]
+211 silly gunzTarPerm extractEntry package.json
+212 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+213 silly gunzTarPerm extractEntry .npmignore
+214 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+215 silly gunzTarPerm extractEntry README.md
+216 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+217 silly gunzTarPerm extractEntry LICENSE
+218 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+219 silly gunzTarPerm extractEntry index.js
+220 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+221 silly gunzTarPerm extractEntry .travis.yml
+222 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+223 silly gunzTarPerm extractEntry test/blank_appkey.js
+224 silly gunzTarPerm modified mode [ 'test/blank_appkey.js', 420, 438 ]
+225 silly gunzTarPerm extractEntry test/bogus_appkey.js
+226 silly gunzTarPerm modified mode [ 'test/bogus_appkey.js', 420, 438 ]
+227 silly gunzTarPerm extractEntry test/invalid_response.js
+228 silly gunzTarPerm modified mode [ 'test/invalid_response.js', 420, 438 ]
+229 silly gunzTarPerm extractEntry test/valid_response.js
+230 silly gunzTarPerm modified mode [ 'test/valid_response.js', 420, 438 ]
+231 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\package.json
+232 info preinstall wolfram@0.3.4
+233 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\package.json
+234 silly prepareForInstallMany adding libxmljs@^0.18.0 from wolfram dependencies
+235 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\package.json
+236 silly cache add args [ 'libxmljs@^0.18.0', null ]
+237 verbose cache add spec libxmljs@^0.18.0
+238 silly cache add parsed spec Result {
+238 silly cache add   raw: 'libxmljs@^0.18.0',
+238 silly cache add   scope: null,
+238 silly cache add   name: 'libxmljs',
+238 silly cache add   rawSpec: '^0.18.0',
+238 silly cache add   spec: '>=0.18.0 <0.19.0',
+238 silly cache add   type: 'range' }
+239 silly addNamed libxmljs@>=0.18.0 <0.19.0
+240 verbose addNamed ">=0.18.0 <0.19.0" is a valid semver range for libxmljs
+241 silly addNameRange { name: 'libxmljs', range: '>=0.18.0 <0.19.0', hasData: false }
+242 silly mapToRegistry name libxmljs
+243 silly mapToRegistry using default registry
+244 silly mapToRegistry registry https://registry.npmjs.org/
+245 silly mapToRegistry data Result {
+245 silly mapToRegistry   raw: 'libxmljs',
+245 silly mapToRegistry   scope: null,
+245 silly mapToRegistry   name: 'libxmljs',
+245 silly mapToRegistry   rawSpec: '',
+245 silly mapToRegistry   spec: 'latest',
+245 silly mapToRegistry   type: 'tag' }
+246 silly mapToRegistry uri https://registry.npmjs.org/libxmljs
+247 verbose addNameRange registry:https://registry.npmjs.org/libxmljs not in flight; fetching
+248 verbose request uri https://registry.npmjs.org/libxmljs
+249 verbose request no auth needed
+250 info attempt registry request try #1 at 18:38:09
+251 verbose etag W/"58b86096-9920"
+252 verbose lastModified Thu, 02 Mar 2017 18:12:38 GMT
+253 http request GET https://registry.npmjs.org/libxmljs
+254 http 304 https://registry.npmjs.org/libxmljs
+255 verbose headers { date: 'Fri, 09 Jun 2017 00:38:08 GMT',
+255 verbose headers   via: '1.1 varnish',
+255 verbose headers   'cache-control': 'max-age=300',
+255 verbose headers   etag: 'W/"58b86096-9920"',
+255 verbose headers   age: '0',
+255 verbose headers   connection: 'keep-alive',
+255 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+255 verbose headers   'x-cache': 'HIT',
+255 verbose headers   'x-cache-hits': '1',
+255 verbose headers   'x-timer': 'S1496968688.277311,VS0,VE20',
+255 verbose headers   vary: 'Accept-Encoding' }
+256 silly get cb [ 304,
+256 silly get   { date: 'Fri, 09 Jun 2017 00:38:08 GMT',
+256 silly get     via: '1.1 varnish',
+256 silly get     'cache-control': 'max-age=300',
+256 silly get     etag: 'W/"58b86096-9920"',
+256 silly get     age: '0',
+256 silly get     connection: 'keep-alive',
+256 silly get     'x-served-by': 'cache-ord1725-ORD',
+256 silly get     'x-cache': 'HIT',
+256 silly get     'x-cache-hits': '1',
+256 silly get     'x-timer': 'S1496968688.277311,VS0,VE20',
+256 silly get     vary: 'Accept-Encoding' } ]
+257 verbose etag https://registry.npmjs.org/libxmljs from cache
+258 verbose get saving libxmljs to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\libxmljs\.cache.json
+259 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+260 silly addNameRange number 2 { name: 'libxmljs', range: '>=0.18.0 <0.19.0', hasData: true }
+261 silly addNameRange versions [ 'libxmljs',
+261 silly addNameRange   [ '0.4.1',
+261 silly addNameRange     '0.4.2',
+261 silly addNameRange     '0.4.3',
+261 silly addNameRange     '0.5.0',
+261 silly addNameRange     '0.5.1',
+261 silly addNameRange     '0.5.2',
+261 silly addNameRange     '0.5.3',
+261 silly addNameRange     '0.5.4',
+261 silly addNameRange     '0.6.0',
+261 silly addNameRange     '0.6.1',
+261 silly addNameRange     '0.7.0',
+261 silly addNameRange     '0.7.1',
+261 silly addNameRange     '0.8.0',
+261 silly addNameRange     '0.8.1',
+261 silly addNameRange     '0.9.0',
+261 silly addNameRange     '0.10.0',
+261 silly addNameRange     '0.11.0',
+261 silly addNameRange     '0.11.1',
+261 silly addNameRange     '0.12.0',
+261 silly addNameRange     '0.13.0',
+261 silly addNameRange     '0.14.0',
+261 silly addNameRange     '0.14.1',
+261 silly addNameRange     '0.14.2',
+261 silly addNameRange     '0.14.3',
+261 silly addNameRange     '0.15.0',
+261 silly addNameRange     '0.16.0',
+261 silly addNameRange     '0.16.1',
+261 silly addNameRange     '0.17.0',
+261 silly addNameRange     '0.17.1',
+261 silly addNameRange     '0.18.0',
+261 silly addNameRange     '0.18.2',
+261 silly addNameRange     '0.18.4' ] ]
+262 silly addNamed libxmljs@0.18.4
+263 verbose addNamed "0.18.4" is a plain semver version for libxmljs
+264 silly cache afterAdd libxmljs@0.18.4
+265 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\libxmljs\0.18.4\package\package.json not in flight; writing
+266 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+267 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\libxmljs\0.18.4\package\package.json written
+268 silly install resolved [ { name: 'libxmljs',
+268 silly install resolved     author: { name: 'Marco Rogers' },
+268 silly install resolved     contributors: [ [Object] ],
+268 silly install resolved     binary:
+268 silly install resolved      { module_name: 'xmljs',
+268 silly install resolved        module_path: './build/Release/',
+268 silly install resolved        host: 'https://github.com',
+268 silly install resolved        remote_path: './libxmljs/libxmljs/releases/download/v{version}/',
+268 silly install resolved        package_name: '{node_abi}-{platform}-{arch}.tar.gz' },
+268 silly install resolved     description: 'libxml bindings for v8 javascript engine',
+268 silly install resolved     version: '0.18.4',
+268 silly install resolved     scripts:
+268 silly install resolved      { install: 'node-pre-gyp install --fallback-to-build --loglevel http',
+268 silly install resolved        test: 'node --expose_gc ./node_modules/.bin/nodeunit test' },
+268 silly install resolved     repository:
+268 silly install resolved      { type: 'git',
+268 silly install resolved        url: 'git+ssh://git@github.com/libxmljs/libxmljs.git' },
+268 silly install resolved     bugs: { url: 'http://github.com/libxmljs/libxmljs/issues' },
+268 silly install resolved     main: './index',
+268 silly install resolved     license: 'MIT',
+268 silly install resolved     engines: { node: '>=0.8.0' },
+268 silly install resolved     dependencies: { 'node-pre-gyp': '~0.6.32', bindings: '1.2.1', nan: '~2.5.0' },
+268 silly install resolved     devDependencies: { nodeunit: '0.9.0' },
+268 silly install resolved     homepage: 'https://github.com/libxmljs/libxmljs',
+268 silly install resolved     _id: 'libxmljs@0.18.4',
+268 silly install resolved     _shasum: '253028925900e9f8d454418034a25b8af4e1507f',
+268 silly install resolved     _from: 'libxmljs@>=0.18.0 <0.19.0',
+268 silly install resolved     _npmVersion: '3.10.9',
+268 silly install resolved     _nodeVersion: '7.1.0',
+268 silly install resolved     _npmUser: { name: 'rchipka', email: 'chipka01@email.franklin.edu' },
+268 silly install resolved     dist:
+268 silly install resolved      { shasum: '253028925900e9f8d454418034a25b8af4e1507f',
+268 silly install resolved        tarball: 'https://registry.npmjs.org/libxmljs/-/libxmljs-0.18.4.tgz' },
+268 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+268 silly install resolved     _npmOperationalInternal:
+268 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
+268 silly install resolved        tmp: 'tmp/libxmljs-0.18.4.tgz_1484764910187_0.7020973393227905' },
+268 silly install resolved     directories: {},
+268 silly install resolved     _resolved: 'https://registry.npmjs.org/libxmljs/-/libxmljs-0.18.4.tgz',
+268 silly install resolved     readme: 'ERROR: No README data found!' } ]
+269 info install libxmljs@0.18.4 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+270 info installOne libxmljs@0.18.4
+271 verbose installOne of libxmljs to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram not in flight; installing
+272 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+273 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\libxmljs-fc4ca55a4c4ca344.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+274 silly install write writing libxmljs 0.18.4 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+275 verbose unbuild node_modules\wolfram\node_modules\libxmljs
+276 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+277 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+278 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\libxmljs\0.18.4\package.tgz
+279 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+280 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs is being purged
+281 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+282 silly gunzTarPerm modes [ '777', '666' ]
+283 silly gunzTarPerm extractEntry package.json
+284 silly gunzTarPerm modified mode [ 'package.json', 493, 511 ]
+285 silly gunzTarPerm extractEntry .npmignore
+286 silly gunzTarPerm modified mode [ '.npmignore', 493, 511 ]
+287 silly gunzTarPerm extractEntry README.md
+288 silly gunzTarPerm modified mode [ 'README.md', 493, 511 ]
+289 silly gunzTarPerm extractEntry LICENSE
+290 silly gunzTarPerm modified mode [ 'LICENSE', 493, 511 ]
+291 silly gunzTarPerm extractEntry index.js
+292 silly gunzTarPerm modified mode [ 'index.js', 493, 511 ]
+293 silly gunzTarPerm extractEntry appveyor.yml
+294 silly gunzTarPerm modified mode [ 'appveyor.yml', 493, 511 ]
+295 silly gunzTarPerm extractEntry binding.gyp
+296 silly gunzTarPerm modified mode [ 'binding.gyp', 493, 511 ]
+297 silly gunzTarPerm extractEntry .travis.yml
+298 silly gunzTarPerm modified mode [ '.travis.yml', 493, 511 ]
+299 silly gunzTarPerm extractEntry Makefile
+300 silly gunzTarPerm modified mode [ 'Makefile', 493, 511 ]
+301 silly gunzTarPerm extractEntry lib/bindings.js
+302 silly gunzTarPerm modified mode [ 'lib/bindings.js', 493, 511 ]
+303 silly gunzTarPerm extractEntry lib/comment.js
+304 silly gunzTarPerm modified mode [ 'lib/comment.js', 493, 511 ]
+305 silly gunzTarPerm extractEntry lib/document.js
+306 silly gunzTarPerm modified mode [ 'lib/document.js', 493, 511 ]
+307 silly gunzTarPerm extractEntry lib/element.js
+308 silly gunzTarPerm modified mode [ 'lib/element.js', 493, 511 ]
+309 silly gunzTarPerm extractEntry lib/sax_parser.js
+310 silly gunzTarPerm modified mode [ 'lib/sax_parser.js', 493, 511 ]
+311 silly gunzTarPerm extractEntry lib/text.js
+312 silly gunzTarPerm modified mode [ 'lib/text.js', 493, 511 ]
+313 silly gunzTarPerm extractEntry vendor/libxml/save.h
+314 silly gunzTarPerm modified mode [ 'vendor/libxml/save.h', 493, 511 ]
+315 silly gunzTarPerm extractEntry vendor/libxml/Copyright
+316 silly gunzTarPerm modified mode [ 'vendor/libxml/Copyright', 493, 511 ]
+317 silly gunzTarPerm extractEntry vendor/libxml/HTMLparser.c
+318 silly gunzTarPerm modified mode [ 'vendor/libxml/HTMLparser.c', 493, 511 ]
+319 silly gunzTarPerm extractEntry vendor/libxml/HTMLtree.c
+320 silly gunzTarPerm modified mode [ 'vendor/libxml/HTMLtree.c', 493, 511 ]
+321 silly gunzTarPerm extractEntry vendor/libxml/SAX.c
+322 silly gunzTarPerm modified mode [ 'vendor/libxml/SAX.c', 493, 511 ]
+323 silly gunzTarPerm extractEntry vendor/libxml/SAX2.c
+324 silly gunzTarPerm modified mode [ 'vendor/libxml/SAX2.c', 493, 511 ]
+325 silly gunzTarPerm extractEntry vendor/libxml/buf.c
+326 silly gunzTarPerm modified mode [ 'vendor/libxml/buf.c', 493, 511 ]
+327 silly gunzTarPerm extractEntry vendor/libxml/buf.h
+328 silly gunzTarPerm modified mode [ 'vendor/libxml/buf.h', 493, 511 ]
+329 silly gunzTarPerm extractEntry vendor/libxml/c14n.c
+330 silly gunzTarPerm modified mode [ 'vendor/libxml/c14n.c', 493, 511 ]
+331 silly gunzTarPerm extractEntry vendor/libxml/catalog.c
+332 silly gunzTarPerm modified mode [ 'vendor/libxml/catalog.c', 493, 511 ]
+333 silly gunzTarPerm extractEntry vendor/libxml/chvalid.c
+334 silly gunzTarPerm modified mode [ 'vendor/libxml/chvalid.c', 493, 511 ]
+335 silly gunzTarPerm extractEntry vendor/libxml/config.h
+336 silly gunzTarPerm modified mode [ 'vendor/libxml/config.h', 493, 511 ]
+337 silly gunzTarPerm extractEntry vendor/libxml/debugXML.c
+338 silly gunzTarPerm modified mode [ 'vendor/libxml/debugXML.c', 493, 511 ]
+339 silly gunzTarPerm extractEntry vendor/libxml/dict.c
+340 silly gunzTarPerm modified mode [ 'vendor/libxml/dict.c', 493, 511 ]
+341 silly gunzTarPerm extractEntry vendor/libxml/elfgcchack.h
+342 silly gunzTarPerm modified mode [ 'vendor/libxml/elfgcchack.h', 493, 511 ]
+343 silly gunzTarPerm extractEntry vendor/libxml/enc.h
+344 silly gunzTarPerm modified mode [ 'vendor/libxml/enc.h', 493, 511 ]
+345 silly gunzTarPerm extractEntry vendor/libxml/encoding.c
+346 silly gunzTarPerm modified mode [ 'vendor/libxml/encoding.c', 493, 511 ]
+347 silly gunzTarPerm extractEntry vendor/libxml/entities.c
+348 silly gunzTarPerm modified mode [ 'vendor/libxml/entities.c', 493, 511 ]
+349 silly gunzTarPerm extractEntry vendor/libxml/error.c
+350 silly gunzTarPerm modified mode [ 'vendor/libxml/error.c', 493, 511 ]
+351 silly gunzTarPerm extractEntry vendor/libxml/globals.c
+352 silly gunzTarPerm modified mode [ 'vendor/libxml/globals.c', 493, 511 ]
+353 silly gunzTarPerm extractEntry vendor/libxml/hash.c
+354 silly gunzTarPerm modified mode [ 'vendor/libxml/hash.c', 493, 511 ]
+355 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/schematron.h
+356 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/schematron.h', 493, 511 ]
+357 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/DOCBparser.h
+358 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/DOCBparser.h', 493, 511 ]
+359 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/HTMLtree.h
+360 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/HTMLtree.h', 493, 511 ]
+361 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/Makefile
+362 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/Makefile', 493, 511 ]
+363 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/Makefile.am
+364 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/Makefile.am', 493, 511 ]
+365 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/Makefile.in
+366 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/Makefile.in', 493, 511 ]
+367 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/SAX.h
+368 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/SAX.h', 493, 511 ]
+369 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/SAX2.h
+370 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/SAX2.h', 493, 511 ]
+371 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/c14n.h
+372 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/c14n.h', 493, 511 ]
+373 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/catalog.h
+374 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/catalog.h', 493, 511 ]
+375 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/chvalid.h
+376 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/chvalid.h', 493, 511 ]
+377 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/debugXML.h
+378 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/debugXML.h', 493, 511 ]
+379 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/dict.h
+380 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/dict.h', 493, 511 ]
+381 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/encoding.h
+382 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/encoding.h', 493, 511 ]
+383 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/entities.h
+384 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/entities.h', 493, 511 ]
+385 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/globals.h
+386 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/globals.h', 493, 511 ]
+387 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/hash.h
+388 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/hash.h', 493, 511 ]
+389 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/list.h
+390 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/list.h', 493, 511 ]
+391 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/nanoftp.h
+392 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/nanoftp.h', 493, 511 ]
+393 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/nanohttp.h
+394 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/nanohttp.h', 493, 511 ]
+395 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/parser.h
+396 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/parser.h', 493, 511 ]
+397 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/parserInternals.h
+398 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/parserInternals.h', 493, 511 ]
+399 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/pattern.h
+400 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/pattern.h', 493, 511 ]
+401 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/relaxng.h
+402 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/relaxng.h', 493, 511 ]
+403 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/schemasInternals.h
+404 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/schemasInternals.h', 493, 511 ]
+405 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/HTMLparser.h
+406 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/HTMLparser.h', 493, 511 ]
+407 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/threads.h
+408 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/threads.h', 493, 511 ]
+409 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/tree.h
+410 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/tree.h', 493, 511 ]
+411 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/uri.h
+412 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/uri.h', 493, 511 ]
+413 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/valid.h
+414 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/valid.h', 493, 511 ]
+415 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xinclude.h
+416 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xinclude.h', 493, 511 ]
+417 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xlink.h
+418 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xlink.h', 493, 511 ]
+419 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlIO.h
+420 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlIO.h', 493, 511 ]
+421 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlautomata.h
+422 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlautomata.h', 493, 511 ]
+423 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlerror.h
+424 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlerror.h', 493, 511 ]
+425 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlexports.h
+426 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlexports.h', 493, 511 ]
+427 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlmemory.h
+428 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlmemory.h', 493, 511 ]
+429 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlmodule.h
+430 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlmodule.h', 493, 511 ]
+431 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlreader.h
+432 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlreader.h', 493, 511 ]
+433 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlregexp.h
+434 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlregexp.h', 493, 511 ]
+435 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlsave.h
+436 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlsave.h', 493, 511 ]
+437 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlschemas.h
+438 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlschemas.h', 493, 511 ]
+439 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlschemastypes.h
+440 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlschemastypes.h', 493, 511 ]
+441 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlstring.h
+442 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlstring.h', 493, 511 ]
+443 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlunicode.h
+444 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlunicode.h', 493, 511 ]
+445 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlversion.h
+446 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlversion.h', 493, 511 ]
+447 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xmlwriter.h
+448 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xmlwriter.h', 493, 511 ]
+449 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xpath.h
+450 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xpath.h', 493, 511 ]
+451 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xpathInternals.h
+452 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xpathInternals.h', 493, 511 ]
+453 silly gunzTarPerm extractEntry vendor/libxml/include/libxml/xpointer.h
+454 silly gunzTarPerm modified mode [ 'vendor/libxml/include/libxml/xpointer.h', 493, 511 ]
+455 silly gunzTarPerm extractEntry vendor/libxml/include/win32config.h
+456 silly gunzTarPerm modified mode [ 'vendor/libxml/include/win32config.h', 493, 511 ]
+457 silly gunzTarPerm extractEntry vendor/libxml/include/wsockcompat.h
+458 silly gunzTarPerm modified mode [ 'vendor/libxml/include/wsockcompat.h', 493, 511 ]
+459 silly gunzTarPerm extractEntry vendor/libxml/legacy.c
+460 silly gunzTarPerm modified mode [ 'vendor/libxml/legacy.c', 493, 511 ]
+461 silly gunzTarPerm extractEntry vendor/libxml/libxml.gyp
+462 silly gunzTarPerm modified mode [ 'vendor/libxml/libxml.gyp', 493, 511 ]
+463 silly gunzTarPerm extractEntry vendor/libxml/libxml.h
+464 silly gunzTarPerm modified mode [ 'vendor/libxml/libxml.h', 493, 511 ]
+465 silly gunzTarPerm extractEntry vendor/libxml/list.c
+466 silly gunzTarPerm modified mode [ 'vendor/libxml/list.c', 493, 511 ]
+467 silly gunzTarPerm extractEntry vendor/libxml/nanoftp.c
+468 silly gunzTarPerm modified mode [ 'vendor/libxml/nanoftp.c', 493, 511 ]
+469 silly gunzTarPerm extractEntry vendor/libxml/nanohttp.c
+470 silly gunzTarPerm modified mode [ 'vendor/libxml/nanohttp.c', 493, 511 ]
+471 silly gunzTarPerm extractEntry vendor/libxml/parser.c
+472 silly gunzTarPerm modified mode [ 'vendor/libxml/parser.c', 493, 511 ]
+473 silly gunzTarPerm extractEntry vendor/libxml/parserInternals.c
+474 silly gunzTarPerm modified mode [ 'vendor/libxml/parserInternals.c', 493, 511 ]
+475 silly gunzTarPerm extractEntry vendor/libxml/pattern.c
+476 silly gunzTarPerm modified mode [ 'vendor/libxml/pattern.c', 493, 511 ]
+477 silly gunzTarPerm extractEntry vendor/libxml/relaxng.c
+478 silly gunzTarPerm modified mode [ 'vendor/libxml/relaxng.c', 493, 511 ]
+479 silly gunzTarPerm extractEntry vendor/libxml/runsuite.c
+480 silly gunzTarPerm modified mode [ 'vendor/libxml/runsuite.c', 493, 511 ]
+481 silly gunzTarPerm extractEntry vendor/libxml/DOCBparser.c
+482 silly gunzTarPerm modified mode [ 'vendor/libxml/DOCBparser.c', 493, 511 ]
+483 silly gunzTarPerm extractEntry vendor/libxml/schematron.c
+484 silly gunzTarPerm modified mode [ 'vendor/libxml/schematron.c', 493, 511 ]
+485 silly gunzTarPerm extractEntry vendor/libxml/threads.c
+486 silly gunzTarPerm modified mode [ 'vendor/libxml/threads.c', 493, 511 ]
+487 silly gunzTarPerm extractEntry vendor/libxml/timsort.h
+488 silly gunzTarPerm modified mode [ 'vendor/libxml/timsort.h', 493, 511 ]
+489 silly gunzTarPerm extractEntry vendor/libxml/tree.c
+490 silly gunzTarPerm modified mode [ 'vendor/libxml/tree.c', 493, 511 ]
+491 silly gunzTarPerm extractEntry vendor/libxml/trio.c
+492 silly gunzTarPerm modified mode [ 'vendor/libxml/trio.c', 493, 511 ]
+493 silly gunzTarPerm extractEntry vendor/libxml/trio.h
+494 silly gunzTarPerm modified mode [ 'vendor/libxml/trio.h', 493, 511 ]
+495 silly gunzTarPerm extractEntry vendor/libxml/triodef.h
+496 silly gunzTarPerm modified mode [ 'vendor/libxml/triodef.h', 493, 511 ]
+497 silly gunzTarPerm extractEntry vendor/libxml/trionan.c
+498 silly gunzTarPerm modified mode [ 'vendor/libxml/trionan.c', 493, 511 ]
+499 silly gunzTarPerm extractEntry vendor/libxml/trionan.h
+500 silly gunzTarPerm modified mode [ 'vendor/libxml/trionan.h', 493, 511 ]
+501 silly gunzTarPerm extractEntry vendor/libxml/triop.h
+502 silly gunzTarPerm modified mode [ 'vendor/libxml/triop.h', 493, 511 ]
+503 silly gunzTarPerm extractEntry vendor/libxml/triostr.c
+504 silly gunzTarPerm modified mode [ 'vendor/libxml/triostr.c', 493, 511 ]
+505 silly gunzTarPerm extractEntry vendor/libxml/triostr.h
+506 silly gunzTarPerm modified mode [ 'vendor/libxml/triostr.h', 493, 511 ]
+507 silly gunzTarPerm extractEntry vendor/libxml/uri.c
+508 silly gunzTarPerm modified mode [ 'vendor/libxml/uri.c', 493, 511 ]
+509 silly gunzTarPerm extractEntry vendor/libxml/valid.c
+510 silly gunzTarPerm modified mode [ 'vendor/libxml/valid.c', 493, 511 ]
+511 silly gunzTarPerm extractEntry vendor/libxml/xinclude.c
+512 silly gunzTarPerm modified mode [ 'vendor/libxml/xinclude.c', 493, 511 ]
+513 silly gunzTarPerm extractEntry vendor/libxml/xlink.c
+514 silly gunzTarPerm modified mode [ 'vendor/libxml/xlink.c', 493, 511 ]
+515 silly gunzTarPerm extractEntry vendor/libxml/xmlIO.c
+516 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlIO.c', 493, 511 ]
+517 silly gunzTarPerm extractEntry vendor/libxml/xmlcatalog.c
+518 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlcatalog.c', 493, 511 ]
+519 silly gunzTarPerm extractEntry vendor/libxml/xmllint.c
+520 silly gunzTarPerm modified mode [ 'vendor/libxml/xmllint.c', 493, 511 ]
+521 silly gunzTarPerm extractEntry vendor/libxml/xmlmemory.c
+522 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlmemory.c', 493, 511 ]
+523 silly gunzTarPerm extractEntry vendor/libxml/xmlmodule.c
+524 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlmodule.c', 493, 511 ]
+525 silly gunzTarPerm extractEntry vendor/libxml/xmlreader.c
+526 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlreader.c', 493, 511 ]
+527 silly gunzTarPerm extractEntry vendor/libxml/xmlregexp.c
+528 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlregexp.c', 493, 511 ]
+529 silly gunzTarPerm extractEntry vendor/libxml/xmlsave.c
+530 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlsave.c', 493, 511 ]
+531 silly gunzTarPerm extractEntry vendor/libxml/xmlschemas.c
+532 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlschemas.c', 493, 511 ]
+533 silly gunzTarPerm extractEntry vendor/libxml/xmlschemastypes.c
+534 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlschemastypes.c', 493, 511 ]
+535 silly gunzTarPerm extractEntry vendor/libxml/xmlstring.c
+536 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlstring.c', 493, 511 ]
+537 silly gunzTarPerm extractEntry vendor/libxml/xmlunicode.c
+538 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlunicode.c', 493, 511 ]
+539 silly gunzTarPerm extractEntry vendor/libxml/xmlwriter.c
+540 silly gunzTarPerm modified mode [ 'vendor/libxml/xmlwriter.c', 493, 511 ]
+541 silly gunzTarPerm extractEntry vendor/libxml/xpath.c
+542 silly gunzTarPerm modified mode [ 'vendor/libxml/xpath.c', 493, 511 ]
+543 silly gunzTarPerm extractEntry vendor/libxml/xpointer.c
+544 silly gunzTarPerm modified mode [ 'vendor/libxml/xpointer.c', 493, 511 ]
+545 silly gunzTarPerm extractEntry vendor/libxml/xzlib.c
+546 silly gunzTarPerm modified mode [ 'vendor/libxml/xzlib.c', 493, 511 ]
+547 silly gunzTarPerm extractEntry vendor/libxml/xzlib.h
+548 silly gunzTarPerm modified mode [ 'vendor/libxml/xzlib.h', 493, 511 ]
+549 silly gunzTarPerm extractEntry src/xml_namespace.cc
+550 silly gunzTarPerm modified mode [ 'src/xml_namespace.cc', 493, 511 ]
+551 silly gunzTarPerm extractEntry src/html_document.cc
+552 silly gunzTarPerm modified mode [ 'src/html_document.cc', 493, 511 ]
+553 silly gunzTarPerm extractEntry src/libxmljs.cc
+554 silly gunzTarPerm modified mode [ 'src/libxmljs.cc', 493, 511 ]
+555 silly gunzTarPerm extractEntry src/libxmljs.h
+556 silly gunzTarPerm modified mode [ 'src/libxmljs.h', 493, 511 ]
+557 silly gunzTarPerm extractEntry src/xml_attribute.cc
+558 silly gunzTarPerm modified mode [ 'src/xml_attribute.cc', 493, 511 ]
+559 silly gunzTarPerm extractEntry src/xml_attribute.h
+560 silly gunzTarPerm modified mode [ 'src/xml_attribute.h', 493, 511 ]
+561 silly gunzTarPerm extractEntry src/xml_comment.cc
+562 silly gunzTarPerm modified mode [ 'src/xml_comment.cc', 493, 511 ]
+563 silly gunzTarPerm extractEntry src/xml_comment.h
+564 silly gunzTarPerm modified mode [ 'src/xml_comment.h', 493, 511 ]
+565 silly gunzTarPerm extractEntry src/xml_document.cc
+566 silly gunzTarPerm modified mode [ 'src/xml_document.cc', 493, 511 ]
+567 silly gunzTarPerm extractEntry src/xml_document.h
+568 silly gunzTarPerm modified mode [ 'src/xml_document.h', 493, 511 ]
+569 silly gunzTarPerm extractEntry src/xml_element.cc
+570 silly gunzTarPerm modified mode [ 'src/xml_element.cc', 493, 511 ]
+571 silly gunzTarPerm extractEntry src/xml_element.h
+572 silly gunzTarPerm modified mode [ 'src/xml_element.h', 493, 511 ]
+573 silly gunzTarPerm extractEntry src/html_document.h
+574 silly gunzTarPerm modified mode [ 'src/html_document.h', 493, 511 ]
+575 silly gunzTarPerm extractEntry src/xml_namespace.h
+576 silly gunzTarPerm modified mode [ 'src/xml_namespace.h', 493, 511 ]
+577 silly gunzTarPerm extractEntry src/xml_node.cc
+578 silly gunzTarPerm modified mode [ 'src/xml_node.cc', 493, 511 ]
+579 silly gunzTarPerm extractEntry src/xml_node.h
+580 silly gunzTarPerm modified mode [ 'src/xml_node.h', 493, 511 ]
+581 silly gunzTarPerm extractEntry src/xml_sax_parser.cc
+582 silly gunzTarPerm modified mode [ 'src/xml_sax_parser.cc', 493, 511 ]
+583 silly gunzTarPerm extractEntry src/xml_sax_parser.h
+584 silly gunzTarPerm modified mode [ 'src/xml_sax_parser.h', 493, 511 ]
+585 silly gunzTarPerm extractEntry src/xml_syntax_error.cc
+586 silly gunzTarPerm modified mode [ 'src/xml_syntax_error.cc', 493, 511 ]
+587 silly gunzTarPerm extractEntry src/xml_syntax_error.h
+588 silly gunzTarPerm modified mode [ 'src/xml_syntax_error.h', 493, 511 ]
+589 silly gunzTarPerm extractEntry src/xml_text.cc
+590 silly gunzTarPerm modified mode [ 'src/xml_text.cc', 493, 511 ]
+591 silly gunzTarPerm extractEntry src/xml_text.h
+592 silly gunzTarPerm modified mode [ 'src/xml_text.h', 493, 511 ]
+593 silly gunzTarPerm extractEntry src/xml_xpath_context.cc
+594 silly gunzTarPerm modified mode [ 'src/xml_xpath_context.cc', 493, 511 ]
+595 silly gunzTarPerm extractEntry src/xml_xpath_context.h
+596 silly gunzTarPerm modified mode [ 'src/xml_xpath_context.h', 493, 511 ]
+597 silly gunzTarPerm extractEntry test/attribute.js
+598 silly gunzTarPerm modified mode [ 'test/attribute.js', 493, 511 ]
+599 silly gunzTarPerm extractEntry test/html_parser.js
+600 silly gunzTarPerm modified mode [ 'test/html_parser.js', 493, 511 ]
+601 silly gunzTarPerm extractEntry test/main.js
+602 silly gunzTarPerm modified mode [ 'test/main.js', 493, 511 ]
+603 silly gunzTarPerm extractEntry test/memory_management.js
+604 silly gunzTarPerm modified mode [ 'test/memory_management.js', 493, 511 ]
+605 silly gunzTarPerm extractEntry test/xml_sax_parser.js
+606 silly gunzTarPerm modified mode [ 'test/xml_sax_parser.js', 493, 511 ]
+607 silly gunzTarPerm extractEntry test/comment.js
+608 silly gunzTarPerm modified mode [ 'test/comment.js', 493, 511 ]
+609 silly gunzTarPerm extractEntry test/ref_integrity.js
+610 silly gunzTarPerm modified mode [ 'test/ref_integrity.js', 493, 511 ]
+611 silly gunzTarPerm extractEntry test/searching.js
+612 silly gunzTarPerm modified mode [ 'test/searching.js', 493, 511 ]
+613 silly gunzTarPerm extractEntry test/text.js
+614 silly gunzTarPerm modified mode [ 'test/text.js', 493, 511 ]
+615 silly gunzTarPerm extractEntry test/text_node.js
+616 silly gunzTarPerm modified mode [ 'test/text_node.js', 493, 511 ]
+617 silly gunzTarPerm extractEntry test/element.js
+618 silly gunzTarPerm modified mode [ 'test/element.js', 493, 511 ]
+619 silly gunzTarPerm extractEntry test/traversal.js
+620 silly gunzTarPerm modified mode [ 'test/traversal.js', 493, 511 ]
+621 silly gunzTarPerm extractEntry test/document.js
+622 silly gunzTarPerm modified mode [ 'test/document.js', 493, 511 ]
+623 silly gunzTarPerm extractEntry test/xml_parser.js
+624 silly gunzTarPerm modified mode [ 'test/xml_parser.js', 493, 511 ]
+625 silly gunzTarPerm extractEntry test/namespace.js
+626 silly gunzTarPerm modified mode [ 'test/namespace.js', 493, 511 ]
+627 silly gunzTarPerm extractEntry test/z_memory_leak.js
+628 silly gunzTarPerm modified mode [ 'test/z_memory_leak.js', 493, 511 ]
+629 silly gunzTarPerm extractEntry test/node_attributes.js
+630 silly gunzTarPerm modified mode [ 'test/node_attributes.js', 493, 511 ]
+631 silly gunzTarPerm extractEntry test/fixtures/baseurl.dtd
+632 silly gunzTarPerm modified mode [ 'test/fixtures/baseurl.dtd', 493, 511 ]
+633 silly gunzTarPerm extractEntry test/fixtures/errors/comment.xml
+634 silly gunzTarPerm modified mode [ 'test/fixtures/errors/comment.xml', 493, 511 ]
+635 silly gunzTarPerm extractEntry test/fixtures/parser-utf16.xml
+636 silly gunzTarPerm modified mode [ 'test/fixtures/parser-utf16.xml', 493, 511 ]
+637 silly gunzTarPerm extractEntry test/fixtures/parser.euc_jp.html
+638 silly gunzTarPerm modified mode [ 'test/fixtures/parser.euc_jp.html', 493, 511 ]
+639 silly gunzTarPerm extractEntry test/fixtures/parser.html
+640 silly gunzTarPerm modified mode [ 'test/fixtures/parser.html', 493, 511 ]
+641 silly gunzTarPerm extractEntry test/fixtures/parser.xml
+642 silly gunzTarPerm modified mode [ 'test/fixtures/parser.xml', 493, 511 ]
+643 silly gunzTarPerm extractEntry test/fixtures/sax_parser.xml
+644 silly gunzTarPerm modified mode [ 'test/fixtures/sax_parser.xml', 493, 511 ]
+645 silly gunzTarPerm extractEntry test/fixtures/warnings/amp.html
+646 silly gunzTarPerm modified mode [ 'test/fixtures/warnings/amp.html', 493, 511 ]
+647 silly gunzTarPerm extractEntry test/fixtures/warnings/ent9.xml
+648 silly gunzTarPerm modified mode [ 'test/fixtures/warnings/ent9.xml', 493, 511 ]
+649 silly gunzTarPerm extractEntry examples/cdata.js
+650 silly gunzTarPerm modified mode [ 'examples/cdata.js', 493, 511 ]
+651 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\package.json
+652 info preinstall libxmljs@0.18.4
+653 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\package.json
+654 silly prepareForInstallMany adding node-pre-gyp@~0.6.32 from libxmljs dependencies
+655 silly prepareForInstallMany adding nan@~2.5.0 from libxmljs dependencies
+656 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\package.json
+657 silly cache add args [ 'node-pre-gyp@~0.6.32', null ]
+658 verbose cache add spec node-pre-gyp@~0.6.32
+659 silly cache add args [ 'nan@~2.5.0', null ]
+660 verbose cache add spec nan@~2.5.0
+661 silly cache add parsed spec Result {
+661 silly cache add   raw: 'node-pre-gyp@~0.6.32',
+661 silly cache add   scope: null,
+661 silly cache add   name: 'node-pre-gyp',
+661 silly cache add   rawSpec: '~0.6.32',
+661 silly cache add   spec: '>=0.6.32 <0.7.0',
+661 silly cache add   type: 'range' }
+662 silly addNamed node-pre-gyp@>=0.6.32 <0.7.0
+663 verbose addNamed ">=0.6.32 <0.7.0" is a valid semver range for node-pre-gyp
+664 silly addNameRange { name: 'node-pre-gyp',
+664 silly addNameRange   range: '>=0.6.32 <0.7.0',
+664 silly addNameRange   hasData: false }
+665 silly mapToRegistry name node-pre-gyp
+666 silly mapToRegistry using default registry
+667 silly mapToRegistry registry https://registry.npmjs.org/
+668 silly mapToRegistry data Result {
+668 silly mapToRegistry   raw: 'node-pre-gyp',
+668 silly mapToRegistry   scope: null,
+668 silly mapToRegistry   name: 'node-pre-gyp',
+668 silly mapToRegistry   rawSpec: '',
+668 silly mapToRegistry   spec: 'latest',
+668 silly mapToRegistry   type: 'tag' }
+669 silly mapToRegistry uri https://registry.npmjs.org/node-pre-gyp
+670 verbose addNameRange registry:https://registry.npmjs.org/node-pre-gyp not in flight; fetching
+671 silly cache add parsed spec Result {
+671 silly cache add   raw: 'nan@~2.5.0',
+671 silly cache add   scope: null,
+671 silly cache add   name: 'nan',
+671 silly cache add   rawSpec: '~2.5.0',
+671 silly cache add   spec: '>=2.5.0 <2.6.0',
+671 silly cache add   type: 'range' }
+672 silly addNamed nan@>=2.5.0 <2.6.0
+673 verbose addNamed ">=2.5.0 <2.6.0" is a valid semver range for nan
+674 silly addNameRange { name: 'nan', range: '>=2.5.0 <2.6.0', hasData: false }
+675 silly mapToRegistry name nan
+676 silly mapToRegistry using default registry
+677 silly mapToRegistry registry https://registry.npmjs.org/
+678 silly mapToRegistry data Result {
+678 silly mapToRegistry   raw: 'nan',
+678 silly mapToRegistry   scope: null,
+678 silly mapToRegistry   name: 'nan',
+678 silly mapToRegistry   rawSpec: '',
+678 silly mapToRegistry   spec: 'latest',
+678 silly mapToRegistry   type: 'tag' }
+679 silly mapToRegistry uri https://registry.npmjs.org/nan
+680 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+681 verbose request uri https://registry.npmjs.org/node-pre-gyp
+682 verbose request no auth needed
+683 info attempt registry request try #1 at 18:38:10
+684 verbose etag W/"592e0a35-29495"
+685 verbose lastModified Wed, 31 May 2017 00:11:33 GMT
+686 http request GET https://registry.npmjs.org/node-pre-gyp
+687 verbose request uri https://registry.npmjs.org/nan
+688 verbose request no auth needed
+689 info attempt registry request try #1 at 18:38:10
+690 verbose etag W/"592dfb8f-1f9f8"
+691 verbose lastModified Tue, 30 May 2017 23:09:03 GMT
+692 http request GET https://registry.npmjs.org/nan
+693 http 304 https://registry.npmjs.org/node-pre-gyp
+694 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+694 verbose headers   via: '1.1 varnish',
+694 verbose headers   'cache-control': 'max-age=300',
+694 verbose headers   etag: 'W/"592e0a35-29495"',
+694 verbose headers   age: '298',
+694 verbose headers   connection: 'keep-alive',
+694 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+694 verbose headers   'x-cache': 'HIT',
+694 verbose headers   'x-cache-hits': '3',
+694 verbose headers   'x-timer': 'S1496968689.422537,VS0,VE0',
+694 verbose headers   vary: 'Accept-Encoding' }
+695 silly get cb [ 304,
+695 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+695 silly get     via: '1.1 varnish',
+695 silly get     'cache-control': 'max-age=300',
+695 silly get     etag: 'W/"592e0a35-29495"',
+695 silly get     age: '298',
+695 silly get     connection: 'keep-alive',
+695 silly get     'x-served-by': 'cache-ord1725-ORD',
+695 silly get     'x-cache': 'HIT',
+695 silly get     'x-cache-hits': '3',
+695 silly get     'x-timer': 'S1496968689.422537,VS0,VE0',
+695 silly get     vary: 'Accept-Encoding' } ]
+696 verbose etag https://registry.npmjs.org/node-pre-gyp from cache
+697 verbose get saving node-pre-gyp to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\node-pre-gyp\.cache.json
+698 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+699 silly addNameRange number 2 { name: 'node-pre-gyp', range: '>=0.6.32 <0.7.0', hasData: true }
+700 silly addNameRange versions [ 'node-pre-gyp',
+700 silly addNameRange   [ '0.1.0',
+700 silly addNameRange     '0.1.1',
+700 silly addNameRange     '0.1.2',
+700 silly addNameRange     '0.1.3',
+700 silly addNameRange     '0.1.4',
+700 silly addNameRange     '0.1.5',
+700 silly addNameRange     '0.1.6',
+700 silly addNameRange     '0.1.7',
+700 silly addNameRange     '0.1.8',
+700 silly addNameRange     '0.1.9',
+700 silly addNameRange     '0.2.1',
+700 silly addNameRange     '0.2.2',
+700 silly addNameRange     '0.2.3',
+700 silly addNameRange     '0.2.4',
+700 silly addNameRange     '0.2.5',
+700 silly addNameRange     '0.2.6',
+700 silly addNameRange     '0.3.0',
+700 silly addNameRange     '0.3.1',
+700 silly addNameRange     '0.3.1-alpha',
+700 silly addNameRange     '0.4.0',
+700 silly addNameRange     '0.4.1',
+700 silly addNameRange     '0.4.2',
+700 silly addNameRange     '0.5.0',
+700 silly addNameRange     '0.5.1',
+700 silly addNameRange     '0.5.2',
+700 silly addNameRange     '0.5.3',
+700 silly addNameRange     '0.5.4',
+700 silly addNameRange     '0.5.5',
+700 silly addNameRange     '0.5.6',
+700 silly addNameRange     '0.5.8',
+700 silly addNameRange     '0.5.9',
+700 silly addNameRange     '0.5.10',
+700 silly addNameRange     '0.5.11',
+700 silly addNameRange     '0.5.12',
+700 silly addNameRange     '0.5.13',
+700 silly addNameRange     '0.5.14',
+700 silly addNameRange     '0.5.15',
+700 silly addNameRange     '0.5.16',
+700 silly addNameRange     '0.5.17',
+700 silly addNameRange     '0.5.18',
+700 silly addNameRange     '0.5.19',
+700 silly addNameRange     '0.5.20',
+700 silly addNameRange     '0.5.21',
+700 silly addNameRange     '0.5.22',
+700 silly addNameRange     '0.5.23',
+700 silly addNameRange     '0.5.24',
+700 silly addNameRange     '0.5.25',
+700 silly addNameRange     '0.5.26',
+700 silly addNameRange     '0.5.27',
+700 silly addNameRange     '0.5.28',
+700 silly addNameRange     '0.5.29',
+700 silly addNameRange     '0.5.30',
+700 silly addNameRange     '0.5.31',
+700 silly addNameRange     '0.6.0',
+700 silly addNameRange     '0.6.1',
+700 silly addNameRange     '0.6.2',
+700 silly addNameRange     '0.6.3',
+700 silly addNameRange     '0.6.4',
+700 silly addNameRange     '0.6.5',
+700 silly addNameRange     '0.6.6',
+700 silly addNameRange     '0.6.7',
+700 silly addNameRange     '0.6.8',
+700 silly addNameRange     '0.6.9',
+700 silly addNameRange     '0.6.10',
+700 silly addNameRange     '0.6.11',
+700 silly addNameRange     '0.6.12',
+700 silly addNameRange     '0.6.13',
+700 silly addNameRange     '0.6.14',
+700 silly addNameRange     '0.6.15',
+700 silly addNameRange     '0.6.16',
+700 silly addNameRange     '0.6.17',
+700 silly addNameRange     '0.6.18',
+700 silly addNameRange     '0.6.19',
+700 silly addNameRange     '0.6.20',
+700 silly addNameRange     '0.6.21',
+700 silly addNameRange     '0.6.22',
+700 silly addNameRange     '0.6.23',
+700 silly addNameRange     '0.6.24',
+700 silly addNameRange     '0.6.25',
+700 silly addNameRange     '0.6.26',
+700 silly addNameRange     '0.6.27',
+700 silly addNameRange     '0.6.28',
+700 silly addNameRange     '0.6.29',
+700 silly addNameRange     '0.6.30',
+700 silly addNameRange     '0.6.31',
+700 silly addNameRange     '0.6.32',
+700 silly addNameRange     '0.6.33',
+700 silly addNameRange     '0.6.34',
+700 silly addNameRange     '0.6.35',
+700 silly addNameRange     '0.6.36' ] ]
+701 silly addNamed node-pre-gyp@0.6.36
+702 verbose addNamed "0.6.36" is a plain semver version for node-pre-gyp
+703 silly cache afterAdd node-pre-gyp@0.6.36
+704 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\node-pre-gyp\0.6.36\package\package.json not in flight; writing
+705 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+706 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\node-pre-gyp\0.6.36\package\package.json written
+707 http 304 https://registry.npmjs.org/nan
+708 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+708 verbose headers   via: '1.1 varnish',
+708 verbose headers   'cache-control': 'max-age=300',
+708 verbose headers   etag: 'W/"592dfb8f-1f9f8"',
+708 verbose headers   age: '262',
+708 verbose headers   connection: 'keep-alive',
+708 verbose headers   'x-served-by': 'cache-ord1729-ORD',
+708 verbose headers   'x-cache': 'HIT',
+708 verbose headers   'x-cache-hits': '6',
+708 verbose headers   'x-timer': 'S1496968690.540580,VS0,VE0',
+708 verbose headers   vary: 'Accept-Encoding' }
+709 silly get cb [ 304,
+709 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+709 silly get     via: '1.1 varnish',
+709 silly get     'cache-control': 'max-age=300',
+709 silly get     etag: 'W/"592dfb8f-1f9f8"',
+709 silly get     age: '262',
+709 silly get     connection: 'keep-alive',
+709 silly get     'x-served-by': 'cache-ord1729-ORD',
+709 silly get     'x-cache': 'HIT',
+709 silly get     'x-cache-hits': '6',
+709 silly get     'x-timer': 'S1496968690.540580,VS0,VE0',
+709 silly get     vary: 'Accept-Encoding' } ]
+710 verbose etag https://registry.npmjs.org/nan from cache
+711 verbose get saving nan to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+712 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+713 silly addNameRange number 2 { name: 'nan', range: '>=2.5.0 <2.6.0', hasData: true }
+714 silly addNameRange versions [ 'nan',
+714 silly addNameRange   [ '0.3.0-wip',
+714 silly addNameRange     '0.3.0-wip2',
+714 silly addNameRange     '0.3.0',
+714 silly addNameRange     '0.3.1',
+714 silly addNameRange     '0.3.2',
+714 silly addNameRange     '0.4.0',
+714 silly addNameRange     '0.4.1',
+714 silly addNameRange     '0.4.2',
+714 silly addNameRange     '0.4.3',
+714 silly addNameRange     '0.4.4',
+714 silly addNameRange     '0.5.0',
+714 silly addNameRange     '0.5.1',
+714 silly addNameRange     '0.5.2',
+714 silly addNameRange     '0.6.0',
+714 silly addNameRange     '0.7.0',
+714 silly addNameRange     '0.7.1',
+714 silly addNameRange     '0.8.0',
+714 silly addNameRange     '1.0.0',
+714 silly addNameRange     '1.1.0',
+714 silly addNameRange     '1.1.1',
+714 silly addNameRange     '1.1.2',
+714 silly addNameRange     '1.2.0',
+714 silly addNameRange     '1.3.0',
+714 silly addNameRange     '1.4.0',
+714 silly addNameRange     '1.4.1',
+714 silly addNameRange     '1.5.0',
+714 silly addNameRange     '1.4.2',
+714 silly addNameRange     '1.4.3',
+714 silly addNameRange     '1.5.1',
+714 silly addNameRange     '1.5.2',
+714 silly addNameRange     '1.6.0',
+714 silly addNameRange     '1.5.3',
+714 silly addNameRange     '1.6.1',
+714 silly addNameRange     '1.6.2',
+714 silly addNameRange     '1.7.0',
+714 silly addNameRange     '1.8.0',
+714 silly addNameRange     '1.8.1',
+714 silly addNameRange     '1.8.2',
+714 silly addNameRange     '1.8.3',
+714 silly addNameRange     '1.8.4',
+714 silly addNameRange     '1.9.0',
+714 silly addNameRange     '2.0.0',
+714 silly addNameRange     '2.0.1',
+714 silly addNameRange     '2.0.2',
+714 silly addNameRange     '2.0.3',
+714 silly addNameRange     '2.0.4',
+714 silly addNameRange     '2.0.5',
+714 silly addNameRange     '2.0.6',
+714 silly addNameRange     '2.0.7',
+714 silly addNameRange     '2.0.8',
+714 silly addNameRange     '2.0.9',
+714 silly addNameRange     '2.1.0',
+714 silly addNameRange     '2.2.0',
+714 silly addNameRange     '2.2.1',
+714 silly addNameRange     '2.3.0',
+714 silly addNameRange     '2.3.1',
+714 silly addNameRange     '2.3.2',
+714 silly addNameRange     '2.3.3',
+714 silly addNameRange     '2.3.4',
+714 silly addNameRange     '2.3.5',
+714 silly addNameRange     '2.4.0',
+714 silly addNameRange     '2.5.0',
+714 silly addNameRange     '2.5.1',
+714 silly addNameRange     '2.6.0',
+714 silly addNameRange     '2.6.1',
+714 silly addNameRange     '2.6.2' ] ]
+715 silly addNamed nan@2.5.1
+716 verbose addNamed "2.5.1" is a plain semver version for nan
+717 silly cache afterAdd nan@2.5.1
+718 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\nan\2.5.1\package\package.json not in flight; writing
+719 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+720 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\nan\2.5.1\package\package.json written
+721 silly install resolved [ { name: 'node-pre-gyp',
+721 silly install resolved     description: 'Node.js native addon binary install tool',
+721 silly install resolved     version: '0.6.36',
+721 silly install resolved     keywords: [ 'native', 'addon', 'module', 'c', 'c++', 'bindings', 'binary' ],
+721 silly install resolved     license: 'BSD-3-Clause',
+721 silly install resolved     author: { name: 'Dane Springmeyer', email: 'dane@mapbox.com' },
+721 silly install resolved     repository: { type: 'git', url: 'git://github.com/mapbox/node-pre-gyp.git' },
+721 silly install resolved     bin: { 'node-pre-gyp': './bin/node-pre-gyp' },
+721 silly install resolved     main: './lib/node-pre-gyp.js',
+721 silly install resolved     dependencies:
+721 silly install resolved      { mkdirp: '^0.5.1',
+721 silly install resolved        nopt: '^4.0.1',
+721 silly install resolved        npmlog: '^4.0.2',
+721 silly install resolved        rc: '^1.1.7',
+721 silly install resolved        request: '^2.81.0',
+721 silly install resolved        rimraf: '^2.6.1',
+721 silly install resolved        semver: '^5.3.0',
+721 silly install resolved        tar: '^2.2.1',
+721 silly install resolved        'tar-pack': '^3.4.0' },
+721 silly install resolved     devDependencies:
+721 silly install resolved      { 'aws-sdk': '^2.28.0',
+721 silly install resolved        mocha: '^3.2.0',
+721 silly install resolved        retire: '^1.2.12',
+721 silly install resolved        jshint: '^2.9.4' },
+721 silly install resolved     jshintConfig:
+721 silly install resolved      { node: true,
+721 silly install resolved        globalstrict: true,
+721 silly install resolved        undef: true,
+721 silly install resolved        unused: true,
+721 silly install resolved        noarg: true,
+721 silly install resolved        mocha: true },
+721 silly install resolved     scripts:
+721 silly install resolved      { pretest: 'retire -n && jshint test/build.test.js test/s3_setup.test.js test/versioning.test.js',
+721 silly install resolved        'update-crosswalk': 'node scripts/abi_crosswalk.js',
+721 silly install resolved        test: 'jshint lib lib/util scripts bin/node-pre-gyp && mocha -R spec --timeout 500000' },
+721 silly install resolved     gitHead: '964a6854e111ec4ea2287a8bf6f012acca755f6a',
+721 silly install resolved     bugs: { url: 'https://github.com/mapbox/node-pre-gyp/issues' },
+721 silly install resolved     homepage: 'https://github.com/mapbox/node-pre-gyp#readme',
+721 silly install resolved     _id: 'node-pre-gyp@0.6.36',
+721 silly install resolved     _shasum: 'db604112cb74e0d477554e9b505b17abddfab786',
+721 silly install resolved     _from: 'node-pre-gyp@>=0.6.32 <0.7.0',
+721 silly install resolved     _npmVersion: '3.10.10',
+721 silly install resolved     _nodeVersion: '6.10.3',
+721 silly install resolved     _npmUser: { name: 'springmeyer', email: 'dane@mapbox.com' },
+721 silly install resolved     dist:
+721 silly install resolved      { shasum: 'db604112cb74e0d477554e9b505b17abddfab786',
+721 silly install resolved        tarball: 'https://registry.npmjs.org/node-pre-gyp/-/node-pre-gyp-0.6.36.tgz' },
+721 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+721 silly install resolved     _npmOperationalInternal:
+721 silly install resolved      { host: 's3://npm-registry-packages',
+721 silly install resolved        tmp: 'tmp/node-pre-gyp-0.6.36.tgz_1496189493690_0.5106917407829314' },
+721 silly install resolved     directories: {},
+721 silly install resolved     _resolved: 'https://registry.npmjs.org/node-pre-gyp/-/node-pre-gyp-0.6.36.tgz',
+721 silly install resolved     readme: 'ERROR: No README data found!' },
+721 silly install resolved   { name: 'nan',
+721 silly install resolved     version: '2.5.1',
+721 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 7 compatibility',
+721 silly install resolved     main: 'include_dirs.js',
+721 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+721 silly install resolved     scripts:
+721 silly install resolved      { test: 'tap --gc --stderr test/js/*-test.js',
+721 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+721 silly install resolved        docs: 'doc/.build.sh' },
+721 silly install resolved     contributors:
+721 silly install resolved      [ [Object],
+721 silly install resolved        [Object],
+721 silly install resolved        [Object],
+721 silly install resolved        [Object],
+721 silly install resolved        [Object],
+721 silly install resolved        [Object],
+721 silly install resolved        [Object] ],
+721 silly install resolved     devDependencies:
+721 silly install resolved      { bindings: '~1.2.1',
+721 silly install resolved        commander: '^2.8.1',
+721 silly install resolved        glob: '^5.0.14',
+721 silly install resolved        'node-gyp': '~3.0.1',
+721 silly install resolved        'readable-stream': '^2.1.4',
+721 silly install resolved        tap: '~0.7.1',
+721 silly install resolved        xtend: '~4.0.0' },
+721 silly install resolved     license: 'MIT',
+721 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+721 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+721 silly install resolved     _id: 'nan@2.5.1',
+721 silly install resolved     _shasum: 'd5b01691253326a97a2bbee9e61c55d8d60351e2',
+721 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.5.1.tgz',
+721 silly install resolved     _from: 'nan@>=2.5.0 <2.6.0',
+721 silly install resolved     _npmVersion: '4.0.5',
+721 silly install resolved     _nodeVersion: '7.4.0',
+721 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+721 silly install resolved     dist:
+721 silly install resolved      { shasum: 'd5b01691253326a97a2bbee9e61c55d8d60351e2',
+721 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.5.1.tgz' },
+721 silly install resolved     maintainers: [ [Object], [Object] ],
+721 silly install resolved     _npmOperationalInternal:
+721 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
+721 silly install resolved        tmp: 'tmp/nan-2.5.1.tgz_1485124061146_0.7941144248470664' },
+721 silly install resolved     directories: {},
+721 silly install resolved     readme: 'ERROR: No README data found!' } ]
+722 info install node-pre-gyp@0.6.36 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+723 info install nan@2.5.1 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+724 info installOne node-pre-gyp@0.6.36
+725 verbose installOne of node-pre-gyp to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs not in flight; installing
+726 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+727 info installOne nan@2.5.1
+728 verbose installOne of nan to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs not in flight; installing
+729 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+730 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\node-pre-gyp-74a62f483f68a836.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+731 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\nan-7c5ae1cee28d843d.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+732 silly install write writing node-pre-gyp 0.6.36 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+733 silly install write writing nan 2.5.1 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+734 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+735 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+736 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+737 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+738 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+739 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+740 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\nan\2.5.1\package.tgz
+741 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+742 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan is being purged
+743 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+744 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\node-pre-gyp\0.6.36\package.tgz
+745 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+746 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp is being purged
+747 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+748 silly gunzTarPerm modes [ '777', '666' ]
+749 silly gunzTarPerm modes [ '777', '666' ]
+750 silly gunzTarPerm extractEntry package.json
+751 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+752 silly gunzTarPerm extractEntry package.json
+753 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+754 silly gunzTarPerm extractEntry README.md
+755 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+756 silly gunzTarPerm extractEntry include_dirs.js
+757 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+758 silly gunzTarPerm extractEntry README.md
+759 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+760 silly gunzTarPerm extractEntry LICENSE
+761 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+762 silly gunzTarPerm extractEntry cloudformation/travis.template
+763 silly gunzTarPerm modified mode [ 'cloudformation/travis.template', 420, 438 ]
+764 silly gunzTarPerm extractEntry appveyor.yml
+765 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+766 silly gunzTarPerm extractEntry bin/node-pre-gyp
+767 silly gunzTarPerm modified mode [ 'bin/node-pre-gyp', 493, 511 ]
+768 silly gunzTarPerm extractEntry bin/node-pre-gyp.cmd
+769 silly gunzTarPerm modified mode [ 'bin/node-pre-gyp.cmd', 420, 438 ]
+770 silly gunzTarPerm extractEntry contributing.md
+771 silly gunzTarPerm modified mode [ 'contributing.md', 420, 438 ]
+772 silly gunzTarPerm extractEntry lib/build.js
+773 silly gunzTarPerm modified mode [ 'lib/build.js', 420, 438 ]
+774 silly gunzTarPerm extractEntry lib/install.js
+775 silly gunzTarPerm modified mode [ 'lib/install.js', 420, 438 ]
+776 silly gunzTarPerm extractEntry lib/node-pre-gyp.js
+777 silly gunzTarPerm modified mode [ 'lib/node-pre-gyp.js', 420, 438 ]
+778 silly gunzTarPerm extractEntry lib/package.js
+779 silly gunzTarPerm modified mode [ 'lib/package.js', 420, 438 ]
+780 silly gunzTarPerm extractEntry lib/pre-binding.js
+781 silly gunzTarPerm modified mode [ 'lib/pre-binding.js', 420, 438 ]
+782 silly gunzTarPerm extractEntry lib/info.js
+783 silly gunzTarPerm modified mode [ 'lib/info.js', 420, 438 ]
+784 silly gunzTarPerm extractEntry lib/rebuild.js
+785 silly gunzTarPerm modified mode [ 'lib/rebuild.js', 420, 438 ]
+786 silly gunzTarPerm extractEntry lib/reinstall.js
+787 silly gunzTarPerm modified mode [ 'lib/reinstall.js', 420, 438 ]
+788 silly gunzTarPerm extractEntry lib/reveal.js
+789 silly gunzTarPerm modified mode [ 'lib/reveal.js', 420, 438 ]
+790 silly gunzTarPerm extractEntry lib/testbinary.js
+791 silly gunzTarPerm modified mode [ 'lib/testbinary.js', 420, 438 ]
+792 silly gunzTarPerm extractEntry lib/testpackage.js
+793 silly gunzTarPerm modified mode [ 'lib/testpackage.js', 420, 438 ]
+794 silly gunzTarPerm extractEntry lib/configure.js
+795 silly gunzTarPerm modified mode [ 'lib/configure.js', 420, 438 ]
+796 silly gunzTarPerm extractEntry lib/unpublish.js
+797 silly gunzTarPerm modified mode [ 'lib/unpublish.js', 420, 438 ]
+798 silly gunzTarPerm extractEntry lib/clean.js
+799 silly gunzTarPerm modified mode [ 'lib/clean.js', 420, 438 ]
+800 silly gunzTarPerm extractEntry lib/publish.js
+801 silly gunzTarPerm modified mode [ 'lib/publish.js', 420, 438 ]
+802 silly gunzTarPerm extractEntry lib/util/compile.js
+803 silly gunzTarPerm modified mode [ 'lib/util/compile.js', 420, 438 ]
+804 silly gunzTarPerm extractEntry lib/util/handle_gyp_opts.js
+805 silly gunzTarPerm modified mode [ 'lib/util/handle_gyp_opts.js', 420, 438 ]
+806 silly gunzTarPerm extractEntry lib/util/s3_setup.js
+807 silly gunzTarPerm modified mode [ 'lib/util/s3_setup.js', 420, 438 ]
+808 silly gunzTarPerm extractEntry lib/util/versioning.js
+809 silly gunzTarPerm modified mode [ 'lib/util/versioning.js', 420, 438 ]
+810 silly gunzTarPerm extractEntry lib/util/abi_crosswalk.json
+811 silly gunzTarPerm modified mode [ 'lib/util/abi_crosswalk.json', 420, 438 ]
+812 silly gunzTarPerm extractEntry lib/util/nw-pre-gyp/package.json
+813 silly gunzTarPerm modified mode [ 'lib/util/nw-pre-gyp/package.json', 420, 438 ]
+814 silly gunzTarPerm extractEntry lib/util/nw-pre-gyp/index.html
+815 silly gunzTarPerm modified mode [ 'lib/util/nw-pre-gyp/index.html', 420, 438 ]
+816 silly gunzTarPerm extractEntry template-name.diff
+817 silly gunzTarPerm modified mode [ 'template-name.diff', 420, 438 ]
+818 silly gunzTarPerm extractEntry CHANGELOG.md
+819 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+820 silly gunzTarPerm extractEntry nan_converters.h
+821 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+822 silly gunzTarPerm extractEntry CHANGELOG.md
+823 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+824 silly gunzTarPerm extractEntry LICENSE.md
+825 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+826 silly gunzTarPerm extractEntry doc/node_misc.md
+827 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+828 silly gunzTarPerm extractEntry doc/asyncworker.md
+829 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+830 silly gunzTarPerm extractEntry doc/callback.md
+831 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+832 silly gunzTarPerm extractEntry doc/converters.md
+833 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+834 silly gunzTarPerm extractEntry doc/errors.md
+835 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+836 silly gunzTarPerm extractEntry doc/maybe_types.md
+837 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+838 silly gunzTarPerm extractEntry doc/methods.md
+839 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+840 silly gunzTarPerm extractEntry doc/new.md
+841 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+842 silly gunzTarPerm extractEntry doc/buffers.md
+843 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+844 silly gunzTarPerm extractEntry doc/object_wrappers.md
+845 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
+846 silly gunzTarPerm extractEntry doc/persistent.md
+847 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+848 silly gunzTarPerm extractEntry doc/scopes.md
+849 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+850 silly gunzTarPerm extractEntry doc/script.md
+851 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+852 silly gunzTarPerm extractEntry doc/string_bytes.md
+853 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+854 silly gunzTarPerm extractEntry doc/v8_internals.md
+855 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+856 silly gunzTarPerm extractEntry doc/v8_misc.md
+857 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+858 silly gunzTarPerm extractEntry nan.h
+859 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+860 silly gunzTarPerm extractEntry nan_callbacks.h
+861 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+862 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+863 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+864 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+865 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+866 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+867 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+868 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+869 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+870 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+871 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+872 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+873 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+874 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+875 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+876 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+877 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+878 silly gunzTarPerm extractEntry nan_new.h
+879 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+880 silly gunzTarPerm extractEntry nan_object_wrap.h
+881 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+882 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+883 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+884 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+885 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+886 silly gunzTarPerm extractEntry nan_private.h
+887 silly gunzTarPerm modified mode [ 'nan_private.h', 436, 438 ]
+888 silly gunzTarPerm extractEntry nan_string_bytes.h
+889 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+890 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+891 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+892 silly gunzTarPerm extractEntry nan_weak.h
+893 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+894 silly gunzTarPerm extractEntry tools/package.json
+895 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+896 silly gunzTarPerm extractEntry tools/README.md
+897 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+898 silly gunzTarPerm extractEntry tools/1to2.js
+899 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+900 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\package.json
+901 info preinstall node-pre-gyp@0.6.36
+902 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\package.json
+903 silly prepareForInstallMany adding nopt@^4.0.1 from node-pre-gyp dependencies
+904 silly prepareForInstallMany adding semver@^5.3.0 from node-pre-gyp dependencies
+905 silly prepareForInstallMany adding tar-pack@^3.4.0 from node-pre-gyp dependencies
+906 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\package.json
+907 silly cache add args [ 'nopt@^4.0.1', null ]
+908 verbose cache add spec nopt@^4.0.1
+909 silly cache add args [ 'semver@^5.3.0', null ]
+910 verbose cache add spec semver@^5.3.0
+911 silly cache add parsed spec Result {
+911 silly cache add   raw: 'nopt@^4.0.1',
+911 silly cache add   scope: null,
+911 silly cache add   name: 'nopt',
+911 silly cache add   rawSpec: '^4.0.1',
+911 silly cache add   spec: '>=4.0.1 <5.0.0',
+911 silly cache add   type: 'range' }
+912 silly addNamed nopt@>=4.0.1 <5.0.0
+913 verbose addNamed ">=4.0.1 <5.0.0" is a valid semver range for nopt
+914 silly addNameRange { name: 'nopt', range: '>=4.0.1 <5.0.0', hasData: false }
+915 silly mapToRegistry name nopt
+916 silly mapToRegistry using default registry
+917 silly mapToRegistry registry https://registry.npmjs.org/
+918 silly mapToRegistry data Result {
+918 silly mapToRegistry   raw: 'nopt',
+918 silly mapToRegistry   scope: null,
+918 silly mapToRegistry   name: 'nopt',
+918 silly mapToRegistry   rawSpec: '',
+918 silly mapToRegistry   spec: 'latest',
+918 silly mapToRegistry   type: 'tag' }
+919 silly mapToRegistry uri https://registry.npmjs.org/nopt
+920 verbose addNameRange registry:https://registry.npmjs.org/nopt not in flight; fetching
+921 silly cache add parsed spec Result {
+921 silly cache add   raw: 'semver@^5.3.0',
+921 silly cache add   scope: null,
+921 silly cache add   name: 'semver',
+921 silly cache add   rawSpec: '^5.3.0',
+921 silly cache add   spec: '>=5.3.0 <6.0.0',
+921 silly cache add   type: 'range' }
+922 silly addNamed semver@>=5.3.0 <6.0.0
+923 verbose addNamed ">=5.3.0 <6.0.0" is a valid semver range for semver
+924 silly addNameRange { name: 'semver', range: '>=5.3.0 <6.0.0', hasData: false }
+925 silly mapToRegistry name semver
+926 silly mapToRegistry using default registry
+927 silly mapToRegistry registry https://registry.npmjs.org/
+928 silly mapToRegistry data Result {
+928 silly mapToRegistry   raw: 'semver',
+928 silly mapToRegistry   scope: null,
+928 silly mapToRegistry   name: 'semver',
+928 silly mapToRegistry   rawSpec: '',
+928 silly mapToRegistry   spec: 'latest',
+928 silly mapToRegistry   type: 'tag' }
+929 silly mapToRegistry uri https://registry.npmjs.org/semver
+930 verbose addNameRange registry:https://registry.npmjs.org/semver not in flight; fetching
+931 silly cache add args [ 'tar-pack@^3.4.0', null ]
+932 verbose cache add spec tar-pack@^3.4.0
+933 silly cache add parsed spec Result {
+933 silly cache add   raw: 'tar-pack@^3.4.0',
+933 silly cache add   scope: null,
+933 silly cache add   name: 'tar-pack',
+933 silly cache add   rawSpec: '^3.4.0',
+933 silly cache add   spec: '>=3.4.0 <4.0.0',
+933 silly cache add   type: 'range' }
+934 silly addNamed tar-pack@>=3.4.0 <4.0.0
+935 verbose addNamed ">=3.4.0 <4.0.0" is a valid semver range for tar-pack
+936 silly addNameRange { name: 'tar-pack', range: '>=3.4.0 <4.0.0', hasData: false }
+937 silly mapToRegistry name tar-pack
+938 silly mapToRegistry using default registry
+939 silly mapToRegistry registry https://registry.npmjs.org/
+940 silly mapToRegistry data Result {
+940 silly mapToRegistry   raw: 'tar-pack',
+940 silly mapToRegistry   scope: null,
+940 silly mapToRegistry   name: 'tar-pack',
+940 silly mapToRegistry   rawSpec: '',
+940 silly mapToRegistry   spec: 'latest',
+940 silly mapToRegistry   type: 'tag' }
+941 silly mapToRegistry uri https://registry.npmjs.org/tar-pack
+942 verbose addNameRange registry:https://registry.npmjs.org/tar-pack not in flight; fetching
+943 verbose request uri https://registry.npmjs.org/nopt
+944 verbose request no auth needed
+945 info attempt registry request try #1 at 18:38:11
+946 verbose etag W/"58518ed2-84a2"
+947 verbose lastModified Wed, 14 Dec 2016 18:26:26 GMT
+948 http request GET https://registry.npmjs.org/nopt
+949 verbose request uri https://registry.npmjs.org/semver
+950 verbose request no auth needed
+951 info attempt registry request try #1 at 18:38:11
+952 verbose etag W/"59256da9-11c30"
+953 verbose lastModified Wed, 24 May 2017 11:25:29 GMT
+954 http request GET https://registry.npmjs.org/semver
+955 verbose request uri https://registry.npmjs.org/tar-pack
+956 verbose request no auth needed
+957 info attempt registry request try #1 at 18:38:11
+958 verbose etag W/"58516b0d-4c6b"
+959 verbose lastModified Wed, 14 Dec 2016 15:53:49 GMT
+960 http request GET https://registry.npmjs.org/tar-pack
+961 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan\package.json
+962 info preinstall nan@2.5.1
+963 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan\package.json
+964 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan\package.json
+965 silly install resolved []
+966 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+967 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+968 info linkStuff nan@2.5.1
+969 silly linkStuff nan@2.5.1 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules as its parent node_modules
+970 verbose linkBins nan@2.5.1
+971 verbose linkMans nan@2.5.1
+972 verbose rebuildBundles nan@2.5.1
+973 info install nan@2.5.1
+974 info postinstall nan@2.5.1
+975 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\nan-7c5ae1cee28d843d.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\nan
+976 http 304 https://registry.npmjs.org/semver
+977 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+977 verbose headers   via: '1.1 varnish',
+977 verbose headers   'cache-control': 'max-age=300',
+977 verbose headers   etag: 'W/"59256da9-11c30"',
+977 verbose headers   age: '221',
+977 verbose headers   connection: 'keep-alive',
+977 verbose headers   'x-served-by': 'cache-ord1729-ORD',
+977 verbose headers   'x-cache': 'HIT',
+977 verbose headers   'x-cache-hits': '17',
+977 verbose headers   'x-timer': 'S1496968690.695077,VS0,VE0',
+977 verbose headers   vary: 'Accept-Encoding' }
+978 silly get cb [ 304,
+978 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+978 silly get     via: '1.1 varnish',
+978 silly get     'cache-control': 'max-age=300',
+978 silly get     etag: 'W/"59256da9-11c30"',
+978 silly get     age: '221',
+978 silly get     connection: 'keep-alive',
+978 silly get     'x-served-by': 'cache-ord1729-ORD',
+978 silly get     'x-cache': 'HIT',
+978 silly get     'x-cache-hits': '17',
+978 silly get     'x-timer': 'S1496968690.695077,VS0,VE0',
+978 silly get     vary: 'Accept-Encoding' } ]
+979 verbose etag https://registry.npmjs.org/semver from cache
+980 verbose get saving semver to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\semver\.cache.json
+981 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+982 http 304 https://registry.npmjs.org/nopt
+983 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+983 verbose headers   via: '1.1 varnish',
+983 verbose headers   'cache-control': 'max-age=300',
+983 verbose headers   etag: 'W/"58518ed2-84a2"',
+983 verbose headers   age: '84',
+983 verbose headers   connection: 'keep-alive',
+983 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+983 verbose headers   'x-cache': 'HIT',
+983 verbose headers   'x-cache-hits': '3',
+983 verbose headers   'x-timer': 'S1496968690.695144,VS0,VE0',
+983 verbose headers   vary: 'Accept-Encoding' }
+984 silly get cb [ 304,
+984 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+984 silly get     via: '1.1 varnish',
+984 silly get     'cache-control': 'max-age=300',
+984 silly get     etag: 'W/"58518ed2-84a2"',
+984 silly get     age: '84',
+984 silly get     connection: 'keep-alive',
+984 silly get     'x-served-by': 'cache-ord1725-ORD',
+984 silly get     'x-cache': 'HIT',
+984 silly get     'x-cache-hits': '3',
+984 silly get     'x-timer': 'S1496968690.695144,VS0,VE0',
+984 silly get     vary: 'Accept-Encoding' } ]
+985 verbose etag https://registry.npmjs.org/nopt from cache
+986 verbose get saving nopt to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\nopt\.cache.json
+987 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+988 silly addNameRange number 2 { name: 'semver', range: '>=5.3.0 <6.0.0', hasData: true }
+989 silly addNameRange versions [ 'semver',
+989 silly addNameRange   [ '1.0.0',
+989 silly addNameRange     '1.0.1',
+989 silly addNameRange     '1.0.2',
+989 silly addNameRange     '1.0.3',
+989 silly addNameRange     '1.0.4',
+989 silly addNameRange     '1.0.5',
+989 silly addNameRange     '1.0.6',
+989 silly addNameRange     '1.0.7',
+989 silly addNameRange     '1.0.8',
+989 silly addNameRange     '1.0.9',
+989 silly addNameRange     '1.0.10',
+989 silly addNameRange     '1.0.11',
+989 silly addNameRange     '1.0.12',
+989 silly addNameRange     '1.0.13',
+989 silly addNameRange     '1.0.14',
+989 silly addNameRange     '1.1.0',
+989 silly addNameRange     '1.1.1',
+989 silly addNameRange     '1.1.2',
+989 silly addNameRange     '1.1.3',
+989 silly addNameRange     '1.1.4',
+989 silly addNameRange     '2.0.0-alpha',
+989 silly addNameRange     '2.0.0-beta',
+989 silly addNameRange     '2.0.1',
+989 silly addNameRange     '2.0.2',
+989 silly addNameRange     '2.0.3',
+989 silly addNameRange     '2.0.4',
+989 silly addNameRange     '2.0.5',
+989 silly addNameRange     '2.0.6',
+989 silly addNameRange     '2.0.7',
+989 silly addNameRange     '2.0.8',
+989 silly addNameRange     '2.0.9',
+989 silly addNameRange     '2.0.10',
+989 silly addNameRange     '2.0.11',
+989 silly addNameRange     '2.1.0',
+989 silly addNameRange     '2.2.0',
+989 silly addNameRange     '2.2.1',
+989 silly addNameRange     '2.3.0',
+989 silly addNameRange     '2.3.1',
+989 silly addNameRange     '2.3.2',
+989 silly addNameRange     '3.0.0',
+989 silly addNameRange     '3.0.1',
+989 silly addNameRange     '4.0.0',
+989 silly addNameRange     '4.0.2',
+989 silly addNameRange     '4.0.3',
+989 silly addNameRange     '4.1.0',
+989 silly addNameRange     '4.1.1',
+989 silly addNameRange     '4.2.0',
+989 silly addNameRange     '4.2.1',
+989 silly addNameRange     '4.2.2',
+989 silly addNameRange     '4.3.0',
+989 silly addNameRange     '4.3.1',
+989 silly addNameRange     '4.3.2',
+989 silly addNameRange     '4.3.3',
+989 silly addNameRange     '4.3.4',
+989 silly addNameRange     '4.3.5',
+989 silly addNameRange     '4.3.6',
+989 silly addNameRange     '5.0.0',
+989 silly addNameRange     '5.0.1',
+989 silly addNameRange     '5.0.2',
+989 silly addNameRange     '5.0.3',
+989 silly addNameRange     '5.1.0',
+989 silly addNameRange     '5.1.1',
+989 silly addNameRange     '5.2.0',
+989 silly addNameRange     '5.3.0' ] ]
+990 silly addNamed semver@5.3.0
+991 verbose addNamed "5.3.0" is a plain semver version for semver
+992 silly cache afterAdd semver@5.3.0
+993 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\semver\5.3.0\package\package.json not in flight; writing
+994 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+995 silly addNameRange number 2 { name: 'nopt', range: '>=4.0.1 <5.0.0', hasData: true }
+996 silly addNameRange versions [ 'nopt',
+996 silly addNameRange   [ '1.0.0',
+996 silly addNameRange     '1.0.1',
+996 silly addNameRange     '1.0.2',
+996 silly addNameRange     '1.0.3',
+996 silly addNameRange     '1.0.4',
+996 silly addNameRange     '1.0.5',
+996 silly addNameRange     '1.0.6',
+996 silly addNameRange     '1.0.7',
+996 silly addNameRange     '1.0.8',
+996 silly addNameRange     '1.0.9',
+996 silly addNameRange     '1.0.10',
+996 silly addNameRange     '2.0.0',
+996 silly addNameRange     '2.1.0',
+996 silly addNameRange     '2.1.1',
+996 silly addNameRange     '2.1.2',
+996 silly addNameRange     '2.2.0',
+996 silly addNameRange     '2.2.1',
+996 silly addNameRange     '3.0.0',
+996 silly addNameRange     '3.0.1',
+996 silly addNameRange     '3.0.2',
+996 silly addNameRange     '3.0.3',
+996 silly addNameRange     '3.0.4',
+996 silly addNameRange     '3.0.5',
+996 silly addNameRange     '3.0.6',
+996 silly addNameRange     '4.0.0',
+996 silly addNameRange     '4.0.1' ] ]
+997 silly addNamed nopt@4.0.1
+998 verbose addNamed "4.0.1" is a plain semver version for nopt
+999 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\semver\5.3.0\package\package.json written
+1000 silly cache afterAdd nopt@4.0.1
+1001 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\nopt\4.0.1\package\package.json not in flight; writing
+1002 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1003 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\nopt\4.0.1\package\package.json written
+1004 http 304 https://registry.npmjs.org/tar-pack
+1005 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1005 verbose headers   via: '1.1 varnish',
+1005 verbose headers   'cache-control': 'max-age=300',
+1005 verbose headers   etag: 'W/"58516b0d-4c6b"',
+1005 verbose headers   age: '85',
+1005 verbose headers   connection: 'keep-alive',
+1005 verbose headers   'x-served-by': 'cache-ord1720-ORD',
+1005 verbose headers   'x-cache': 'HIT',
+1005 verbose headers   'x-cache-hits': '1',
+1005 verbose headers   'x-timer': 'S1496968690.788641,VS0,VE1',
+1005 verbose headers   vary: 'Accept-Encoding' }
+1006 silly get cb [ 304,
+1006 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1006 silly get     via: '1.1 varnish',
+1006 silly get     'cache-control': 'max-age=300',
+1006 silly get     etag: 'W/"58516b0d-4c6b"',
+1006 silly get     age: '85',
+1006 silly get     connection: 'keep-alive',
+1006 silly get     'x-served-by': 'cache-ord1720-ORD',
+1006 silly get     'x-cache': 'HIT',
+1006 silly get     'x-cache-hits': '1',
+1006 silly get     'x-timer': 'S1496968690.788641,VS0,VE1',
+1006 silly get     vary: 'Accept-Encoding' } ]
+1007 verbose etag https://registry.npmjs.org/tar-pack from cache
+1008 verbose get saving tar-pack to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\tar-pack\.cache.json
+1009 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1010 silly addNameRange number 2 { name: 'tar-pack', range: '>=3.4.0 <4.0.0', hasData: true }
+1011 silly addNameRange versions [ 'tar-pack',
+1011 silly addNameRange   [ '1.0.0',
+1011 silly addNameRange     '2.0.0',
+1011 silly addNameRange     '2.0.1',
+1011 silly addNameRange     '3.0.0',
+1011 silly addNameRange     '3.1.0',
+1011 silly addNameRange     '3.1.1',
+1011 silly addNameRange     '3.1.2',
+1011 silly addNameRange     '3.1.3',
+1011 silly addNameRange     '3.1.4',
+1011 silly addNameRange     '3.2.0',
+1011 silly addNameRange     '3.3.0',
+1011 silly addNameRange     '3.4.0' ] ]
+1012 silly addNamed tar-pack@3.4.0
+1013 verbose addNamed "3.4.0" is a plain semver version for tar-pack
+1014 silly cache afterAdd tar-pack@3.4.0
+1015 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\tar-pack\3.4.0\package\package.json not in flight; writing
+1016 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1017 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\tar-pack\3.4.0\package\package.json written
+1018 silly install resolved [ { name: 'semver',
+1018 silly install resolved     version: '5.3.0',
+1018 silly install resolved     description: 'The semantic version parser used by npm.',
+1018 silly install resolved     main: 'semver.js',
+1018 silly install resolved     scripts: { test: 'tap test/*.js' },
+1018 silly install resolved     devDependencies: { tap: '^2.0.0' },
+1018 silly install resolved     license: 'ISC',
+1018 silly install resolved     repository:
+1018 silly install resolved      { type: 'git',
+1018 silly install resolved        url: 'git+https://github.com/npm/node-semver.git' },
+1018 silly install resolved     bin: { semver: './bin/semver' },
+1018 silly install resolved     files: [ 'bin', 'range.bnf', 'semver.js' ],
+1018 silly install resolved     gitHead: 'd21444a0658224b152ce54965d02dbe0856afb84',
+1018 silly install resolved     bugs: { url: 'https://github.com/npm/node-semver/issues' },
+1018 silly install resolved     homepage: 'https://github.com/npm/node-semver#readme',
+1018 silly install resolved     _id: 'semver@5.3.0',
+1018 silly install resolved     _shasum: '9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f',
+1018 silly install resolved     _from: 'semver@>=5.3.0 <6.0.0',
+1018 silly install resolved     _npmVersion: '3.10.6',
+1018 silly install resolved     _nodeVersion: '4.4.4',
+1018 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+1018 silly install resolved     dist:
+1018 silly install resolved      { shasum: '9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f',
+1018 silly install resolved        tarball: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz' },
+1018 silly install resolved     maintainers: [ [Object], [Object] ],
+1018 silly install resolved     _npmOperationalInternal:
+1018 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1018 silly install resolved        tmp: 'tmp/semver-5.3.0.tgz_1468515166602_0.9155273644719273' },
+1018 silly install resolved     directories: {},
+1018 silly install resolved     _resolved: 'https://registry.npmjs.org/semver/-/semver-5.3.0.tgz',
+1018 silly install resolved     readme: 'ERROR: No README data found!' },
+1018 silly install resolved   { name: 'nopt',
+1018 silly install resolved     version: '4.0.1',
+1018 silly install resolved     description: 'Option parsing for Node, supporting types, shorthands, etc. Used by npm.',
+1018 silly install resolved     author:
+1018 silly install resolved      { name: 'Isaac Z. Schlueter',
+1018 silly install resolved        email: 'i@izs.me',
+1018 silly install resolved        url: 'http://blog.izs.me/' },
+1018 silly install resolved     main: 'lib/nopt.js',
+1018 silly install resolved     scripts: { test: 'tap test/*.js' },
+1018 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/npm/nopt.git' },
+1018 silly install resolved     bin: { nopt: './bin/nopt.js' },
+1018 silly install resolved     license: 'ISC',
+1018 silly install resolved     dependencies: { abbrev: '1', osenv: '^0.1.4' },
+1018 silly install resolved     devDependencies: { tap: '^8.0.1' },
+1018 silly install resolved     gitHead: '24921187dc52825d628042c9708bbd8e8734698c',
+1018 silly install resolved     bugs: { url: 'https://github.com/npm/nopt/issues' },
+1018 silly install resolved     homepage: 'https://github.com/npm/nopt#readme',
+1018 silly install resolved     _id: 'nopt@4.0.1',
+1018 silly install resolved     _shasum: 'd0d4685afd5415193c8c7505602d0d17cd64474d',
+1018 silly install resolved     _from: 'nopt@>=4.0.1 <5.0.0',
+1018 silly install resolved     _npmVersion: '4.0.5',
+1018 silly install resolved     _nodeVersion: '7.2.0',
+1018 silly install resolved     _npmUser: { name: 'othiym23', email: 'ogd@aoaioxxysz.net' },
+1018 silly install resolved     dist:
+1018 silly install resolved      { shasum: 'd0d4685afd5415193c8c7505602d0d17cd64474d',
+1018 silly install resolved        tarball: 'https://registry.npmjs.org/nopt/-/nopt-4.0.1.tgz' },
+1018 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+1018 silly install resolved     _npmOperationalInternal:
+1018 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1018 silly install resolved        tmp: 'tmp/nopt-4.0.1.tgz_1481739985863_0.18861285015009344' },
+1018 silly install resolved     directories: {},
+1018 silly install resolved     _resolved: 'https://registry.npmjs.org/nopt/-/nopt-4.0.1.tgz',
+1018 silly install resolved     readme: 'ERROR: No README data found!' },
+1018 silly install resolved   { name: 'tar-pack',
+1018 silly install resolved     version: '3.4.0',
+1018 silly install resolved     description: 'Package and un-package modules of some sort (in tar/gz bundles).',
+1018 silly install resolved     scripts: { test: 'mocha -R list' },
+1018 silly install resolved     repository:
+1018 silly install resolved      { type: 'git',
+1018 silly install resolved        url: 'git+https://github.com/ForbesLindesay/tar-pack.git' },
+1018 silly install resolved     license: 'BSD-2-Clause',
+1018 silly install resolved     dependencies:
+1018 silly install resolved      { debug: '^2.2.0',
+1018 silly install resolved        fstream: '^1.0.10',
+1018 silly install resolved        'fstream-ignore': '^1.0.5',
+1018 silly install resolved        once: '^1.3.3',
+1018 silly install resolved        'readable-stream': '^2.1.4',
+1018 silly install resolved        rimraf: '^2.5.1',
+1018 silly install resolved        tar: '^2.2.1',
+1018 silly install resolved        'uid-number': '^0.0.6' },
+1018 silly install resolved     devDependencies: { mocha: '*', rfile: '*', mkdirp: '*' },
+1018 silly install resolved     gitHead: 'ebd8cc0a3bfa571fa324ba5dc7c9799c1a182647',
+1018 silly install resolved     bugs: { url: 'https://github.com/ForbesLindesay/tar-pack/issues' },
+1018 silly install resolved     homepage: 'https://github.com/ForbesLindesay/tar-pack#readme',
+1018 silly install resolved     _id: 'tar-pack@3.4.0',
+1018 silly install resolved     _shasum: '23be2d7f671a8339376cbdb0b8fe3fdebf317984',
+1018 silly install resolved     _from: 'tar-pack@>=3.4.0 <4.0.0',
+1018 silly install resolved     _npmVersion: '3.10.3',
+1018 silly install resolved     _nodeVersion: '6.7.0',
+1018 silly install resolved     _npmUser: { name: 'es128', email: 'elan.shanker+npm@gmail.com' },
+1018 silly install resolved     dist:
+1018 silly install resolved      { shasum: '23be2d7f671a8339376cbdb0b8fe3fdebf317984',
+1018 silly install resolved        tarball: 'https://registry.npmjs.org/tar-pack/-/tar-pack-3.4.0.tgz' },
+1018 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+1018 silly install resolved     _npmOperationalInternal:
+1018 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1018 silly install resolved        tmp: 'tmp/tar-pack-3.4.0.tgz_1481730827944_0.7641004878096282' },
+1018 silly install resolved     directories: {},
+1018 silly install resolved     _resolved: 'https://registry.npmjs.org/tar-pack/-/tar-pack-3.4.0.tgz',
+1018 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1019 info install semver@5.3.0 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1020 info install nopt@4.0.1 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1021 info install tar-pack@3.4.0 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1022 info installOne semver@5.3.0
+1023 verbose installOne of semver to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp not in flight; installing
+1024 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1025 info installOne nopt@4.0.1
+1026 verbose installOne of nopt to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp not in flight; installing
+1027 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1028 info installOne tar-pack@3.4.0
+1029 verbose installOne of tar-pack to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp not in flight; installing
+1030 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1031 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\semver-e84f2a08e28a1433.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1032 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\nopt-bba1070b7c6cea61.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1033 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\tar-pack-ebf1179107e7423a.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1034 silly install write writing semver 5.3.0 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1035 silly install write writing nopt 4.0.1 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1036 silly install write writing tar-pack 3.4.0 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1037 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1038 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1039 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1040 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1041 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1042 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1043 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1044 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1045 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1046 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\semver\5.3.0\package.tgz
+1047 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1048 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver is being purged
+1049 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1050 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\nopt\4.0.1\package.tgz
+1051 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1052 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt is being purged
+1053 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1054 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\tar-pack\3.4.0\package.tgz
+1055 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1056 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack is being purged
+1057 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1058 silly gunzTarPerm modes [ '777', '666' ]
+1059 silly gunzTarPerm modes [ '777', '666' ]
+1060 silly gunzTarPerm modes [ '777', '666' ]
+1061 silly gunzTarPerm extractEntry package.json
+1062 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1063 silly gunzTarPerm extractEntry package.json
+1064 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1065 silly gunzTarPerm extractEntry package.json
+1066 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1067 silly gunzTarPerm extractEntry README.md
+1068 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1069 silly gunzTarPerm extractEntry LICENSE
+1070 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1071 silly gunzTarPerm extractEntry .npmignore
+1072 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+1073 silly gunzTarPerm extractEntry README.md
+1074 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1075 silly gunzTarPerm extractEntry .npmignore
+1076 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+1077 silly gunzTarPerm extractEntry README.md
+1078 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1079 silly gunzTarPerm extractEntry semver.js
+1080 silly gunzTarPerm modified mode [ 'semver.js', 420, 438 ]
+1081 silly gunzTarPerm extractEntry LICENSE
+1082 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1083 silly gunzTarPerm extractEntry bin/nopt.js
+1084 silly gunzTarPerm modified mode [ 'bin/nopt.js', 493, 511 ]
+1085 silly gunzTarPerm extractEntry LICENSE
+1086 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1087 silly gunzTarPerm extractEntry index.js
+1088 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+1089 silly gunzTarPerm extractEntry .travis.yml
+1090 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+1091 silly gunzTarPerm extractEntry CHANGELOG.md
+1092 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 420, 438 ]
+1093 silly gunzTarPerm extractEntry .travis.yml
+1094 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+1095 silly gunzTarPerm extractEntry bin/semver
+1096 silly gunzTarPerm modified mode [ 'bin/semver', 493, 511 ]
+1097 silly gunzTarPerm extractEntry range.bnf
+1098 silly gunzTarPerm modified mode [ 'range.bnf', 420, 438 ]
+1099 silly gunzTarPerm extractEntry test/index.js
+1100 silly gunzTarPerm modified mode [ 'test/index.js', 420, 438 ]
+1101 silly gunzTarPerm extractEntry test/fixtures/packed-file.txt
+1102 silly gunzTarPerm modified mode [ 'test/fixtures/packed-file.txt', 420, 438 ]
+1103 silly gunzTarPerm extractEntry examples/my-program.js
+1104 silly gunzTarPerm modified mode [ 'examples/my-program.js', 493, 511 ]
+1105 silly gunzTarPerm extractEntry lib/nopt.js
+1106 silly gunzTarPerm modified mode [ 'lib/nopt.js', 420, 438 ]
+1107 silly gunzTarPerm extractEntry test/basic.js
+1108 silly gunzTarPerm modified mode [ 'test/basic.js', 420, 438 ]
+1109 silly gunzTarPerm extractEntry test/fixtures/packed.tar
+1110 silly gunzTarPerm modified mode [ 'test/fixtures/packed.tar', 420, 438 ]
+1111 silly gunzTarPerm extractEntry test/fixtures/packed.tar.gz
+1112 silly gunzTarPerm modified mode [ 'test/fixtures/packed.tar.gz', 420, 438 ]
+1113 silly gunzTarPerm extractEntry test/fixtures/to-pack/bar.txt
+1114 silly gunzTarPerm modified mode [ 'test/fixtures/to-pack/bar.txt', 420, 438 ]
+1115 silly gunzTarPerm extractEntry test/fixtures/to-pack/foo.txt
+1116 silly gunzTarPerm modified mode [ 'test/fixtures/to-pack/foo.txt', 420, 438 ]
+1117 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver\package.json
+1118 info preinstall semver@5.3.0
+1119 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver\package.json
+1120 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver\package.json
+1121 silly install resolved []
+1122 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1123 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1124 info linkStuff semver@5.3.0
+1125 silly linkStuff semver@5.3.0 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules as its parent node_modules
+1126 verbose linkBins semver@5.3.0
+1127 verbose link bins [ { semver: './bin/semver' },
+1127 verbose link bins   'D:\\Storage\\Projects\\PacketCloud\\ALVIS\\node_modules\\wolfram\\node_modules\\libxmljs\\node_modules\\node-pre-gyp\\node_modules\\.bin',
+1127 verbose link bins   false ]
+1128 verbose linkMans semver@5.3.0
+1129 verbose rebuildBundles semver@5.3.0
+1130 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\package.json
+1131 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\package.json
+1132 info install semver@5.3.0
+1133 info postinstall semver@5.3.0
+1134 info preinstall nopt@4.0.1
+1135 info preinstall tar-pack@3.4.0
+1136 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\package.json
+1137 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\semver-e84f2a08e28a1433.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\semver
+1138 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\package.json
+1139 silly prepareForInstallMany adding abbrev@1 from nopt dependencies
+1140 silly prepareForInstallMany adding osenv@^0.1.4 from nopt dependencies
+1141 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\package.json
+1142 silly prepareForInstallMany adding fstream-ignore@^1.0.5 from tar-pack dependencies
+1143 silly prepareForInstallMany adding uid-number@^0.0.6 from tar-pack dependencies
+1144 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\package.json
+1145 silly cache add args [ 'abbrev@1', null ]
+1146 verbose cache add spec abbrev@1
+1147 silly cache add args [ 'osenv@^0.1.4', null ]
+1148 verbose cache add spec osenv@^0.1.4
+1149 silly cache add args [ 'fstream-ignore@^1.0.5', null ]
+1150 verbose cache add spec fstream-ignore@^1.0.5
+1151 silly cache add args [ 'uid-number@^0.0.6', null ]
+1152 verbose cache add spec uid-number@^0.0.6
+1153 silly cache add parsed spec Result {
+1153 silly cache add   raw: 'abbrev@1',
+1153 silly cache add   scope: null,
+1153 silly cache add   name: 'abbrev',
+1153 silly cache add   rawSpec: '1',
+1153 silly cache add   spec: '>=1.0.0 <2.0.0',
+1153 silly cache add   type: 'range' }
+1154 silly addNamed abbrev@>=1.0.0 <2.0.0
+1155 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for abbrev
+1156 silly addNameRange { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: false }
+1157 silly mapToRegistry name abbrev
+1158 silly mapToRegistry using default registry
+1159 silly mapToRegistry registry https://registry.npmjs.org/
+1160 silly mapToRegistry data Result {
+1160 silly mapToRegistry   raw: 'abbrev',
+1160 silly mapToRegistry   scope: null,
+1160 silly mapToRegistry   name: 'abbrev',
+1160 silly mapToRegistry   rawSpec: '',
+1160 silly mapToRegistry   spec: 'latest',
+1160 silly mapToRegistry   type: 'tag' }
+1161 silly mapToRegistry uri https://registry.npmjs.org/abbrev
+1162 verbose addNameRange registry:https://registry.npmjs.org/abbrev not in flight; fetching
+1163 silly cache add parsed spec Result {
+1163 silly cache add   raw: 'osenv@^0.1.4',
+1163 silly cache add   scope: null,
+1163 silly cache add   name: 'osenv',
+1163 silly cache add   rawSpec: '^0.1.4',
+1163 silly cache add   spec: '>=0.1.4 <0.2.0',
+1163 silly cache add   type: 'range' }
+1164 silly addNamed osenv@>=0.1.4 <0.2.0
+1165 verbose addNamed ">=0.1.4 <0.2.0" is a valid semver range for osenv
+1166 silly addNameRange { name: 'osenv', range: '>=0.1.4 <0.2.0', hasData: false }
+1167 silly mapToRegistry name osenv
+1168 silly mapToRegistry using default registry
+1169 silly mapToRegistry registry https://registry.npmjs.org/
+1170 silly mapToRegistry data Result {
+1170 silly mapToRegistry   raw: 'osenv',
+1170 silly mapToRegistry   scope: null,
+1170 silly mapToRegistry   name: 'osenv',
+1170 silly mapToRegistry   rawSpec: '',
+1170 silly mapToRegistry   spec: 'latest',
+1170 silly mapToRegistry   type: 'tag' }
+1171 silly mapToRegistry uri https://registry.npmjs.org/osenv
+1172 verbose addNameRange registry:https://registry.npmjs.org/osenv not in flight; fetching
+1173 silly cache add parsed spec Result {
+1173 silly cache add   raw: 'fstream-ignore@^1.0.5',
+1173 silly cache add   scope: null,
+1173 silly cache add   name: 'fstream-ignore',
+1173 silly cache add   rawSpec: '^1.0.5',
+1173 silly cache add   spec: '>=1.0.5 <2.0.0',
+1173 silly cache add   type: 'range' }
+1174 silly addNamed fstream-ignore@>=1.0.5 <2.0.0
+1175 verbose addNamed ">=1.0.5 <2.0.0" is a valid semver range for fstream-ignore
+1176 silly addNameRange { name: 'fstream-ignore',
+1176 silly addNameRange   range: '>=1.0.5 <2.0.0',
+1176 silly addNameRange   hasData: false }
+1177 silly mapToRegistry name fstream-ignore
+1178 silly mapToRegistry using default registry
+1179 silly mapToRegistry registry https://registry.npmjs.org/
+1180 silly mapToRegistry data Result {
+1180 silly mapToRegistry   raw: 'fstream-ignore',
+1180 silly mapToRegistry   scope: null,
+1180 silly mapToRegistry   name: 'fstream-ignore',
+1180 silly mapToRegistry   rawSpec: '',
+1180 silly mapToRegistry   spec: 'latest',
+1180 silly mapToRegistry   type: 'tag' }
+1181 silly mapToRegistry uri https://registry.npmjs.org/fstream-ignore
+1182 verbose addNameRange registry:https://registry.npmjs.org/fstream-ignore not in flight; fetching
+1183 silly cache add parsed spec Result {
+1183 silly cache add   raw: 'uid-number@^0.0.6',
+1183 silly cache add   scope: null,
+1183 silly cache add   name: 'uid-number',
+1183 silly cache add   rawSpec: '^0.0.6',
+1183 silly cache add   spec: '>=0.0.6 <0.0.7',
+1183 silly cache add   type: 'range' }
+1184 silly addNamed uid-number@>=0.0.6 <0.0.7
+1185 verbose addNamed ">=0.0.6 <0.0.7" is a valid semver range for uid-number
+1186 silly addNameRange { name: 'uid-number', range: '>=0.0.6 <0.0.7', hasData: false }
+1187 silly mapToRegistry name uid-number
+1188 silly mapToRegistry using default registry
+1189 silly mapToRegistry registry https://registry.npmjs.org/
+1190 silly mapToRegistry data Result {
+1190 silly mapToRegistry   raw: 'uid-number',
+1190 silly mapToRegistry   scope: null,
+1190 silly mapToRegistry   name: 'uid-number',
+1190 silly mapToRegistry   rawSpec: '',
+1190 silly mapToRegistry   spec: 'latest',
+1190 silly mapToRegistry   type: 'tag' }
+1191 silly mapToRegistry uri https://registry.npmjs.org/uid-number
+1192 verbose addNameRange registry:https://registry.npmjs.org/uid-number not in flight; fetching
+1193 verbose request uri https://registry.npmjs.org/osenv
+1194 verbose request no auth needed
+1195 info attempt registry request try #1 at 18:38:11
+1196 verbose etag W/"58b4eec7-2a99"
+1197 verbose lastModified Tue, 28 Feb 2017 03:30:15 GMT
+1198 http request GET https://registry.npmjs.org/osenv
+1199 verbose request uri https://registry.npmjs.org/fstream-ignore
+1200 verbose request no auth needed
+1201 info attempt registry request try #1 at 18:38:11
+1202 verbose etag W/"573b8390-4685"
+1203 verbose lastModified Tue, 17 May 2016 20:48:16 GMT
+1204 http request GET https://registry.npmjs.org/fstream-ignore
+1205 verbose request uri https://registry.npmjs.org/abbrev
+1206 verbose request no auth needed
+1207 info attempt registry request try #1 at 18:38:11
+1208 verbose etag W/"58daf047-1e6e"
+1209 verbose lastModified Tue, 28 Mar 2017 23:22:47 GMT
+1210 http request GET https://registry.npmjs.org/abbrev
+1211 verbose request uri https://registry.npmjs.org/uid-number
+1212 verbose request no auth needed
+1213 info attempt registry request try #1 at 18:38:11
+1214 verbose etag W/"5463e8f5-184a"
+1215 verbose lastModified Wed, 12 Nov 2014 23:10:45 GMT
+1216 http request GET https://registry.npmjs.org/uid-number
+1217 http 304 https://registry.npmjs.org/abbrev
+1218 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1218 verbose headers   via: '1.1 varnish',
+1218 verbose headers   'cache-control': 'max-age=300',
+1218 verbose headers   etag: 'W/"58daf047-1e6e"',
+1218 verbose headers   age: '289',
+1218 verbose headers   connection: 'keep-alive',
+1218 verbose headers   'x-served-by': 'cache-ord1720-ORD',
+1218 verbose headers   'x-cache': 'HIT',
+1218 verbose headers   'x-cache-hits': '10',
+1218 verbose headers   'x-timer': 'S1496968690.892946,VS0,VE0',
+1218 verbose headers   vary: 'Accept-Encoding' }
+1219 silly get cb [ 304,
+1219 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1219 silly get     via: '1.1 varnish',
+1219 silly get     'cache-control': 'max-age=300',
+1219 silly get     etag: 'W/"58daf047-1e6e"',
+1219 silly get     age: '289',
+1219 silly get     connection: 'keep-alive',
+1219 silly get     'x-served-by': 'cache-ord1720-ORD',
+1219 silly get     'x-cache': 'HIT',
+1219 silly get     'x-cache-hits': '10',
+1219 silly get     'x-timer': 'S1496968690.892946,VS0,VE0',
+1219 silly get     vary: 'Accept-Encoding' } ]
+1220 verbose etag https://registry.npmjs.org/abbrev from cache
+1221 verbose get saving abbrev to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\abbrev\.cache.json
+1222 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1223 http 304 https://registry.npmjs.org/osenv
+1224 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1224 verbose headers   via: '1.1 varnish',
+1224 verbose headers   'cache-control': 'max-age=300',
+1224 verbose headers   etag: 'W/"58b4eec7-2a99"',
+1224 verbose headers   age: '163',
+1224 verbose headers   connection: 'keep-alive',
+1224 verbose headers   'x-served-by': 'cache-ord1729-ORD',
+1224 verbose headers   'x-cache': 'HIT',
+1224 verbose headers   'x-cache-hits': '6',
+1224 verbose headers   'x-timer': 'S1496968690.892766,VS0,VE0',
+1224 verbose headers   vary: 'Accept-Encoding' }
+1225 silly get cb [ 304,
+1225 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1225 silly get     via: '1.1 varnish',
+1225 silly get     'cache-control': 'max-age=300',
+1225 silly get     etag: 'W/"58b4eec7-2a99"',
+1225 silly get     age: '163',
+1225 silly get     connection: 'keep-alive',
+1225 silly get     'x-served-by': 'cache-ord1729-ORD',
+1225 silly get     'x-cache': 'HIT',
+1225 silly get     'x-cache-hits': '6',
+1225 silly get     'x-timer': 'S1496968690.892766,VS0,VE0',
+1225 silly get     vary: 'Accept-Encoding' } ]
+1226 verbose etag https://registry.npmjs.org/osenv from cache
+1227 verbose get saving osenv to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\osenv\.cache.json
+1228 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1229 http 304 https://registry.npmjs.org/fstream-ignore
+1230 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1230 verbose headers   via: '1.1 varnish',
+1230 verbose headers   'cache-control': 'max-age=300',
+1230 verbose headers   etag: 'W/"573b8390-4685"',
+1230 verbose headers   age: '224',
+1230 verbose headers   connection: 'keep-alive',
+1230 verbose headers   'x-served-by': 'cache-ord1725-ORD',
+1230 verbose headers   'x-cache': 'HIT',
+1230 verbose headers   'x-cache-hits': '2',
+1230 verbose headers   'x-timer': 'S1496968690.893885,VS0,VE0',
+1230 verbose headers   vary: 'Accept-Encoding' }
+1231 silly get cb [ 304,
+1231 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1231 silly get     via: '1.1 varnish',
+1231 silly get     'cache-control': 'max-age=300',
+1231 silly get     etag: 'W/"573b8390-4685"',
+1231 silly get     age: '224',
+1231 silly get     connection: 'keep-alive',
+1231 silly get     'x-served-by': 'cache-ord1725-ORD',
+1231 silly get     'x-cache': 'HIT',
+1231 silly get     'x-cache-hits': '2',
+1231 silly get     'x-timer': 'S1496968690.893885,VS0,VE0',
+1231 silly get     vary: 'Accept-Encoding' } ]
+1232 verbose etag https://registry.npmjs.org/fstream-ignore from cache
+1233 verbose get saving fstream-ignore to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\fstream-ignore\.cache.json
+1234 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1235 silly addNameRange number 2 { name: 'osenv', range: '>=0.1.4 <0.2.0', hasData: true }
+1236 silly addNameRange versions [ 'osenv',
+1236 silly addNameRange   [ '0.0.1',
+1236 silly addNameRange     '0.0.2',
+1236 silly addNameRange     '0.0.3',
+1236 silly addNameRange     '0.1.0',
+1236 silly addNameRange     '0.1.1',
+1236 silly addNameRange     '0.1.2',
+1236 silly addNameRange     '0.1.3',
+1236 silly addNameRange     '0.1.4' ] ]
+1237 silly addNamed osenv@0.1.4
+1238 verbose addNamed "0.1.4" is a plain semver version for osenv
+1239 silly cache afterAdd osenv@0.1.4
+1240 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\osenv\0.1.4\package\package.json not in flight; writing
+1241 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1242 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: true }
+1243 silly addNameRange versions [ 'abbrev',
+1243 silly addNameRange   [ '1.0.3', '1.0.4', '1.0.5', '1.0.6', '1.0.7', '1.0.9', '1.1.0' ] ]
+1244 silly addNamed abbrev@1.1.0
+1245 verbose addNamed "1.1.0" is a plain semver version for abbrev
+1246 silly cache afterAdd abbrev@1.1.0
+1247 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\abbrev\1.1.0\package\package.json not in flight; writing
+1248 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1249 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\osenv\0.1.4\package\package.json written
+1250 silly addNameRange number 2 { name: 'fstream-ignore',
+1250 silly addNameRange   range: '>=1.0.5 <2.0.0',
+1250 silly addNameRange   hasData: true }
+1251 silly addNameRange versions [ 'fstream-ignore',
+1251 silly addNameRange   [ '0.0.1',
+1251 silly addNameRange     '0.0.2',
+1251 silly addNameRange     '0.0.3',
+1251 silly addNameRange     '0.0.4',
+1251 silly addNameRange     '0.0.5',
+1251 silly addNameRange     '0.0.6',
+1251 silly addNameRange     '0.0.7',
+1251 silly addNameRange     '0.0.8',
+1251 silly addNameRange     '0.0.9',
+1251 silly addNameRange     '0.0.10',
+1251 silly addNameRange     '1.0.0',
+1251 silly addNameRange     '1.0.1',
+1251 silly addNameRange     '1.0.2',
+1251 silly addNameRange     '1.0.3',
+1251 silly addNameRange     '1.0.4',
+1251 silly addNameRange     '1.0.5' ] ]
+1252 silly addNamed fstream-ignore@1.0.5
+1253 verbose addNamed "1.0.5" is a plain semver version for fstream-ignore
+1254 silly cache afterAdd fstream-ignore@1.0.5
+1255 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\fstream-ignore\1.0.5\package\package.json not in flight; writing
+1256 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1257 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\abbrev\1.1.0\package\package.json written
+1258 silly install resolved [ { name: 'osenv',
+1258 silly install resolved     version: '0.1.4',
+1258 silly install resolved     main: 'osenv.js',
+1258 silly install resolved     directories: { test: 'test' },
+1258 silly install resolved     dependencies: { 'os-homedir': '^1.0.0', 'os-tmpdir': '^1.0.0' },
+1258 silly install resolved     devDependencies: { tap: '^8.0.1' },
+1258 silly install resolved     scripts: { test: 'tap test/*.js' },
+1258 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/npm/osenv.git' },
+1258 silly install resolved     keywords:
+1258 silly install resolved      [ 'environment',
+1258 silly install resolved        'variable',
+1258 silly install resolved        'home',
+1258 silly install resolved        'tmpdir',
+1258 silly install resolved        'path',
+1258 silly install resolved        'prompt',
+1258 silly install resolved        'ps1' ],
+1258 silly install resolved     author:
+1258 silly install resolved      { name: 'Isaac Z. Schlueter',
+1258 silly install resolved        email: 'i@izs.me',
+1258 silly install resolved        url: 'http://blog.izs.me/' },
+1258 silly install resolved     license: 'ISC',
+1258 silly install resolved     description: 'Look up environment settings specific to different operating systems',
+1258 silly install resolved     gitHead: 'ef718f0d20e38d45ec452b7faeefc692d3cd1062',
+1258 silly install resolved     bugs: { url: 'https://github.com/npm/osenv/issues' },
+1258 silly install resolved     homepage: 'https://github.com/npm/osenv#readme',
+1258 silly install resolved     _id: 'osenv@0.1.4',
+1258 silly install resolved     _shasum: '42fe6d5953df06c8064be6f176c3d05aaaa34644',
+1258 silly install resolved     _from: 'osenv@>=0.1.4 <0.2.0',
+1258 silly install resolved     _npmVersion: '3.10.9',
+1258 silly install resolved     _nodeVersion: '6.5.0',
+1258 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+1258 silly install resolved     dist:
+1258 silly install resolved      { shasum: '42fe6d5953df06c8064be6f176c3d05aaaa34644',
+1258 silly install resolved        tarball: 'https://registry.npmjs.org/osenv/-/osenv-0.1.4.tgz' },
+1258 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+1258 silly install resolved     _npmOperationalInternal:
+1258 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
+1258 silly install resolved        tmp: 'tmp/osenv-0.1.4.tgz_1481655889868_0.3980878754518926' },
+1258 silly install resolved     _resolved: 'https://registry.npmjs.org/osenv/-/osenv-0.1.4.tgz',
+1258 silly install resolved     readme: 'ERROR: No README data found!' },
+1258 silly install resolved   { name: 'abbrev',
+1258 silly install resolved     version: '1.1.0',
+1258 silly install resolved     description: 'Like ruby\'s abbrev module, but in js',
+1258 silly install resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+1258 silly install resolved     main: 'abbrev.js',
+1258 silly install resolved     scripts:
+1258 silly install resolved      { test: 'tap test.js --100',
+1258 silly install resolved        preversion: 'npm test',
+1258 silly install resolved        postversion: 'npm publish',
+1258 silly install resolved        postpublish: 'git push origin --all; git push origin --tags' },
+1258 silly install resolved     repository:
+1258 silly install resolved      { type: 'git',
+1258 silly install resolved        url: 'git+ssh://git@github.com/isaacs/abbrev-js.git' },
+1258 silly install resolved     license: 'ISC',
+1258 silly install resolved     devDependencies: { tap: '^10.1' },
+1258 silly install resolved     files: [ 'abbrev.js' ],
+1258 silly install resolved     gitHead: '7136d4d95449dc44115d4f78b80ec907724f64e0',
+1258 silly install resolved     bugs: { url: 'https://github.com/isaacs/abbrev-js/issues' },
+1258 silly install resolved     homepage: 'https://github.com/isaacs/abbrev-js#readme',
+1258 silly install resolved     _id: 'abbrev@1.1.0',
+1258 silly install resolved     _shasum: 'd0554c2256636e2f56e7c2e5ad183f859428d81f',
+1258 silly install resolved     _from: 'abbrev@>=1.0.0 <2.0.0',
+1258 silly install resolved     _npmVersion: '4.3.0',
+1258 silly install resolved     _nodeVersion: '8.0.0-pre',
+1258 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+1258 silly install resolved     dist:
+1258 silly install resolved      { shasum: 'd0554c2256636e2f56e7c2e5ad183f859428d81f',
+1258 silly install resolved        tarball: 'https://registry.npmjs.org/abbrev/-/abbrev-1.1.0.tgz' },
+1258 silly install resolved     maintainers: [ [Object] ],
+1258 silly install resolved     _npmOperationalInternal:
+1258 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1258 silly install resolved        tmp: 'tmp/abbrev-1.1.0.tgz_1487054000015_0.9229173036292195' },
+1258 silly install resolved     directories: {},
+1258 silly install resolved     _resolved: 'https://registry.npmjs.org/abbrev/-/abbrev-1.1.0.tgz',
+1258 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1259 info install osenv@0.1.4 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1260 info install abbrev@1.1.0 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1261 info installOne osenv@0.1.4
+1262 verbose installOne of osenv to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt not in flight; installing
+1263 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1264 info installOne abbrev@1.1.0
+1265 verbose installOne of abbrev to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt not in flight; installing
+1266 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1267 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\fstream-ignore\1.0.5\package\package.json written
+1268 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\osenv-a43874d0f2f14059.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1269 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\abbrev-e62c2dd6b5f38f56.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1270 silly install write writing osenv 0.1.4 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1271 silly install write writing abbrev 1.1.0 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1272 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1273 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1274 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1275 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1276 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1277 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1278 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\osenv\0.1.4\package.tgz
+1279 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1280 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv is being purged
+1281 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1282 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\abbrev\1.1.0\package.tgz
+1283 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1284 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev is being purged
+1285 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1286 silly gunzTarPerm modes [ '777', '666' ]
+1287 silly gunzTarPerm modes [ '777', '666' ]
+1288 silly gunzTarPerm extractEntry package.json
+1289 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1290 silly gunzTarPerm extractEntry package.json
+1291 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1292 silly gunzTarPerm extractEntry .npmignore
+1293 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+1294 silly gunzTarPerm extractEntry README.md
+1295 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1296 silly gunzTarPerm extractEntry README.md
+1297 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1298 silly gunzTarPerm extractEntry LICENSE
+1299 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1300 silly gunzTarPerm extractEntry abbrev.js
+1301 silly gunzTarPerm modified mode [ 'abbrev.js', 420, 438 ]
+1302 silly gunzTarPerm extractEntry LICENSE
+1303 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1304 silly gunzTarPerm extractEntry osenv.js
+1305 silly gunzTarPerm modified mode [ 'osenv.js', 420, 438 ]
+1306 silly gunzTarPerm extractEntry .travis.yml
+1307 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+1308 silly gunzTarPerm extractEntry test/unix.js
+1309 silly gunzTarPerm modified mode [ 'test/unix.js', 420, 438 ]
+1310 silly gunzTarPerm extractEntry test/windows.js
+1311 silly gunzTarPerm modified mode [ 'test/windows.js', 420, 438 ]
+1312 silly gunzTarPerm extractEntry x.tap
+1313 silly gunzTarPerm modified mode [ 'x.tap', 420, 438 ]
+1314 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev\package.json
+1315 info preinstall abbrev@1.1.0
+1316 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev\package.json
+1317 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev\package.json
+1318 silly install resolved []
+1319 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1320 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1321 info linkStuff abbrev@1.1.0
+1322 silly linkStuff abbrev@1.1.0 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules as its parent node_modules
+1323 verbose linkBins abbrev@1.1.0
+1324 verbose linkMans abbrev@1.1.0
+1325 verbose rebuildBundles abbrev@1.1.0
+1326 info install abbrev@1.1.0
+1327 info postinstall abbrev@1.1.0
+1328 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\abbrev-e62c2dd6b5f38f56.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\abbrev
+1329 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\package.json
+1330 info preinstall osenv@0.1.4
+1331 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\package.json
+1332 silly prepareForInstallMany adding os-tmpdir@^1.0.0 from osenv dependencies
+1333 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\package.json
+1334 silly cache add args [ 'os-tmpdir@^1.0.0', null ]
+1335 verbose cache add spec os-tmpdir@^1.0.0
+1336 silly cache add parsed spec Result {
+1336 silly cache add   raw: 'os-tmpdir@^1.0.0',
+1336 silly cache add   scope: null,
+1336 silly cache add   name: 'os-tmpdir',
+1336 silly cache add   rawSpec: '^1.0.0',
+1336 silly cache add   spec: '>=1.0.0 <2.0.0',
+1336 silly cache add   type: 'range' }
+1337 silly addNamed os-tmpdir@>=1.0.0 <2.0.0
+1338 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for os-tmpdir
+1339 silly addNameRange { name: 'os-tmpdir', range: '>=1.0.0 <2.0.0', hasData: false }
+1340 silly mapToRegistry name os-tmpdir
+1341 silly mapToRegistry using default registry
+1342 silly mapToRegistry registry https://registry.npmjs.org/
+1343 silly mapToRegistry data Result {
+1343 silly mapToRegistry   raw: 'os-tmpdir',
+1343 silly mapToRegistry   scope: null,
+1343 silly mapToRegistry   name: 'os-tmpdir',
+1343 silly mapToRegistry   rawSpec: '',
+1343 silly mapToRegistry   spec: 'latest',
+1343 silly mapToRegistry   type: 'tag' }
+1344 silly mapToRegistry uri https://registry.npmjs.org/os-tmpdir
+1345 verbose addNameRange registry:https://registry.npmjs.org/os-tmpdir not in flight; fetching
+1346 verbose request uri https://registry.npmjs.org/os-tmpdir
+1347 verbose request no auth needed
+1348 info attempt registry request try #1 at 18:38:11
+1349 verbose etag W/"57edf00a-1497"
+1350 verbose lastModified Fri, 30 Sep 2016 04:54:34 GMT
+1351 http request GET https://registry.npmjs.org/os-tmpdir
+1352 http 304 https://registry.npmjs.org/os-tmpdir
+1353 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1353 verbose headers   via: '1.1 varnish',
+1353 verbose headers   'cache-control': 'max-age=300',
+1353 verbose headers   etag: 'W/"57edf00a-1497"',
+1353 verbose headers   age: '16',
+1353 verbose headers   connection: 'keep-alive',
+1353 verbose headers   'x-served-by': 'cache-ord1720-ORD',
+1353 verbose headers   'x-cache': 'HIT',
+1353 verbose headers   'x-cache-hits': '1',
+1353 verbose headers   'x-timer': 'S1496968690.990092,VS0,VE1',
+1353 verbose headers   vary: 'Accept-Encoding' }
+1354 silly get cb [ 304,
+1354 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1354 silly get     via: '1.1 varnish',
+1354 silly get     'cache-control': 'max-age=300',
+1354 silly get     etag: 'W/"57edf00a-1497"',
+1354 silly get     age: '16',
+1354 silly get     connection: 'keep-alive',
+1354 silly get     'x-served-by': 'cache-ord1720-ORD',
+1354 silly get     'x-cache': 'HIT',
+1354 silly get     'x-cache-hits': '1',
+1354 silly get     'x-timer': 'S1496968690.990092,VS0,VE1',
+1354 silly get     vary: 'Accept-Encoding' } ]
+1355 verbose etag https://registry.npmjs.org/os-tmpdir from cache
+1356 verbose get saving os-tmpdir to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\os-tmpdir\.cache.json
+1357 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1358 silly addNameRange number 2 { name: 'os-tmpdir', range: '>=1.0.0 <2.0.0', hasData: true }
+1359 silly addNameRange versions [ 'os-tmpdir', [ '1.0.0', '1.0.1', '1.0.2' ] ]
+1360 silly addNamed os-tmpdir@1.0.2
+1361 verbose addNamed "1.0.2" is a plain semver version for os-tmpdir
+1362 silly cache afterAdd os-tmpdir@1.0.2
+1363 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\os-tmpdir\1.0.2\package\package.json not in flight; writing
+1364 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1365 http 304 https://registry.npmjs.org/uid-number
+1366 verbose headers { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1366 verbose headers   via: '1.1 varnish',
+1366 verbose headers   'cache-control': 'max-age=300',
+1366 verbose headers   etag: 'W/"5463e8f5-184a"',
+1366 verbose headers   age: '85',
+1366 verbose headers   connection: 'keep-alive',
+1366 verbose headers   'x-served-by': 'cache-ord1741-ORD',
+1366 verbose headers   'x-cache': 'HIT',
+1366 verbose headers   'x-cache-hits': '2',
+1366 verbose headers   'x-timer': 'S1496968690.996475,VS0,VE0',
+1366 verbose headers   vary: 'Accept-Encoding' }
+1367 silly get cb [ 304,
+1367 silly get   { date: 'Fri, 09 Jun 2017 00:38:09 GMT',
+1367 silly get     via: '1.1 varnish',
+1367 silly get     'cache-control': 'max-age=300',
+1367 silly get     etag: 'W/"5463e8f5-184a"',
+1367 silly get     age: '85',
+1367 silly get     connection: 'keep-alive',
+1367 silly get     'x-served-by': 'cache-ord1741-ORD',
+1367 silly get     'x-cache': 'HIT',
+1367 silly get     'x-cache-hits': '2',
+1367 silly get     'x-timer': 'S1496968690.996475,VS0,VE0',
+1367 silly get     vary: 'Accept-Encoding' } ]
+1368 verbose etag https://registry.npmjs.org/uid-number from cache
+1369 verbose get saving uid-number to C:\Users\aschu\AppData\Roaming\npm-cache\registry.npmjs.org\uid-number\.cache.json
+1370 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1371 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\os-tmpdir\1.0.2\package\package.json written
+1372 silly install resolved [ { name: 'os-tmpdir',
+1372 silly install resolved     version: '1.0.2',
+1372 silly install resolved     description: 'Node.js os.tmpdir() ponyfill',
+1372 silly install resolved     license: 'MIT',
+1372 silly install resolved     repository:
+1372 silly install resolved      { type: 'git',
+1372 silly install resolved        url: 'git+https://github.com/sindresorhus/os-tmpdir.git' },
+1372 silly install resolved     author:
+1372 silly install resolved      { name: 'Sindre Sorhus',
+1372 silly install resolved        email: 'sindresorhus@gmail.com',
+1372 silly install resolved        url: 'sindresorhus.com' },
+1372 silly install resolved     engines: { node: '>=0.10.0' },
+1372 silly install resolved     scripts: { test: 'xo && ava' },
+1372 silly install resolved     files: [ 'index.js' ],
+1372 silly install resolved     keywords:
+1372 silly install resolved      [ 'built-in',
+1372 silly install resolved        'core',
+1372 silly install resolved        'ponyfill',
+1372 silly install resolved        'polyfill',
+1372 silly install resolved        'shim',
+1372 silly install resolved        'os',
+1372 silly install resolved        'tmpdir',
+1372 silly install resolved        'tempdir',
+1372 silly install resolved        'tmp',
+1372 silly install resolved        'temp',
+1372 silly install resolved        'dir',
+1372 silly install resolved        'directory',
+1372 silly install resolved        'env',
+1372 silly install resolved        'environment' ],
+1372 silly install resolved     devDependencies: { ava: '*', xo: '^0.16.0' },
+1372 silly install resolved     gitHead: '1abf9cf5611b4be7377060ea67054b45cbf6813c',
+1372 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/os-tmpdir/issues' },
+1372 silly install resolved     homepage: 'https://github.com/sindresorhus/os-tmpdir#readme',
+1372 silly install resolved     _id: 'os-tmpdir@1.0.2',
+1372 silly install resolved     _shasum: 'bbe67406c79aa85c5cfec766fe5734555dfa1274',
+1372 silly install resolved     _from: 'os-tmpdir@>=1.0.0 <2.0.0',
+1372 silly install resolved     _npmVersion: '3.10.3',
+1372 silly install resolved     _nodeVersion: '6.6.0',
+1372 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+1372 silly install resolved     dist:
+1372 silly install resolved      { shasum: 'bbe67406c79aa85c5cfec766fe5734555dfa1274',
+1372 silly install resolved        tarball: 'https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz' },
+1372 silly install resolved     maintainers: [ [Object] ],
+1372 silly install resolved     _npmOperationalInternal:
+1372 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1372 silly install resolved        tmp: 'tmp/os-tmpdir-1.0.2.tgz_1475211274587_0.14931037812493742' },
+1372 silly install resolved     directories: {},
+1372 silly install resolved     _resolved: 'https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz',
+1372 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1373 info install os-tmpdir@1.0.2 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1374 info installOne os-tmpdir@1.0.2
+1375 verbose installOne of os-tmpdir to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv not in flight; installing
+1376 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1377 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\os-tmpdir-726ec610af5b9d47.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1378 silly install write writing os-tmpdir 1.0.2 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1379 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1380 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1381 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1382 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\os-tmpdir\1.0.2\package.tgz
+1383 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1384 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir is being purged
+1385 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1386 silly gunzTarPerm modes [ '777', '666' ]
+1387 silly gunzTarPerm extractEntry package.json
+1388 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1389 silly addNameRange number 2 { name: 'uid-number', range: '>=0.0.6 <0.0.7', hasData: true }
+1390 silly addNameRange versions [ 'uid-number',
+1390 silly addNameRange   [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5', '0.0.6' ] ]
+1391 silly addNamed uid-number@0.0.6
+1392 verbose addNamed "0.0.6" is a plain semver version for uid-number
+1393 silly gunzTarPerm extractEntry index.js
+1394 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+1395 silly gunzTarPerm extractEntry license
+1396 silly gunzTarPerm modified mode [ 'license', 420, 438 ]
+1397 silly cache afterAdd uid-number@0.0.6
+1398 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\uid-number\0.0.6\package\package.json not in flight; writing
+1399 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+1400 silly gunzTarPerm extractEntry readme.md
+1401 silly gunzTarPerm modified mode [ 'readme.md', 420, 438 ]
+1402 verbose afterAdd C:\Users\aschu\AppData\Roaming\npm-cache\uid-number\0.0.6\package\package.json written
+1403 silly install resolved [ { author:
+1403 silly install resolved      { name: 'Isaac Z. Schlueter',
+1403 silly install resolved        email: 'i@izs.me',
+1403 silly install resolved        url: 'http://blog.izs.me/' },
+1403 silly install resolved     name: 'fstream-ignore',
+1403 silly install resolved     description: 'A thing for ignoring files based on globs',
+1403 silly install resolved     version: '1.0.5',
+1403 silly install resolved     repository:
+1403 silly install resolved      { type: 'git',
+1403 silly install resolved        url: 'git://github.com/isaacs/fstream-ignore.git' },
+1403 silly install resolved     main: 'ignore.js',
+1403 silly install resolved     scripts: { test: 'tap test/*.js --cov' },
+1403 silly install resolved     dependencies: { fstream: '^1.0.0', inherits: '2', minimatch: '^3.0.0' },
+1403 silly install resolved     devDependencies: { mkdirp: '', rimraf: '', tap: '^5.7.1' },
+1403 silly install resolved     license: 'ISC',
+1403 silly install resolved     files: [ 'ignore.js' ],
+1403 silly install resolved     gitHead: '1438a1a2c25fee71327c36c86de787a14a53ffd4',
+1403 silly install resolved     bugs: { url: 'https://github.com/isaacs/fstream-ignore/issues' },
+1403 silly install resolved     homepage: 'https://github.com/isaacs/fstream-ignore#readme',
+1403 silly install resolved     _id: 'fstream-ignore@1.0.5',
+1403 silly install resolved     _shasum: '9c31dae34767018fe1d249b24dada67d092da105',
+1403 silly install resolved     _from: 'fstream-ignore@>=1.0.5 <2.0.0',
+1403 silly install resolved     _npmVersion: '3.9.1',
+1403 silly install resolved     _nodeVersion: '5.10.1',
+1403 silly install resolved     _npmUser: { name: 'zkat', email: 'kat@sykosomatic.org' },
+1403 silly install resolved     dist:
+1403 silly install resolved      { shasum: '9c31dae34767018fe1d249b24dada67d092da105',
+1403 silly install resolved        tarball: 'https://registry.npmjs.org/fstream-ignore/-/fstream-ignore-1.0.5.tgz' },
+1403 silly install resolved     maintainers: [ [Object], [Object], [Object] ],
+1403 silly install resolved     _npmOperationalInternal:
+1403 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+1403 silly install resolved        tmp: 'tmp/fstream-ignore-1.0.5.tgz_1463518095640_0.10221575922332704' },
+1403 silly install resolved     directories: {},
+1403 silly install resolved     _resolved: 'https://registry.npmjs.org/fstream-ignore/-/fstream-ignore-1.0.5.tgz',
+1403 silly install resolved     readme: 'ERROR: No README data found!' },
+1403 silly install resolved   { author:
+1403 silly install resolved      { name: 'Isaac Z. Schlueter',
+1403 silly install resolved        email: 'i@izs.me',
+1403 silly install resolved        url: 'http://blog.izs.me/' },
+1403 silly install resolved     name: 'uid-number',
+1403 silly install resolved     description: 'Convert a username/group name to a uid/gid number',
+1403 silly install resolved     version: '0.0.6',
+1403 silly install resolved     repository: { type: 'git', url: 'git://github.com/isaacs/uid-number.git' },
+1403 silly install resolved     main: 'uid-number.js',
+1403 silly install resolved     dependencies: {},
+1403 silly install resolved     devDependencies: {},
+1403 silly install resolved     optionalDependencies: {},
+1403 silly install resolved     engines: { node: '*' },
+1403 silly install resolved     license: 'ISC',
+1403 silly install resolved     gitHead: 'aab48f5d6bda85794946b26d945d2ee452e0e9ab',
+1403 silly install resolved     bugs: { url: 'https://github.com/isaacs/uid-number/issues' },
+1403 silly install resolved     homepage: 'https://github.com/isaacs/uid-number',
+1403 silly install resolved     _id: 'uid-number@0.0.6',
+1403 silly install resolved     scripts: {},
+1403 silly install resolved     _shasum: '0ea10e8035e8eb5b8e4449f06da1c730663baa81',
+1403 silly install resolved     _from: 'uid-number@>=0.0.6 <0.0.7',
+1403 silly install resolved     _npmVersion: '2.1.3',
+1403 silly install resolved     _nodeVersion: '0.10.31',
+1403 silly install resolved     _npmUser: { name: 'isaacs', email: 'i@izs.me' },
+1403 silly install resolved     maintainers: [ [Object] ],
+1403 silly install resolved     dist:
+1403 silly install resolved      { shasum: '0ea10e8035e8eb5b8e4449f06da1c730663baa81',
+1403 silly install resolved        tarball: 'https://registry.npmjs.org/uid-number/-/uid-number-0.0.6.tgz' },
+1403 silly install resolved     directories: {},
+1403 silly install resolved     _resolved: 'https://registry.npmjs.org/uid-number/-/uid-number-0.0.6.tgz',
+1403 silly install resolved     readme: 'ERROR: No README data found!' } ]
+1404 info install fstream-ignore@1.0.5 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1405 info install uid-number@0.0.6 into D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1406 info installOne fstream-ignore@1.0.5
+1407 verbose installOne of fstream-ignore to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack not in flight; installing
+1408 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1409 info installOne uid-number@0.0.6
+1410 verbose installOne of uid-number to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack not in flight; installing
+1411 verbose correctMkdir C:\Users\aschu\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+1412 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\fstream-ignore-06528d59abae80cf.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1413 verbose lock using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\uid-number-aad98f771eeb1d82.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1414 silly install write writing fstream-ignore 1.0.5 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1415 silly install write writing uid-number 0.0.6 to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1416 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1417 verbose unbuild node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1418 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1419 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1420 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1421 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1422 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\fstream-ignore\1.0.5\package.tgz
+1423 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1424 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore is being purged
+1425 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1426 verbose tar unpack C:\Users\aschu\AppData\Roaming\npm-cache\uid-number\0.0.6\package.tgz
+1427 verbose tar unpacking to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1428 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number is being purged
+1429 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1430 silly gunzTarPerm modes [ '777', '666' ]
+1431 silly gunzTarPerm modes [ '777', '666' ]
+1432 silly gunzTarPerm extractEntry package.json
+1433 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1434 silly gunzTarPerm extractEntry package.json
+1435 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+1436 silly gunzTarPerm extractEntry README.md
+1437 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1438 silly gunzTarPerm extractEntry LICENSE
+1439 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1440 silly gunzTarPerm extractEntry README.md
+1441 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+1442 silly gunzTarPerm extractEntry LICENSE
+1443 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+1444 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir\package.json
+1445 silly gunzTarPerm extractEntry get-uid-gid.js
+1446 silly gunzTarPerm modified mode [ 'get-uid-gid.js', 493, 511 ]
+1447 silly gunzTarPerm extractEntry uid-number.js
+1448 silly gunzTarPerm modified mode [ 'uid-number.js', 420, 438 ]
+1449 silly gunzTarPerm extractEntry ignore.js
+1450 silly gunzTarPerm modified mode [ 'ignore.js', 420, 438 ]
+1451 info preinstall os-tmpdir@1.0.2
+1452 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir\package.json
+1453 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir\package.json
+1454 silly install resolved []
+1455 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1456 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1457 info linkStuff os-tmpdir@1.0.2
+1458 silly linkStuff os-tmpdir@1.0.2 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules as its parent node_modules
+1459 verbose linkBins os-tmpdir@1.0.2
+1460 verbose linkMans os-tmpdir@1.0.2
+1461 verbose rebuildBundles os-tmpdir@1.0.2
+1462 info install os-tmpdir@1.0.2
+1463 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore\package.json
+1464 info postinstall os-tmpdir@1.0.2
+1465 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\os-tmpdir-726ec610af5b9d47.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv\node_modules\os-tmpdir
+1466 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1467 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1468 info linkStuff osenv@0.1.4
+1469 silly linkStuff osenv@0.1.4 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules as its parent node_modules
+1470 verbose write writing to D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number\package.json
+1471 info preinstall fstream-ignore@1.0.5
+1472 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore\package.json
+1473 verbose linkBins osenv@0.1.4
+1474 verbose linkMans osenv@0.1.4
+1475 verbose rebuildBundles osenv@0.1.4
+1476 verbose rebuildBundles [ 'os-tmpdir' ]
+1477 info install osenv@0.1.4
+1478 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore\package.json
+1479 info preinstall uid-number@0.0.6
+1480 info postinstall osenv@0.1.4
+1481 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number\package.json
+1482 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\osenv-a43874d0f2f14059.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt\node_modules\osenv
+1483 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1484 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1485 silly install resolved []
+1486 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1487 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1488 verbose readDependencies loading dependencies from D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number\package.json
+1489 info linkStuff nopt@4.0.1
+1490 silly linkStuff nopt@4.0.1 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules as its parent node_modules
+1491 info linkStuff fstream-ignore@1.0.5
+1492 silly linkStuff fstream-ignore@1.0.5 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules as its parent node_modules
+1493 silly install resolved []
+1494 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1495 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1496 verbose linkBins nopt@4.0.1
+1497 verbose link bins [ { nopt: './bin/nopt.js' },
+1497 verbose link bins   'D:\\Storage\\Projects\\PacketCloud\\ALVIS\\node_modules\\wolfram\\node_modules\\libxmljs\\node_modules\\node-pre-gyp\\node_modules\\.bin',
+1497 verbose link bins   false ]
+1498 verbose linkMans nopt@4.0.1
+1499 verbose rebuildBundles nopt@4.0.1
+1500 info linkStuff uid-number@0.0.6
+1501 silly linkStuff uid-number@0.0.6 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules as its parent node_modules
+1502 verbose rebuildBundles [ 'abbrev', 'osenv' ]
+1503 verbose linkBins fstream-ignore@1.0.5
+1504 verbose linkMans fstream-ignore@1.0.5
+1505 verbose rebuildBundles fstream-ignore@1.0.5
+1506 info install fstream-ignore@1.0.5
+1507 info postinstall fstream-ignore@1.0.5
+1508 verbose linkBins uid-number@0.0.6
+1509 verbose linkMans uid-number@0.0.6
+1510 verbose rebuildBundles uid-number@0.0.6
+1511 info install uid-number@0.0.6
+1512 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\fstream-ignore-06528d59abae80cf.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\fstream-ignore
+1513 info postinstall uid-number@0.0.6
+1514 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\uid-number-aad98f771eeb1d82.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack\node_modules\uid-number
+1515 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1516 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1517 info install nopt@4.0.1
+1518 info postinstall nopt@4.0.1
+1519 info linkStuff tar-pack@3.4.0
+1520 silly linkStuff tar-pack@3.4.0 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules as its parent node_modules
+1521 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\nopt-bba1070b7c6cea61.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\nopt
+1522 verbose linkBins tar-pack@3.4.0
+1523 verbose linkMans tar-pack@3.4.0
+1524 verbose rebuildBundles tar-pack@3.4.0
+1525 verbose rebuildBundles [ 'fstream-ignore', 'uid-number' ]
+1526 info install tar-pack@3.4.0
+1527 info postinstall tar-pack@3.4.0
+1528 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\tar-pack-ebf1179107e7423a.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp\node_modules\tar-pack
+1529 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1530 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1531 info linkStuff node-pre-gyp@0.6.36
+1532 silly linkStuff node-pre-gyp@0.6.36 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules as its parent node_modules
+1533 verbose linkBins node-pre-gyp@0.6.36
+1534 verbose link bins [ { 'node-pre-gyp': './bin/node-pre-gyp' },
+1534 verbose link bins   'D:\\Storage\\Projects\\PacketCloud\\ALVIS\\node_modules\\wolfram\\node_modules\\libxmljs\\node_modules\\.bin',
+1534 verbose link bins   false ]
+1535 verbose linkMans node-pre-gyp@0.6.36
+1536 verbose rebuildBundles node-pre-gyp@0.6.36
+1537 verbose rebuildBundles [ '.bin', 'nopt', 'semver', 'tar-pack' ]
+1538 info install node-pre-gyp@0.6.36
+1539 info postinstall node-pre-gyp@0.6.36
+1540 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\node-pre-gyp-74a62f483f68a836.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs\node_modules\node-pre-gyp
+1541 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+1542 info build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+1543 info linkStuff libxmljs@0.18.4
+1544 silly linkStuff libxmljs@0.18.4 has D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules as its parent node_modules
+1545 verbose linkBins libxmljs@0.18.4
+1546 verbose linkMans libxmljs@0.18.4
+1547 verbose rebuildBundles libxmljs@0.18.4
+1548 verbose rebuildBundles [ '.bin', 'nan', 'node-pre-gyp' ]
+1549 info install libxmljs@0.18.4
+1550 verbose unsafe-perm in lifecycle true
+1551 info libxmljs@0.18.4 Failed to exec install script
+1552 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\libxmljs-fc4ca55a4c4ca344.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+1553 verbose about to build D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+1554 verbose unlock done using C:\Users\aschu\AppData\Roaming\npm-cache\_locks\wolfram-a493815ee3724351.lock for D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+1555 verbose stack Error: libxmljs@0.18.4 install: `node-pre-gyp install --fallback-to-build --loglevel http`
+1555 verbose stack Exit status 1
+1555 verbose stack     at EventEmitter.<anonymous> (C:\Users\aschu\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:217:16)
+1555 verbose stack     at emitTwo (events.js:125:13)
+1555 verbose stack     at EventEmitter.emit (events.js:213:7)
+1555 verbose stack     at ChildProcess.<anonymous> (C:\Users\aschu\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
+1555 verbose stack     at emitTwo (events.js:125:13)
+1555 verbose stack     at ChildProcess.emit (events.js:213:7)
+1555 verbose stack     at maybeClose (internal/child_process.js:887:16)
+1555 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:208:5)
+1556 verbose pkgid libxmljs@0.18.4
+1557 verbose cwd D:\Storage\Projects\PacketCloud\ALVIS
+1558 error Windows_NT 10.0.15063
+1559 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\aschu\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "wolfram"
+1560 error node v8.0.0
+1561 error npm  v2.15.11
+1562 error code ELIFECYCLE
+1563 error libxmljs@0.18.4 install: `node-pre-gyp install --fallback-to-build --loglevel http`
+1563 error Exit status 1
+1564 error Failed at the libxmljs@0.18.4 install script 'node-pre-gyp install --fallback-to-build --loglevel http'.
+1564 error This is most likely a problem with the libxmljs package,
+1564 error not with npm itself.
+1564 error Tell the author that this fails on your system:
+1564 error     node-pre-gyp install --fallback-to-build --loglevel http
+1564 error You can get information on how to open an issue for this project with:
+1564 error     npm bugs libxmljs
+1564 error Or if that isn't available, you can get their info via:
+1564 error
+1564 error     npm owner ls libxmljs
+1564 error There is likely additional logging output above.
+1565 verbose exit [ 1, true ]
+1566 verbose unbuild node_modules\wolfram\node_modules\libxmljs
+1567 info preuninstall libxmljs@0.18.4
+1568 info uninstall libxmljs@0.18.4
+1569 verbose unbuild rmStuff libxmljs@0.18.4 from D:\Storage\Projects\PacketCloud\ALVIS\node_modules
+1570 verbose unbuild rmStuff in D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules
+1571 info postuninstall libxmljs@0.18.4
+1572 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1573 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+1574 silly vacuum-fs purging D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules\libxmljs
+1575 silly vacuum-fs removing D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram\node_modules
+1576 silly vacuum-fs quitting because other entries in D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+1577 verbose unbuild node_modules\wolfram
+1578 info preuninstall wolfram@0.3.4
+1579 info uninstall wolfram@0.3.4
+1580 verbose unbuild rmStuff wolfram@0.3.4 from D:\Storage\Projects\PacketCloud\ALVIS\node_modules
+1581 info postuninstall wolfram@0.3.4
+1582 silly gentlyRm D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram is being purged from base D:\Storage\Projects\PacketCloud\ALVIS
+1583 verbose gentlyRm don't care about contents; nuking D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+1584 silly vacuum-fs purging D:\Storage\Projects\PacketCloud\ALVIS\node_modules\wolfram
+1585 silly vacuum-fs quitting because other entries in D:\Storage\Projects\PacketCloud\ALVIS\node_modules

@@ -5,7 +5,7 @@ class NewMemberHandler {
     this.bot = bot;
   }
 
-  handle(newUser) {
+  handle(newMember) {
     var defaultChannel = newMember.guild.defaultChannel;
     var admin_role_id = newMember.guild.roles.find("name", this.bot.permissions.admin_role).id;
     var manager_role_id = newMember.guild.roles.find("name", this.bot.permissions.manager_role).id;

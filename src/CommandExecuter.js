@@ -141,11 +141,7 @@ class CommandExecuter {
   playmusicCommand(message, arg1, body) {
     if (arg1 === "?"){
       this.util.sendMusicList(message, null);
-      if (message.channel instanceof Discord.TextChannel) {
-        this.util.logger("Responded to '" + command_prefix + "playmusic ?' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-      }else {
-        this.util.logger("Responded to '" + command_prefix + "playmusic ?' command from " + message.author.username);
-      }
+      this.util.logStandardCommand(message, "playmusic");
       this.util.cleanupMessage(message);
       return;
     }
@@ -170,21 +166,13 @@ class CommandExecuter {
         var obj_keys = Object.keys(this.util.musicData);
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
-        if (message.channel instanceof Discord.TextChannel) {
-          this.util.logger("Responded to '" + command_prefix + "playmusic' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-        }else {
-          this.util.logger("Responded to '" + command_prefix + "playmusic' command from " + message.author.username);
-        }
+        this.util.logStandardCommand(message, "playmusic");
       }else{
         if (this.util.musicData[body] == null){
           message.author.send("The song '" + body + "' does not exist in my library. Use **!playmusic ?** for a list of songs.");
         }else{
           this.util.playSound(channel, path + "/" + this.util.musicData[body].file);
-          if (message.channel instanceof Discord.TextChannel) {
-            this.util.logger("Responded to '" + command_prefix + "playmusic " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-          }else{
-            this.util.logger("Responded to '" + command_prefix + "playmusic " + arg1 +"' command from " + message.author.username);
-          }
+          this.util.logStandardCommand(message, "playmusic");
         }
       }
     }
@@ -194,11 +182,7 @@ class CommandExecuter {
   playsoundCommand(message, arg1, body) {
     if (arg1 === "?"){
       this.util.sendSoundList(message, null);
-      if (message.channel instanceof Discord.TextChannel) {
-        this.util.logger("Responded to '" + command_prefix + "playsound ?' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-      }else {
-        this.util.logger("Responded to '" + command_prefix + "playsound ?' command from " + message.author.username);
-      }
+      this.util.logStandardCommand(message, "playsound");
       this.util.cleanupMessage(message);
       return;
     }
@@ -223,21 +207,13 @@ class CommandExecuter {
         var obj_keys = Object.keys(this.util.soundData);
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file);
-        if (message.channel instanceof Discord.TextChannel) {
-          this.util.logger("Responded to '" + command_prefix + "playsound' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-        }else {
-          this.util.logger("Responded to '" + command_prefix + "playsound' command from " + message.author.username);
-        }
+        this.util.logStandardCommand(message, "playsound");
       }else{
         if (this.util.soundData[body] == null){
           message.author.send("The sound '" + body + "' does not exist in my library. Use **!playmusic ?** for a list of sounds.");
         }else{
           this.util.playSound(channel, path + "/" + this.util.soundData[body].file);
-          if (message.channel instanceof Discord.TextChannel) {
-            this.util.logger("Responded to '" + command_prefix + "playsound " + arg1 + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-          }else{
-            this.util.logger("Responded to '" + command_prefix + "playsound " + arg1 +"' command from " + message.author.username);
-          }
+          this.util.logStandardCommand(message, "playsound");
         }
       }
     }

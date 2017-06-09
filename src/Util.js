@@ -19,9 +19,9 @@ class Util {
 
   logStandardCommand(message, command) {
     if (message.channel instanceof Discord.TextChannel) {
-			this.logger("Responded to '" + this.bot.basic.command_prefix + command + "' command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
+			this.logger("Responded to " + command + " command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
 		}else {
-      this.logger("Responded to '" + this.bot.basic.command_prefix + command + "' command from " + message.author.username);
+      this.logger("Responded to " + command + " command from " + message.author.username);
     }
   }
 
@@ -43,6 +43,9 @@ class Util {
   }
 
   getRandomInt(min, max) {
+    if (max < min){
+      return Math.floor(min);
+    }
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 

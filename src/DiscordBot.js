@@ -28,14 +28,14 @@ class DiscordBot extends Discord.Client {
 
     if (this.startupIntegrityCheck()){
 
-      this.chatbot = APIai(this.config.chatbot_key);
+      this.chatbot = APIai(this.config.apiai_key);
 
       this.addEventListeners();
 
       this.login(this.config.token);
 
     }else{
-      this.util.logger("Startup Check FAILED! Ensure settings are configured correctly then try again.");
+      this.util.logger("Startup Configuration Check FAILED! Ensure settings are configured correctly then try again.");
     }
   }
 
@@ -79,11 +79,11 @@ class DiscordBot extends Discord.Client {
   }
 
   disconnectListener() {
-    this.util.logger('Bot disconnected from Discord\n');
+    this.util.logger('Bot disconnected from Discord');
   }
 
   reconnectingListener() {
-    this.util.logger('AutoReconnecting...');
+    this.util.logger('AutoReconnecting to Discord');
   }
 
   guildMemberAddListener(newMember) {

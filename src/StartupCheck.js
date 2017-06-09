@@ -7,12 +7,16 @@ class StartupCheck {
   }
 
   runCheck() {
-    this.bot.util.logger("Startup Check Initiated");
+    this.bot.util.logger("Startup Configuration Check INITIATED");
     if (!this.bot.config.hasOwnProperty("token") || typeof this.bot.config.token !== 'string'){
       this.setDefaultConfig();
       return false;
     }
-    if (!this.bot.config.hasOwnProperty("chatbot_key") || typeof this.bot.config.chatbot_key !== 'string'){
+    if (!this.bot.config.hasOwnProperty("apiai_key") || typeof this.bot.config.apiai_key !== 'string'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("wolfram_key") || typeof this.bot.config.wolfram_key !== 'string'){
       this.setDefaultConfig();
       return false;
     }
@@ -44,8 +48,12 @@ class StartupCheck {
       console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
-    if (this.bot.config.chatbot_key == "" || this.bot.config.chatbot_key == "YOUR_API.AI_AGENT_KEY"){
+    if (this.bot.config.apiai_key == "" || this.bot.config.apiai_key == "YOUR_API.AI_AGENT_KEY"){
       console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.");
+      return false;
+    }
+    if (this.bot.config.wolfram_key == "" || this.bot.config.wolfram_key == "YOUR_WOLFRAM_API_KEY"){
+      console.log("ERROR: Wolfram API key not configured. Please configure your key in './config/config.json'. See README for more information.");
       return false;
     }
     if (this.bot.permissions.manager_role == ""){
@@ -56,12 +64,12 @@ class StartupCheck {
       console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
-    this.bot.util.logger("Startup Check PASSED");
+    this.bot.util.logger("Startup Configuration Check PASSED");
     return true;
   }
 
   setDefaultConfig() {
-    var json_data = {"token": "YOUR_DISCORD_BOT_TOKEN", "chatbot_key": "YOUR_API.AI_AGENT_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    var json_data = {"token": "YOUR_DISCORD_BOT_TOKEN", "apiai_key": "YOUR_API.AI_AGENT_KEY", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
     fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
       if (err) console.log(err);
     });
