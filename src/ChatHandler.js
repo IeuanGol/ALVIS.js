@@ -16,7 +16,8 @@ class ChatHandler {
     const rawcontent = message.content.toLowerCase();
     if (rawcontent.includes(this.bot.basic.username.toLowerCase()) && !rawcontent.includes("\\" + this.bot.basic.username.toLowerCase()) && !rawcontent.includes("/" + this.bot.basic.username.toLowerCase())){
       var response = this.bot.responses.name_mention_response;
-      message.reply(response);
+      message.reply(response)
+      .then((msg) => {this.bot.messageCleanupQueue.add(msg, 0.5, true)});
       this.bot.util.logger("Responded to name mention from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
       return;
     }

@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 const APIai = require('apiai');
+const MessageCleanupQueue = require('./MessageCleanupQueue.js');
 const BotMessageHandler = require('./BotMessageHandler.js');
 const ResponseHandler = require('./AI/ResponseHandler.js');
 const NewMemberHandler = require('./NewMemberHandler.js');
@@ -18,6 +19,7 @@ class DiscordBot extends Discord.Client {
     this.basic = require('./basic.json');
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('./userSounds.json');
+    this.messageCleanupQueue = new MessageCleanupQueue(this);
     this.botMessageHandler = new BotMessageHandler(this);
     this.newMemberHandler = new NewMemberHandler(this);
     this.responseHandler = new ResponseHandler(this);
@@ -49,6 +51,7 @@ class DiscordBot extends Discord.Client {
     this.on('message', this.messageListener);
     this.on('disconnect', this.disconnectListener);
     this.on('reconnecting', this.reconnectingListener);
+    this.on('messageDelete', this.messageDeleteListener);
     this.on('guildMemberAdd', this.guildMemberAddListener);
     this.on('voiceStateUpdate', this.voiceStateUpdateListener);
   }
@@ -61,6 +64,7 @@ class DiscordBot extends Discord.Client {
   }
 
   messageListener(message) {
+    this.messageCleanupQueue.update();
     if (message.author.bot){
       this.botMessageHandler.handle(message);
       return;
@@ -84,6 +88,10 @@ class DiscordBot extends Discord.Client {
 
   reconnectingListener() {
     this.util.logger('AutoReconnecting to Discord');
+  }
+
+  messageDeleteListener(message) {
+    this.messageCleanupQueue.remove(message.id);
   }
 
   guildMemberAddListener(newMember) {

@@ -18,13 +18,14 @@ class R6Siege {
     var playtime_converter = this.convertPlaytime;
     var rank_converter = this.convertRank;
     var request = require('request');
+    var handler = this;
     request("https://api.r6stats.com/api/v1/players/" + username + "?platform=" + platform, function (error, response, body) {
       var playerData = JSON.parse(body).player;
       if (typeof playerData === "undefined"){
         if (noplatform){
-          message.reply("Player data could not be located. Ensure the username is correct.");
+          message.reply("I could not locate player data. Are you sure the username is correct?");
         }else{
-          message.reply("Player data could not be located. Ensure the username is correct. If you are providing a platform, be sure it is also correct.");
+          message.reply("I could not locate player data. Are you sure the username is correct? If you are providing a platform, be sure it is also correct.");
         }
         return;
       }
@@ -43,7 +44,9 @@ class R6Siege {
           replyContent = replyContent + "\nSeason:\n    Rank:     " + rank + "\n    Wins:     " + season.wins +"\n    Losses:   " + season.losses + "\n    Abandons: " + season.abandons + "\n    Skill:    " + Math.round(season.ranking.mean) + " ± " + season.ranking.stdev + "\n";
         }
         replyContent = replyContent + "```";
-        message.reply(replyContent);
+        var Bot = this.bot;
+        message.reply(replyContent)
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) handler.bot.messageCleanupQueue.add(msg, 10)});
       });
     });
   }
