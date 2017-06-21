@@ -64,7 +64,6 @@ class DiscordBot extends Discord.Client {
   }
 
   messageListener(message) {
-    this.messageCleanupQueue.update();
     if (message.author.bot){
       this.botMessageHandler.handle(message);
       return;
