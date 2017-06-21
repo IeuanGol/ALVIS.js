@@ -83,7 +83,7 @@ class DiscordBot extends Discord.Client {
   }
 
   disconnectListener() {
-    this.util.logger('Bot disconnected from Discord');
+    this.util.logger('Disconnected from Discord');
   }
 
   reconnectingListener() {

@@ -375,6 +375,14 @@
         "aliases": [],
         "tags": []
     },
+    "closed": {
+        "name": "closed",
+        "file": "closed.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "cluster_charge": {
         "name": "cluster_charge",
         "file": "cluster_charge.mp3",

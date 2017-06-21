@@ -210,7 +210,7 @@ class CommandExecuter {
         this.util.logStandardCommand(message, "playsound");
       }else{
         if (this.util.soundData[body] == null){
-          message.author.send("The sound '" + body + "' does not exist in my library. Use **!playmusic ?** for a list of sounds.");
+          message.author.send("The sound '" + body + "' does not exist in my library. Use **!playsound ?** for a list of sounds.");
         }else{
           this.util.playSound(channel, path + "/" + this.util.soundData[body].file);
           this.util.logStandardCommand(message, "playsound");

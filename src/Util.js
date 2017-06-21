@@ -185,14 +185,15 @@ class Util {
 
   setUserSound(id, username, sound) {
     if (sound == null){
+      console.log("null");
       delete this.bot.userSounds[id];
     }else if (this.soundData[sound]){
-      this.bot.userSounds[id] = {"id": id, "username":username ,"sound": sound};
+      this.bot.userSounds[id] = {"id": id, "username":username,"sound": sound};
     }else{
       return false;
     }
-    fs.writeFile("./userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
-      return;
+    fs.writeFile("./src/userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
+      if (err) console.log(err);
     });
     return true;
   }
