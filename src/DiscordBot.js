@@ -30,11 +30,11 @@ class DiscordBot extends Discord.Client {
 
     if (this.startupIntegrityCheck()){
 
-      this.chatbot = APIai(this.config.apiai_key);
+      this.chatbot = APIai(this.config.apiai_agent_token);
 
       this.addEventListeners();
 
-      this.login(this.config.token);
+      this.login(this.config.discord_token);
 
     }else{
       this.util.logger("Startup Configuration Check FAILED! Ensure settings are configured correctly then try again.");

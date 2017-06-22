@@ -8,11 +8,11 @@ class StartupCheck {
 
   runCheck() {
     this.bot.util.logger("Startup Configuration Check INITIATED");
-    if (!this.bot.config.hasOwnProperty("token") || typeof this.bot.config.token !== 'string'){
+    if (!this.bot.config.hasOwnProperty("discord_token") || typeof this.bot.config.discord_token !== 'string'){
       this.setDefaultConfig();
       return false;
     }
-    if (!this.bot.config.hasOwnProperty("apiai_key") || typeof this.bot.config.apiai_key !== 'string'){
+    if (!this.bot.config.hasOwnProperty("apiai_agent_token") || typeof this.bot.config.apiai_agent_token !== 'string'){
       this.setDefaultConfig();
       return false;
     }
@@ -44,11 +44,11 @@ class StartupCheck {
       this.setDefaultPermissions();
       return false;
     }
-    if (this.bot.config.token == "" || this.bot.config.token == "YOUR_DISCORD_BOT_TOKEN"){
+    if (this.bot.config.discord_token == "" || this.bot.config.discord_token == "YOUR_DISCORD_BOT_TOKEN"){
       console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
-    if (this.bot.config.apiai_key == "" || this.bot.config.apiai_key == "YOUR_API.AI_AGENT_KEY"){
+    if (this.bot.config.apiai_agent_token == "" || this.bot.config.apiai_agent_token == "YOUR_API.AI_AGENT_TOKEN"){
       console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
@@ -69,7 +69,7 @@ class StartupCheck {
   }
 
   setDefaultConfig() {
-    var json_data = {"token": "YOUR_DISCORD_BOT_TOKEN", "apiai_key": "YOUR_API.AI_AGENT_KEY", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
     fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
       if (err) console.log(err);
     });
@@ -83,21 +83,6 @@ class StartupCheck {
     });
     this.bot.util.logger("ERROR: Missing fields in permissions file; resetting to default permissions values.");
   }
-
-  throwConfigError() {
-    console.log("\n>>>>>>>>>> There was a problem with your configuration file. It has been reset to default values. Please re-configure it in './config/config.json'. See README for more information.\n");
-    setTimeout(function(){
-      throw new Error("Problem with configuration file.");
-    }, 500);
-  }
-
-  throwPermissionsError() {
-    console.log("\n>>>>>>>>>> There was a problem with your permissions file. It has been reset to default values. Please re-configure it in './config/permissions.json'. See README for more information.\n");
-    setTimeout(function(){
-      throw new Error("Problem with permissions file.");
-    }, 500);
-  }
-
 }
 
 module.exports = StartupCheck;
