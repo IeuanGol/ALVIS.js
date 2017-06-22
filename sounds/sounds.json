@@ -1071,6 +1071,14 @@
         "aliases": [],
         "tags": []
     },
+    "kys_long": {
+        "name": "kys_long",
+        "file": "kys_long.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "land_development": {
         "name": "land_development",
         "file": "land_development.mp3",
