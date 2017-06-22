@@ -1063,6 +1063,14 @@
         "aliases": [],
         "tags": []
     },
+    "kys": {
+        "name": "kys",
+        "file": "kys.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "land_development": {
         "name": "land_development",
         "file": "land_development.mp3",
@@ -2066,6 +2074,14 @@
     "tearing_me_apart": {
         "name": "tearing_me_apart",
         "file": "tearing_me_apart.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
+    "thats_pretty_awww": {
+        "name": "thats_pretty_awww",
+        "file": "thats_pretty_awww.mp3",
         "extension": "mp3",
         "artist": "",
         "aliases": [],
