@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const DefaultResponse = require('./DefaultResponse');
 
-class DiscordCommand extends DefaultResponse {
+class NativeCommand extends DefaultResponse {
   constructor(bot) {
     super(bot);
   }
@@ -63,4 +63,4 @@ class DiscordCommand extends DefaultResponse {
   }
 }
 
-module.exports = DiscordCommand;
+module.exports = NativeCommand;

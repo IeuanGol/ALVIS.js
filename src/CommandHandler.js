@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const CommandExecuter = require('./CommandExecuter.js');
+const fs = require('fs');
 
 class CommandHandler {
   constructor(bot) {

@@ -17,7 +17,8 @@ class ChatHandler {
     if (rawcontent.includes("\\delete")){
       this.bot.messageCleanupQueue.add(message, 5, true);
     }
-    if (rawcontent.includes(this.bot.basic.username.toLowerCase()) && !rawcontent.includes("\\" + this.bot.basic.username.toLowerCase()) && !rawcontent.includes("/" + this.bot.basic.username.toLowerCase())){
+    var username = this.bot.basic.username;
+    if (rawcontent.includes(username.toLowerCase()) && !rawcontent.includes("\\" + username.toLowerCase())){
       var response = this.bot.responses.name_mention_response;
       message.reply(response)
       .then((msg) => {this.bot.messageCleanupQueue.add(msg, 0.5, true)});
