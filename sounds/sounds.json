@@ -63,6 +63,14 @@
         "aliases": [],
         "tags": []
     },
+    "adrian_cube": {
+        "name": "adrian_cube",
+        "file": "adrian_cube.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "america_runs": {
         "name": "america_runs",
         "file": "america_runs.mp3",
@@ -1015,6 +1023,14 @@
         "aliases": [],
         "tags": []
     },
+    "joseph_cube": {
+        "name": "joseph_cube",
+        "file": "joseph_cube.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "joseph_wat": {
         "name": "joseph_wat",
         "file": "joseph_wat.mp3",
@@ -1122,6 +1138,14 @@
     "leviosa": {
         "name": "leviosa",
         "file": "leviosa.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
+    "lick_asshole": {
+        "name": "lick_asshole",
+        "file": "lick_asshole.mp3",
         "extension": "mp3",
         "artist": "",
         "aliases": [],
@@ -1391,6 +1415,14 @@
         "aliases": [],
         "tags": []
     },
+    "noice_cube": {
+        "name": "noice_cube",
+        "file": "noice_cube.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "nonono": {
         "name": "nonono",
         "file": "nonono.mp3",
@@ -1455,6 +1487,14 @@
         "aliases": [],
         "tags": []
     },
+    "number_9": {
+        "name": "number_9",
+        "file": "number_9.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
     "nyessss": {
         "name": "nyessss",
         "file": "nyessss.mp3",
@@ -1506,6 +1546,14 @@
     "old_spice": {
         "name": "old_spice",
         "file": "old_spice.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
+    "orc_horn": {
+        "name": "orc_horn",
+        "file": "orc_horn.mp3",
         "extension": "mp3",
         "artist": "",
         "aliases": [],
@@ -1786,6 +1834,14 @@
     "salt_life": {
         "name": "salt_life",
         "file": "salt_life.mp3",
+        "extension": "mp3",
+        "artist": "",
+        "aliases": [],
+        "tags": []
+    },
+    "sanic_cube": {
+        "name": "sanic_cube",
+        "file": "sanic_cube.mp3",
         "extension": "mp3",
         "artist": "",
         "aliases": [],

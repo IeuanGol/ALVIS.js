@@ -75,7 +75,7 @@ class Util {
           var nextsong = this.musicData[key];
           if (nextsong.name.length + Output.length >= charlimit - 5){
             message.author.send(Output);
-            Output = "```\n" + nextsong.name;
+            Output = "```\n" + nextsong.name + "\n";
           }else{
             Output = Output + nextsong.name + "\n";
           }
@@ -97,7 +97,7 @@ class Util {
           var nextsound = this.soundData[key];
           if (nextsound.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
-            Output = "```\n" + nextsound.name;
+            Output = "```\n" + nextsound.name + "\n";
           }else{
             Output = Output + nextsound.name + "\n";
           }
