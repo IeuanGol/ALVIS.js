@@ -110,12 +110,14 @@ class Util {
     }
   }
 
-  playSound(voiceChannel, filepath) {
+  playSound(voiceChannel, filepath, options) {
+    var stream_options = this.bot.basic.stream_options;
+    if (options) stream_options = options;
     if (voiceChannel.guild.voiceConnection) return;
     if (!voiceChannel.joinable || !voiceChannel.speakable || voiceChannel.full) return;
     if (voiceChannel == null || filepath == null) return;
     voiceChannel.join().then((connection) => {
-      const dispatcher = connection.playFile(filepath);
+      var dispatcher = connection.playFile(filepath, stream_options);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
         voiceChannel.leave();
@@ -134,11 +136,13 @@ class Util {
     })
   }
 
-  playStream(voiceChannel, url) {
+  playStream(voiceChannel, url, options) {
+    var stream_options = this.bot.basic.stream_options;
+    if (options) stream_options = options;
     if (voiceChannel == null || url == null) return;
     voiceChannel.join().then((connection) => {
-  		const stream = ytdl(url, {filter: 'audioonly'});
-  		const dispatcher = connection.playStream(stream, this.bot.basic.stream_options);
+  		var stream = ytdl(url, {filter: 'audioonly'});
+  		var dispatcher = connection.playStream(stream, stream_options);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
         voiceChannel.leave();
@@ -155,6 +159,54 @@ class Util {
       this.logger("An error occured in stream playback:");
       console.log(error.message);
     });
+  }
+
+  setIntegerVolume(integerVolume) {
+    integerVolume = Math.floor(integerVolume/10);
+    if (integerVolume > 10) integerVolume = 10;
+    if (integerVolume < 1) integerVolume = 1;
+    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    this.setVolume(volumeMap[integerVolume - 1]);
+  }
+
+  setVolume(newVolume) {
+    this.bot.basic.stream_options.volume = newVolume;
+  }
+
+  increaseVolume() {
+    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    var length = volumeMap.length;
+    var volume = this.bot.basic.stream_options.volume;
+    for (var i = 0; i < length; i++){
+      if (volume == volumeMap[i]){
+        var volume_index = i + 2;
+        if (volume_index > 9){
+          this.setIntegerVolume(100);
+          return 100;
+        }
+        this.setIntegerVolume((volume_index+1) * 10);
+        return (volume_index + 1) * 10;
+      }
+    }
+    return -1;
+  }
+
+  decreaseVolume() {
+    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    var length = volumeMap.length;
+    var volume = this.bot.basic.stream_options.volume;
+    for (var i = 0; i < length; i++){
+      if (volume == volumeMap[i]){
+        var volume_index = i - 2;
+        if (volume_index < 1){
+          this.setIntegerVolume(10);
+          return 10;
+        }
+        this.setIntegerVolume((volume_index + 1) * 10);
+        return (volume_index + 1) * 10;
+      }
+    }
+    return -1;
   }
 
   getAudioData(json_file, sound_name) {

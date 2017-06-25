@@ -5,5 +5,5 @@
   "command_prefix": "!",
   "sound_path": "./sounds",
   "music_path": "./music",
-  "stream_options": {"seek": 0, "volume": 1}
+  "stream_options": {"volume": 1}
 }

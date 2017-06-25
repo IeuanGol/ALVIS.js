@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const DefaultResponse = require('./DefaultResponse');
+const DefaultResponse = require('./DefaultResponse.js');
 
 class NativeCommand extends DefaultResponse {
   constructor(bot) {
@@ -37,6 +37,28 @@ class NativeCommand extends DefaultResponse {
       }
     }else if (actionType == "roll_die"){
       this.roll_die(message, response.result.parameters.number);
+    }else if (actionType == "set_volume"){
+      if (message.channel instanceof Discord.DMChannel){
+        message.reply("You cannot change my playback volume from within a DM channel.");
+        return;
+      }
+      var subType = action.split(".")[2];
+      if (subType == "value"){
+        var newVolume = parseInt(response.result.parameters.number);
+        newVolume = Math.floor(newVolume/10);
+        if (newVolume > 10) newVolume = 10;
+        if (newVolume < 1) newVolume = 1;
+        this.bot.util.setIntegerVolume(newVolume*10);
+        message.reply("My playback volume is now at " + newVolume*10 + "%");
+      }else if (subType == "increase"){
+        var newVolume = this.bot.util.increaseVolume();
+        message.reply("My playback volume is now at " + newVolume + "%");
+      }else if (subType == "decrease"){
+        var newVolume = this.bot.util.decreaseVolume();
+        message.reply("My playback volume is now at " + newVolume + "%");
+      }else{
+        this.defaultHandler(message, response);
+      }
     }else{
       this.defaultHandler(message, response);
     }

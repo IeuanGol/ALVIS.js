@@ -381,13 +381,16 @@ class CommandExecuter {
 
   stopCommand(message) {
     if (message.guild.voiceConnection){
-      message.guild.voiceConnection.disconnect();
-    }else{
-      message.author.send("There is currently no audio playing on server for me to stop.");
-      this.util.cleanupMessage(message);
-      return;
+      if (message.member.voiceChannel){
+        if (message.guild.voiceConnection.channel.id == message.member.voiceChannel.id){
+          message.guild.voiceConnection.disconnect();
+          this.util.logStandardCommand(message, "stop");
+          this.util.cleanupMessage(message);
+          return;
+        }
+      }
     }
-    this.util.logStandardCommand(message, "stop");
+    message.author.send("There is currently no audio for me to stop.");
     this.util.cleanupMessage(message);
   }
 }

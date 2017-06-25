@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const WolframService = require('../Services/Wolfram.js');
-const DefaultResponse = require('./DefaultResponse');
+const DefaultResponse = require('./DefaultResponse.js');
 
 class Wolfram extends DefaultResponse {
   constructor(bot) {

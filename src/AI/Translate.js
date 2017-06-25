@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const DefaultResponse = require('./DefaultResponse');
+const DefaultResponse = require('./DefaultResponse.js');
 
 class Translate extends DefaultResponse {
   constructor(bot) {

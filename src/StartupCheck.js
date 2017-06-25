@@ -20,6 +20,14 @@ class StartupCheck {
       this.setDefaultConfig();
       return false;
     }
+    if (!this.bot.config.hasOwnProperty("google_credentials")){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.google_credentials.hasOwnProperty("androidId") || !this.bot.config.google_credentials.hasOwnProperty("masterToken")){
+      this.setDefaultConfig();
+      return false;
+    }
     if (!this.bot.config.hasOwnProperty("bot_game") || typeof this.bot.config.bot_game !== 'string'){
       this.setDefaultConfig();
       return false;
@@ -52,10 +60,6 @@ class StartupCheck {
       console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
-    if (this.bot.config.wolfram_key == "" || this.bot.config.wolfram_key == "YOUR_WOLFRAM_API_KEY"){
-      console.log("ERROR: Wolfram API key not configured. Please configure your key in './config/config.json'. See README for more information.");
-      return false;
-    }
     if (this.bot.permissions.manager_role == ""){
       console.log("ERROR: Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
@@ -69,7 +73,7 @@ class StartupCheck {
   }
 
   setDefaultConfig() {
-    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
     fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
       if (err) console.log(err);
     });

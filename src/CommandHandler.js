@@ -60,6 +60,8 @@ class CommandHandler {
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
+    }else if (command === "setvolume"){
+      this.bot.util.setIntegerVolume(parseInt(arg1));
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);
