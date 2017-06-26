@@ -39,17 +39,30 @@ class GooglePlayMusic {
             var duration = song.track.durationMillis/60000;
             var duration_minutes = Math.floor(duration);
             var duration_seconds = ("0" + Math.floor((duration - duration_minutes) * 60)).slice(-2);
-            message.channel.send("Now playing on " + message.member.voiceChannel + ":\n**" + song.track.title + "**\n" + song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
+            message.channel.send("Now playing in " + message.member.voiceChannel + ":\n**" + song.track.title + "**\n" + song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
             .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true)});
             discord_bot.util.playSound(message.member.voiceChannel, "./assets/" + message.guild.id + ".mp3", stream_options);
           });
         });
       }else{
-        message.reply("I could not find any songs matching your request on Google Play Music.");
+        message.reply("I could not find any songs matching your request on Google Play Music.")
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }
     }, function(msg, body, err, httpResponse) {
         console.log(msg);
     });
+  }
+
+  startCurrentlyCachedSong(message, response, stream_options) {
+    var discord_bot = this.bot;
+    if (fs.existsSync("./assets/" + message.guild.id + ".mp3")) {
+      message.reply(response.result.fulfillment.speech)
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      discord_bot.util.playSound(message.member.voiceChannel, "./assets/" + message.guild.id + ".mp3", stream_options);
+    }else{
+      message.reply("There is currently no song to replay.")
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+    }
   }
 }
 

@@ -7,6 +7,7 @@ class NativeCommand extends DefaultResponse {
   }
 
   handle(message, response) {
+    var discord_bot = this.bot;
     var action = response.result.action;
     var actionType = action.split(".")[1];
     if (actionType == "flip_coin"){
@@ -49,16 +50,20 @@ class NativeCommand extends DefaultResponse {
         if (newVolume > 10) newVolume = 10;
         if (newVolume < 1) newVolume = 1;
         this.bot.util.setIntegerVolume(newVolume*10);
-        message.reply("My playback volume is now at " + newVolume*10 + "%");
+        message.reply("My playback volume is now at " + newVolume*10 + "%.")
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else if (subType == "increase"){
         var newVolume = this.bot.util.increaseVolume();
-        message.reply("My playback volume is now at " + newVolume + "%");
+        message.reply("My playback volume is now at " + newVolume + "%.")
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else if (subType == "decrease"){
         var newVolume = this.bot.util.decreaseVolume();
-        message.reply("My playback volume is now at " + newVolume + "%");
+        message.reply("My playback volume is now at " + newVolume + "%.")
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else{
         this.defaultHandler(message, response);
       }
+      discord_bot.messageCleanupQueue.add(message, 1, true);
     }else{
       this.defaultHandler(message, response);
     }

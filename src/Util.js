@@ -67,34 +67,40 @@ class Util {
   }
 
   sendMusicList(message, tag) {
-    if (tag == null){
-      const charlimit = 2000;
-      var Output = "**Songs:**\n```\n";
-      for (var key in this.musicData){
-        if (this.musicData.hasOwnProperty(key)) {
-          var nextsong = this.musicData[key];
+    const charlimit = 2000;
+    var hasResult = false;
+    var Output = "**__Songs:__**\n```\n";
+    for (var key in this.musicData){
+      if (this.musicData.hasOwnProperty(key)) {
+        var nextsong = this.musicData[key];
+        if (this.searchMediaForTag(nextsong, tag)){
+          hasResult = true;
           if (nextsong.name.length + Output.length >= charlimit - 5){
-            message.author.send(Output);
+            message.author.send(Output + "```");
             Output = "```\n" + nextsong.name + "\n";
           }else{
             Output = Output + nextsong.name + "\n";
           }
         }
       }
-      Output = Output + "```";
-      message.author.send(Output);
-    }else{
-        //TODO: Tag Lookup
     }
+    if (hasResult){
+      Output = Output + "```";
+    }else{
+      Output = Output + "No Results" + "```";
+    }
+    message.author.send(Output);
   }
 
   sendSoundList(message, tag) {
-    if (tag == null){
-      const charlimit = 2000;
-      var Output = "**__Sounds:__**\n```\n";
-      for (var key in this.soundData){
-        if (this.soundData.hasOwnProperty(key)) {
-          var nextsound = this.soundData[key];
+    const charlimit = 2000;
+    var hasResult = false;
+    var Output = "**__Sounds:__**\n```\n";
+    for (var key in this.soundData){
+      if (this.soundData.hasOwnProperty(key)) {
+        var nextsound = this.soundData[key];
+        if (this.searchMediaForTag(nextsound, tag)){
+          hasResult = true;
           if (nextsound.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
             Output = "```\n" + nextsound.name + "\n";
@@ -103,11 +109,32 @@ class Util {
           }
         }
       }
-      Output = Output + "```";
-      message.author.send(Output);
-    }else{
-        //TODO: Tag Lookup
     }
+    if (hasResult){
+      Output = Output + "```";
+    }else{
+      Output = Output + "No Results" + "```";
+    }
+    message.author.send(Output);
+  }
+
+  searchMediaForTag(media, tag) {
+    if (tag == null) return true;
+    var tags = tag.split(" ");
+    var i, j;
+    for (i = 0; i < tags.length; i++){
+      if (media.name.includes(tags[i])) return true;
+      for (j = 0; j < media.artists.length; j++){
+        if (media.artists[j].includes(tags[i])) return true;
+      }
+      for (j = 0; j < media.tags.length; j++){
+        if (media.tags[j].includes(tags[i])) return true;
+      }
+      for (j = 0; j < media.aliases.length; j++){
+        if (media.aliases[j].includes(tags[i])) return true;
+      }
+    }
+    return false;
   }
 
   playSound(voiceChannel, filepath, options) {
@@ -165,7 +192,7 @@ class Util {
     integerVolume = Math.floor(integerVolume/10);
     if (integerVolume > 10) integerVolume = 10;
     if (integerVolume < 1) integerVolume = 1;
-    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    var volumeMap = [0.02, 0.04, 0.06, 0.09, 0.13, 0.20, 0.30, 0.45, 0.67, 1];
     this.setVolume(volumeMap[integerVolume - 1]);
   }
 
@@ -174,7 +201,7 @@ class Util {
   }
 
   increaseVolume() {
-    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    var volumeMap = [0.02, 0.04, 0.06, 0.09, 0.13, 0.20, 0.30, 0.45, 0.67, 1];
     var length = volumeMap.length;
     var volume = this.bot.basic.stream_options.volume;
     for (var i = 0; i < length; i++){
@@ -192,7 +219,7 @@ class Util {
   }
 
   decreaseVolume() {
-    var volumeMap = [0.025, 0.005, 0.01, 0.02, 0.04, 0.07, 0.13, 0.25, 0.50, 1];
+    var volumeMap = [0.02, 0.04, 0.06, 0.09, 0.13, 0.20, 0.30, 0.45, 0.67, 1];
     var length = volumeMap.length;
     var volume = this.bot.basic.stream_options.volume;
     for (var i = 0; i < length; i++){

@@ -3,312 +3,312 @@
         "name": "all_star",
         "file": "all_star.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Smash Mouth"],
         "aliases": [],
-        "tags": []
+        "tags": ["smash mouth", "shrek", "all star", "meme", "soundtrack"]
     },
     "all_star_mlg": {
         "name": "all_star_mlg",
         "file": "all_star_mlg.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Smash Mouth"],
         "aliases": [],
-        "tags": []
+        "tags": ["dank", "cancer", "mlg"]
     },
     "allahu_trapbar": {
         "name": "allahu_trapbar",
         "file": "allahu_trapbar.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["allahu", "bomb", "terrorist"]
     },
     "america": {
         "name": "america",
         "file": "america.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["america", "fuck yeah", "murica"]
     },
     "attack_on_titan": {
         "name": "attack_on_titan",
         "file": "attack_on_titan.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["titan", "theme", "soundtrack"]
     },
     "call_me_maybe": {
         "name": "call_me_maybe",
         "file": "call_me_maybe.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Carly Rae Jepsen", "Rick Astley"],
         "aliases": [],
-        "tags": []
+        "tags": ["call me maybe", "never gonna give you up", "rick roll", "meme"]
     },
     "cantina_song": {
         "name": "cantina_song",
         "file": "cantina_song.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["soundtrack", "star wars", "cantina"]
     },
     "carrot_for_a_cock": {
         "name": "carrot_for_a_cock",
         "file": "carrot_for_a_cock.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["cancer", "snowman", "carrot", "cock"]
     },
     "danger_zone": {
         "name": "danger_zone",
         "file": "danger_zone.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Kenny Loggins"],
         "aliases": [],
-        "tags": []
+        "tags": ["top gun", "kenny loggins", "soundtrack"]
     },
     "diggy_diggy_hole": {
         "name": "diggy_diggy_hole",
         "file": "diggy_diggy_hole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["PatientZero", "Yogscast"],
         "aliases": [],
-        "tags": []
+        "tags": ["dwarf", "dig", "hole", "patientzero", "patient zero", "yogscast"]
     },
     "door": {
         "name": "door",
         "file": "door.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Ramin Djawadi", "Armin van Buuren", "Element Animation"],
         "aliases": [],
-        "tags": []
+        "tags": ["game of thrones", "minecraft", "element animation", "got", "theme", "soundtrack"]
     },
     "dora_the_explora": {
         "name": "dora_the_explora",
         "file": "dora_the_explora.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["cancer", "filthy", "frank", "pink guy", "pinkguy", "pink", "dora"]
     },
     "epic_sax": {
         "name": "epic_sax",
         "file": "epic_sax.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Sergey Stepanov"],
         "aliases": [],
-        "tags": []
+        "tags": ["sergey stepanov", "epic", "meme", "epic sax", "sax"]
     },
     "fun_song": {
         "name": "fun_song",
         "file": "fun_song.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["spongebob", "fun", "meme", "plankton", "spongebob squarepants", "soundtrack"]
     },
     "goofy_goober_rock": {
         "name": "goofy_goober_rock",
         "file": "goofy_goober_rock.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["spongebob", "goofy goober", "spongebob squarepants", "soundtrack"]
     },
     "grrreat": {
         "name": "grrreat",
         "file": "grrreat.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["electronic"]
     },
     "harder_better_faster_china": {
         "name": "harder_better_faster_china",
         "file": "harder_better_faster_china.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Donald Trump", "Daft Punk"],
         "aliases": [],
-        "tags": []
+        "tags": ["donald trump", "china", "trump", "meme"]
     },
     "hoc_theme": {
         "name": "hoc_theme",
         "file": "hoc_theme.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Jeff Beal"],
         "aliases": [],
-        "tags": []
+        "tags": ["house of cards", "theme", "soundtrack"]
     },
     "just_do_it": {
         "name": "just_do_it",
         "file": "just_do_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Shia Labeouf"],
         "aliases": [],
-        "tags": []
+        "tags": ["shia", "motivational", "just do it", "meme"]
     },
     "kill_yourself": {
         "name": "kill_yourself",
         "file": "kill_yourself.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["pink guy", "kill yourself", "filthy frank"]
     },
     "let_it_go_pg": {
         "name": "let_it_go_pg",
         "file": "let_it_go_pg.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["frozen", "let it go", "pink guy", "cancer"]
     },
     "my_heart_will_go_on": {
         "name": "my_heart_will_go_on",
         "file": "my_heart_will_go_on.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Celine Dion"],
         "aliases": [],
-        "tags": []
+        "tags": ["titanic", "celine", "dion", "sad", "soundtrack"]
     },
     "now_that_we're_men": {
         "name": "now_that_we're_men",
         "file": "now_that_we're_men.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["spongebob", "men", "spongebob squarepants", "soundtrack"]
     },
     "numa_numa": {
         "name": "numa_numa",
         "file": "numa_numa.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["O-Zone"],
         "aliases": [],
-        "tags": []
+        "tags": ["numa", "romanian", "euro", "electronic"]
     },
     "number_one": {
         "name": "number_one",
         "file": "number_one.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["LazyTown"],
         "aliases": [],
-        "tags": []
+        "tags": ["meme", "soundtrack", "lazy town", "soundtrack"]
     },
     "please_stop_calling_me_gay": {
         "name": "please_stop_calling_me_gay",
         "file": "please_stop_calling_me_gay.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["gay", "cancer", "pink guy"]
     },
     "potatos": {
         "name": "potatos",
         "file": "potatos.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["meme", "lord of the rings", "potatos", "lotr", "hobbits"]
     },
     "ppap": {
         "name": "ppap",
         "file": "ppap.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Daimaou Kosaka"],
         "aliases": [],
-        "tags": []
+        "tags": ["pineapple", "pen", "korea"]
     },
     "ramen_king": {
         "name": "ramen_king",
         "file": "ramen_king.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["ramen", "rap", "cancer", "pink guy"]
     },
     "reposted": {
         "name": "reposted",
         "file": "reposted.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["SHOKK"],
         "aliases": [],
-        "tags": []
+        "tags": ["meme", "dank", "cancer"]
     },
     "reposted_all_star": {
         "name": "reposted_all_star",
         "file": "reposted_all_star.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Smash Mouth", "SHOKK"],
         "aliases": [],
-        "tags": []
+        "tags": ["all star", "shrek", "reposted", "dank", "cancer", "meme", "remix"]
     },
     "roundabout": {
         "name": "roundabout",
         "file": "roundabout.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Yes"],
         "aliases": [],
-        "tags": []
+        "tags": ["roundabout", "dark souls", "dank", "sushi rainbow", "yes"]
     },
     "space_oddity": {
         "name": "space_oddity",
         "file": "space_oddity.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["David Bowie", "Chris Hadfield"],
         "aliases": [],
-        "tags": []
+        "tags": ["space", "iss", "cover"]
     },
     "stfu": {
         "name": "stfu",
         "file": "stfu.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Pink Guy"],
         "aliases": [],
-        "tags": []
+        "tags": ["pink guy", "cancer"]
     },
     "still_alive": {
         "name": "still_alive",
         "file": "still_alive.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Ellen McLain"],
         "aliases": [],
-        "tags": []
+        "tags": ["portal", "glados", "valve", "soundtrack"]
     },
     "sweet_victory": {
         "name": "sweet_victory",
         "file": "sweet_victory.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["spongebob", "spongebob squarepants", "soundtrack"]
     },
     "troll": {
         "name": "troll",
         "file": "troll.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": ["troll", "meme", "cancer"]
     },
     "ultimate_showdown": {
         "name": "ultimate_showdown",
         "file": "ultimate_showdown.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["Lemon Demon"],
         "aliases": [],
-        "tags": []
+        "tags": ["ultimate showdown", "lemon demon"]
     },
     "you_are_a_pirate": {
         "name": "you_are_a_pirate",
         "file": "you_are_a_pirate.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": ["LazyTown", "Mani Svavarsson"],
         "aliases": [],
-        "tags": []
+        "tags": ["pirate", "lazy town", "soundtrack"]
     }
 }

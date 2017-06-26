@@ -34,6 +34,8 @@ class DiscordBot extends Discord.Client {
 
       this.addEventListeners();
 
+      this.setVolumeToDefault();
+
       this.login(this.config.discord_token);
 
     }else{
@@ -44,6 +46,10 @@ class DiscordBot extends Discord.Client {
   startupIntegrityCheck() {
     if (new StartupCheck(this).runCheck()) return true;
     return false;
+  }
+
+  setVolumeToDefault() {
+    this.util.setIntegerVolume(this.config.default_volume);
   }
 
   addEventListeners() {
@@ -100,7 +106,7 @@ class DiscordBot extends Discord.Client {
   voiceStateUpdateListener(oldMember, newMember) {
     if (newMember.voiceChannel && !oldMember.voiceChannel){
       if (newMember.voiceChannel.joinable && !newMember.voiceChannel.full && newMember.voiceChannel.speakable && (newMember.voiceChannel.members.array().length > 1) && this.userSounds[newMember.id] && !newMember.guild.voiceConnection){
-        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.util.soundData[this.userSounds[newMember.id].sound].file);
+        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.util.soundData[this.userSounds[newMember.id].sound].file, {});
         this.util.logger("Played user sound for " + newMember.user.username + " on " + newMember.guild.name + ":" + newMember.voiceChannel.name);
       }
     }

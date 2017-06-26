@@ -35,9 +35,9 @@ class CommandHandler {
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
     }else if (command === "playmusic"){
-      this.commandExecuter.playmusicCommand(message, arg1, body);
+      this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound"){
-      this.commandExecuter.playsoundCommand(message, arg1, body);
+      this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
     }else if (command === "playstream"){
       this.commandExecuter.playstreamCommand(message, arg1);
     }else if (command === "purgemusic"){
@@ -60,8 +60,6 @@ class CommandHandler {
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
-    }else if (command === "setvolume"){
-      this.bot.util.setIntegerVolume(parseInt(arg1));
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);

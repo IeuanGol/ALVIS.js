@@ -3,7 +3,7 @@
         "name": "100",
         "file": "100.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -11,7 +11,7 @@
         "name": "20_century_fox",
         "file": "20_century_fox.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -19,7 +19,7 @@
         "name": "3am",
         "file": "3am.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -27,7 +27,7 @@
         "name": "6_hours_later",
         "file": "6_hours_later.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -35,7 +35,7 @@
         "name": "a_god_damn_thing",
         "file": "a_god_damn_thing.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -43,7 +43,7 @@
         "name": "a_is_for_alfred",
         "file": "a_is_for_alfred.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -51,7 +51,7 @@
         "name": "a_lot_to_see",
         "file": "a_lot_to_see.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -59,7 +59,7 @@
         "name": "ace_power",
         "file": "ace_power.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -67,7 +67,7 @@
         "name": "adrian_cube",
         "file": "adrian_cube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -75,7 +75,7 @@
         "name": "america_runs",
         "file": "america_runs.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -83,7 +83,7 @@
         "name": "and_i",
         "file": "and_i.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -91,7 +91,7 @@
         "name": "are_you_sure",
         "file": "are_you_sure.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -99,7 +99,7 @@
         "name": "awaken_anything",
         "file": "awaken_anything.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -107,7 +107,7 @@
         "name": "b0ss_lucas",
         "file": "b0ss_lucas.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -115,7 +115,7 @@
         "name": "bandit",
         "file": "bandit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -123,7 +123,7 @@
         "name": "bat_signal",
         "file": "bat_signal.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -131,7 +131,7 @@
         "name": "bathroom",
         "file": "bathroom.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -139,7 +139,7 @@
         "name": "be_more_careful",
         "file": "be_more_careful.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -147,7 +147,7 @@
         "name": "beauties_in_place",
         "file": "beauties_in_place.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -155,7 +155,7 @@
         "name": "being_fresh",
         "file": "being_fresh.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -163,7 +163,7 @@
         "name": "best_game",
         "file": "best_game.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -171,7 +171,7 @@
         "name": "big_dump",
         "file": "big_dump.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -179,7 +179,7 @@
         "name": "big_fat_morty",
         "file": "big_fat_morty.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -187,7 +187,7 @@
         "name": "big_hole",
         "file": "big_hole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -195,7 +195,7 @@
         "name": "bitches_aint_shit",
         "file": "bitches_aint_shit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -203,7 +203,7 @@
         "name": "blitz_dubstep",
         "file": "blitz_dubstep.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -211,7 +211,7 @@
         "name": "bonfire_sale",
         "file": "bonfire_sale.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -219,7 +219,7 @@
         "name": "boo_boo",
         "file": "boo_boo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -227,7 +227,7 @@
         "name": "bounce_up_and_down",
         "file": "bounce_up_and_down.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -235,7 +235,7 @@
         "name": "burp",
         "file": "burp.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -243,7 +243,7 @@
         "name": "butthole",
         "file": "butthole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -251,7 +251,7 @@
         "name": "campfire_song_song",
         "file": "campfire_song_song.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -259,7 +259,7 @@
         "name": "carpenter",
         "file": "carpenter.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -267,7 +267,7 @@
         "name": "cave_johnson_asbestos",
         "file": "cave_johnson_asbestos.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -275,7 +275,7 @@
         "name": "cave_johnson_blue_paint",
         "file": "cave_johnson_blue_paint.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -283,7 +283,7 @@
         "name": "cave_johnson_element",
         "file": "cave_johnson_element.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -291,7 +291,7 @@
         "name": "cave_johnson_lemons",
         "file": "cave_johnson_lemons.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -299,7 +299,7 @@
         "name": "cave_johnson_mantis",
         "file": "cave_johnson_mantis.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -307,7 +307,7 @@
         "name": "cave_johnson_microchip",
         "file": "cave_johnson_microchip.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -315,7 +315,7 @@
         "name": "cave_johnson_repulsion_gel",
         "file": "cave_johnson_repulsion_gel.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -323,7 +323,7 @@
         "name": "cave_johnson_superconductor",
         "file": "cave_johnson_superconductor.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -331,7 +331,7 @@
         "name": "cave_johnson_teleportation",
         "file": "cave_johnson_teleportation.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -339,7 +339,7 @@
         "name": "cave_johnson_time_travel",
         "file": "cave_johnson_time_travel.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -347,7 +347,7 @@
         "name": "cave_johnson_tumours",
         "file": "cave_johnson_tumours.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -355,7 +355,7 @@
         "name": "cave_johnson_wheelchair",
         "file": "cave_johnson_wheelchair.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -363,7 +363,7 @@
         "name": "cena",
         "file": "cena.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -371,7 +371,7 @@
         "name": "chanka_anthem",
         "file": "chanka_anthem.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -379,7 +379,7 @@
         "name": "chickens",
         "file": "chickens.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -387,7 +387,7 @@
         "name": "closed",
         "file": "closed.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -395,7 +395,7 @@
         "name": "cluster_charge",
         "file": "cluster_charge.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -403,7 +403,7 @@
         "name": "creamy",
         "file": "creamy.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -411,7 +411,7 @@
         "name": "crickets",
         "file": "crickets.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -419,7 +419,7 @@
         "name": "cruel_ploy",
         "file": "cruel_ploy.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -427,7 +427,7 @@
         "name": "dark_dump",
         "file": "dark_dump.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -435,7 +435,7 @@
         "name": "dark_lord",
         "file": "dark_lord.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -443,7 +443,7 @@
         "name": "death_machine",
         "file": "death_machine.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -451,7 +451,7 @@
         "name": "deported",
         "file": "deported.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -459,7 +459,7 @@
         "name": "did_not_hit_her",
         "file": "did_not_hit_her.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -467,7 +467,7 @@
         "name": "dinosaur_laser_fight",
         "file": "dinosaur_laser_fight.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -475,7 +475,7 @@
         "name": "do_that_too",
         "file": "do_that_too.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -483,7 +483,7 @@
         "name": "dont_do_it_nig",
         "file": "dont_do_it_nig.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -491,7 +491,7 @@
         "name": "dont_say_it",
         "file": "dont_say_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -499,7 +499,7 @@
         "name": "double_points",
         "file": "double_points.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -507,7 +507,7 @@
         "name": "dreams",
         "file": "dreams.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -515,7 +515,7 @@
         "name": "driftwood",
         "file": "driftwood.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -523,7 +523,7 @@
         "name": "drugs",
         "file": "drugs.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -531,7 +531,7 @@
         "name": "dump_in_a_mug",
         "file": "dump_in_a_mug.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -539,7 +539,7 @@
         "name": "dungeon",
         "file": "dungeon.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -547,7 +547,7 @@
         "name": "duped",
         "file": "duped.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -555,7 +555,7 @@
         "name": "eat_my_ass",
         "file": "eat_my_ass.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -563,7 +563,7 @@
         "name": "eat_my_asshole",
         "file": "eat_my_asshole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -571,7 +571,7 @@
         "name": "eating_my_dick",
         "file": "eating_my_dick.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -579,7 +579,7 @@
         "name": "education",
         "file": "education.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -587,7 +587,7 @@
         "name": "engineer",
         "file": "engineer.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -595,7 +595,7 @@
         "name": "engineer2",
         "file": "engineer2.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -603,7 +603,7 @@
         "name": "eric",
         "file": "eric.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -611,7 +611,7 @@
         "name": "eugene_ken_kuray",
         "file": "eugene_ken_kuray.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -619,7 +619,7 @@
         "name": "evil",
         "file": "evil.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -627,7 +627,7 @@
         "name": "ey_b0ss",
         "file": "ey_b0ss.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -635,7 +635,7 @@
         "name": "faded",
         "file": "faded.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -643,7 +643,7 @@
         "name": "faggot",
         "file": "faggot.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -651,7 +651,7 @@
         "name": "fast_2",
         "file": "fast_2.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -659,7 +659,7 @@
         "name": "favourite_anime",
         "file": "favourite_anime.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -667,7 +667,7 @@
         "name": "fire_sale",
         "file": "fire_sale.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -675,7 +675,7 @@
         "name": "floor_is_strong",
         "file": "floor_is_strong.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -683,7 +683,7 @@
         "name": "fuck_poem",
         "file": "fuck_poem.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -691,7 +691,7 @@
         "name": "fucking_suck",
         "file": "fucking_suck.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -699,7 +699,7 @@
         "name": "gadget",
         "file": "gadget.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -707,7 +707,7 @@
         "name": "gamecube",
         "file": "gamecube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -715,7 +715,7 @@
         "name": "gangnam_style",
         "file": "gangnam_style.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -723,7 +723,7 @@
         "name": "gay_goober_rock",
         "file": "gay_goober_rock.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -731,7 +731,7 @@
         "name": "genji_ult",
         "file": "genji_ult.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -739,7 +739,7 @@
         "name": "gibe_de_pussy_b0ss",
         "file": "gibe_de_pussy_b0ss.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -747,7 +747,7 @@
         "name": "gingy",
         "file": "gingy.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -755,7 +755,7 @@
         "name": "glorious_pcmr",
         "file": "glorious_pcmr.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -763,7 +763,7 @@
         "name": "gonna_die_tonight",
         "file": "gonna_die_tonight.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -771,7 +771,7 @@
         "name": "gonna_feel_it",
         "file": "gonna_feel_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -779,7 +779,7 @@
         "name": "got_eem",
         "file": "got_eem.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -787,7 +787,7 @@
         "name": "got_you_in_my_sights",
         "file": "got_you_in_my_sights.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -795,7 +795,7 @@
         "name": "grand_fuckery",
         "file": "grand_fuckery.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -803,7 +803,7 @@
         "name": "guerrero_street",
         "file": "guerrero_street.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -811,7 +811,7 @@
         "name": "hamburger_plz",
         "file": "hamburger_plz.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -819,7 +819,7 @@
         "name": "handicap_stroke",
         "file": "handicap_stroke.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -827,7 +827,7 @@
         "name": "hanzo_ult",
         "file": "hanzo_ult.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -835,7 +835,7 @@
         "name": "he_fucked_up",
         "file": "he_fucked_up.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -843,7 +843,7 @@
         "name": "heyeayeay",
         "file": "heyeayeay.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -851,7 +851,7 @@
         "name": "hi_guiyz",
         "file": "hi_guiyz.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -859,7 +859,7 @@
         "name": "hitler_has_won",
         "file": "hitler_has_won.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -867,7 +867,7 @@
         "name": "holy_water",
         "file": "holy_water.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -875,7 +875,7 @@
         "name": "i_am_hitler",
         "file": "i_am_hitler.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -883,7 +883,7 @@
         "name": "i_cant_hear_you",
         "file": "i_cant_hear_you.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -891,7 +891,7 @@
         "name": "i_dont_get_it",
         "file": "i_dont_get_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -899,7 +899,7 @@
         "name": "i_habe_cancer",
         "file": "i_habe_cancer.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -907,7 +907,7 @@
         "name": "i_have_fallen",
         "file": "i_have_fallen.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -915,7 +915,7 @@
         "name": "i_have_the_power",
         "file": "i_have_the_power.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -923,7 +923,7 @@
         "name": "i_like_money",
         "file": "i_like_money.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -931,7 +931,7 @@
         "name": "i_like_to_have_fun",
         "file": "i_like_to_have_fun.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -939,7 +939,7 @@
         "name": "ice_cream",
         "file": "ice_cream.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -947,7 +947,7 @@
         "name": "illuminati_mlg",
         "file": "illuminati_mlg.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -955,7 +955,7 @@
         "name": "im_gay",
         "file": "im_gay.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -963,7 +963,7 @@
         "name": "im_serious",
         "file": "im_serious.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -971,7 +971,7 @@
         "name": "indiana_theme",
         "file": "indiana_theme.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -979,7 +979,7 @@
         "name": "insta_kill",
         "file": "insta_kill.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -987,7 +987,7 @@
         "name": "internet_is_for_porn",
         "file": "internet_is_for_porn.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -995,7 +995,7 @@
         "name": "iq_batteries",
         "file": "iq_batteries.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1003,7 +1003,7 @@
         "name": "isengard",
         "file": "isengard.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1011,7 +1011,7 @@
         "name": "its_high_noon",
         "file": "its_high_noon.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1019,7 +1019,7 @@
         "name": "jager",
         "file": "jager.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1027,7 +1027,7 @@
         "name": "joseph_cube",
         "file": "joseph_cube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1035,7 +1035,7 @@
         "name": "joseph_wat",
         "file": "joseph_wat.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1043,7 +1043,7 @@
         "name": "jumbo_sized_pubes",
         "file": "jumbo_sized_pubes.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1051,7 +1051,7 @@
         "name": "just_do_it",
         "file": "just_do_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1059,7 +1059,7 @@
         "name": "justice_rains",
         "file": "justice_rains.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1067,7 +1067,7 @@
         "name": "kill_yourself",
         "file": "kill_yourself.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1075,7 +1075,7 @@
         "name": "kim_jong_un",
         "file": "kim_jong_un.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1083,7 +1083,7 @@
         "name": "kys",
         "file": "kys.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1091,7 +1091,7 @@
         "name": "kys_long",
         "file": "kys_long.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1099,7 +1099,7 @@
         "name": "land_development",
         "file": "land_development.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1107,7 +1107,7 @@
         "name": "laser_sights",
         "file": "laser_sights.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1115,7 +1115,7 @@
         "name": "laughing",
         "file": "laughing.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1123,7 +1123,7 @@
         "name": "leedle",
         "file": "leedle.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1131,7 +1131,7 @@
         "name": "let_it_go",
         "file": "let_it_go.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1139,7 +1139,7 @@
         "name": "leviosa",
         "file": "leviosa.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1147,7 +1147,7 @@
         "name": "lick_asshole",
         "file": "lick_asshole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1155,7 +1155,7 @@
         "name": "lightbulb",
         "file": "lightbulb.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1163,7 +1163,7 @@
         "name": "like_a_glove",
         "file": "like_a_glove.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1171,7 +1171,7 @@
         "name": "like_you",
         "file": "like_you.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1179,7 +1179,7 @@
         "name": "lion_king",
         "file": "lion_king.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1187,7 +1187,7 @@
         "name": "little_fingers",
         "file": "little_fingers.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1195,7 +1195,7 @@
         "name": "lmg_mounted",
         "file": "lmg_mounted.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1203,7 +1203,7 @@
         "name": "loud_noises",
         "file": "loud_noises.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1211,7 +1211,7 @@
         "name": "lower_your_voice",
         "file": "lower_your_voice.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1219,7 +1219,7 @@
         "name": "lucas_joseph_orgasm",
         "file": "lucas_joseph_orgasm.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1227,7 +1227,7 @@
         "name": "lucas_laughter",
         "file": "lucas_laughter.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1235,7 +1235,7 @@
         "name": "lucas_ult",
         "file": "lucas_ult.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1243,7 +1243,7 @@
         "name": "make_the_terror",
         "file": "make_the_terror.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1251,7 +1251,7 @@
         "name": "making_babies_tonight",
         "file": "making_babies_tonight.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1259,7 +1259,7 @@
         "name": "manhattan",
         "file": "manhattan.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1267,7 +1267,7 @@
         "name": "max_ammo",
         "file": "max_ammo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1275,7 +1275,7 @@
         "name": "mayonnaise",
         "file": "mayonnaise.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1283,7 +1283,7 @@
         "name": "meeseeks",
         "file": "meeseeks.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1291,7 +1291,7 @@
         "name": "meeseeks_can_do",
         "file": "meeseeks_can_do.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1299,7 +1299,7 @@
         "name": "meeseeks_okay",
         "file": "meeseeks_okay.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1307,7 +1307,7 @@
         "name": "merked_asshole",
         "file": "merked_asshole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1315,7 +1315,7 @@
         "name": "mmm_what_you_say",
         "file": "mmm_what_you_say.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1323,7 +1323,7 @@
         "name": "monkey_looking_motherfucker",
         "file": "monkey_looking_motherfucker.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1331,7 +1331,7 @@
         "name": "muppet",
         "file": "muppet.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1339,7 +1339,7 @@
         "name": "my_heart_will_go_on",
         "file": "my_heart_will_go_on.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1347,7 +1347,7 @@
         "name": "new_door",
         "file": "new_door.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1355,7 +1355,7 @@
         "name": "nigcube",
         "file": "nigcube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1363,7 +1363,7 @@
         "name": "nigga_oh_no",
         "file": "nigga_oh_no.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1371,7 +1371,7 @@
         "name": "niggers_in_my_store",
         "file": "niggers_in_my_store.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1379,7 +1379,7 @@
         "name": "nitro",
         "file": "nitro.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1387,7 +1387,7 @@
         "name": "no_god_please_no",
         "file": "no_god_please_no.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1395,7 +1395,7 @@
         "name": "no_idea_what_im_doing",
         "file": "no_idea_what_im_doing.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1403,7 +1403,7 @@
         "name": "no_other",
         "file": "no_other.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1411,7 +1411,7 @@
         "name": "no_reason_boner",
         "file": "no_reason_boner.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1419,7 +1419,7 @@
         "name": "noice_cube",
         "file": "noice_cube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1427,7 +1427,7 @@
         "name": "nonono",
         "file": "nonono.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1435,7 +1435,7 @@
         "name": "nooo",
         "file": "nooo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1443,7 +1443,7 @@
         "name": "nope_nope",
         "file": "nope_nope.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1451,7 +1451,7 @@
         "name": "not_enough_juice",
         "file": "not_enough_juice.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1459,7 +1459,7 @@
         "name": "not_rick",
         "file": "not_rick.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1467,7 +1467,7 @@
         "name": "not_the_bees",
         "file": "not_the_bees.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1475,7 +1475,7 @@
         "name": "nothing_wrong_with_that",
         "file": "nothing_wrong_with_that.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1483,7 +1483,7 @@
         "name": "nuke",
         "file": "nuke.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1491,7 +1491,7 @@
         "name": "number_9",
         "file": "number_9.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1499,7 +1499,7 @@
         "name": "nyessss",
         "file": "nyessss.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1507,7 +1507,7 @@
         "name": "ode_to_salt",
         "file": "ode_to_salt.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1515,7 +1515,7 @@
         "name": "oh_hi_mark",
         "file": "oh_hi_mark.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1523,7 +1523,7 @@
         "name": "oh_my_favourite",
         "file": "oh_my_favourite.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1531,7 +1531,7 @@
         "name": "oh_sieg_heil_no",
         "file": "oh_sieg_heil_no.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1539,7 +1539,7 @@
         "name": "okay",
         "file": "okay.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1547,7 +1547,7 @@
         "name": "old_spice",
         "file": "old_spice.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1555,7 +1555,7 @@
         "name": "orc_horn",
         "file": "orc_horn.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1563,7 +1563,7 @@
         "name": "orgasm_frank",
         "file": "orgasm_frank.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1571,7 +1571,7 @@
         "name": "orgasm_joseph",
         "file": "orgasm_joseph.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1579,7 +1579,7 @@
         "name": "orgasm_tyler",
         "file": "orgasm_tyler.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1587,7 +1587,7 @@
         "name": "overwatch_theme",
         "file": "overwatch_theme.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1595,7 +1595,7 @@
         "name": "pants",
         "file": "pants.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1603,7 +1603,7 @@
         "name": "patches_laugh",
         "file": "patches_laugh.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1611,7 +1611,7 @@
         "name": "patches_laugh2",
         "file": "patches_laugh2.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1619,7 +1619,7 @@
         "name": "patrick_scream",
         "file": "patrick_scream.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1627,7 +1627,7 @@
         "name": "peter_knee",
         "file": "peter_knee.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1635,7 +1635,7 @@
         "name": "piece_of_shit",
         "file": "piece_of_shit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1643,7 +1643,7 @@
         "name": "pieces_of_shit",
         "file": "pieces_of_shit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1651,7 +1651,7 @@
         "name": "pink_guy_sings",
         "file": "pink_guy_sings.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1659,7 +1659,7 @@
         "name": "pink_guy_sings_full",
         "file": "pink_guy_sings_full.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1667,7 +1667,7 @@
         "name": "pizza_plz",
         "file": "pizza_plz.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1675,7 +1675,7 @@
         "name": "planet_anymore",
         "file": "planet_anymore.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1683,7 +1683,7 @@
         "name": "play_hero",
         "file": "play_hero.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1691,7 +1691,7 @@
         "name": "pokemon_pg",
         "file": "pokemon_pg.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1699,7 +1699,7 @@
         "name": "popopotato",
         "file": "popopotato.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1707,7 +1707,7 @@
         "name": "potato",
         "file": "potato.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1715,7 +1715,7 @@
         "name": "potato_pg",
         "file": "potato_pg.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1723,7 +1723,7 @@
         "name": "probably_right",
         "file": "probably_right.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1731,7 +1731,7 @@
         "name": "push_it",
         "file": "push_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1739,7 +1739,7 @@
         "name": "pussy_hair",
         "file": "pussy_hair.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1747,7 +1747,7 @@
         "name": "puzi_plz",
         "file": "puzi_plz.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1755,7 +1755,7 @@
         "name": "raspberry",
         "file": "raspberry.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1763,7 +1763,7 @@
         "name": "recruit",
         "file": "recruit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1771,7 +1771,7 @@
         "name": "ricefields",
         "file": "ricefields.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1779,7 +1779,7 @@
         "name": "ride_the_bus",
         "file": "ride_the_bus.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1787,7 +1787,7 @@
         "name": "rival",
         "file": "rival.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1795,7 +1795,7 @@
         "name": "roped",
         "file": "roped.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1803,7 +1803,7 @@
         "name": "rubber_fingers",
         "file": "rubber_fingers.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1811,7 +1811,7 @@
         "name": "sad_song",
         "file": "sad_song.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1819,7 +1819,7 @@
         "name": "said_it_like_that",
         "file": "said_it_like_that.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1827,7 +1827,7 @@
         "name": "salamander",
         "file": "salamander.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1835,7 +1835,7 @@
         "name": "salt_life",
         "file": "salt_life.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1843,7 +1843,7 @@
         "name": "sanic_cube",
         "file": "sanic_cube.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1851,7 +1851,7 @@
         "name": "sat_on_a_banana",
         "file": "sat_on_a_banana.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1859,7 +1859,7 @@
         "name": "scanning",
         "file": "scanning.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1867,7 +1867,7 @@
         "name": "screaming_joseph",
         "file": "screaming_joseph.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1875,7 +1875,7 @@
         "name": "scrumping",
         "file": "scrumping.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1883,7 +1883,7 @@
         "name": "sell_me_something",
         "file": "sell_me_something.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1891,7 +1891,7 @@
         "name": "serious_protection",
         "file": "serious_protection.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1899,7 +1899,7 @@
         "name": "several_dicks",
         "file": "several_dicks.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1907,7 +1907,7 @@
         "name": "sex",
         "file": "sex.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1915,7 +1915,7 @@
         "name": "sex_life",
         "file": "sex_life.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1923,7 +1923,7 @@
         "name": "shia_labouef",
         "file": "shia_labouef.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1931,7 +1931,7 @@
         "name": "shit_sculpture",
         "file": "shit_sculpture.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1939,7 +1939,7 @@
         "name": "shit_together",
         "file": "shit_together.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1947,7 +1947,7 @@
         "name": "short_game",
         "file": "short_game.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1955,7 +1955,7 @@
         "name": "shrek_hole",
         "file": "shrek_hole.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1963,7 +1963,7 @@
         "name": "shrek_onions",
         "file": "shrek_onions.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1971,7 +1971,7 @@
         "name": "shrek_swamp",
         "file": "shrek_swamp.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1979,7 +1979,7 @@
         "name": "sign_with_my_nuts",
         "file": "sign_with_my_nuts.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1987,7 +1987,7 @@
         "name": "skills",
         "file": "skills.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -1995,7 +1995,7 @@
         "name": "slipped_up",
         "file": "slipped_up.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2003,7 +2003,7 @@
         "name": "slurping_joseph",
         "file": "slurping_joseph.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2011,7 +2011,7 @@
         "name": "smashing",
         "file": "smashing.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2019,7 +2019,7 @@
         "name": "smelly_smell",
         "file": "smelly_smell.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2027,7 +2027,7 @@
         "name": "soiled_it",
         "file": "soiled_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2035,7 +2035,7 @@
         "name": "son_of_a_somebody",
         "file": "son_of_a_somebody.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2043,7 +2043,7 @@
         "name": "special_friends",
         "file": "special_friends.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2051,7 +2051,7 @@
         "name": "special_ops",
         "file": "special_ops.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2059,7 +2059,7 @@
         "name": "sterile",
         "file": "sterile.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2067,7 +2067,7 @@
         "name": "stop_worrying",
         "file": "stop_worrying.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2075,7 +2075,7 @@
         "name": "striped_sweater",
         "file": "striped_sweater.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2083,7 +2083,7 @@
         "name": "subspecies",
         "file": "subspecies.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2091,7 +2091,7 @@
         "name": "suck_some_dick",
         "file": "suck_some_dick.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2099,7 +2099,7 @@
         "name": "sukhraj",
         "file": "sukhraj.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2107,7 +2107,7 @@
         "name": "sukhraj_watermelone",
         "file": "sukhraj_watermelone.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2115,7 +2115,7 @@
         "name": "sun_will_come_up",
         "file": "sun_will_come_up.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2123,7 +2123,7 @@
         "name": "targets_detected",
         "file": "targets_detected.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2131,7 +2131,7 @@
         "name": "teabagging",
         "file": "teabagging.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2139,7 +2139,7 @@
         "name": "tearing_me_apart",
         "file": "tearing_me_apart.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2147,7 +2147,7 @@
         "name": "thats_pretty_awww",
         "file": "thats_pretty_awww.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2155,7 +2155,7 @@
         "name": "the_fuck",
         "file": "the_fuck.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2163,7 +2163,7 @@
         "name": "the_one_who_knocks",
         "file": "the_one_who_knocks.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2171,7 +2171,7 @@
         "name": "the_thing",
         "file": "the_thing.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2179,7 +2179,7 @@
         "name": "thrift_shop",
         "file": "thrift_shop.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2187,7 +2187,7 @@
         "name": "thx",
         "file": "thx.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2195,7 +2195,7 @@
         "name": "to_be_continued",
         "file": "to_be_continued.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2203,7 +2203,7 @@
         "name": "too_much_juice",
         "file": "too_much_juice.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2211,7 +2211,7 @@
         "name": "touch_my_tralala",
         "file": "touch_my_tralala.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2219,7 +2219,7 @@
         "name": "tracer",
         "file": "tracer.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2227,7 +2227,7 @@
         "name": "training_video",
         "file": "training_video.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2235,7 +2235,7 @@
         "name": "trolololo",
         "file": "trolololo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2243,7 +2243,7 @@
         "name": "trust",
         "file": "trust.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2251,7 +2251,7 @@
         "name": "two_face",
         "file": "two_face.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2259,7 +2259,7 @@
         "name": "two_of_us",
         "file": "two_of_us.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2267,7 +2267,7 @@
         "name": "tyz",
         "file": "tyz.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2275,7 +2275,7 @@
         "name": "unacceptable",
         "file": "unacceptable.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2283,7 +2283,7 @@
         "name": "unicorn",
         "file": "unicorn.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2291,7 +2291,7 @@
         "name": "virus",
         "file": "virus.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2299,7 +2299,7 @@
         "name": "voice_of_god",
         "file": "voice_of_god.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2307,7 +2307,7 @@
         "name": "waste_of_time",
         "file": "waste_of_time.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2315,7 +2315,7 @@
         "name": "wednesday",
         "file": "wednesday.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2323,7 +2323,7 @@
         "name": "weeaboo",
         "file": "weeaboo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2331,7 +2331,7 @@
         "name": "wet_panties",
         "file": "wet_panties.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2339,7 +2339,7 @@
         "name": "what_a_story",
         "file": "what_a_story.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2347,7 +2347,7 @@
         "name": "what_im_talkin_bout",
         "file": "what_im_talkin_bout.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2355,7 +2355,7 @@
         "name": "what_the_fuck",
         "file": "what_the_fuck.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2363,7 +2363,7 @@
         "name": "what_you_got",
         "file": "what_you_got.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2371,7 +2371,7 @@
         "name": "white_women",
         "file": "white_women.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2379,7 +2379,7 @@
         "name": "whos_that_pokemon",
         "file": "whos_that_pokemon.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2387,7 +2387,7 @@
         "name": "why_did_you_leave",
         "file": "why_did_you_leave.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2395,7 +2395,7 @@
         "name": "whyyy",
         "file": "whyyy.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2403,7 +2403,7 @@
         "name": "wumbo",
         "file": "wumbo.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2411,7 +2411,7 @@
         "name": "you_are_a_pirate",
         "file": "you_are_a_pirate.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2419,7 +2419,7 @@
         "name": "you_did_it",
         "file": "you_did_it.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2427,7 +2427,7 @@
         "name": "you_die",
         "file": "you_die.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2435,7 +2435,7 @@
         "name": "you_dumb_shit",
         "file": "you_dumb_shit.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2443,7 +2443,7 @@
         "name": "you_like_that_baby",
         "file": "you_like_that_baby.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2451,7 +2451,7 @@
         "name": "you_may_die",
         "file": "you_may_die.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2459,7 +2459,7 @@
         "name": "you_sucked_my_dick",
         "file": "you_sucked_my_dick.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2467,7 +2467,7 @@
         "name": "you_whore",
         "file": "you_whore.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     },
@@ -2475,7 +2475,7 @@
         "name": "youre_fired",
         "file": "youre_fired.mp3",
         "extension": "mp3",
-        "artist": "",
+        "artists": [],
         "aliases": [],
         "tags": []
     }

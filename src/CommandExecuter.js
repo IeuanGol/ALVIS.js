@@ -29,7 +29,7 @@ class CommandExecuter {
       var name = sound.slice(0, -ext.length - 1);
       if (!this.util.musicData.hasOwnProperty(name)){
         if (ext != "json"){
-          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artist": "", "aliases": [], "tags": []};
+          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
         }
       }
     }
@@ -56,7 +56,7 @@ class CommandExecuter {
       var name = sound.slice(0, -ext.length - 1);
       if (!this.util.soundData.hasOwnProperty(name)){
         if (ext != "json"){
-          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artist": "", "aliases": [], "tags": []};
+          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
         }
       }
     }
@@ -87,7 +87,7 @@ class CommandExecuter {
     }
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
-    const sound_obj = {"name": arg1, "file": arg2, "extension": ext, "artist": "", "aliases": [], "tags": []};
+    const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
     this.util.setAudioData(this.util.musicData, this.bot.basic.music_path + "/music.json", sound_obj);
     this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
     this.util.logStandardCommand(message, "addmusic");
@@ -112,7 +112,7 @@ class CommandExecuter {
     }
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
-    const sound_obj = {"name": arg1, "file": arg2, "extension": ext, "artist": "", "aliases": [], "tags": []};
+    const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
     this.util.setAudioData(this.util.soundData, this.bot.basic.sound_path + "/sounds.json",sound_obj);
     this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
     this.util.logStandardCommand(message, "addsound");
@@ -138,9 +138,14 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  playmusicCommand(message, arg1, body) {
+  playmusicCommand(message, arg1, arg2, body) {
     if (arg1 === "?"){
-      this.util.sendMusicList(message, null);
+      if (arg2){
+        var search_tag = body.substring(body.indexOf(" ") + 1);
+        this.util.sendMusicList(message, search_tag);
+      }else{
+        this.util.sendMusicList(message, null);
+      }
       this.util.logStandardCommand(message, "playmusic");
       this.util.cleanupMessage(message);
       return;
@@ -179,9 +184,15 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  playsoundCommand(message, arg1, body) {
+  playsoundCommand(message, arg1, arg2, body) {
+    var stream_options = {};
     if (arg1 === "?"){
-      this.util.sendSoundList(message, null);
+      if (arg2){
+        var search_tag = body.substring(body.indexOf(" ") + 1);
+        this.util.sendSoundList(message, search_tag);
+      }else{
+        this.util.sendSoundList(message, null);
+      }
       this.util.logStandardCommand(message, "playsound");
       this.util.cleanupMessage(message);
       return;
@@ -206,13 +217,13 @@ class CommandExecuter {
       if (arg1 == null){
         var obj_keys = Object.keys(this.util.soundData);
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
-        this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file);
+        this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file, stream_options);
         this.util.logStandardCommand(message, "playsound");
       }else{
         if (this.util.soundData[body] == null){
           message.author.send("The sound '" + body + "' does not exist in my library. Use **!playsound ?** for a list of sounds.");
         }else{
-          this.util.playSound(channel, path + "/" + this.util.soundData[body].file);
+          this.util.playSound(channel, path + "/" + this.util.soundData[body].file, stream_options);
           this.util.logStandardCommand(message, "playsound");
         }
       }
