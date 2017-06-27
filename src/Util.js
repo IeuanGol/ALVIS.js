@@ -49,6 +49,14 @@ class Util {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  objectIsEmpty(obj) {
+    for(var key in obj) {
+        if(obj.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+  }
+
   cleanupMessage(message) {
     if (this.bot.config.deleteMessages){
       if (message.channel instanceof Discord.TextChannel) message.delete();
@@ -67,12 +75,13 @@ class Util {
   }
 
   sendMusicList(message, tag) {
+    var collection = this.createMediaSubCollection(this.musicData, tag);
     const charlimit = 2000;
     var hasResult = false;
     var Output = "**__Songs:__**\n```\n";
-    for (var key in this.musicData){
-      if (this.musicData.hasOwnProperty(key)) {
-        var nextsong = this.musicData[key];
+    for (var key in collection){
+      if (collection.hasOwnProperty(key)){
+        var nextsong = collection[key];
         if (this.searchMediaForTag(nextsong, tag)){
           hasResult = true;
           if (nextsong.name.length + Output.length >= charlimit - 5){
@@ -93,12 +102,13 @@ class Util {
   }
 
   sendSoundList(message, tag) {
+    var collection = this.createMediaSubCollection(this.soundData, tag);
     const charlimit = 2000;
     var hasResult = false;
     var Output = "**__Sounds:__**\n```\n";
-    for (var key in this.soundData){
-      if (this.soundData.hasOwnProperty(key)) {
-        var nextsound = this.soundData[key];
+    for (var key in collection){
+      if (collection.hasOwnProperty(key)){
+        var nextsound = collection[key];
         if (this.searchMediaForTag(nextsound, tag)){
           hasResult = true;
           if (nextsound.name.length + Output.length >= charlimit - 5){
@@ -135,6 +145,19 @@ class Util {
       }
     }
     return false;
+  }
+
+  createMediaSubCollection(media_collection, tag) {
+    var result_collection = {};
+    for (var key in media_collection){
+      if (media_collection.hasOwnProperty(key)) {
+        var nextitem = media_collection[key];
+        if (this.searchMediaForTag(nextitem, tag)){
+          result_collection[key] = nextitem;
+        }
+      }
+    }
+    return result_collection;
   }
 
   playSound(voiceChannel, filepath, options) {

@@ -39,9 +39,9 @@ class DMHandler {
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
     }else if (command === "playmusic"){
-      this.commandExecuter.playmusicCommand(message, arg1, body);
+      this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound"){
-      this.commandExecuter.playsoundCommand(message, arg1, body);
+      this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
     }else if (command === "playstream"){
       message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
     }else if (command === "purgemusic"){

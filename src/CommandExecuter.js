@@ -172,6 +172,17 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
         this.util.logStandardCommand(message, "playmusic");
+      }else if (arg1.startsWith("-")){
+        var tag = arg1.substring(1);
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tag);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no songs matching your query.");
+        }else{
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file);
+          this.util.logStandardCommand(message, "playsound");
+        }
       }else{
         if (this.util.musicData[body] == null){
           message.author.send("The song '" + body + "' does not exist in my library. Use **!playmusic ?** for a list of songs.");
@@ -219,6 +230,17 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file, stream_options);
         this.util.logStandardCommand(message, "playsound");
+      }else if (arg1.startsWith("-")){
+        var tag = arg1.substring(1);
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tag);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no sounds matching your query.");
+        }else{
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file, stream_options);
+          this.util.logStandardCommand(message, "playsound");
+        }
       }else{
         if (this.util.soundData[body] == null){
           message.author.send("The sound '" + body + "' does not exist in my library. Use **!playsound ?** for a list of sounds.");

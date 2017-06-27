@@ -1969,6 +1969,18 @@
             "dubs"
         ]
     },
+    "motherfucker": {
+        "name": "motherfucker",
+        "file": "motherfucker.mp3",
+        "extension": "mp3",
+        "artists": [
+			"Julian"
+		],
+        "aliases": [],
+        "tags": [
+			"julian"
+		]
+    },
     "muppet": {
         "name": "muppet",
         "file": "muppet.mp3",
@@ -3052,12 +3064,14 @@
         "file": "suck_some_dick.mp3",
         "extension": "mp3",
         "artists": [
-            "Lucas"
+            "Lucas",
+            "Adrian"
         ],
         "aliases": [],
         "tags": [
             "lucas",
-            "reaction"
+            "reaction",
+            "adrian"
         ]
     },
     "sukhraj": {
