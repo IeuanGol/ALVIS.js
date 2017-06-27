@@ -5,15 +5,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs","ace","power"]
+        "tags": [
+            "jaboody",
+            "dubs",
+            "ace",
+            "power"
+        ]
     },
     "20_century_fox": {
         "name": "20_century_fox",
         "file": "20_century_fox.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["cancer","lucas"]
+        "tags": [
+            "cancer",
+            "lucas"
+        ]
     },
     "3am": {
         "name": "3am",
@@ -21,7 +31,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "6_hours_later": {
         "name": "6_hours_later",
@@ -29,7 +42,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "a_god_damn_thing": {
         "name": "a_god_damn_thing",
@@ -37,7 +52,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pulp","fiction","reaction"]
+        "tags": [
+            "pulp",
+            "fiction",
+            "reaction"
+        ]
     },
     "a_is_for_alfred": {
         "name": "a_is_for_alfred",
@@ -45,7 +64,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "a_lot_to_see": {
         "name": "a_lot_to_see",
@@ -53,7 +75,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron"]
+        "tags": [
+            "jontron"
+        ]
     },
     "ace_power": {
         "name": "ace_power",
@@ -61,7 +85,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "adrian_cube": {
         "name": "adrian_cube",
@@ -69,7 +96,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["adrian","gamecube","orgasm"]
+        "tags": [
+            "adrian",
+            "gamecube",
+            "orgasm"
+        ]
     },
     "america_runs": {
         "name": "america_runs",
@@ -77,7 +108,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["canada","tim","hortons"]
+        "tags": [
+            "canada",
+            "tim",
+            "hortons"
+        ]
     },
     "and_i": {
         "name": "and_i",
@@ -85,7 +120,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["wednesday","meme"]
+        "tags": [
+            "wednesday",
+            "meme"
+        ]
     },
     "are_you_sure": {
         "name": "are_you_sure",
@@ -93,7 +131,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["reaction","meme","john","cena"]
+        "tags": [
+            "reaction",
+            "meme",
+            "john",
+            "cena"
+        ]
     },
     "awaken_anything": {
         "name": "awaken_anything",
@@ -101,15 +144,21 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["community"]
+        "tags": [
+            "community"
+        ]
     },
     "b0ss_lucas": {
         "name": "b0ss_lucas",
         "file": "b0ss_lucas.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas"]
+        "tags": [
+            "lucas"
+        ]
     },
     "bandit": {
         "name": "bandit",
@@ -117,7 +166,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","bandit"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "bandit"
+        ]
     },
     "bat_signal": {
         "name": "bat_signal",
@@ -125,7 +178,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "bathroom": {
         "name": "bathroom",
@@ -133,7 +189,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","lord","chanka"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "lord",
+            "chanka"
+        ]
     },
     "be_more_careful": {
         "name": "be_more_careful",
@@ -141,7 +202,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["patches","reaction"]
+        "tags": [
+            "patches",
+            "reaction"
+        ]
     },
     "beauties_in_place": {
         "name": "beauties_in_place",
@@ -149,7 +213,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["smoke","r6","rainbow6"]
+        "tags": [
+            "smoke",
+            "r6",
+            "rainbow6"
+        ]
     },
     "being_fresh": {
         "name": "being_fresh",
@@ -157,7 +225,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "best_game": {
         "name": "best_game",
@@ -165,7 +236,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron","reaction"]
+        "tags": [
+            "jontron",
+            "reaction"
+        ]
     },
     "big_dump": {
         "name": "big_dump",
@@ -173,7 +247,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs","shit","dump"]
+        "tags": [
+            "jaboody",
+            "dubs",
+            "shit",
+            "dump"
+        ]
     },
     "big_fat_morty": {
         "name": "big_fat_morty",
@@ -181,7 +260,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shit","dump","rick","morty"]
+        "tags": [
+            "shit",
+            "dump",
+            "rick",
+            "morty"
+        ]
     },
     "big_hole": {
         "name": "big_hole",
@@ -189,7 +273,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","thermite"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "thermite"
+        ]
     },
     "bitches_aint_shit": {
         "name": "bitches_aint_shit",
@@ -197,7 +285,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","pg"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "pg"
+        ]
     },
     "blitz_dubstep": {
         "name": "blitz_dubstep",
@@ -205,7 +298,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","blitz"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "blitz"
+        ]
     },
     "bonfire_sale": {
         "name": "bonfire_sale",
@@ -213,7 +310,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cod","cancer","garbage"]
+        "tags": [
+            "cod",
+            "cancer",
+            "garbage"
+        ]
     },
     "bounce_up_and_down": {
         "name": "bounce_up_and_down",
@@ -221,15 +322,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "burp": {
         "name": "burp",
         "file": "burp.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["reaction","lucas"]
+        "tags": [
+            "reaction",
+            "lucas"
+        ]
     },
     "butthole": {
         "name": "butthole",
@@ -237,7 +346,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty"]
+        "tags": [
+            "rick",
+            "morty"
+        ]
     },
     "campfire_song_song": {
         "name": "campfire_song_song",
@@ -245,7 +357,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","song"]
+        "tags": [
+            "spongebob",
+            "song"
+        ]
     },
     "carpenter": {
         "name": "carpenter",
@@ -253,7 +368,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","garbage","shit","cod"]
+        "tags": [
+            "cancer",
+            "garbage",
+            "shit",
+            "cod"
+        ]
     },
     "cave_johnson_asbestos": {
         "name": "cave_johnson_asbestos",
@@ -261,7 +381,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_blue_paint": {
         "name": "cave_johnson_blue_paint",
@@ -269,7 +391,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_element": {
         "name": "cave_johnson_element",
@@ -277,7 +401,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_lemons": {
         "name": "cave_johnson_lemons",
@@ -285,7 +411,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_mantis": {
         "name": "cave_johnson_mantis",
@@ -293,7 +421,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_microchip": {
         "name": "cave_johnson_microchip",
@@ -301,7 +431,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_repulsion_gel": {
         "name": "cave_johnson_repulsion_gel",
@@ -309,7 +441,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_superconductor": {
         "name": "cave_johnson_superconductor",
@@ -317,7 +451,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_teleportation": {
         "name": "cave_johnson_teleportation",
@@ -325,7 +461,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_time_travel": {
         "name": "cave_johnson_time_travel",
@@ -333,7 +471,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_tumours": {
         "name": "cave_johnson_tumours",
@@ -341,7 +481,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cave_johnson_wheelchair": {
         "name": "cave_johnson_wheelchair",
@@ -349,7 +491,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["portal"]
+        "tags": [
+            "portal"
+        ]
     },
     "cena": {
         "name": "cena",
@@ -357,7 +501,14 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["john","cena","his","name","is","meme"]
+        "tags": [
+            "john",
+            "cena",
+            "his",
+            "name",
+            "is",
+            "meme"
+        ]
     },
     "chanka_anthem": {
         "name": "chanka_anthem",
@@ -365,7 +516,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","tachanka","lord","chanka"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "tachanka",
+            "lord",
+            "chanka"
+        ]
     },
     "chickens": {
         "name": "chickens",
@@ -373,7 +530,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["game","of","thrones","hound","chickens"]
+        "tags": [
+            "game",
+            "of",
+            "thrones",
+            "hound",
+            "chickens"
+        ]
     },
     "closed": {
         "name": "closed",
@@ -381,7 +544,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["ebola","lucas"]
+        "tags": [
+            "ebola",
+            "lucas"
+        ]
     },
     "cluster_charge": {
         "name": "cluster_charge",
@@ -389,7 +555,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","fuze"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "fuze"
+        ]
     },
     "creamy": {
         "name": "creamy",
@@ -397,7 +567,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme"]
+        "tags": [
+            "meme"
+        ]
     },
     "crickets": {
         "name": "crickets",
@@ -405,7 +577,17 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["brandon"]
+        "tags": [
+            "brandon"
+        ]
+    },
+    "croissant": {
+        "name": "croissant",
+        "file": "croissant.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": []
     },
     "cruel_ploy": {
         "name": "cruel_ploy",
@@ -413,7 +595,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "dark_dump": {
         "name": "dark_dump",
@@ -421,7 +606,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs","dank"]
+        "tags": [
+            "jaboody",
+            "dubs",
+            "dank"
+        ]
     },
     "dark_lord": {
         "name": "dark_lord",
@@ -429,7 +618,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","cody"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "cody"
+        ]
     },
     "death_machine": {
         "name": "death_machine",
@@ -437,7 +631,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","garbage","shit","cod"]
+        "tags": [
+            "cancer",
+            "garbage",
+            "shit",
+            "cod"
+        ]
     },
     "deported": {
         "name": "deported",
@@ -445,7 +644,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["trump","dora"]
+        "tags": [
+            "trump",
+            "dora"
+        ]
     },
     "did_not_hit_her": {
         "name": "did_not_hit_her",
@@ -453,7 +655,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","oh","hai","mark"]
+        "tags": [
+            "the",
+            "room",
+            "oh",
+            "hai",
+            "mark"
+        ]
     },
     "dinosaur_laser_fight": {
         "name": "dinosaur_laser_fight",
@@ -461,7 +669,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["ninja","sex","party"]
+        "tags": [
+            "ninja",
+            "sex",
+            "party"
+        ]
     },
     "do_that_too": {
         "name": "do_that_too",
@@ -469,15 +681,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "dont_do_it_nig": {
         "name": "dont_do_it_nig",
         "file": "dont_do_it_nig.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction","no"]
+        "tags": [
+            "joseph",
+            "reaction",
+            "no"
+        ]
     },
     "dont_say_it": {
         "name": "dont_say_it",
@@ -485,7 +707,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["game","of","thrones","bronn"]
+        "tags": [
+            "game",
+            "of",
+            "thrones",
+            "bronn"
+        ]
     },
     "double_points": {
         "name": "double_points",
@@ -493,7 +720,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","shit","garbage","cod"]
+        "tags": [
+            "cancer",
+            "shit",
+            "garbage",
+            "cod"
+        ]
     },
     "dreams": {
         "name": "dreams",
@@ -501,7 +733,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shia","labeouf","meme"]
+        "tags": [
+            "shia",
+            "labeouf",
+            "meme"
+        ]
     },
     "driftwood": {
         "name": "driftwood",
@@ -509,7 +745,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty"]
+        "tags": [
+            "rick",
+            "morty"
+        ]
     },
     "drugs": {
         "name": "drugs",
@@ -517,7 +756,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","bandit"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "bandit"
+        ]
     },
     "dump_in_a_mug": {
         "name": "dump_in_a_mug",
@@ -525,7 +768,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "dungeon": {
         "name": "dungeon",
@@ -533,7 +779,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["adventure","time","lemongrab","reaction"]
+        "tags": [
+            "adventure",
+            "time",
+            "lemongrab",
+            "reaction"
+        ]
     },
     "duped": {
         "name": "duped",
@@ -541,7 +792,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","duped","reaction"]
+        "tags": [
+            "spongebob",
+            "duped",
+            "reaction"
+        ]
     },
     "eat_my_ass": {
         "name": "eat_my_ass",
@@ -549,31 +804,52 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","let","it","go","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "let",
+            "it",
+            "go",
+            "filthyfrank"
+        ]
     },
     "eat_my_asshole": {
         "name": "eat_my_asshole",
         "file": "eat_my_asshole.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction"]
+        "tags": [
+            "joseph",
+            "reaction"
+        ]
     },
     "eating_my_dick": {
         "name": "eating_my_dick",
         "file": "eating_my_dick.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction"]
+        "tags": [
+            "joseph",
+            "reaction"
+        ]
     },
     "education": {
         "name": "education",
         "file": "education.mp3",
         "extension": "mp3",
-        "artists": ["Jospeh"],
+        "artists": [
+            "Jospeh"
+        ],
         "aliases": [],
-        "tags": ["joseph"]
+        "tags": [
+            "joseph"
+        ]
     },
     "engineer": {
         "name": "engineer",
@@ -581,7 +857,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "engineer2": {
         "name": "engineer2",
@@ -589,23 +869,38 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "eric": {
         "name": "eric",
         "file": "eric.mp3",
         "extension": "mp3",
-        "artists": ["Eric"],
+        "artists": [
+            "Eric"
+        ],
         "aliases": [],
-        "tags": ["cancer","eric"]
+        "tags": [
+            "cancer",
+            "eric"
+        ]
     },
     "eugene_ken_kuray": {
         "name": "eugene_ken_kuray",
         "file": "eugene_ken_kuray.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","cancer","overwatch"]
+        "tags": [
+            "lucas",
+            "cancer",
+            "overwatch"
+        ]
     },
     "evil": {
         "name": "evil",
@@ -613,7 +908,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "ey_b0ss": {
         "name": "ey_b0ss",
@@ -621,7 +918,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","reaction"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "reaction"
+        ]
     },
     "faded": {
         "name": "faded",
@@ -637,7 +939,15 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["faggot","reaction","pink","guy","filthyfrank","kill","yourself"]
+        "tags": [
+            "faggot",
+            "reaction",
+            "pink",
+            "guy",
+            "filthyfrank",
+            "kill",
+            "yourself"
+        ]
     },
     "fast_2": {
         "name": "fast_2",
@@ -645,7 +955,16 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron","that","is","a","joke","ladies","and","gentlemen"]
+        "tags": [
+            "jontron",
+            "that",
+            "is",
+            "a",
+            "joke",
+            "ladies",
+            "and",
+            "gentlemen"
+        ]
     },
     "favourite_anime": {
         "name": "favourite_anime",
@@ -653,7 +972,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","filthyfrank","anime"]
+        "tags": [
+            "cancer",
+            "filthyfrank",
+            "anime"
+        ]
     },
     "fire_sale": {
         "name": "fire_sale",
@@ -661,7 +984,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","shit","garbage","cod"]
+        "tags": [
+            "cancer",
+            "shit",
+            "garbage",
+            "cod"
+        ]
     },
     "floor_is_strong": {
         "name": "floor_is_strong",
@@ -669,7 +997,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","tachanka","lord","chanka"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "tachanka",
+            "lord",
+            "chanka"
+        ]
     },
     "fuck_poem": {
         "name": "fuck_poem",
@@ -677,7 +1011,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["fuck","meme"]
+        "tags": [
+            "fuck",
+            "meme"
+        ]
     },
     "fucking_suck": {
         "name": "fucking_suck",
@@ -685,15 +1022,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["avgn","reaction"]
+        "tags": [
+            "avgn",
+            "reaction"
+        ]
     },
     "gadget": {
         "name": "gadget",
         "file": "gadget.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "gamecube": {
         "name": "gamecube",
@@ -717,7 +1062,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["idubzztv","gay","spongebob"]
+        "tags": [
+            "idubzztv",
+            "gay",
+            "spongebob"
+        ]
     },
     "genji_ult": {
         "name": "genji_ult",
@@ -725,7 +1074,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch","genji","ult"]
+        "tags": [
+            "overwatch",
+            "genji",
+            "ult"
+        ]
     },
     "gibe_de_pussy_b0ss": {
         "name": "gibe_de_pussy_b0ss",
@@ -733,7 +1086,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","b0ss"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "b0ss"
+        ]
     },
     "gingy": {
         "name": "gingy",
@@ -741,15 +1099,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shrek","gingerbread","man"]
+        "tags": [
+            "shrek",
+            "gingerbread",
+            "man"
+        ]
     },
     "glorious_pcmr": {
         "name": "glorious_pcmr",
         "file": "glorious_pcmr.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph"]
+        "tags": [
+            "joseph"
+        ]
     },
     "gonna_die_tonight": {
         "name": "gonna_die_tonight",
@@ -757,7 +1123,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron"]
+        "tags": [
+            "jontron"
+        ]
     },
     "gonna_feel_it": {
         "name": "gonna_feel_it",
@@ -765,7 +1133,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs","balls"]
+        "tags": [
+            "jaboody",
+            "dubs",
+            "balls"
+        ]
     },
     "got_eem": {
         "name": "got_eem",
@@ -773,7 +1145,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","reaction"]
+        "tags": [
+            "meme",
+            "reaction"
+        ]
     },
     "got_you_in_my_sights": {
         "name": "got_you_in_my_sights",
@@ -781,15 +1156,24 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch","soldier","76","ult"]
+        "tags": [
+            "overwatch",
+            "soldier",
+            "76",
+            "ult"
+        ]
     },
     "grand_fuckery": {
         "name": "grand_fuckery",
         "file": "grand_fuckery.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph"]
+        "tags": [
+            "joseph"
+        ]
     },
     "guerrero_street": {
         "name": "guerrero_street",
@@ -797,7 +1181,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","hospital"]
+        "tags": [
+            "the",
+            "room",
+            "hospital"
+        ]
     },
     "hamburger_plz": {
         "name": "hamburger_plz",
@@ -805,7 +1193,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "handicap_stroke": {
         "name": "handicap_stroke",
@@ -813,7 +1205,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","meeseeks","jerry"]
+        "tags": [
+            "rick",
+            "morty",
+            "meeseeks",
+            "jerry"
+        ]
     },
     "hanzo_ult": {
         "name": "hanzo_ult",
@@ -821,15 +1218,26 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch","hanzo","ult","cancer"]
+        "tags": [
+            "overwatch",
+            "hanzo",
+            "ult",
+            "cancer"
+        ]
     },
     "he_fucked_up": {
         "name": "he_fucked_up",
         "file": "he_fucked_up.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","cancer","reaction"]
+        "tags": [
+            "lucas",
+            "cancer",
+            "reaction"
+        ]
     },
     "heyeayeay": {
         "name": "heyeayeay",
@@ -837,23 +1245,39 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["he","man"]
+        "tags": [
+            "he",
+            "man"
+        ]
     },
     "hi_guiyz": {
         "name": "hi_guiyz",
         "file": "hi_guiyz.mp3",
         "extension": "mp3",
-        "artists": ["Joseph","Lucas"],
+        "artists": [
+            "Joseph",
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["joseph","lucas","cancer","dank"]
+        "tags": [
+            "joseph",
+            "lucas",
+            "cancer",
+            "dank"
+        ]
     },
     "hitler_has_won": {
         "name": "hitler_has_won",
         "file": "hitler_has_won.mp3",
         "extension": "mp3",
-        "artists": ["Sukhraj"],
+        "artists": [
+            "Sukhraj"
+        ],
         "aliases": [],
-        "tags": ["sukhraj","hitler"]
+        "tags": [
+            "sukhraj",
+            "hitler"
+        ]
     },
     "holy_water": {
         "name": "holy_water",
@@ -861,15 +1285,21 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme"]
+        "tags": [
+            "meme"
+        ]
     },
     "i_am_hitler": {
         "name": "i_am_hitler",
         "file": "i_am_hitler.mp3",
         "extension": "mp3",
-        "artists": ["Doug"],
+        "artists": [
+            "Doug"
+        ],
         "aliases": [],
-        "tags": ["doug"]
+        "tags": [
+            "doug"
+        ]
     },
     "i_cant_hear_you": {
         "name": "i_cant_hear_you",
@@ -877,7 +1307,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "i_dont_get_it": {
         "name": "i_dont_get_it",
@@ -885,7 +1318,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron","reaction"]
+        "tags": [
+            "jontron",
+            "reaction"
+        ]
     },
     "i_habe_cancer": {
         "name": "i_habe_cancer",
@@ -893,7 +1329,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "i_have_fallen": {
         "name": "i_have_fallen",
@@ -901,7 +1341,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron"]
+        "tags": [
+            "jontron"
+        ]
     },
     "i_have_the_power": {
         "name": "i_have_the_power",
@@ -909,7 +1351,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["he","man","greyskull"]
+        "tags": [
+            "he",
+            "man",
+            "greyskull"
+        ]
     },
     "i_like_money": {
         "name": "i_like_money",
@@ -917,7 +1363,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","mr","krabs"]
+        "tags": [
+            "spongebob",
+            "mr",
+            "krabs"
+        ]
     },
     "i_like_to_have_fun": {
         "name": "i_like_to_have_fun",
@@ -925,7 +1375,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","meme"]
+        "tags": [
+            "cancer",
+            "meme"
+        ]
     },
     "ice_cream": {
         "name": "ice_cream",
@@ -933,7 +1386,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["filthyfrank","let","it","go"]
+        "tags": [
+            "filthyfrank",
+            "let",
+            "it",
+            "go"
+        ]
     },
     "illuminati_mlg": {
         "name": "illuminati_mlg",
@@ -941,7 +1399,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","dank"]
+        "tags": [
+            "meme",
+            "dank"
+        ]
     },
     "im_gay": {
         "name": "im_gay",
@@ -949,7 +1410,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["idubzztv","gay"]
+        "tags": [
+            "idubzztv",
+            "gay"
+        ]
     },
     "im_serious": {
         "name": "im_serious",
@@ -957,15 +1421,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["sniper","virus"]
+        "tags": [
+            "sniper",
+            "virus"
+        ]
     },
     "indiana_theme": {
         "name": "indiana_theme",
         "file": "indiana_theme.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","cancer"]
+        "tags": [
+            "lucas",
+            "cancer"
+        ]
     },
     "insta_kill": {
         "name": "insta_kill",
@@ -973,7 +1445,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer","shit","garbage","cod"]
+        "tags": [
+            "cancer",
+            "shit",
+            "garbage",
+            "cod"
+        ]
     },
     "internet_is_for_porn": {
         "name": "internet_is_for_porn",
@@ -981,7 +1458,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song"]
+        "tags": [
+            "song"
+        ]
     },
     "iq_batteries": {
         "name": "iq_batteries",
@@ -989,7 +1468,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","iq","screaming"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "iq",
+            "screaming"
+        ]
     },
     "isengard": {
         "name": "isengard",
@@ -997,7 +1481,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["lotr","meme","hobbits"]
+        "tags": [
+            "lotr",
+            "meme",
+            "hobbits"
+        ]
     },
     "its_high_noon": {
         "name": "its_high_noon",
@@ -1005,7 +1493,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch","mcree","ult"]
+        "tags": [
+            "overwatch",
+            "mcree",
+            "ult"
+        ]
     },
     "jager": {
         "name": "jager",
@@ -1013,7 +1505,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "joseph_cube": {
         "name": "joseph_cube",
@@ -1021,15 +1517,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["joseph","gamecube","orgasm"]
+        "tags": [
+            "joseph",
+            "gamecube",
+            "orgasm"
+        ]
     },
     "joseph_wat": {
         "name": "joseph_wat",
         "file": "joseph_wat.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","what","wat"]
+        "tags": [
+            "joseph",
+            "what",
+            "wat"
+        ]
     },
     "jumbo_sized_pubes": {
         "name": "jumbo_sized_pubes",
@@ -1037,7 +1543,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs","pubes"]
+        "tags": [
+            "jaboody",
+            "dubs",
+            "pubes"
+        ]
     },
     "just_do_it": {
         "name": "just_do_it",
@@ -1045,7 +1555,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shia","labeouf","reaction"]
+        "tags": [
+            "shia",
+            "labeouf",
+            "reaction"
+        ]
     },
     "justice_rains": {
         "name": "justice_rains",
@@ -1053,7 +1567,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch","pharah","ult"]
+        "tags": [
+            "overwatch",
+            "pharah",
+            "ult"
+        ]
     },
     "kill_yourself": {
         "name": "kill_yourself",
@@ -1069,7 +1587,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song","glorious","leader"]
+        "tags": [
+            "song",
+            "glorious",
+            "leader"
+        ]
     },
     "kys": {
         "name": "kys",
@@ -1077,7 +1599,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["kill","yourself","filthyfrank","reaction"]
+        "tags": [
+            "kill",
+            "yourself",
+            "filthyfrank",
+            "reaction"
+        ]
     },
     "kys_long": {
         "name": "kys_long",
@@ -1085,7 +1612,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["kill","yourself","filthyfrank","reaction"]
+        "tags": [
+            "kill",
+            "yourself",
+            "filthyfrank",
+            "reaction"
+        ]
     },
     "land_development": {
         "name": "land_development",
@@ -1093,7 +1625,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "laser_sights": {
         "name": "laser_sights",
@@ -1101,15 +1635,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","thatchers"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "thatchers"
+        ]
     },
     "laughing": {
         "name": "laughing",
         "file": "laughing.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","cancer","reaction"]
+        "tags": [
+            "lucas",
+            "cancer",
+            "reaction"
+        ]
     },
     "leedle": {
         "name": "leedle",
@@ -1117,7 +1661,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "let_it_go": {
         "name": "let_it_go",
@@ -1125,7 +1672,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["filthyfrank","in","my","ass"]
+        "tags": [
+            "filthyfrank",
+            "in",
+            "my",
+            "ass"
+        ]
     },
     "leviosa": {
         "name": "leviosa",
@@ -1133,15 +1685,26 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["harry","potter","ronald","weasly","snape"]
+        "tags": [
+            "harry",
+            "potter",
+            "ronald",
+            "weasly",
+            "snape"
+        ]
     },
     "lick_asshole": {
         "name": "lick_asshole",
         "file": "lick_asshole.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction"]
+        "tags": [
+            "joseph",
+            "reaction"
+        ]
     },
     "lightbulb": {
         "name": "lightbulb",
@@ -1149,7 +1712,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "like_a_glove": {
         "name": "like_a_glove",
@@ -1165,7 +1731,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["star","wars","cantina","reaction"]
+        "tags": [
+            "star",
+            "wars",
+            "cantina",
+            "reaction"
+        ]
     },
     "lion_king": {
         "name": "lion_king",
@@ -1173,15 +1744,21 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song"]
+        "tags": [
+            "song"
+        ]
     },
     "little_fingers": {
         "name": "little_fingers",
         "file": "little_fingers.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas"]
+        "tags": [
+            "lucas"
+        ]
     },
     "lmg_mounted": {
         "name": "lmg_mounted",
@@ -1189,7 +1766,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","tachanka","lord","chanka"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "tachanka",
+            "lord",
+            "chanka"
+        ]
     },
     "loud_noises": {
         "name": "loud_noises",
@@ -1197,7 +1780,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["reaction","brick"]
+        "tags": [
+            "reaction",
+            "brick"
+        ]
     },
     "lower_your_voice": {
         "name": "lower_your_voice",
@@ -1205,31 +1791,55 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","lord","chanka","tachanka","reaction"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "lord",
+            "chanka",
+            "tachanka",
+            "reaction"
+        ]
     },
     "lucas_joseph_orgasm": {
         "name": "lucas_joseph_orgasm",
         "file": "lucas_joseph_orgasm.mp3",
         "extension": "mp3",
-        "artists": ["Lucas","Joseph"],
+        "artists": [
+            "Lucas",
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["lucas","joseph","orgasm","cock"]
+        "tags": [
+            "lucas",
+            "joseph",
+            "orgasm",
+            "cock"
+        ]
     },
     "lucas_laughter": {
         "name": "lucas_laughter",
         "file": "lucas_laughter.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["cancer"]
+        "tags": [
+            "cancer"
+        ]
     },
     "lucas_ult": {
         "name": "lucas_ult",
         "file": "lucas_ult.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["hanzo","overwatch"]
+        "tags": [
+            "hanzo",
+            "overwatch"
+        ]
     },
     "make_the_terror": {
         "name": "make_the_terror",
@@ -1237,7 +1847,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["house","of","cards"]
+        "tags": [
+            "house",
+            "of",
+            "cards"
+        ]
     },
     "making_babies_tonight": {
         "name": "making_babies_tonight",
@@ -1245,7 +1859,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "manhattan": {
         "name": "manhattan",
@@ -1253,7 +1870,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["john","cena","theme"]
+        "tags": [
+            "john",
+            "cena",
+            "theme"
+        ]
     },
     "max_ammo": {
         "name": "max_ammo",
@@ -1261,7 +1882,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shit","garbage","cancer","cod"]
+        "tags": [
+            "shit",
+            "garbage",
+            "cancer",
+            "cod"
+        ]
     },
     "mayonnaise": {
         "name": "mayonnaise",
@@ -1269,7 +1895,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "meeseeks": {
         "name": "meeseeks",
@@ -1277,7 +1906,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty"]
+        "tags": [
+            "rick",
+            "morty"
+        ]
     },
     "meeseeks_can_do": {
         "name": "meeseeks_can_do",
@@ -1285,7 +1917,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","reaction"]
+        "tags": [
+            "rick",
+            "morty",
+            "reaction"
+        ]
     },
     "meeseeks_okay": {
         "name": "meeseeks_okay",
@@ -1293,15 +1929,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","reaction"]
+        "tags": [
+            "rick",
+            "morty",
+            "reaction"
+        ]
     },
     "merked_asshole": {
         "name": "merked_asshole",
         "file": "merked_asshole.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["reaction"]
+        "tags": [
+            "reaction"
+        ]
     },
     "mmm_what_you_say": {
         "name": "mmm_what_you_say",
@@ -1309,7 +1953,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","song"]
+        "tags": [
+            "meme",
+            "song"
+        ]
     },
     "monkey_looking_motherfucker": {
         "name": "monkey_looking_motherfucker",
@@ -1317,7 +1964,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "muppet": {
         "name": "muppet",
@@ -1325,7 +1975,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","smoke"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "smoke"
+        ]
     },
     "my_heart_will_go_on": {
         "name": "my_heart_will_go_on",
@@ -1333,7 +1987,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["reaction","dank","recorder"]
+        "tags": [
+            "reaction",
+            "dank",
+            "recorder"
+        ]
     },
     "new_door": {
         "name": "new_door",
@@ -1341,7 +1999,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","thermite"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "thermite"
+        ]
     },
     "nigcube": {
         "name": "nigcube",
@@ -1349,7 +2011,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["gamecube","cancer","joseph","orgasm"]
+        "tags": [
+            "gamecube",
+            "cancer",
+            "joseph",
+            "orgasm"
+        ]
     },
     "nigga_oh_no": {
         "name": "nigga_oh_no",
@@ -1357,7 +2024,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme"]
+        "tags": [
+            "meme"
+        ]
     },
     "niggers_in_my_store": {
         "name": "niggers_in_my_store",
@@ -1373,7 +2042,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6"]
+        "tags": [
+            "r6",
+            "rainbow6"
+        ]
     },
     "no_god_please_no": {
         "name": "no_god_please_no",
@@ -1381,7 +2053,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","office","reaction"]
+        "tags": [
+            "the",
+            "office",
+            "reaction"
+        ]
     },
     "no_idea_what_im_doing": {
         "name": "no_idea_what_im_doing",
@@ -1389,7 +2065,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["taran","reaction"]
+        "tags": [
+            "taran",
+            "reaction"
+        ]
     },
     "no_other": {
         "name": "no_other",
@@ -1397,7 +2076,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rainbow6","r6"]
+        "tags": [
+            "rainbow6",
+            "r6"
+        ]
     },
     "no_reason_boner": {
         "name": "no_reason_boner",
@@ -1405,7 +2087,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["ninja","sex","party"]
+        "tags": [
+            "ninja",
+            "sex",
+            "party"
+        ]
     },
     "noice_cube": {
         "name": "noice_cube",
@@ -1413,15 +2099,22 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","gamecube"]
+        "tags": [
+            "meme",
+            "gamecube"
+        ]
     },
     "nonono": {
         "name": "nonono",
         "file": "nonono.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["reaction"]
+        "tags": [
+            "reaction"
+        ]
     },
     "nooo": {
         "name": "nooo",
@@ -1429,21 +2122,32 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","reaction"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "reaction"
+        ]
     },
     "nope_nope": {
         "name": "nope_nope",
         "file": "nope_nope.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["reaction"]
+        "tags": [
+            "reaction"
+        ]
     },
     "not_enough_juice": {
         "name": "not_enough_juice",
         "file": "not_enough_juice.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
         "tags": []
     },
@@ -1453,7 +2157,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "not_the_bees": {
         "name": "not_the_bees",
@@ -1461,7 +2168,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["nicolas","cage","meme"]
+        "tags": [
+            "nicolas",
+            "cage",
+            "meme"
+        ]
     },
     "nothing_wrong_with_that": {
         "name": "nothing_wrong_with_that",
@@ -1469,7 +2180,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron","reaction"]
+        "tags": [
+            "jontron",
+            "reaction"
+        ]
     },
     "nuke": {
         "name": "nuke",
@@ -1477,7 +2191,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shit","cancer","garbage","cod"]
+        "tags": [
+            "shit",
+            "cancer",
+            "garbage",
+            "cod"
+        ]
     },
     "number_9": {
         "name": "number_9",
@@ -1485,7 +2204,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","gta","mambo"]
+        "tags": [
+            "meme",
+            "gta",
+            "mambo"
+        ]
     },
     "nyessss": {
         "name": "nyessss",
@@ -1493,7 +2216,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank","reaction"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank",
+            "reaction"
+        ]
     },
     "ode_to_salt": {
         "name": "ode_to_salt",
@@ -1501,7 +2229,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["saltd","cody","reaction"]
+        "tags": [
+            "saltd",
+            "cody",
+            "reaction"
+        ]
     },
     "oh_hi_mark": {
         "name": "oh_hi_mark",
@@ -1509,7 +2241,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","tommy"]
+        "tags": [
+            "the",
+            "room",
+            "tommy"
+        ]
     },
     "oh_my_favourite": {
         "name": "oh_my_favourite",
@@ -1517,7 +2253,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron"]
+        "tags": [
+            "jontron"
+        ]
     },
     "oh_sieg_heil_no": {
         "name": "oh_sieg_heil_no",
@@ -1525,7 +2263,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["reaction","hitler"]
+        "tags": [
+            "reaction",
+            "hitler"
+        ]
     },
     "okay": {
         "name": "okay",
@@ -1533,7 +2274,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["lil","jon","reaction"]
+        "tags": [
+            "lil",
+            "jon",
+            "reaction"
+        ]
     },
     "old_spice": {
         "name": "old_spice",
@@ -1541,7 +2286,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["super","bros","mowtendoo"]
+        "tags": [
+            "super",
+            "bros",
+            "mowtendoo"
+        ]
     },
     "orc_horn": {
         "name": "orc_horn",
@@ -1549,7 +2298,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["lotr","yeah","boi","dank"]
+        "tags": [
+            "lotr",
+            "yeah",
+            "boi",
+            "dank"
+        ]
     },
     "orgasm_frank": {
         "name": "orgasm_frank",
@@ -1557,21 +2311,31 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "orgasm_joseph": {
         "name": "orgasm_joseph",
         "file": "orgasm_joseph.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["reaction"]
+        "tags": [
+            "reaction"
+        ]
     },
     "orgasm_tyler": {
         "name": "orgasm_tyler",
         "file": "orgasm_tyler.mp3",
         "extension": "mp3",
-        "artists": ["Tyler"],
+        "artists": [
+            "Tyler"
+        ],
         "aliases": [],
         "tags": []
     },
@@ -1579,7 +2343,9 @@
         "name": "overwatch_theme",
         "file": "overwatch_theme.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
         "tags": []
     },
@@ -1589,7 +2355,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["virus","sniper"]
+        "tags": [
+            "virus",
+            "sniper"
+        ]
     },
     "patches_laugh": {
         "name": "patches_laugh",
@@ -1597,7 +2366,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["dark","souls","reaction","dank"]
+        "tags": [
+            "dark",
+            "souls",
+            "reaction",
+            "dank"
+        ]
     },
     "patches_laugh2": {
         "name": "patches_laugh2",
@@ -1605,7 +2379,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["dark","souls","reaction","dank"]
+        "tags": [
+            "dark",
+            "souls",
+            "reaction",
+            "dank"
+        ]
     },
     "patrick_scream": {
         "name": "patrick_scream",
@@ -1613,7 +2392,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "peter_knee": {
         "name": "peter_knee",
@@ -1621,15 +2403,24 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer"]
+        "tags": [
+            "cancer"
+        ]
     },
     "piece_of_shit": {
         "name": "piece_of_shit",
         "file": "piece_of_shit.mp3",
         "extension": "mp3",
-        "artists": ["Lucas","Sukhraj"],
+        "artists": [
+            "Lucas",
+            "Sukhraj"
+        ],
         "aliases": [],
-        "tags": ["lucas","sukhraj","reaction"]
+        "tags": [
+            "lucas",
+            "sukhraj",
+            "reaction"
+        ]
     },
     "pieces_of_shit": {
         "name": "pieces_of_shit",
@@ -1637,7 +2428,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","reaction"]
+        "tags": [
+            "rick",
+            "morty",
+            "reaction"
+        ]
     },
     "pink_guy_sings": {
         "name": "pink_guy_sings",
@@ -1645,7 +2440,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["filthyfrank","song","dank"]
+        "tags": [
+            "filthyfrank",
+            "song",
+            "dank"
+        ]
     },
     "pink_guy_sings_full": {
         "name": "pink_guy_sings_full",
@@ -1653,7 +2452,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["filthyfrank","song","dank"]
+        "tags": [
+            "filthyfrank",
+            "song",
+            "dank"
+        ]
     },
     "pizza_plz": {
         "name": "pizza_plz",
@@ -1661,7 +2464,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "planet_anymore": {
         "name": "planet_anymore",
@@ -1669,7 +2476,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["futurama","reaction"]
+        "tags": [
+            "futurama",
+            "reaction"
+        ]
     },
     "play_hero": {
         "name": "play_hero",
@@ -1685,7 +2495,13 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","lord","chanka","tachanka"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "lord",
+            "chanka",
+            "tachanka"
+        ]
     },
     "popopotato": {
         "name": "popopotato",
@@ -1693,7 +2509,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "potato": {
         "name": "potato",
@@ -1701,7 +2521,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "potato_pg": {
         "name": "potato_pg",
@@ -1709,15 +2533,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","screaming","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "screaming",
+            "filthyfrank"
+        ]
     },
     "probably_right": {
         "name": "probably_right",
         "file": "probably_right.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "push_it": {
         "name": "push_it",
@@ -1725,7 +2559,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "pussy_hair": {
         "name": "pussy_hair",
@@ -1733,7 +2570,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "puzi_plz": {
         "name": "puzi_plz",
@@ -1741,7 +2581,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pussy","pink","guy","filthyfrank"]
+        "tags": [
+            "pussy",
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "raspberry": {
         "name": "raspberry",
@@ -1757,7 +2602,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6"]
+        "tags": [
+            "r6",
+            "rainbow6"
+        ]
     },
     "ricefields": {
         "name": "ricefields",
@@ -1765,15 +2613,21 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["filthyfrank"]
+        "tags": [
+            "filthyfrank"
+        ]
     },
     "ride_the_bus": {
         "name": "ride_the_bus",
         "file": "ride_the_bus.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph"]
+        "tags": [
+            "joseph"
+        ]
     },
     "rival": {
         "name": "rival",
@@ -1789,7 +2643,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","meeseeks"]
+        "tags": [
+            "rick",
+            "morty",
+            "meeseeks"
+        ]
     },
     "rubber_fingers": {
         "name": "rubber_fingers",
@@ -1797,7 +2655,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "sad_song": {
         "name": "sad_song",
@@ -1805,7 +2666,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","dank"]
+        "tags": [
+            "meme",
+            "dank"
+        ]
     },
     "said_it_like_that": {
         "name": "said_it_like_that",
@@ -1813,7 +2677,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "salamander": {
         "name": "salamander",
@@ -1821,7 +2689,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrankrecorder","cancer"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrankrecorder",
+            "cancer"
+        ]
     },
     "salt_life": {
         "name": "salt_life",
@@ -1829,7 +2702,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["saltd","codyd","reaction"]
+        "tags": [
+            "saltd",
+            "codyd",
+            "reaction"
+        ]
     },
     "sanic_cube": {
         "name": "sanic_cube",
@@ -1837,7 +2714,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["gamecube","earrape"]
+        "tags": [
+            "gamecube",
+            "earrape"
+        ]
     },
     "sat_on_a_banana": {
         "name": "sat_on_a_banana",
@@ -1845,7 +2725,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jimmy","neutron","meme"]
+        "tags": [
+            "jimmy",
+            "neutron",
+            "meme"
+        ]
     },
     "scanning": {
         "name": "scanning",
@@ -1853,13 +2737,19 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rainbow6","r6","iq"]
+        "tags": [
+            "rainbow6",
+            "r6",
+            "iq"
+        ]
     },
     "screaming_joseph": {
         "name": "screaming_joseph",
         "file": "screaming_joseph.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
         "tags": []
     },
@@ -1869,7 +2759,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6"]
+        "tags": [
+            "r6",
+            "rainbow6"
+        ]
     },
     "sell_me_something": {
         "name": "sell_me_something",
@@ -1877,7 +2770,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "serious_protection": {
         "name": "serious_protection",
@@ -1885,15 +2780,24 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","rook"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "rook"
+        ]
     },
     "several_dicks": {
         "name": "several_dicks",
         "file": "several_dicks.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "sex": {
         "name": "sex",
@@ -1901,7 +2805,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song"]
+        "tags": [
+            "song"
+        ]
     },
     "sex_life": {
         "name": "sex_life",
@@ -1909,7 +2815,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","mark","tommy"]
+        "tags": [
+            "the",
+            "room",
+            "mark",
+            "tommy"
+        ]
     },
     "shia_labouef": {
         "name": "shia_labouef",
@@ -1917,7 +2828,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song"]
+        "tags": [
+            "song"
+        ]
     },
     "shit_sculpture": {
         "name": "shit_sculpture",
@@ -1925,7 +2838,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["avgn","reaction"]
+        "tags": [
+            "avgn",
+            "reaction"
+        ]
     },
     "shit_together": {
         "name": "shit_together",
@@ -1933,7 +2849,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","reaction"]
+        "tags": [
+            "rick",
+            "morty",
+            "reaction"
+        ]
     },
     "short_game": {
         "name": "short_game",
@@ -1941,15 +2861,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","meeseeks"]
+        "tags": [
+            "rick",
+            "morty",
+            "meeseeks"
+        ]
     },
     "shrek_hole": {
         "name": "shrek_hole",
         "file": "shrek_hole.mp3",
         "extension": "mp3",
-        "artists": ["Sukhraj"],
+        "artists": [
+            "Sukhraj"
+        ],
         "aliases": [],
-        "tags": ["sukhraj"]
+        "tags": [
+            "sukhraj"
+        ]
     },
     "shrek_onions": {
         "name": "shrek_onions",
@@ -1957,7 +2885,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["donkey"]
+        "tags": [
+            "donkey"
+        ]
     },
     "shrek_swamp": {
         "name": "shrek_swamp",
@@ -1965,7 +2895,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["reaction"]
+        "tags": [
+            "reaction"
+        ]
     },
     "sign_with_my_nuts": {
         "name": "sign_with_my_nuts",
@@ -1981,7 +2913,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "slipped_up": {
         "name": "slipped_up",
@@ -1989,13 +2924,18 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["virus","sniper"]
+        "tags": [
+            "virus",
+            "sniper"
+        ]
     },
     "slurping_joseph": {
         "name": "slurping_joseph",
         "file": "slurping_joseph.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
         "tags": []
     },
@@ -2005,7 +2945,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["nigel","lucas"]
+        "tags": [
+            "nigel",
+            "lucas"
+        ]
     },
     "smelly_smell": {
         "name": "smelly_smell",
@@ -2013,7 +2956,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","mr","krabs"]
+        "tags": [
+            "spongebob",
+            "mr",
+            "krabs"
+        ]
     },
     "soiled_it": {
         "name": "soiled_it",
@@ -2021,7 +2968,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "son_of_a_somebody": {
         "name": "son_of_a_somebody",
@@ -2029,7 +2978,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["all","star","meme"]
+        "tags": [
+            "all",
+            "star",
+            "meme"
+        ]
     },
     "special_friends": {
         "name": "special_friends",
@@ -2037,7 +2990,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["cancer"]
+        "tags": [
+            "cancer"
+        ]
     },
     "special_ops": {
         "name": "special_ops",
@@ -2053,7 +3008,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","recruit"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "recruit"
+        ]
     },
     "stop_worrying": {
         "name": "stop_worrying",
@@ -2061,7 +3020,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","jager"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "jager"
+        ]
     },
     "striped_sweater": {
         "name": "striped_sweater",
@@ -2069,7 +3032,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "subspecies": {
         "name": "subspecies",
@@ -2077,15 +3042,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","plankton"]
+        "tags": [
+            "spongebob",
+            "plankton"
+        ]
     },
     "suck_some_dick": {
         "name": "suck_some_dick",
         "file": "suck_some_dick.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "sukhraj": {
         "name": "sukhraj",
@@ -2093,7 +3066,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["faggot","reaction"]
+        "tags": [
+            "faggot",
+            "reaction"
+        ]
     },
     "sukhraj_watermelone": {
         "name": "sukhraj_watermelone",
@@ -2109,7 +3085,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","cancer"]
+        "tags": [
+            "rick",
+            "morty",
+            "cancer"
+        ]
     },
     "targets_detected": {
         "name": "targets_detected",
@@ -2117,7 +3097,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6","iq"]
+        "tags": [
+            "r6",
+            "rainbow6",
+            "iq"
+        ]
     },
     "teabagging": {
         "name": "teabagging",
@@ -2125,7 +3109,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "tearing_me_apart": {
         "name": "tearing_me_apart",
@@ -2133,23 +3120,38 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","tommy","lisa"]
+        "tags": [
+            "the",
+            "room",
+            "tommy",
+            "lisa"
+        ]
     },
     "thats_pretty_awww": {
         "name": "thats_pretty_awww",
         "file": "thats_pretty_awww.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "the_fuck": {
         "name": "the_fuck",
         "file": "the_fuck.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "the_one_who_knocks": {
         "name": "the_one_who_knocks",
@@ -2157,7 +3159,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["breaking","bad","heisenberg"]
+        "tags": [
+            "breaking",
+            "bad",
+            "heisenberg"
+        ]
     },
     "the_thing": {
         "name": "the_thing",
@@ -2165,7 +3171,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["adventure","time","lemongrab"]
+        "tags": [
+            "adventure",
+            "time",
+            "lemongrab"
+        ]
     },
     "thrift_shop": {
         "name": "thrift_shop",
@@ -2173,7 +3183,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "thx": {
         "name": "thx",
@@ -2181,7 +3195,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["earrape"]
+        "tags": [
+            "earrape"
+        ]
     },
     "to_be_continued": {
         "name": "to_be_continued",
@@ -2189,15 +3205,25 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["dankr","dark","souls","roundabout","yes"]
+        "tags": [
+            "dankr",
+            "dark",
+            "souls",
+            "roundabout",
+            "yes"
+        ]
     },
     "too_much_juice": {
         "name": "too_much_juice",
         "file": "too_much_juice.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph"]
+        "tags": [
+            "joseph"
+        ]
     },
     "touch_my_tralala": {
         "name": "touch_my_tralala",
@@ -2205,7 +3231,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song","cancer"]
+        "tags": [
+            "song",
+            "cancer"
+        ]
     },
     "tracer": {
         "name": "tracer",
@@ -2213,7 +3242,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["overwatch"]
+        "tags": [
+            "overwatch"
+        ]
     },
     "training_video": {
         "name": "training_video",
@@ -2221,7 +3252,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob"]
+        "tags": [
+            "spongebob"
+        ]
     },
     "trolololo": {
         "name": "trolololo",
@@ -2229,7 +3262,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song","reaction"]
+        "tags": [
+            "song",
+            "reaction"
+        ]
     },
     "trust": {
         "name": "trust",
@@ -2237,7 +3273,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["sukhraj"]
+        "tags": [
+            "sukhraj"
+        ]
     },
     "two_face": {
         "name": "two_face",
@@ -2245,7 +3283,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "two_of_us": {
         "name": "two_of_us",
@@ -2253,7 +3294,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["trump","song"]
+        "tags": [
+            "trump",
+            "song"
+        ]
     },
     "tyz": {
         "name": "tyz",
@@ -2261,7 +3305,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["tian","reposted"]
+        "tags": [
+            "tian",
+            "reposted"
+        ]
     },
     "unacceptable": {
         "name": "unacceptable",
@@ -2269,7 +3316,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["adventure","time","lemongrab","reaction"]
+        "tags": [
+            "adventure",
+            "time",
+            "lemongrab",
+            "reaction"
+        ]
     },
     "unicorn": {
         "name": "unicorn",
@@ -2277,7 +3329,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["banff"]
+        "tags": [
+            "banff"
+        ]
     },
     "virus": {
         "name": "virus",
@@ -2285,7 +3339,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["sniper"]
+        "tags": [
+            "sniper"
+        ]
     },
     "voice_of_god": {
         "name": "voice_of_god",
@@ -2293,7 +3349,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","vsauce"]
+        "tags": [
+            "meme",
+            "vsauce"
+        ]
     },
     "waste_of_time": {
         "name": "waste_of_time",
@@ -2301,7 +3360,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["r6","rainbow6"]
+        "tags": [
+            "r6",
+            "rainbow6"
+        ]
     },
     "wednesday": {
         "name": "wednesday",
@@ -2309,7 +3371,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","my","dudes"]
+        "tags": [
+            "meme",
+            "my",
+            "dudes"
+        ]
     },
     "weeaboo": {
         "name": "weeaboo",
@@ -2317,7 +3383,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["joseph","cancer","filthyfrank"]
+        "tags": [
+            "joseph",
+            "cancer",
+            "filthyfrank"
+        ]
     },
     "wet_panties": {
         "name": "wet_panties",
@@ -2325,7 +3395,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "what_a_story": {
         "name": "what_a_story",
@@ -2333,7 +3406,14 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["the","room","tommy","mark","oh","hai"]
+        "tags": [
+            "the",
+            "room",
+            "tommy",
+            "mark",
+            "oh",
+            "hai"
+        ]
     },
     "what_im_talkin_bout": {
         "name": "what_im_talkin_bout",
@@ -2341,15 +3421,26 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jaboody","dubs"]
+        "tags": [
+            "jaboody",
+            "dubs"
+        ]
     },
     "what_the_fuck": {
         "name": "what_the_fuck",
         "file": "what_the_fuck.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","you","fucking","idiot","reaction"]
+        "tags": [
+            "lucas",
+            "you",
+            "fucking",
+            "idiot",
+            "reaction"
+        ]
     },
     "what_you_got": {
         "name": "what_you_got",
@@ -2357,7 +3448,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["rick","morty","cromulon"]
+        "tags": [
+            "rick",
+            "morty",
+            "cromulon"
+        ]
     },
     "white_women": {
         "name": "white_women",
@@ -2365,7 +3460,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme"]
+        "tags": [
+            "meme"
+        ]
     },
     "whos_that_pokemon": {
         "name": "whos_that_pokemon",
@@ -2373,7 +3470,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["allahu","akbar"]
+        "tags": [
+            "allahu",
+            "akbar"
+        ]
     },
     "why_did_you_leave": {
         "name": "why_did_you_leave",
@@ -2381,7 +3481,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "whyyy": {
         "name": "whyyy",
@@ -2389,7 +3493,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["jontron","reaction"]
+        "tags": [
+            "jontron",
+            "reaction"
+        ]
     },
     "wumbo": {
         "name": "wumbo",
@@ -2397,7 +3504,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["spongebob","patrick"]
+        "tags": [
+            "spongebob",
+            "patrick"
+        ]
     },
     "you_are_a_pirate": {
         "name": "you_are_a_pirate",
@@ -2405,15 +3515,22 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["song"]
+        "tags": [
+            "song"
+        ]
     },
     "you_did_it": {
         "name": "you_did_it",
         "file": "you_did_it.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction"]
+        "tags": [
+            "joseph",
+            "reaction"
+        ]
     },
     "you_die": {
         "name": "you_die",
@@ -2421,15 +3538,26 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["avgn","cancer","reaction","silver","shit"]
+        "tags": [
+            "avgn",
+            "cancer",
+            "reaction",
+            "silver",
+            "shit"
+        ]
     },
     "you_dumb_shit": {
         "name": "you_dumb_shit",
         "file": "you_dumb_shit.mp3",
         "extension": "mp3",
-        "artists": ["Lucas"],
+        "artists": [
+            "Lucas"
+        ],
         "aliases": [],
-        "tags": ["lucas","reaction"]
+        "tags": [
+            "lucas",
+            "reaction"
+        ]
     },
     "you_like_that_baby": {
         "name": "you_like_that_baby",
@@ -2437,7 +3565,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["pink","guy","filthyfrank"]
+        "tags": [
+            "pink",
+            "guy",
+            "filthyfrank"
+        ]
     },
     "you_may_die": {
         "name": "you_may_die",
@@ -2445,7 +3577,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["shrek","lord","farquad"]
+        "tags": [
+            "shrek",
+            "lord",
+            "farquad"
+        ]
     },
     "you_sucked_my_dick": {
         "name": "you_sucked_my_dick",
@@ -2453,15 +3589,23 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["batman","badman"]
+        "tags": [
+            "batman",
+            "badman"
+        ]
     },
     "you_whore": {
         "name": "you_whore",
         "file": "you_whore.mp3",
         "extension": "mp3",
-        "artists": ["Joseph"],
+        "artists": [
+            "Joseph"
+        ],
         "aliases": [],
-        "tags": ["joseph","reaction"]
+        "tags": [
+            "joseph",
+            "reaction"
+        ]
     },
     "youre_fired": {
         "name": "youre_fired",
@@ -2469,6 +3613,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["adventure","time","lemongrab"]
+        "tags": [
+            "adventure",
+            "time",
+            "lemongrab"
+        ]
     }
 }
