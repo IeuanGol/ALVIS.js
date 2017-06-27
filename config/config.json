@@ -6,6 +6,7 @@
         "androidId": "",
         "masterToken": ""
     },
+    "default_volume": 50,
     "bot_game": "by PacketCloud™",
     "bot_game_link": "",
     "deleteMessages": true
