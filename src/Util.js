@@ -77,13 +77,13 @@ class Util {
   sendMusicList(message, tags, strict) {
     var collection = this.createMediaSubCollection(this.musicData, tags);
     const charlimit = 2000;
-    var hasResult = false;
+    var results_number = 0;
     var Output = "**__Songs:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
         if (this.searchMediaForTags(nextsong, tags, strict)){
-          hasResult = true;
+          results_number += 1;
           if (nextsong.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
             Output = "```\n" + nextsong.name + "\n";
@@ -93,8 +93,12 @@ class Util {
         }
       }
     }
-    if (hasResult){
-      Output = Output + "```";
+    if (results_number){
+      if (results_number == 1){
+        Output = Output + "```*1 result*";
+      }else{
+        Output = Output + "```*" + results_number + " results*";
+      }
     }else{
       Output = Output + "No Results" + "```";
     }
@@ -104,13 +108,13 @@ class Util {
   sendSoundList(message, tags, strict) {
     var collection = this.createMediaSubCollection(this.soundData, tags);
     const charlimit = 2000;
-    var hasResult = false;
+    var results_number = 0;
     var Output = "**__Sounds:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
         if (this.searchMediaForTags(nextsound, tags, strict)){
-          hasResult = true;
+          results_number += 1;
           if (nextsound.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
             Output = "```\n" + nextsound.name + "\n";
@@ -120,8 +124,12 @@ class Util {
         }
       }
     }
-    if (hasResult){
-      Output = Output + "```";
+    if (results_number){
+      if (results_number == 1){
+        Output = Output + "```*1 result*";
+      }else{
+        Output = Output + "```*" + results_number + " results*";
+      }
     }else{
       Output = Output + "No Results" + "```";
     }
@@ -163,6 +171,42 @@ class Util {
         }
       }
       return false;
+    }
+  }
+
+  getSongInfo(song_name){
+    if (this.musicData.hasOwnProperty(song_name)){
+      var song = this.musicData[song_name];
+      var name = " - ";
+      var file = " - ";
+      var artists = " - ";
+      var tags = " - ";
+      if (song.name) name = song.name;
+      if (song.file) file = song.file;
+      if (song.artists.length) artists = song.artists.join(" | ");
+      if (song.tags.length) tags = song.tags.join(" | ");
+      var Output = "```\nSong Name:  " + name + "\nFile:       " + file + "\nArtists:    " + artists + "\nTags:       " + tags + "\n```";
+      return Output;
+    }else{
+      return null;
+    }
+  }
+
+  getSoundInfo(sound_name) {
+    if (this.soundData.hasOwnProperty(sound_name)){
+      var sound = this.soundData[sound_name];
+      var name = " - ";
+      var file = " - ";
+      var artists = " - ";
+      var tags = " - ";
+      if (sound.name) name = sound.name;
+      if (sound.file) file = sound.file;
+      if (sound.artists.length) artists = sound.artists.join(" | ");
+      if (sound.tags.length) tags = sound.tags.join(" | ");
+      var Output = "```\nSound Name: " + name + "\nFile:       " + file + "\nArtists:    " + artists + "\nTags:       " + tags + "\n```";
+      return Output;
+    }else{
+      return null;
     }
   }
 

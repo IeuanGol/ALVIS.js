@@ -21,11 +21,13 @@ Bot Commands:
     !about
     !flip
     !help
-    !playmusic [?|song_name]
-    !playsound [?|sound_name]
+    !playmusic [song_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]
+    !playsound [sound_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]
     !playstream <Youtube_URL>
     !r6stats <username> [platform]
     !roll
+	!songinfo <song_name>
+	!soundinfo <sound_name>
     !stop
 
   Admin Commands:

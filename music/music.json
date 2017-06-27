@@ -10,7 +10,9 @@
         "tags": [
             "smash mouth",
             "shrek",
-            "all star",
+            "allstar",
+            "all",
+            "star",
             "meme",
             "soundtrack"
         ]
@@ -49,7 +51,8 @@
         "aliases": [],
         "tags": [
             "america",
-            "fuck yeah",
+            "fuck",
+            "yeah",
             "murica"
         ]
     },
@@ -75,8 +78,14 @@
         ],
         "aliases": [],
         "tags": [
-            "call me maybe",
-            "never gonna give you up",
+            "call",
+            "me",
+            "maybe",
+            "never",
+            "gonna",
+            "give",
+            "you",
+            "up",
             "rick roll",
             "meme"
         ]
@@ -89,7 +98,8 @@
         "aliases": [],
         "tags": [
             "soundtrack",
-            "star wars",
+            "star",
+            "wars",
             "cantina"
         ]
     },
@@ -115,8 +125,8 @@
         ],
         "aliases": [],
         "tags": [
-            "top gun",
-            "kenny loggins",
+            "top",
+            "gun",
             "soundtrack"
         ]
     },
@@ -134,7 +144,8 @@
             "dig",
             "hole",
             "patientzero",
-            "patient zero",
+            "patient",
+            "zero",
             "yogscast"
         ]
     },
@@ -184,10 +195,8 @@
         ],
         "aliases": [],
         "tags": [
-            "sergey stepanov",
             "epic",
             "meme",
-            "epic sax",
             "sax"
         ]
     },
@@ -202,7 +211,7 @@
             "fun",
             "meme",
             "plankton",
-            "spongebob squarepants",
+            "squarepants",
             "soundtrack"
         ]
     },
@@ -214,8 +223,9 @@
         "aliases": [],
         "tags": [
             "spongebob",
-            "goofy goober",
-            "spongebob squarepants",
+            "goofy",
+            "goobers",
+            "squarepants",
             "soundtrack"
         ]
     },
@@ -254,7 +264,10 @@
         ],
         "aliases": [],
         "tags": [
-            "house of cards",
+            "house",
+            "of",
+            "cards",
+            "hoc",
             "theme",
             "soundtrack"
         ]
@@ -270,7 +283,9 @@
         "tags": [
             "shia",
             "motivational",
-            "just do it",
+            "just",
+            "do",
+            "it",
             "meme"
         ]
     },
@@ -283,9 +298,12 @@
         ],
         "aliases": [],
         "tags": [
-            "pink guy",
-            "kill yourself",
-            "filthy frank"
+            "pink",
+            "guy",
+            "kill",
+            "yourself",
+            "filthy",
+            "frank"
         ]
     },
     "let_it_go_pg": {
@@ -298,8 +316,11 @@
         "aliases": [],
         "tags": [
             "frozen",
-            "let it go",
-            "pink guy",
+            "let",
+            "it",
+            "go",
+            "pink",
+            "guy",
             "cancer"
         ]
     },
@@ -328,7 +349,7 @@
         "tags": [
             "spongebob",
             "men",
-            "spongebob squarepants",
+            "squarepants",
             "soundtrack"
         ]
     },
@@ -358,7 +379,8 @@
         "tags": [
             "meme",
             "soundtrack",
-            "lazy town",
+            "lazy",
+            "town",
             "soundtrack"
         ]
     },
@@ -368,7 +390,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "dank",
+            "meme"
+        ]
     },
     "please_stop_calling_me_gay": {
         "name": "please_stop_calling_me_gay",
@@ -381,7 +406,8 @@
         "tags": [
             "gay",
             "cancer",
-            "pink guy"
+            "pink",
+            "guy"
         ]
     },
     "potatos": {
@@ -392,7 +418,10 @@
         "aliases": [],
         "tags": [
             "meme",
-            "lord of the rings",
+            "lord",
+            "of",
+            "the",
+            "rings",
             "potatos",
             "lotr",
             "hobbits"
@@ -424,7 +453,8 @@
             "ramen",
             "rap",
             "cancer",
-            "pink guy"
+            "pink",
+            "guy"
         ]
     },
     "reposted": {
@@ -451,7 +481,8 @@
         ],
         "aliases": [],
         "tags": [
-            "all star",
+            "all",
+            "star",
             "shrek",
             "reposted",
             "dank",
@@ -470,9 +501,11 @@
         "aliases": [],
         "tags": [
             "roundabout",
-            "dark souls",
+            "dark",
+            "souls",
             "dank",
-            "sushi rainbow",
+            "sushi",
+            "rainbow",
             "yes"
         ]
     },
@@ -500,7 +533,8 @@
         ],
         "aliases": [],
         "tags": [
-            "pink guy",
+            "pink",
+            "guy",
             "cancer"
         ]
     },
@@ -527,7 +561,7 @@
         "aliases": [],
         "tags": [
             "spongebob",
-            "spongebob squarepants",
+            "squarepants",
             "soundtrack"
         ]
     },
@@ -552,8 +586,10 @@
         ],
         "aliases": [],
         "tags": [
-            "ultimate showdown",
-            "lemon demon"
+            "ultimate",
+            "showdown",
+            "lemon",
+            "demon"
         ]
     },
     "you_are_a_pirate": {
@@ -567,7 +603,8 @@
         "aliases": [],
         "tags": [
             "pirate",
-            "lazy town",
+            "lazy",
+            "town",
             "soundtrack"
         ]
     }

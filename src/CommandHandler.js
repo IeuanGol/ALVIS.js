@@ -41,9 +41,9 @@ class CommandHandler {
     }else if (command === "playstream"){
       this.commandExecuter.playstreamCommand(message, arg1);
     }else if (command === "purgemusic"){
-      this.commandExecuter.purgemusicCommand(message);
+      this.commandExecuter.purgemusicCommand(message, arg1);
     }else if (command === "purgesounds"){
-      this.commandExecuter.purgesoundsCommand(message);
+      this.commandExecuter.purgesoundsCommand(message, arg1);
     }else if (command === "removemusic"){
       this.commandExecuter.removemusicCommand(message, arg1);
     }else if (command === "removesound"){
@@ -58,6 +58,10 @@ class CommandHandler {
       this.commandExecuter.setusersoundCommand(message, arg1, arg2);
     }else if (command === "showusersounds"){
       this.commandExecuter.showusersoundsCommand(message);
+    }else if (command === "songinfo"){
+      this.commandExecuter.songinfoCommand(message, arg1);
+    }else if (command === "soundinfo"){
+      this.commandExecuter.soundinfoCommand(message, arg1);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }else{

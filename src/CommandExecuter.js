@@ -26,7 +26,7 @@ class CommandExecuter {
       var sound = file_list[i];
       var ext = sound.split(".");
       ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1);
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
       if (!this.util.musicData.hasOwnProperty(name)){
         if (ext != "json"){
           this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
@@ -53,7 +53,7 @@ class CommandExecuter {
       var sound = file_list[i];
       var ext = sound.split(".");
       ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1);
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
       if (!this.util.soundData.hasOwnProperty(name)){
         if (ext != "json"){
           this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
@@ -85,6 +85,11 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
+    var name = arg1.toLowerCase();
+    var sound = arg2.split("/");
+    sound = sound[sound.length - 1];
+    sound = arg2.split("\\");
+    sound = sound[sound.length - 1];
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
     const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
@@ -110,6 +115,11 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
+    var name = arg1.toLowerCase();
+    var sound = arg2.split("/");
+    sound = sound[sound.length - 1];
+    sound = arg2.split("\\");
+    sound = sound[sound.length - 1];
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
     const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
@@ -310,34 +320,44 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  purgemusicCommand(message) {
+  purgemusicCommand(message, arg1) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
-    this.util.musicData = {};
-    var file = this.bot.basic.music_path + "/music.json";
-    fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
-      return;
-    });
-    this.util.logStandardCommand(message, "purgemusic");
-    this.util.cleanupMessage(message);
+    if (arg1 == "DELETE"){
+      this.util.musicData = {};
+      var file = this.bot.basic.music_path + "/music.json";
+      fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
+        return;
+      });
+      this.util.logStandardCommand(message, "purgemusic");
+      this.util.cleanupMessage(message);
+    }else{
+      message.author.send("Are you sure you want to do this? The entire music library structure will be deleted.\nIf you know what you are doing, run **!purgemusic DELETE** to confirm.");
+      this.util.cleanupMessage(message);
+    }
   }
 
-  purgesoundsCommand(message) {
+  purgesoundsCommand(message, arg1) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
-    this.util.soundData = {};
-    var file = this.bot.basic.sound_path + "/sounds.json";
-    fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
-      return;
-    });
-    this.util.logStandardCommand(message, "purgesounds");
-    this.util.cleanupMessage(message);
+    if (arg1 == "DELETE"){
+      this.util.soundData = {};
+      var file = this.bot.basic.sound_path + "/sounds.json";
+      fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
+        return;
+      });
+      this.util.logStandardCommand(message, "purgesounds");
+      this.util.cleanupMessage(message);
+    }else{
+      message.author.send("Are you sure you want to do this? The entire sound library structure will be deleted.\nIf you know what you are doing, run **!purgesounds DELETE** to confirm.");
+      this.util.cleanupMessage(message);
+    }
   }
 
   r6statsCommand(message, arg1, arg2) {
@@ -447,6 +467,28 @@ class CommandExecuter {
     }
     this.util.sendUserSounds(message);
     this.util.logStandardCommand(message,"showusersounds");
+    this.util.cleanupMessage(message);
+  }
+
+  songinfoCommand(message, arg1) {
+    var output = this.util.getSongInfo(arg1.toLowerCase());
+    if (output) {
+      message.author.send(output);
+      this.util.logStandardCommand(message, "songinfo");
+    }else{
+      message.author.send("I could not find the song '" + arg1 + "' in my local library.");
+    }
+    this.util.cleanupMessage(message);
+  }
+
+  soundinfoCommand(message, arg1) {
+    var output = this.util.getSoundInfo(arg1.toLowerCase());
+    if (output) {
+      message.author.send(output);
+      this.util.logStandardCommand(message, "soundinfo");
+    }else{
+      message.author.send("I could not find the sound '" + arg1 + "' in my local library.");
+    }
     this.util.cleanupMessage(message);
   }
 

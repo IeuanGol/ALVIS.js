@@ -145,7 +145,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "community"
+            "community",
+            "dean"
         ]
     },
     "b0ss_lucas": {
@@ -169,7 +170,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "bandit"
+            "bandit",
+            "siege"
         ]
     },
     "bat_signal": {
@@ -193,7 +195,9 @@
             "r6",
             "rainbow6",
             "lord",
-            "chanka"
+            "chanka",
+            "tachanka",
+            "siege"
         ]
     },
     "be_more_careful": {
@@ -204,7 +208,10 @@
         "aliases": [],
         "tags": [
             "patches",
-            "reaction"
+            "reaction",
+            "dark",
+            "souls",
+            "ds3"
         ]
     },
     "beauties_in_place": {
@@ -216,7 +223,8 @@
         "tags": [
             "smoke",
             "r6",
-            "rainbow6"
+            "rainbow6",
+            "siege"
         ]
     },
     "being_fresh": {
@@ -276,7 +284,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "thermite"
+            "thermite",
+            "siege"
         ]
     },
     "bitches_aint_shit": {
@@ -301,7 +310,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "blitz"
+            "blitz",
+            "siege"
         ]
     },
     "bonfire_sale": {
@@ -312,8 +322,7 @@
         "aliases": [],
         "tags": [
             "cod",
-            "cancer",
-            "garbage"
+            "zombies"
         ]
     },
     "bounce_up_and_down": {
@@ -369,9 +378,7 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "cancer",
-            "garbage",
-            "shit",
+            "zombies",
             "cod"
         ]
     },
@@ -504,9 +511,6 @@
         "tags": [
             "john",
             "cena",
-            "his",
-            "name",
-            "is",
             "meme"
         ]
     },
@@ -558,7 +562,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "fuze"
+            "fuze",
+            "siege"
         ]
     },
     "creamy": {
@@ -587,7 +592,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "jimmy",
+            "neutron",
+            "cancer"
+        ]
     },
     "cruel_ploy": {
         "name": "cruel_ploy",
@@ -632,10 +641,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "cancer",
-            "garbage",
-            "shit",
-            "cod"
+            "cod",
+            "zombies"
         ]
     },
     "deported": {
@@ -684,7 +691,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "dont_do_it_nig": {
@@ -721,9 +729,7 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "cancer",
-            "shit",
-            "garbage",
+            "zombies",
             "cod"
         ]
     },
@@ -759,7 +765,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "bandit"
+            "bandit",
+            "siege"
         ]
     },
     "dump_in_a_mug": {
@@ -860,7 +867,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "engineer2": {
@@ -872,7 +880,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "eric": {
@@ -929,9 +938,14 @@
         "name": "faded",
         "file": "faded.mp3",
         "extension": "mp3",
-        "artists": [],
+        "artists": [
+              "Alan Walker"
+        ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "music",
+            "song"
+        ]
     },
     "faggot": {
         "name": "faggot",
@@ -985,10 +999,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "cancer",
-            "shit",
-            "garbage",
-            "cod"
+            "cod",
+            "zombies"
         ]
     },
     "floor_is_strong": {
@@ -1002,7 +1014,8 @@
             "rainbow6",
             "tachanka",
             "lord",
-            "chanka"
+            "chanka",
+            "siege"
         ]
     },
     "fuck_poem": {
@@ -1052,9 +1065,12 @@
         "name": "gangnam_style",
         "file": "gangnam_style.mp3",
         "extension": "mp3",
-        "artists": [],
+        "artists": ["PSY"],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "music",
+            "song"
+        ]
     },
     "gay_goober_rock": {
         "name": "gay_goober_rock",
@@ -1065,7 +1081,8 @@
         "tags": [
             "idubzztv",
             "gay",
-            "spongebob"
+            "spongebob",
+            "song"
         ]
     },
     "genji_ult": {
@@ -1446,10 +1463,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "cancer",
-            "shit",
-            "garbage",
-            "cod"
+            "cod",
+            "zombies"
         ]
     },
     "internet_is_for_porn": {
@@ -1472,7 +1487,8 @@
             "r6",
             "rainbow6",
             "iq",
-            "screaming"
+            "screaming",
+            "siege"
         ]
     },
     "isengard": {
@@ -1508,7 +1524,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "joseph_cube": {
@@ -1579,7 +1596,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+              "song",
+              "parody"
+        ]
     },
     "kim_jong_un": {
         "name": "kim_jong_un",
@@ -1638,7 +1658,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "thatchers"
+            "thatchers",
+            "siege"
         ]
     },
     "laughing": {
@@ -1771,7 +1792,8 @@
             "rainbow6",
             "tachanka",
             "lord",
-            "chanka"
+            "chanka",
+            "siege"
         ]
     },
     "loud_noises": {
@@ -1797,7 +1819,8 @@
             "lord",
             "chanka",
             "tachanka",
-            "reaction"
+            "reaction",
+            "siege"
         ]
     },
     "lucas_joseph_orgasm": {
@@ -1883,10 +1906,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "shit",
-            "garbage",
-            "cancer",
-            "cod"
+            "cod",
+            "zombies"
         ]
     },
     "mayonnaise": {
@@ -1990,7 +2011,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "smoke"
+            "smoke",
+            "siege"
         ]
     },
     "my_heart_will_go_on": {
@@ -2014,7 +2036,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "thermite"
+            "thermite",
+            "siege"
         ]
     },
     "nigcube": {
@@ -2056,7 +2079,8 @@
         "aliases": [],
         "tags": [
             "r6",
-            "rainbow6"
+            "rainbow6",
+            "siege"
         ]
     },
     "no_god_please_no": {
@@ -2090,7 +2114,8 @@
         "aliases": [],
         "tags": [
             "rainbow6",
-            "r6"
+            "r6",
+            "siege"
         ]
     },
     "no_reason_boner": {
@@ -2204,9 +2229,7 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "shit",
-            "cancer",
-            "garbage",
+            "zombies",
             "cod"
         ]
     },
@@ -2512,7 +2535,8 @@
             "rainbow6",
             "lord",
             "chanka",
-            "tachanka"
+            "tachanka",
+            "siege"
         ]
     },
     "popopotato": {
@@ -2616,7 +2640,8 @@
         "aliases": [],
         "tags": [
             "r6",
-            "rainbow6"
+            "rainbow6",
+            "siege"
         ]
     },
     "ricefields": {
@@ -2692,7 +2717,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "salamander": {
@@ -2752,7 +2778,8 @@
         "tags": [
             "rainbow6",
             "r6",
-            "iq"
+            "iq",
+            "siege"
         ]
     },
     "screaming_joseph": {
@@ -2773,7 +2800,8 @@
         "aliases": [],
         "tags": [
             "r6",
-            "rainbow6"
+            "rainbow6",
+            "siege"
         ]
     },
     "sell_me_something": {
@@ -2795,7 +2823,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "rook"
+            "rook",
+            "siege"
         ]
     },
     "several_dicks": {
@@ -3012,7 +3041,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "siege",
+            "rainbow6",
+            "r6",
+            "terrorists"
+        ]
     },
     "sterile": {
         "name": "sterile",
@@ -3023,7 +3057,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "recruit"
+            "recruit",
+            "siege"
         ]
     },
     "stop_worrying": {
@@ -3035,7 +3070,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "jager"
+            "jager",
+            "siege"
         ]
     },
     "striped_sweater": {
@@ -3122,7 +3158,8 @@
         "tags": [
             "r6",
             "rainbow6",
-            "iq"
+            "iq",
+            "siege"
         ]
     },
     "teabagging": {
@@ -3228,7 +3265,7 @@
         "artists": [],
         "aliases": [],
         "tags": [
-            "dankr",
+            "dank",
             "dark",
             "souls",
             "roundabout",
@@ -3392,7 +3429,9 @@
         "aliases": [],
         "tags": [
             "r6",
-            "rainbow6"
+            "rainbow6",
+            "siege",
+            "thatcher"
         ]
     },
     "wednesday": {
