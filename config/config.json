@@ -1,6 +1,11 @@
 {
-    "token": "YOUR_DISCORD_BOT_TOKEN",
-    "chatbot_key": "YOUR_API.AI_AGENT_KEY",
+    "discord_token": "YOUR_DISCORD_BOT_TOKEN",
+    "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN",
+    "wolfram_key": "YOUR_WOLFRAM_API_KEY",
+    "google_credentials": {
+        "androidId": "",
+        "masterToken": ""
+    },
     "bot_game": "by PacketCloud™",
     "bot_game_link": "",
     "deleteMessages": true

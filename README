@@ -85,6 +85,9 @@ Package:
         We send web requests to api.r6stats.com to retrieve player stats for Rainbow Six Siege.
         [https://r6stats.com]
         [https://rainbow6.ubisoft.com]
+		
+	  playsound:
+		Used to send search requests to Google Play Music for song lookup and stream URL retrieval, allowing for music playback.
 
     Other Dependencies:
       bufferutil: ^3.0.1

@@ -11,11 +11,7 @@
         "name": "20_century_fox",
         "file": "20_century_fox.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["cancer","lucas"]
     },
@@ -81,7 +77,7 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["canada","tim","hortons",]
+        "tags": ["canada","tim","hortons"]
     },
     "and_i": {
         "name": "and_i",
@@ -111,11 +107,7 @@
         "name": "b0ss_lucas",
         "file": "b0ss_lucas.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas"]
     },
@@ -220,17 +212,6 @@
         "file": "bonfire_sale.mp3",
         "extension": "mp3",
         "artists": [],
-<<<<<<< HEAD
-        "aliases": [],
-        "tags": []
-    },
-    "boo_boo": {
-        "name": "boo_boo",
-        "file": "boo_boo.mp3",
-        "extension": "mp3",
-        "artists": [],
-=======
->>>>>>> origin/master
         "aliases": [],
         "tags": ["cod","cancer","garbage"]
     },
@@ -246,11 +227,7 @@
         "name": "burp",
         "file": "burp.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["reaction","lucas"]
     },
@@ -498,11 +475,7 @@
         "name": "dont_do_it_nig",
         "file": "dont_do_it_nig.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction","no"]
     },
@@ -582,11 +555,7 @@
         "name": "eat_my_asshole",
         "file": "eat_my_asshole.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction"]
     },
@@ -594,11 +563,7 @@
         "name": "eating_my_dick",
         "file": "eating_my_dick.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction"]
     },
@@ -606,11 +571,7 @@
         "name": "education",
         "file": "education.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Jospeh"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph"]
     },
@@ -634,11 +595,7 @@
         "name": "eric",
         "file": "eric.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Eric"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["cancer","eric"]
     },
@@ -646,11 +603,7 @@
         "name": "eugene_ken_kuray",
         "file": "eugene_ken_kuray.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","cancer","overwatch"]
     },
@@ -738,11 +691,7 @@
         "name": "gadget",
         "file": "gadget.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -798,11 +747,7 @@
         "name": "glorious_pcmr",
         "file": "glorious_pcmr.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph"]
     },
@@ -842,11 +787,7 @@
         "name": "grand_fuckery",
         "file": "grand_fuckery.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph"]
     },
@@ -886,11 +827,7 @@
         "name": "he_fucked_up",
         "file": "he_fucked_up.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","cancer","reaction"]
     },
@@ -906,11 +843,7 @@
         "name": "hi_guiyz",
         "file": "hi_guiyz.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph","Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","lucas","cancer","dank"]
     },
@@ -918,11 +851,7 @@
         "name": "hitler_has_won",
         "file": "hitler_has_won.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Sukhraj"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["sukhraj","hitler"]
     },
@@ -938,11 +867,7 @@
         "name": "i_am_hitler",
         "file": "i_am_hitler.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Doug"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["doug"]
     },
@@ -1016,7 +941,7 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": ["meme","dank"]		
+        "tags": ["meme","dank"]
     },
     "im_gay": {
         "name": "im_gay",
@@ -1038,11 +963,7 @@
         "name": "indiana_theme",
         "file": "indiana_theme.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","cancer"]
     },
@@ -1106,11 +1027,7 @@
         "name": "joseph_wat",
         "file": "joseph_wat.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","what","wat"]
     },
@@ -1190,11 +1107,7 @@
         "name": "laughing",
         "file": "laughing.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","cancer","reaction"]
     },
@@ -1226,11 +1139,7 @@
         "name": "lick_asshole",
         "file": "lick_asshole.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction"]
     },
@@ -1270,11 +1179,7 @@
         "name": "little_fingers",
         "file": "little_fingers.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas"]
     },
@@ -1306,11 +1211,7 @@
         "name": "lucas_joseph_orgasm",
         "file": "lucas_joseph_orgasm.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas","Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","joseph","orgasm","cock"]
     },
@@ -1318,11 +1219,7 @@
         "name": "lucas_laughter",
         "file": "lucas_laughter.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["cancer"]
     },
@@ -1330,11 +1227,7 @@
         "name": "lucas_ult",
         "file": "lucas_ult.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["hanzo","overwatch"]
     },
@@ -1406,11 +1299,7 @@
         "name": "merked_asshole",
         "file": "merked_asshole.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["reaction"]
     },
@@ -1530,11 +1419,7 @@
         "name": "nonono",
         "file": "nonono.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["reaction"]
     },
@@ -1550,11 +1435,7 @@
         "name": "nope_nope",
         "file": "nope_nope.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["reaction"]
     },
@@ -1562,11 +1443,7 @@
         "name": "not_enough_juice",
         "file": "not_enough_juice.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": []
     },
@@ -1686,11 +1563,7 @@
         "name": "orgasm_joseph",
         "file": "orgasm_joseph.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["reaction"]
     },
@@ -1698,11 +1571,7 @@
         "name": "orgasm_tyler",
         "file": "orgasm_tyler.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Tyler"],
->>>>>>> origin/master
         "aliases": [],
         "tags": []
     },
@@ -1710,11 +1579,7 @@
         "name": "overwatch_theme",
         "file": "overwatch_theme.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": []
     },
@@ -1762,11 +1627,7 @@
         "name": "piece_of_shit",
         "file": "piece_of_shit.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas","Sukhraj"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","sukhraj","reaction"]
     },
@@ -1854,11 +1715,7 @@
         "name": "probably_right",
         "file": "probably_right.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -1884,7 +1741,7 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": [pussy","pink","guy","filthyfrank]
+        "tags": ["pussy","pink","guy","filthyfrank"]
     },
     "raspberry": {
         "name": "raspberry",
@@ -1914,11 +1771,7 @@
         "name": "ride_the_bus",
         "file": "ride_the_bus.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph"]
     },
@@ -2006,11 +1859,7 @@
         "name": "screaming_joseph",
         "file": "screaming_joseph.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": []
     },
@@ -2042,11 +1891,7 @@
         "name": "several_dicks",
         "file": "several_dicks.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -2102,11 +1947,7 @@
         "name": "shrek_hole",
         "file": "shrek_hole.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Sukhraj"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["sukhraj"]
     },
@@ -2154,11 +1995,7 @@
         "name": "slurping_joseph",
         "file": "slurping_joseph.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": []
     },
@@ -2246,11 +2083,7 @@
         "name": "suck_some_dick",
         "file": "suck_some_dick.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -2306,11 +2139,7 @@
         "name": "thats_pretty_awww",
         "file": "thats_pretty_awww.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -2318,11 +2147,7 @@
         "name": "the_fuck",
         "file": "the_fuck.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -2370,11 +2195,7 @@
         "name": "too_much_juice",
         "file": "too_much_juice.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph"]
     },
@@ -2526,11 +2347,7 @@
         "name": "what_the_fuck",
         "file": "what_the_fuck.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","you","fucking","idiot","reaction"]
     },
@@ -2594,11 +2411,7 @@
         "name": "you_did_it",
         "file": "you_did_it.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction"]
     },
@@ -2614,11 +2427,7 @@
         "name": "you_dumb_shit",
         "file": "you_dumb_shit.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Lucas"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["lucas","reaction"]
     },
@@ -2650,11 +2459,7 @@
         "name": "you_whore",
         "file": "you_whore.mp3",
         "extension": "mp3",
-<<<<<<< HEAD
-        "artists": [],
-=======
         "artists": ["Joseph"],
->>>>>>> origin/master
         "aliases": [],
         "tags": ["joseph","reaction"]
     },
