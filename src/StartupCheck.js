@@ -28,6 +28,10 @@ class StartupCheck {
       this.setDefaultConfig();
       return false;
     }
+    if (!this.bot.config.hasOwnProperty("default_volume")){
+      this.setDefaultConfig();
+      return false;
+    }
     if (!this.bot.config.hasOwnProperty("bot_game") || typeof this.bot.config.bot_game !== 'string'){
       this.setDefaultConfig();
       return false;
@@ -73,7 +77,7 @@ class StartupCheck {
   }
 
   setDefaultConfig() {
-    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "default_volume": 50, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
     fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
       if (err) console.log(err);
     });
