@@ -141,8 +141,16 @@ class CommandExecuter {
   playmusicCommand(message, arg1, arg2, body) {
     if (arg1 === "?"){
       if (arg2){
-        var search_tag = body.substring(body.indexOf(" ") + 1);
-        this.util.sendMusicList(message, search_tag);
+        if (arg2.startsWith("-")){
+          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          this.util.sendMusicList(message, search_tags, false);
+        }else if (arg2.startsWith("+")){
+          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          this.util.sendMusicList(message, search_tags, true);
+        }else{
+          var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
+          this.util.sendMusicList(message, search_tags, false);
+        }
       }else{
         this.util.sendMusicList(message, null);
       }
@@ -173,8 +181,19 @@ class CommandExecuter {
         this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
         this.util.logStandardCommand(message, "playmusic");
       }else if (arg1.startsWith("-")){
-        var tag = arg1.substring(1);
-        var collection = this.util.createMediaSubCollection(this.util.musicData, tag);
+        var tags = body.substring(1).split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, false);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no songs matching your query.");
+        }else{
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file);
+          this.util.logStandardCommand(message, "playsound");
+        }
+      }else if (arg1.startsWith("+")){
+        var tags = body.substring(1).split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, true);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no songs matching your query.");
         }else{
@@ -199,8 +218,16 @@ class CommandExecuter {
     var stream_options = {};
     if (arg1 === "?"){
       if (arg2){
-        var search_tag = body.substring(body.indexOf(" ") + 1);
-        this.util.sendSoundList(message, search_tag);
+        if (arg2.startsWith("-")){
+          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          this.util.sendSoundList(message, search_tags, false);
+        }else if (arg2.startsWith("+")){
+          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          this.util.sendSoundList(message, search_tags, true);
+        }else{
+          var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
+          this.util.sendSoundList(message, search_tags, false);
+        }
       }else{
         this.util.sendSoundList(message, null);
       }
@@ -231,8 +258,19 @@ class CommandExecuter {
         this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file, stream_options);
         this.util.logStandardCommand(message, "playsound");
       }else if (arg1.startsWith("-")){
-        var tag = arg1.substring(1);
-        var collection = this.util.createMediaSubCollection(this.util.soundData, tag);
+        var tags = body.substring(1).split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, false);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no sounds matching your query.");
+        }else{
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file, stream_options);
+          this.util.logStandardCommand(message, "playsound");
+        }
+      }else if (arg1.startsWith("+")){
+        var tags = body.substring(1).split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, true);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no sounds matching your query.");
         }else{

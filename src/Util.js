@@ -74,15 +74,15 @@ class Util {
   	return false;
   }
 
-  sendMusicList(message, tag) {
-    var collection = this.createMediaSubCollection(this.musicData, tag);
+  sendMusicList(message, tags, strict) {
+    var collection = this.createMediaSubCollection(this.musicData, tags);
     const charlimit = 2000;
     var hasResult = false;
     var Output = "**__Songs:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
-        if (this.searchMediaForTag(nextsong, tag)){
+        if (this.searchMediaForTags(nextsong, tags, strict)){
           hasResult = true;
           if (nextsong.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
@@ -101,15 +101,15 @@ class Util {
     message.author.send(Output);
   }
 
-  sendSoundList(message, tag) {
-    var collection = this.createMediaSubCollection(this.soundData, tag);
+  sendSoundList(message, tags, strict) {
+    var collection = this.createMediaSubCollection(this.soundData, tags);
     const charlimit = 2000;
     var hasResult = false;
     var Output = "**__Sounds:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
-        if (this.searchMediaForTag(nextsound, tag)){
+        if (this.searchMediaForTags(nextsound, tags, strict)){
           hasResult = true;
           if (nextsound.name.length + Output.length >= charlimit - 5){
             message.author.send(Output + "```");
@@ -128,31 +128,50 @@ class Util {
     message.author.send(Output);
   }
 
-  searchMediaForTag(media, tag) {
-    if (tag == null) return true;
-    var tags = tag.split(" ");
+  searchMediaForTags(media, tags, strict) {
+    if (tags == null) return true;
     var i, j;
-    for (i = 0; i < tags.length; i++){
-      if (media.name.includes(tags[i])) return true;
-      for (j = 0; j < media.artists.length; j++){
-        if (media.artists[j].includes(tags[i])) return true;
+    if (strict){
+      for (i = 0; i < tags.length; i++){
+        var hit = false;
+        var tag = tags[i].toLowerCase();
+        if (media.name.toLowerCase().includes(tag)) hit = true;
+        for (j = 0; j < media.artists.length; j++){
+          if (media.artists[j].toLowerCase().includes(tag)) hit = true;
+        }
+        for (j = 0; j < media.tags.length; j++){
+          if (media.tags[j].toLowerCase().includes(tag)) hit = true;
+        }
+        for (j = 0; j < media.aliases.length; j++){
+          if (media.aliases[j].toLowerCase().includes(tag)) hit = true;
+        }
+        if (!hit) return false;
       }
-      for (j = 0; j < media.tags.length; j++){
-        if (media.tags[j].includes(tags[i])) return true;
+      return true;
+    }else{
+      for (i = 0; i < tags.length; i++){
+        var tag = tags[i].toLowerCase();
+        if (media.name.toLowerCase().includes(tag)) return true;
+        for (j = 0; j < media.artists.length; j++){
+          if (media.artists[j].toLowerCase().includes(tag)) return true;
+        }
+        for (j = 0; j < media.tags.length; j++){
+          if (media.tags[j].toLowerCase().includes(tag)) return true;
+        }
+        for (j = 0; j < media.aliases.length; j++){
+          if (media.aliases[j].toLowerCase().includes(tag)) return true;
+        }
       }
-      for (j = 0; j < media.aliases.length; j++){
-        if (media.aliases[j].includes(tags[i])) return true;
-      }
+      return false;
     }
-    return false;
   }
 
-  createMediaSubCollection(media_collection, tag) {
+  createMediaSubCollection(media_collection, tag, strict) {
     var result_collection = {};
     for (var key in media_collection){
       if (media_collection.hasOwnProperty(key)) {
         var nextitem = media_collection[key];
-        if (this.searchMediaForTag(nextitem, tag)){
+        if (this.searchMediaForTags(nextitem, tag, strict)){
           result_collection[key] = nextitem;
         }
       }

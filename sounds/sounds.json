@@ -1974,12 +1974,12 @@
         "file": "motherfucker.mp3",
         "extension": "mp3",
         "artists": [
-			"Julian"
-		],
+            "Julian"
+        ],
         "aliases": [],
         "tags": [
-			"julian"
-		]
+            "julian"
+        ]
     },
     "muppet": {
         "name": "muppet",
@@ -3048,6 +3048,14 @@
             "spongebob"
         ]
     },
+    "styrofoam": {
+        "name": "styrofoam",
+        "file": "styrofoam.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": []
+    },
     "subspecies": {
         "name": "subspecies",
         "file": "subspecies.mp3",
@@ -3269,6 +3277,14 @@
         "tags": [
             "spongebob"
         ]
+    },
+    "transexual_asian_girlfriend": {
+        "name": "transexual_asian_girlfriend",
+        "file": "transexual_asian_girlfriend.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": []
     },
     "trolololo": {
         "name": "trolololo",
