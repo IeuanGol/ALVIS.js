@@ -12,9 +12,9 @@ class Wolfram extends DefaultResponse {
     var action = response.result.action;
     var actionType = action.split(".")[1];
     if (actionType == "topic_search"){
-      this.wolframService.sendWolframResponse(message, response, "I found this for you:\n\n", false, true);
+      this.wolframService.sendWolframResponse(message, response, "I found this for you:\n\n", null, true, true, false, false, true);
     }else if (actionType == "resolve_equation"){
-      this.wolframService.sendWolframResponse(message, response, "Here you go:\n\n", false, false);
+      this.wolframService.sendWolframResponse(message, response, "Here you go:\n\n", null, false, true, true, true);
     }else{
       this.defaultHandler(message, response);
     }

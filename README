@@ -21,21 +21,21 @@ Bot Commands:
     !about
     !flip
     !help
-    !playmusic [song_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]
-    !playsound [sound_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]
+    !playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]
+    !playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]
     !playstream <Youtube_URL>
     !r6stats <username> [platform]
     !roll
-	!songinfo <song_name>
-	!soundinfo <sound_name>
+    !songinfo <song_name>
+    !soundinfo <sound_name>
     !stop
 
   Admin Commands:
-    !addmusic <song_name> <file_name_with_extension>
+    !addsong <song_name> <file_name_with_extension>
     !addsound <sound_name> <file_name_with_extension>
     !removemusic <song_name>
     !removesound <sound_name>
-    !setusersound <@mention_target_user> [sound_name]
+    !setusersound <@mention> [sound_name]
 
   Manager Commands:
     !addallmusic
@@ -87,7 +87,7 @@ Package:
         We send web requests to api.r6stats.com to retrieve player stats for Rainbow Six Siege.
         [https://r6stats.com]
         [https://rainbow6.ubisoft.com]
-		
+
 	  playsound:
 		Used to send search requests to Google Play Music for song lookup and stream URL retrieval, allowing for music playback.
 

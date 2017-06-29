@@ -86,7 +86,7 @@ class Music extends DefaultResponse {
           if (message.guild.voiceConnection.channel.id == message.member.voiceChannel.id){
             message.reply(response.result.fulfillment.speech)
             .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-            message.guild.voiceConnection.disconnect();
+            discord_bot.util.endDispatcher(message.guild.id);
             discord_bot.messageCleanupQueue.add(message, 1, true);
             return;
           }

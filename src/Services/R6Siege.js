@@ -19,6 +19,7 @@ class R6Siege {
     var rank_converter = this.convertRank;
     var request = require('request');
     var handler = this;
+    var profile_picture_url = "https://ubistatic19-a.akamaihd.net/resource/en-ca/game/rainbow6/siege/R6_logo-6.png";
     request("https://api.r6stats.com/api/v1/players/" + username + "?platform=" + platform, function (error, response, body) {
       var playerData = JSON.parse(body).player;
       if (typeof playerData === "undefined"){
@@ -29,23 +30,27 @@ class R6Siege {
         }
         return;
       }
+      if (playerData.platform == "uplay"){
+        profile_picture_url = "https://uplay-avatars.s3.amazonaws.com/" + playerData.ubisoft_id + "/default_146_146.png";
+      }
       var casual = playerData.stats.casual;
       var ranked = playerData.stats.ranked;
       var request2 = require('request');
       request2("https://api.r6stats.com/api/v1/players/" + username + "/seasons?platform=" + platform +"&season=" + currentSeason, function (error2, response2, body2) {
         var seasonData = JSON.parse(body2).seasons;
-        var replyContent = "Here you go:\n```\nRAINBOW SIX SIEGE - PLAYER ACTION REPORT\n\nPlayer: " + playerData.username + "\nPlatform: " + playerData.platform + "\nDate: " + playerData.updated_at.slice(0, 10) + "\n\n";
-        replyContent = replyContent + "Level: " + playerData.stats.progression.level + "\n\n";
-        replyContent = replyContent + "Casual:\n    Wins:     " + casual.wins + "\n    Losses:   " + casual.losses + "\n    W/L:      " + casual.wlr + "\n    Kills:    " + casual.kills + "\n    Deaths:   " + casual.deaths + "\n    K/D:      " + casual.kd + "\n    Playtime: " + playtime_converter(casual.playtime) + "\n\n";
-        replyContent = replyContent + "Ranked:\n    Wins:     " + ranked.wins + "\n    Losses:   " + ranked.losses + "\n    W/L:      " + ranked.wlr + "\n    Kills:    " + ranked.kills + "\n    Deaths:   " + ranked.deaths + "\n    K/D:      " + ranked.kd + "\n    Playtime: " + playtime_converter(ranked.playtime) + "\n";
+        var embed = new Discord.RichEmbed();
+        embed.setDescription("Rainbow Six Siege - Player Action Report");
+        embed.addField(playerData.username, "Level: " + playerData.stats.progression.level + "        Platform: " + playerData.platform);
+        if (casual) embed.addField("Casual", "```\nWins:     " + casual.wins + "\nLosses:   " + casual.losses + "\nW/L:      " + casual.wlr + "\nKills:    " + casual.kills + "\nDeaths:   " + casual.deaths + "\nK/D:      " + casual.kd + "\nPlaytime: " + playtime_converter(casual.playtime) + "```", true);
+        if (ranked) embed.addField("Ranked", "```\nWins:     " + ranked.wins + "\nLosses:   " + ranked.losses + "\nW/L:      " + ranked.wlr + "\nKills:    " + ranked.kills + "\nDeaths:   " + ranked.deaths + "\nK/D:      " + ranked.kd + "\nPlaytime: " + playtime_converter(ranked.playtime) + "```", true);
         if (seasonData[currentSeason] && seasonData[currentSeason][region]) {
           var season = seasonData[currentSeason][region];
           var rank = rank_converter(season.ranking.rank);
-          replyContent = replyContent + "\nSeason:\n    Rank:     " + rank + "\n    Wins:     " + season.wins +"\n    Losses:   " + season.losses + "\n    Abandons: " + season.abandons + "\n    Skill:    " + Math.round(season.ranking.mean) + " ± " + season.ranking.stdev + "\n";
+          embed.addField("Season", "```\nRank:     " + rank + "\nWins:     " + season.wins +"\nLosses:   " + season.losses + "\nAbandons: " + season.abandons + "\nSkill:    " + Math.round(season.ranking.mean) + " ± " + season.ranking.stdev + "```", true);
         }
-        replyContent = replyContent + "```";
-        var Bot = this.bot;
-        message.reply(replyContent)
+        embed.setThumbnail(profile_picture_url);
+        embed.setColor(0x730099);
+        message.reply("Here you go:", {"embed": embed})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) handler.bot.messageCleanupQueue.add(msg, 10)});
       });
     });

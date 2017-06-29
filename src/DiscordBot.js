@@ -19,20 +19,22 @@ class DiscordBot extends Discord.Client {
     this.basic = require('./basic.json');
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('./userSounds.json');
-    this.messageCleanupQueue = new MessageCleanupQueue(this);
-    this.botMessageHandler = new BotMessageHandler(this);
-    this.newMemberHandler = new NewMemberHandler(this);
     this.responseHandler = new ResponseHandler(this);
+    this.util = new Util(this);
+    this.botMessageHandler = new BotMessageHandler(this);
+    this.messageCleanupQueue = new MessageCleanupQueue(this);
+    this.newMemberHandler = new NewMemberHandler(this);
     this.commandHandler = new CommandHandler(this);
     this.chatHandler = new ChatHandler(this);
     this.dmHandler = new DMHandler(this);
-    this.util = new Util(this);
 
     if (this.startupIntegrityCheck()){
 
       this.chatbot = APIai(this.config.apiai_agent_token);
 
       this.addEventListeners();
+
+      this.createMediaContainers();
 
       this.setVolumeToDefault();
 
@@ -50,6 +52,11 @@ class DiscordBot extends Discord.Client {
 
   setVolumeToDefault() {
     this.util.setIntegerVolume(this.config.default_volume);
+  }
+
+  createMediaContainers() {
+    this.basic.last_played = {};
+    this.basic.dispatchers = {};
   }
 
   addEventListeners() {

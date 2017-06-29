@@ -1,5 +1,144 @@
 {
-  "cmdList": "\n`!about` *Displays bot information.*\n`!flip` *Flips a coin.*\n`!help` *Lists available commands.*\n`!playmusic [song_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]` *Plays requested or random song. '?' lists available songs.*\n`!playsound [sound_name|'?' [[-|+]tag [...]]|<-|+>tag [...]]` *Plays requested or random sound. '?' lists available sounds.*\n`!playstream <Youtube_URL>` *Plays audio from requested youtube video.*\n`!r6stats <username> [platform]` *Generates a __Rainbow Six Siege__ Player Action Report.*\n`!roll` *Rolls a die.*\n`!songinfo <song_name>` *Displays information about a song.*\n`!soundinfo <sound_name>` *Displays information about a sound.*\n`!stop` *Stops sound playback on voice channel.*\n\nAlternatively you can **@mention** or **DM** me, and we can converse.",
-  "about_response": "Greetings! I am ALVIS (Asynchronous Learning Virtual Intelligence System).\n\nI am currently under development by **PacketCloud™** [https://www.packetcloud.com].\nMy code is availabe at <https://www.github.com/packetcloud>.\nPlease put up with my bugs, as I am still in development.\n\nYou can **@mention** or **DM** me for assistance, or type **!help** for a list of commands.\n\n v",
-  "name_mention_response": "I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*"
+  "cmdList": [{
+    "name": "Add All Music",
+    "syntax": "addallmusic",
+    "description": "Attempts to add all files in ./music folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "Add All Sounds",
+    "syntax": "addallsounds",
+    "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+    {
+    "name": "Add Song",
+    "syntax": "addsong <song_name> <file_name_with_extension>",
+    "description": "Adds a song to the local library, pointing to the file provided within the ./music folder. Will overwrite. \n*Admin Command*",
+    "admin_command": true,
+    "manager_command": false
+  },
+  {
+    "name": "Add Sound",
+    "syntax": "addsound <sound_name> <file_name_with_extension>",
+    "description": "Adds a sound to the local library, pointing to the file provided within the ./sounds folder. Will overwrite. \n*Admin Command*",
+    "admin_command": true,
+    "manager_command": false
+  },
+    {
+    "name": "About",
+    "syntax": "about",
+    "description": "Displays bot information.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Flip",
+    "syntax": "flip",
+    "description": "Flips a coin.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Help",
+    "syntax": "help",
+    "description": "Displays list of available commands.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Play Music",
+    "syntax": "playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]",
+    "description": "Plays specific or random song matching provided search criteria. \n'?' lists songs matching request.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Play Sound",
+    "syntax": "playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]]",
+    "description": "Plays specific or random sound matching provided search criteria. \n'?' lists sounds matching request.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Play Stream",
+    "syntax": "playstream <Youtube_URL>",
+    "description": "Plays audio from the provided YouTube video.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Purge Music",
+    "syntax": "purgemusic <confirmation>",
+    "description": "Removes all songs from the local library. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "Purge Sounds",
+    "syntax": "purgemusic <confirmation>",
+    "description": "Removes all sounds from the local library. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "R6 Stats",
+    "syntax": "r6stats <username> [platform]",
+    "description": "Generates a [Rainbow Six Siege](https://rainbow6.ubisoft.com/siege/) Player Action Report.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Remove Song",
+    "syntax": "removesong <song_name>",
+    "description": "Deletes a song from the local library structure. Does not delete the file from disk. \n*Admin Command*",
+    "admin_command": true,
+    "manager_command": false
+  },
+  {
+    "name": "Remove Sound",
+    "syntax": "removesound <sound_name>",
+    "description": "Deletes a sound from the local library strcuture. Does not delete the file from disk. \n*Admin Command*",
+    "admin_command": true,
+    "manager_command": false
+  },
+  {
+    "name": "Roll",
+    "syntax": "roll",
+    "description": "Rolls a die.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Set User Sound",
+    "syntax": "setusersound <@mention> [sound_name]",
+    "description": "Assigns (or removes) a sound to a user. \n*Admin Command*",
+    "admin_command": true,
+    "manager_command": false
+  },
+  {
+    "name": "Song Info",
+    "syntax": "songinfo",
+    "description": "Displays info about a song.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Sound Info",
+    "syntax": "soundinfo",
+    "description": "Displays info about a sound",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Stop",
+    "syntax": "stop",
+    "description": "Stops audio playback on voice channel.",
+    "admin_command": false,
+    "manager_command": false
+  }],
+  "aboutBot": "Greetings! I am ALVIS (Asynchronous Learning Virtual Intelligence System). I am currently under development by [PacketCloud™](https://packetcloud.com). \nMy code is available on [GitHub](https://github.com/packetcloud/alvis). \n\nPlease put up with my bugs, as I am still in development.\n\nYou can **@mention** or **DM** me for assistance, or type `!help` for a list of commands.\n\n",
+  "overheardNameResponse": "I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*"
 }

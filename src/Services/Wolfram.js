@@ -6,45 +6,87 @@ class Wolfram {
     this.wolfram_client = require('wolfram').createClient(this.bot.config.wolfram_key);
   }
 
-  sendWolframResponse(message, response, header, show_images, credit_wolfram) {
-    var credit = "";
-    if (credit_wolfram) credit = "\n*Results courtesy of Wolfram Alpha*"
-    message.reply(response.result.fulfillment.speech)
+  sendWolframResponse(message, response, header, colour, show_thumbnail, credit_wolfram, code_box, graph, enlarged_thumbnail) {
+    var wolfram_logo = "http://i1.wp.com/seanshadmand.com/wp-content/uploads/2015/02/Wolfram-Alpha-icon.png";
+    if (!colour) colour = 0xb32400;
+    var embed = new Discord.RichEmbed();
+    if (response.result.fulfillment.speech) message.reply(response.result.fulfillment.speech)
     .then((msg) => {if (msg.channel instanceof Discord.TextChannel) this.bot.messageCleanupQueue.add(msg, 0.5, true)});
-    var handler = this;
+    var discord_bot = this.bot;
     this.wolfram_client.query(response.result.resolvedQuery, function(err, result) {
       if (err){
         console.log(err);
         return;
       }
       if (result.length > 0){
-        var display = "";
-        var images = "";
+        var thumbnail = "";
+        var image = "";
+        var image_set = false;
+        var thumbnail_set = false;
         for (var i = 0; i < result.length; i++){
           var a = result[i];
           var first = true;
           var has_value = false;
+          var section_content = "";
           for (var j = 0; j < a.subpods.length; j++){
             var b = a.subpods[j];
-            if (b.value != ""){
-              if (first == true){
-                display = display + "**" + a.title + ":**```\n";
+            var title = a.title.toLowerCase();
+            if ((a.title == "Image" || a.title == "Images") && show_thumbnail && !thumbnail_set && first){
+              if (b.image != ""){
+                if (enlarged_thumbnail){
+                  first = false;
+                  image = b.image;
+                  image_set = true;
+                }else{
+                  first = false;
+                  thumbnail = b.image;
+                  thumbnail_set = true;
+                }
+              }
+            }else if (a.title == "Result" && show_thumbnail && !thumbnail_set && first){
+              if (b.image != ""){
+                if (enlarged_thumbnail){
+                  first = false;
+                  image = b.image;
+                  image_set = true;
+                }else{
+                  first = false;
+                  thumbnail = b.image;
+                  thumbnail_set = true;
+                }
+              }
+            }else if ((title == "plot" || title.includes("plots") || title.includes("visual representation")) && graph && !image_set && first){
+              if (b.image != ""){
+                first = false;
+                image = b.image;
+                image_set = true;
+              }
+            }
+            if (b.value != "" && section_content.length + b.value.length < 1024 - 10){
+              if (first){
+                if (code_box) section_content = "```\n";
                 first = false;
               }
               has_value = true;
-              display = display + b.value + "\n";
-            }
-            if (b.image != "" && show_images){
-              images = images + b.image + "\n";
+              section_content = section_content + b.value + "\n";
             }
           }
-          if (has_value == true || show_images){
-            display = display + "```\n";
+          if (has_value == true){
+            if (code_box) section_content += "```";
+            embed.addField(a.title, section_content);
           }
         }
-        if (show_images && images != "") images = "**Images:**\n" + images;
-        message.reply(header + display + images + credit, {split: true})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) handler.bot.messageCleanupQueue.add(msg, 10)});
+        if (show_thumbnail && thumbnail_set){
+          embed.setThumbnail(thumbnail)
+        }else if (credit_wolfram){
+          embed.setThumbnail(wolfram_logo);
+        }
+        if (image_set){
+          embed.setImage(image);
+        }
+        embed.setColor(colour);
+        message.reply(header, {"embed": embed, "split": true})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 10)});
       }else{
         message.reply("I could not secure any concrete knowledgebase about the subject.");
       }

@@ -10,9 +10,16 @@ var command_prefix = "";
 class CommandExecuter {
   constructor(bot) {
     this.bot = bot;
-    this.util = new Util(bot);
+    //this.util = new Util(bot);
+    this.util = bot.util;
     this.r6Siege = new R6Siege(this.bot);
     command_prefix = this.bot.basic.command_prefix;
+  }
+
+  aboutCommand(message) {
+    message.reply("", {embed: this.util.generateAboutEmbed()});
+    this.util.logStandardCommand(message, "about");
+    this.util.cleanupMessage(message);
   }
 
   addallmusicCommand(message) {
@@ -69,7 +76,7 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  addmusicCommand(message, arg1, arg2) {
+  addsongCommand(message, arg1, arg2) {
     if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
@@ -129,12 +136,6 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  aboutCommand(message) {
-    message.reply(this.bot.responses.about_response + this.bot.basic.version);
-    this.util.logStandardCommand(message, "about");
-    this.util.cleanupMessage(message);
-  }
-
   flipCommand(message) {
     const outcome = ["heads", "tails"];
     message.reply("You flipped " + outcome[this.util.getRandomInt(0, 1)] + ".");
@@ -143,7 +144,14 @@ class CommandExecuter {
   }
 
   helpCommand(message) {
-    message.reply(this.bot.responses.cmdList);
+    var discord_bot = this.bot;
+    var embed;
+    if (message.channel instanceof Discord.TextChannel){
+      embed = this.util.generateHelpEmbed(this.util.isAdmin(message.member), this.util.isManager(message.member));
+    }else{
+      embed = this.util.generateHelpEmbed(false, false);
+    }
+    message.author.send("", {embed: embed});
     this.util.logStandardCommand(message, "help");
     this.util.cleanupMessage(message);
   }
@@ -151,15 +159,16 @@ class CommandExecuter {
   playmusicCommand(message, arg1, arg2, body) {
     if (arg1 === "?"){
       if (arg2){
-        if (arg2.startsWith("-")){
+        if (arg2.startsWith("&")){
           var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendMusicList(message, search_tags, false);
-        }else if (arg2.startsWith("+")){
-          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendMusicList(message, search_tags, true);
+          this.util.sendMusicList(message, search_tags, true, false);
         }else{
-          var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
-          this.util.sendMusicList(message, search_tags, false);
+          if (arg2.startsWith("-")){
+            var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          }else{
+            var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
+          }
+          this.util.sendMusicList(message, search_tags, false, false);
         }
       }else{
         this.util.sendMusicList(message, null);
@@ -175,7 +184,7 @@ class CommandExecuter {
     var channel = message.member.voiceChannel;
     var path = this.bot.basic.music_path;
     if (message.member.voiceChannel == null){
-      message.author.send("You need to be in a voice channel for me to play your requested music.");
+      message.author.send("You need to be in a voice channel for me to play music.");
       this.util.cleanupMessage(message);
       return;
     }
@@ -190,9 +199,9 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
         this.util.logStandardCommand(message, "playmusic");
-      }else if (arg1.startsWith("-")){
+      }else if (arg1.startsWith("&")){
         var tags = body.substring(1).split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, false);
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, true, false);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no songs matching your query.");
         }else{
@@ -201,9 +210,9 @@ class CommandExecuter {
           this.util.playSound(channel, path + "/" + collection[random_key].file);
           this.util.logStandardCommand(message, "playsound");
         }
-      }else if (arg1.startsWith("+")){
+      }else if (arg1.startsWith("-")){
         var tags = body.substring(1).split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, true);
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, false, false);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no songs matching your query.");
         }else{
@@ -213,11 +222,15 @@ class CommandExecuter {
           this.util.logStandardCommand(message, "playsound");
         }
       }else{
-        if (this.util.musicData[body] == null){
-          message.author.send("The song '" + body + "' does not exist in my library. Use **!playmusic ?** for a list of songs.");
+        var tags = body.split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, false, true);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no songs matching your query.");
         }else{
-          this.util.playSound(channel, path + "/" + this.util.musicData[body].file);
-          this.util.logStandardCommand(message, "playmusic");
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file);
+          this.util.logStandardCommand(message, "playsound");
         }
       }
     }
@@ -228,15 +241,16 @@ class CommandExecuter {
     var stream_options = {};
     if (arg1 === "?"){
       if (arg2){
-        if (arg2.startsWith("-")){
+        if (arg2.startsWith("&")){
           var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendSoundList(message, search_tags, false);
-        }else if (arg2.startsWith("+")){
-          var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendSoundList(message, search_tags, true);
+          this.util.sendSoundList(message, search_tags, true, false);
         }else{
-          var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
-          this.util.sendSoundList(message, search_tags, false);
+          if (arg2.startsWith("-")){
+            var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
+          }else{
+            var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
+          }
+          this.util.sendSoundList(message, search_tags, false, false);
         }
       }else{
         this.util.sendSoundList(message, null);
@@ -252,7 +266,7 @@ class CommandExecuter {
     var channel = message.member.voiceChannel;
     var path = this.bot.basic.sound_path;
     if (message.member.voiceChannel == null){
-      message.author.send("You need to be in a voice channel for me to play your requested sound.");
+      message.author.send("You need to be in a voice channel for me to play sounds.");
       this.util.cleanupMessage(message);
       return;
     }
@@ -267,9 +281,9 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file, stream_options);
         this.util.logStandardCommand(message, "playsound");
-      }else if (arg1.startsWith("-")){
+      }else if (arg1.startsWith("&")){
         var tags = body.substring(1).split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, false);
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, true, false);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no sounds matching your query.");
         }else{
@@ -278,9 +292,9 @@ class CommandExecuter {
           this.util.playSound(channel, path + "/" + collection[random_key].file, stream_options);
           this.util.logStandardCommand(message, "playsound");
         }
-      }else if (arg1.startsWith("+")){
+      }else if (arg1.startsWith("-")){
         var tags = body.substring(1).split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, true);
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, false, false);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no sounds matching your query.");
         }else{
@@ -290,10 +304,14 @@ class CommandExecuter {
           this.util.logStandardCommand(message, "playsound");
         }
       }else{
-        if (this.util.soundData[body] == null){
-          message.author.send("The sound '" + body + "' does not exist in my library. Use **!playsound ?** for a list of sounds.");
+        var tags = body.split(" ");
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, false, true);
+        if (this.util.objectIsEmpty(collection)){
+          message.author.send("There are no sounds matching your query.");
         }else{
-          this.util.playSound(channel, path + "/" + this.util.soundData[body].file, stream_options);
+          var obj_keys = Object.keys(collection);
+          var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+          this.util.playSound(channel, path + "/" + collection[random_key].file, stream_options);
           this.util.logStandardCommand(message, "playsound");
         }
       }
@@ -496,7 +514,7 @@ class CommandExecuter {
     if (message.guild.voiceConnection){
       if (message.member.voiceChannel){
         if (message.guild.voiceConnection.channel.id == message.member.voiceChannel.id){
-          message.guild.voiceConnection.disconnect();
+          this.util.endDispatcher(message.guild.id);
           this.util.logStandardCommand(message, "stop");
           this.util.cleanupMessage(message);
           return;

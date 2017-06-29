@@ -24,8 +24,8 @@ class CommandHandler {
       this.commandExecuter.addallmusicCommand(message);
     }else if (command === "addallsounds"){
       this.commandExecuter.addallsoundsCommand(message);
-    }else if (command === "addmusic"){
-      this.commandExecuter.addmusicCommand(message, arg1, arg2);
+    }else if (command === "addsong"){
+      this.commandExecuter.addsongCommand(message, arg1, arg2);
     }else if (command === "addsound"){
       this.commandExecuter.addsoundCommand(message, arg1, arg2);
     }else if (command === "about"){

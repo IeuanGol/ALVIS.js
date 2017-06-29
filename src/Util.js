@@ -74,22 +74,46 @@ class Util {
   	return false;
   }
 
-  sendMusicList(message, tags, strict) {
-    var collection = this.createMediaSubCollection(this.musicData, tags);
+  generateAboutEmbed() {
+    var aboutBot = this.bot.responses.aboutBot;
+    var embed = new Discord.RichEmbed();
+    embed.setColor(0x1a75ff);
+    embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
+    embed.addField("About ALVIS", aboutBot + "v" + this.bot.basic.version);
+    return embed;
+  }
+
+  generateHelpEmbed(admin, manager) {
+    var prefix = this.bot.basic.command_prefix;
+    var cmdList = this.bot.responses.cmdList;
+    var embed = new Discord.RichEmbed();
+    embed.setFooter("Alternatively you can @mention or DM me, and we can converse.");
+    embed.setColor(0x1a75ff);
+    embed.setAuthor("Available Commands:", null, "https://github.com/packetcloud/alvis");
+    embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
+    for (var i = 0; i < cmdList.length; i++){
+      var cmd = cmdList[i];
+      if ((!cmd.admin_command && !cmd.manager_command)||(cmd.admin_command && admin)||(cmd.manager_command && manager)){
+        embed.addField(cmd.name,"`" + prefix + cmd.syntax + "`\n" + cmd.description + "\n");
+      }
+    }
+    return embed;
+  }
+
+  sendMusicList(message, tags, strict, exact) {
+    var collection = this.createMediaSubCollection(this.musicData, tags, strict, exact);
     const charlimit = 2000;
     var results_number = 0;
     var Output = "**__Songs:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
-        if (this.searchMediaForTags(nextsong, tags, strict)){
-          results_number += 1;
-          if (nextsong.name.length + Output.length >= charlimit - 5){
-            message.author.send(Output + "```");
-            Output = "```\n" + nextsong.name + "\n";
-          }else{
-            Output = Output + nextsong.name + "\n";
-          }
+        results_number += 1;
+        if (nextsong.name.length + Output.length >= charlimit - 5){
+          message.author.send(Output + "```");
+          Output = "```\n" + nextsong.name + "\n";
+        }else{
+          Output = Output + nextsong.name + "\n";
         }
       }
     }
@@ -105,22 +129,20 @@ class Util {
     message.author.send(Output);
   }
 
-  sendSoundList(message, tags, strict) {
-    var collection = this.createMediaSubCollection(this.soundData, tags);
+  sendSoundList(message, tags, strict, exact) {
+    var collection = this.createMediaSubCollection(this.soundData, tags, strict, exact);
     const charlimit = 2000;
     var results_number = 0;
     var Output = "**__Sounds:__**\n```\n";
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
-        if (this.searchMediaForTags(nextsound, tags, strict)){
-          results_number += 1;
-          if (nextsound.name.length + Output.length >= charlimit - 5){
-            message.author.send(Output + "```");
-            Output = "```\n" + nextsound.name + "\n";
-          }else{
-            Output = Output + nextsound.name + "\n";
-          }
+        results_number += 1;
+        if (nextsound.name.length + Output.length >= charlimit - 5){
+          message.author.send(Output + "```");
+          Output = "```\n" + nextsound.name + "\n";
+        }else{
+          Output = Output + nextsound.name + "\n";
         }
       }
     }
@@ -143,7 +165,10 @@ class Util {
       for (i = 0; i < tags.length; i++){
         var hit = false;
         var tag = tags[i].toLowerCase();
-        if (media.name.toLowerCase().includes(tag)) hit = true;
+        if (media.name.toLowerCase().includes(tag)){
+          hit = true;
+          if (tags.length == 1 && media.name.toLowerCase() == tag) return 2;
+        }
         for (j = 0; j < media.artists.length; j++){
           if (media.artists[j].toLowerCase().includes(tag)) hit = true;
         }
@@ -153,24 +178,27 @@ class Util {
         for (j = 0; j < media.aliases.length; j++){
           if (media.aliases[j].toLowerCase().includes(tag)) hit = true;
         }
-        if (!hit) return false;
+        if (!hit) return 0;
       }
-      return true;
+      return 1;
     }else{
       for (i = 0; i < tags.length; i++){
         var tag = tags[i].toLowerCase();
-        if (media.name.toLowerCase().includes(tag)) return true;
+        if (media.name.toLowerCase().includes(tag)){
+          if (tags.length == 1 && media.name.toLowerCase() == tag) return 2;
+          return 1;
+        }
         for (j = 0; j < media.artists.length; j++){
-          if (media.artists[j].toLowerCase().includes(tag)) return true;
+          if (media.artists[j].toLowerCase().includes(tag)) return 1;
         }
         for (j = 0; j < media.tags.length; j++){
-          if (media.tags[j].toLowerCase().includes(tag)) return true;
+          if (media.tags[j].toLowerCase().includes(tag)) return 1;
         }
         for (j = 0; j < media.aliases.length; j++){
-          if (media.aliases[j].toLowerCase().includes(tag)) return true;
+          if (media.aliases[j].toLowerCase().includes(tag)) return 1;
         }
       }
-      return false;
+      return 0;
     }
   }
 
@@ -210,12 +238,17 @@ class Util {
     }
   }
 
-  createMediaSubCollection(media_collection, tag, strict) {
+  createMediaSubCollection(media_collection, tags, strict, exact) {
     var result_collection = {};
     for (var key in media_collection){
       if (media_collection.hasOwnProperty(key)) {
         var nextitem = media_collection[key];
-        if (this.searchMediaForTags(nextitem, tag, strict)){
+        var result = this.searchMediaForTags(nextitem, tags, strict);
+        if (result == 2 && exact){
+          result_collection = {};
+          result_collection[key] = nextitem;
+          return result_collection;
+        }else if (result){
           result_collection[key] = nextitem;
         }
       }
@@ -229,21 +262,21 @@ class Util {
     if (voiceChannel.guild.voiceConnection) return;
     if (!voiceChannel.joinable || !voiceChannel.speakable || voiceChannel.full) return;
     if (voiceChannel == null || filepath == null) return;
+    var dispatchers = this.bot.basic.dispatchers;
     voiceChannel.join().then((connection) => {
-      var dispatcher = connection.playFile(filepath, stream_options);
+      dispatchers[voiceChannel.guild.id] = connection.playFile(filepath, stream_options);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        voiceChannel.leave();
+        dispatchers[voiceChannel.guild.id].end();
       });
       connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        voiceChannel.leave();
+        dispatchers[voiceChannel.guild.id].end();
       });
-      dispatcher.on('end', () => {
+      dispatchers[voiceChannel.guild.id].on('end', () => {
         connection.disconnect();
       });
     }).catch((error) => {
-      voiceChannel.leave();
       this.logger("An error occured in sound playback:");
       console.log(error.message);
     })
@@ -253,25 +286,39 @@ class Util {
     var stream_options = this.bot.basic.stream_options;
     if (options) stream_options = options;
     if (voiceChannel == null || url == null) return;
+    var dispatchers = this.bot.basic.dispatchers;
     voiceChannel.join().then((connection) => {
   		var stream = ytdl(url, {filter: 'audioonly'});
-  		var dispatcher = connection.playStream(stream, stream_options);
+  		dispatchers[voiceChannel.guild.id] = connection.playStream(stream, stream_options);
       connection.on('error', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        voiceChannel.leave();
+        dispatchers[voiceChannel.guild.id].end();
       });
       connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
-        voiceChannel.leave();
+        dispatchers[voiceChannel.guild.id].end();
       });
-  		dispatcher.on('end', () => {
+  		dispatchers[voiceChannel.guild.id].on('end', () => {
         connection.disconnect();
       });
   	}).catch((error) => {
-      voiceChannel.leave();
       this.logger("An error occured in stream playback:");
       console.log(error.message);
     });
+  }
+
+  endDispatcher(server_id) {
+    this.bot.basic.dispatchers[server_id].end();
+    this.bot.messageCleanupQueue.expireTag("currentlyplaying" + server_id);
+  }
+
+  setLastSongEmbed(server_id, embed) {
+    this.bot.basic.last_played[server_id] = embed;
+  }
+
+  getLastSongEmbed(server_id) {
+    var embed = this.bot.basic.last_played[server_id];
+    return embed;
   }
 
   setIntegerVolume(integerVolume) {

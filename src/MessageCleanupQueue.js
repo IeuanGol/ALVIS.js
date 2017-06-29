@@ -6,9 +6,10 @@ class MessageCleanupQueue {
     this.queue = {};
     var timer;
     this.setTimer(timer, this, 10000);
+    this.expired_tags = [];
   }
 
-  add(message, lifetime, delete_on_death) {
+  add(message, lifetime, delete_on_death, expiration_tags) {
     if (!delete_on_death) {
       delete_on_death = false;
     }else{
@@ -16,6 +17,9 @@ class MessageCleanupQueue {
     }
     var expiration = Math.floor(lifetime * 60000) + new Date().valueOf();
     this.queue[message.id] = {"message": message, "expiration": expiration, "lifetime": lifetime, "delete": delete_on_death};
+    if (expiration_tags) {
+      this.queue[message.id].expiration_tags = expiration_tags;
+    }
   }
 
   remove(id) {
@@ -27,21 +31,39 @@ class MessageCleanupQueue {
     for (var k in this.queue){
       var item = this.queue[k];
       if (item.expiration <= currentTime){
-        if (item.message){
-          if (item.message.deletable && item.delete){
-            item.message.delete();
-          }else if (item.message.editable){
-            item.message.edit("`Content deleted after " + item.lifetime + " minutes to reduce clutter.`");
-          }else if (item.message.deletable){
-            item.message.delete();
-            console.log("Error: Message marked for cleanup was not editable; It was deleted instead. Check function usage.");
-          }else{
-            console.log("Error: Could not modify or delete message marked for cleanup. Check bot permissions on " + item.message.guild.name + ":" + item.message.channel.name);
+        this.cleanupMessage(item);
+        delete this.queue[k];
+      }else{
+        if (item.hasOwnProperty("expiration_tags")){
+          for (var l = 0; l < this.expired_tags.length; l++){
+            if (item.expiration_tags.includes(this.expired_tags[l])){
+              this.cleanupMessage(item, true);
+              delete this.queue[k];
+              break;
+            }
           }
         }
-        delete this.queue[k];
       }
     }
+    this.expired_tags = [];
+  }
+
+  cleanupMessage(queue_item, force_delete) {
+    if (!queue_item.message) return;
+    if (queue_item.message.deletable && (queue_item.delete || force_delete)){
+      queue_item.message.delete();
+    }else if (queue_item.message.editable){
+      queue_item.message.edit("`Content removed after " + queue_item.lifetime + " minutes to reduce clutter.`", {"embed": null});
+    }else if (queue_item.message.deletable){
+      queue_item.message.delete();
+      console.log("Error: Message marked for cleanup was not editable; It was deleted instead. Check function usage.");
+    }else{
+      console.log("Error: Could not modify or delete message marked for cleanup. Check bot permissions on " + queue_item.message.guild.name + ":" + queue_item.message.channel.name);
+    }
+  }
+
+  expireTag(tag) {
+    this.expired_tags.push(tag);
   }
 
   setTimer(timerVariable, queueVariable, timerPeriod) {
