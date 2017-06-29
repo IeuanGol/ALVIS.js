@@ -44,8 +44,8 @@ class CommandHandler {
       this.commandExecuter.purgemusicCommand(message, arg1);
     }else if (command === "purgesounds"){
       this.commandExecuter.purgesoundsCommand(message, arg1);
-    }else if (command === "removemusic"){
-      this.commandExecuter.removemusicCommand(message, arg1);
+    }else if (command === "removesong"){
+      this.commandExecuter.removesongCommand(message, arg1);
     }else if (command === "removesound"){
       this.commandExecuter.removesoundCommand(message, arg1);
     }else if (command === "r6stats"){

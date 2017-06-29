@@ -19,6 +19,8 @@ class DiscordBot extends Discord.Client {
     this.basic = require('./basic.json');
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('./userSounds.json');
+    this.webAssets = require('../assets/webAssets.json');
+    this.colours = require('../assets/colours.json');
     this.responseHandler = new ResponseHandler(this);
     this.util = new Util(this);
     this.botMessageHandler = new BotMessageHandler(this);

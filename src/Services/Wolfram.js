@@ -8,7 +8,7 @@ class Wolfram {
 
   sendWolframResponse(message, response, header, colour, show_thumbnail, credit_wolfram, code_box, graph, enlarged_thumbnail) {
     var wolfram_logo = "http://i1.wp.com/seanshadmand.com/wp-content/uploads/2015/02/Wolfram-Alpha-icon.png";
-    if (!colour) colour = 0xb32400;
+    if (!colour) colour = parseInt(this.bot.colours.wolfram_embed_default_colour);
     var embed = new Discord.RichEmbed();
     if (response.result.fulfillment.speech) message.reply(response.result.fulfillment.speech)
     .then((msg) => {if (msg.channel instanceof Discord.TextChannel) this.bot.messageCleanupQueue.add(msg, 0.5, true)});

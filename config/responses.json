@@ -16,14 +16,14 @@
     {
     "name": "Add Song",
     "syntax": "addsong <song_name> <file_name_with_extension>",
-    "description": "Adds a song to the local library, pointing to the file provided within the ./music folder. Will overwrite. \n*Admin Command*",
+    "description": "Adds a song to the local library, pointing to the file provided within the ./music folder. Will overwrite existing songs. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Add Sound",
     "syntax": "addsound <sound_name> <file_name_with_extension>",
-    "description": "Adds a sound to the local library, pointing to the file provided within the ./sounds folder. Will overwrite. \n*Admin Command*",
+    "description": "Adds a sound to the local library, pointing to the file provided within the ./sounds folder. Will overwrite existing sounds. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
@@ -44,21 +44,21 @@
   {
     "name": "Help",
     "syntax": "help",
-    "description": "Displays list of available commands.",
+    "description": "Displays a list of available commands.",
     "admin_command": false,
     "manager_command": false
   },
   {
     "name": "Play Music",
     "syntax": "playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]",
-    "description": "Plays specific or random song matching provided search criteria. \n'?' lists songs matching request.",
+    "description": "Plays specific or random song matching provided search criteria. \n'?' lists songs matching search criteria.",
     "admin_command": false,
     "manager_command": false
   },
   {
     "name": "Play Sound",
     "syntax": "playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]]",
-    "description": "Plays specific or random sound matching provided search criteria. \n'?' lists sounds matching request.",
+    "description": "Plays specific or random sound matching provided search criteria. \n'?' lists sounds matching search criteria.",
     "admin_command": false,
     "manager_command": false
   },
@@ -114,21 +114,21 @@
   {
     "name": "Set User Sound",
     "syntax": "setusersound <@mention> [sound_name]",
-    "description": "Assigns (or removes) a sound to a user. \n*Admin Command*",
+    "description": "Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Song Info",
     "syntax": "songinfo",
-    "description": "Displays info about a song.",
+    "description": "Displays information about a song.",
     "admin_command": false,
     "manager_command": false
   },
   {
     "name": "Sound Info",
     "syntax": "soundinfo",
-    "description": "Displays info about a sound",
+    "description": "Displays information about a sound",
     "admin_command": false,
     "manager_command": false
   },

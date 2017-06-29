@@ -48,7 +48,7 @@ class DMHandler {
       message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
     }else if (command === "purgesounds"){
       message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
-    }else if (command === "removemusic"){
+    }else if (command === "removesong"){
       message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
     }else if (command === "removesound"){
       message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");

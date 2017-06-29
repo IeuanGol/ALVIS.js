@@ -77,7 +77,7 @@ class Util {
   generateAboutEmbed() {
     var aboutBot = this.bot.responses.aboutBot;
     var embed = new Discord.RichEmbed();
-    embed.setColor(0x1a75ff);
+    embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
     embed.addField("About ALVIS", aboutBot + "v" + this.bot.basic.version);
     return embed;
@@ -88,8 +88,8 @@ class Util {
     var cmdList = this.bot.responses.cmdList;
     var embed = new Discord.RichEmbed();
     embed.setFooter("Alternatively you can @mention or DM me, and we can converse.");
-    embed.setColor(0x1a75ff);
-    embed.setAuthor("Available Commands:", null, "https://github.com/packetcloud/alvis");
+    embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+    embed.setAuthor("Available Commands:", null, this.bot.webAssets.alvis_github);
     embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
     for (var i = 0; i < cmdList.length; i++){
       var cmd = cmdList[i];

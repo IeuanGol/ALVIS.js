@@ -16,34 +16,103 @@ Setting Up The Bot:
       People with manager_role will be allowed to use all bot commands, admin_role grants administrative commands.
       Default_role is the name of the role you want the bot to assign all new users. This one is optional.
 
+
+
 Bot Commands:
   Public Commands:
-    !about
-    !flip
-    !help
-    !playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]
-    !playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]
-    !playstream <Youtube_URL>
-    !r6stats <username> [platform]
-    !roll
-    !songinfo <song_name>
-    !soundinfo <sound_name>
-    !stop
+    About
+      Displays bot information.
+      !about
+
+    Flip
+      Flips a coin.
+      !flip
+
+    Help
+      Displays list of available commands.
+      !help
+
+    Play Music
+      Plays specific or random song matching provided search criteria.
+      '?' lists songs matching search criteria.
+      !playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]
+
+    Play Sound
+      Plays specific or random sound matching provided search criteria.
+      '?' lists sounds matching search criteria.
+      !playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]
+
+    Play Stream
+      Plays audio from the provided YouTube video.
+      !playstream <Youtube_URL>
+
+    R6 Stats
+      Generates a 'Rainbow Six Siege' Player Action Report.
+      !r6stats <username> [platform]
+
+    Roll
+      Rolls a die.
+      !roll
+
+    Song Info
+      Displays information about a song.
+      !songinfo <song_name>
+
+    Sound Info
+      Displays information about a sound.
+      !soundinfo <sound_name>
+
+    Stop
+      Stops audio playback on voice channel.
+      !stop
+
 
   Admin Commands:
-    !addsong <song_name> <file_name_with_extension>
-    !addsound <sound_name> <file_name_with_extension>
-    !removemusic <song_name>
-    !removesound <sound_name>
-    !setusersound <@mention> [sound_name]
+    Add Song
+      Adds a song to the local library, pointing to the file provided within the ./music folder.
+      Will overwrite existing songs.
+      !addsong <song_name> <file_name_with_extension>
+
+    Add Sound
+      Adds a sound to the local library, pointing to the file provided within the ./sounds folder.
+      Will overwrite existing sounds.
+      !addsound <sound_name> <file_name_with_extension>
+
+    Remove Song
+      Deletes a song from the local library structure. Does not delete the file from disk.
+      !removesong <song_name>
+
+    Remove Sound
+      Deletes a sound from the local library structure. Does not delete the file from disk.
+      !removesound <sound_name>
+
+    Set User Sound
+      Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.
+      !setusersound <@mention> [sound_name]
+
 
   Manager Commands:
-    !addallmusic
-    !addallsounds
-    !purgemusic
-    !purgesounds
+    Add All Music
+      Attempts to add all files in ./music folder to the local library under their filenames.
+      Does not overwrite.
+      !addallmusic
+
+    Add All Sounds
+      Attempts to add all files in ./sounds folder to the local library under their filenames.
+      Does not overwrite.
+      !addallsounds
+
+    Purge Music
+      Removes all songs from the local library.
+      !purgemusic <confirmation>
+
+    Purge Sounds
+      Removes all sounds from the local library.
+      !purgesounds <confirmation>
 
 To run commands, enter them into any text channel the bot has access to. Certain commands also work in Direct Messages with the bot.
+
+
 
 Changing Settings:
     You can change bot settings manually in the configuration files within the 'config' folder.

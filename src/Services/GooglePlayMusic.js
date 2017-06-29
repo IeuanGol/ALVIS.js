@@ -43,7 +43,7 @@ class GooglePlayMusic {
             .setDescription("Now playing in #" + message.member.voiceChannel.name + ":")
             .addField(song.track.title, song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
             .setThumbnail(song.track.albumArtRef[0].url)
-            .setColor(0xE65C00);
+            .setColor(parseInt(discord_bot.colours.google_play_music_embed_colour));
             embed.duration = duration;
             discord_bot.util.setLastSongEmbed(message.guild.id, embed);
             message.channel.send("", {"embed": embed})

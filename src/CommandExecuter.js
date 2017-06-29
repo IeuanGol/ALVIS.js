@@ -396,7 +396,7 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  removemusicCommand(message, arg1) {
+  removesongCommand(message, arg1) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
