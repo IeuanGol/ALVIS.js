@@ -41,7 +41,7 @@ class CommandExecuter {
       }
     }
     this.util.musicData = this.util.alphabetizeByKey(this.util.musicData);
-    var file = this.bot.basic.music_path + "/music.json";
+    var file = this.bot.basic.music_path + "/_music.json";
     fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
       return;
     });
@@ -68,7 +68,7 @@ class CommandExecuter {
       }
     }
     this.util.soundData = this.util.alphabetizeByKey(this.util.soundData);
-    var file = this.bot.basic.sound_path + "/sounds.json";
+    var file = this.bot.basic.sound_path + "/_sounds.json";
     fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
       return;
     });
@@ -100,8 +100,8 @@ class CommandExecuter {
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
     const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-    this.util.setAudioData(this.util.musicData, this.bot.basic.music_path + "/music.json", sound_obj);
-    this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
+    this.util.setAudioData(this.util.musicData, this.bot.basic.music_path + "/_music.json", sound_obj);
+    this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
     this.util.logStandardCommand(message, "addmusic");
     this.util.cleanupMessage(message);
   }
@@ -130,8 +130,8 @@ class CommandExecuter {
     var ext = arg2.split(".");
     ext = ext[ext.length - 1];
     const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-    this.util.setAudioData(this.util.soundData, this.bot.basic.sound_path + "/sounds.json",sound_obj);
-    this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
+    this.util.setAudioData(this.util.soundData, this.bot.basic.sound_path + "/_sounds.json",sound_obj);
+    this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
     this.util.logStandardCommand(message, "addsound");
     this.util.cleanupMessage(message);
   }
@@ -346,7 +346,7 @@ class CommandExecuter {
     }
     if (arg1 == "DELETE"){
       this.util.musicData = {};
-      var file = this.bot.basic.music_path + "/music.json";
+      var file = this.bot.basic.music_path + "/_music.json";
       fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
         return;
       });
@@ -366,7 +366,7 @@ class CommandExecuter {
     }
     if (arg1 == "DELETE"){
       this.util.soundData = {};
-      var file = this.bot.basic.sound_path + "/sounds.json";
+      var file = this.bot.basic.sound_path + "/_sounds.json";
       fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
         return;
       });
@@ -404,11 +404,11 @@ class CommandExecuter {
     }
     var json_data = this.util.musicData;
     delete json_data[arg1];
-    var file = this.bot.basic.music_path + "/music.json";
+    var file = this.bot.basic.music_path + "/_music.json";
     fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
-    this.util.musicData = require("." + this.bot.basic.music_path + "/music.json");
+    this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
     this.util.logStandardCommand(message, "purgemusic");
     this.util.cleanupMessage(message);
   }
@@ -422,11 +422,11 @@ class CommandExecuter {
     }
     var json_data = this.util.soundData;
     delete json_data[arg1];
-    var file = this.bot.basic.sound_path + "/sounds.json";
+    var file = this.bot.basic.sound_path + "/_sounds.json";
     fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
       return;
     });
-    this.util.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
+    this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
     this.util.cleanupMessage(message);
   }
 
@@ -489,9 +489,18 @@ class CommandExecuter {
   }
 
   songinfoCommand(message, arg1) {
-    var output = this.util.getSongInfo(arg1.toLowerCase());
-    if (output) {
-      message.author.send(output);
+    var song = this.util.getSongInfo(arg1.toLowerCase());
+    if (song) {
+      var discord_bot = this.bot;
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = song.artists.join(" ");
+      if (tags.length) tags = song.tags.join(" ");
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+      embed.addField(song.name, "File: " + song.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       this.util.logStandardCommand(message, "songinfo");
     }else{
       message.author.send("I could not find the song '" + arg1 + "' in my local library.");
@@ -500,9 +509,18 @@ class CommandExecuter {
   }
 
   soundinfoCommand(message, arg1) {
-    var output = this.util.getSoundInfo(arg1.toLowerCase());
-    if (output) {
-      message.author.send(output);
+    var sound = this.util.getSoundInfo(arg1.toLowerCase());
+    if (sound) {
+      var discord_bot = this.bot;
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = sound.artists.join(" ");
+      if (tags.length) tags = sound.tags.join(" ");
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+      embed.addField(sound.name, "File: " + sound.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       this.util.logStandardCommand(message, "soundinfo");
     }else{
       message.author.send("I could not find the sound '" + arg1 + "' in my local library.");

@@ -7,8 +7,8 @@ class Util {
   constructor(bot) {
     this.bot = bot;
     this.responseHandler = bot.responseHandler;
-    this.musicData = require("." + this.bot.basic.music_path + "/music.json");
-    this.soundData = require("." + this.bot.basic.sound_path + "/sounds.json");
+    this.musicData = require("." + this.bot.basic.music_path + "/_music.json");
+    this.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
   }
 
   logger(string) {
@@ -78,7 +78,7 @@ class Util {
     var aboutBot = this.bot.responses.aboutBot;
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
-    embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
+    embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
     embed.addField("About ALVIS", aboutBot + "v" + this.bot.basic.version);
     return embed;
   }
@@ -90,7 +90,7 @@ class Util {
     embed.setFooter("Alternatively you can @mention or DM me, and we can converse.");
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     embed.setAuthor("Available Commands:", null, this.bot.webAssets.alvis_github);
-    embed.setThumbnail("https://static1.squarespace.com/static/590a3b36893fc0d31893235d/t/590a3b9a3a04112426fad651/1498631274219/?format=1500w");
+    embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
     for (var i = 0; i < cmdList.length; i++){
       var cmd = cmdList[i];
       if ((!cmd.admin_command && !cmd.manager_command)||(cmd.admin_command && admin)||(cmd.manager_command && manager)){
@@ -101,61 +101,105 @@ class Util {
   }
 
   sendMusicList(message, tags, strict, exact) {
+    var search_criteria = "";
+    if (tags){
+      search_criteria = tags.join(" ");
+      if (strict){
+        search_criteria = "&" + search_criteria;
+      }
+      search_criteria = "| Tags: " + search_criteria;
+    }
     var collection = this.createMediaSubCollection(this.musicData, tags, strict, exact);
-    const charlimit = 2000;
-    var results_number = 0;
-    var Output = "**__Songs:__**\n```\n";
+    const charlimit = 1024;
+    var isFirst = true;
+    var body = "";
+    var results_number = 0
+    var embed = new Discord.RichEmbed();
+    embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
-        results_number += 1;
-        if (nextsong.name.length + Output.length >= charlimit - 5){
-          message.author.send(Output + "```");
-          Output = "```\n" + nextsong.name + "\n";
-        }else{
-          Output = Output + nextsong.name + "\n";
+        if (body.length + nextsong.name.length > charlimit){
+          if (isFirst){
+            embed.addField("Songs:", body);
+            isFirst = false;
+            body = "";
+          }else{
+            embed.addField("==============================", body);
+            body = "";
+          }
         }
+        body = body + nextsong.name + "\n"
+        results_number += 1;
       }
     }
     if (results_number){
-      if (results_number == 1){
-        Output = Output + "```*1 result*";
+      if (isFirst){
+        embed.addField("Songs:", body);
       }else{
-        Output = Output + "```*" + results_number + " results*";
+        embed.addField("==============================", body);
+      }
+      if (results_number == 1){
+        embed.setFooter("1 result " + search_criteria);
+      }else{
+        embed.setFooter(results_number + " results " + search_criteria);
       }
     }else{
-      Output = Output + "No Results" + "```";
+      embed.addField("Songs:", "No Results");
+      embed.setFooter("0 results " + search_criteria);
     }
-    message.author.send(Output);
+    message.author.send("", {embed: embed});
   }
 
   sendSoundList(message, tags, strict, exact) {
+    var search_criteria = "";
+    if (tags){
+      search_criteria = tags.join(" ");
+      if (strict){
+        search_criteria = "&" + search_criteria;
+      }
+      search_criteria = "| Tags: " + search_criteria;
+    }
     var collection = this.createMediaSubCollection(this.soundData, tags, strict, exact);
-    const charlimit = 2000;
-    var results_number = 0;
-    var Output = "**__Sounds:__**\n```\n";
+    const charlimit = 1024;
+    var isFirst = true;
+    var body = "";
+    var results_number = 0
+    var embed = new Discord.RichEmbed();
+    embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
-        results_number += 1;
-        if (nextsound.name.length + Output.length >= charlimit - 5){
-          message.author.send(Output + "```");
-          Output = "```\n" + nextsound.name + "\n";
-        }else{
-          Output = Output + nextsound.name + "\n";
+        if (body.length + nextsound.name.length > charlimit){
+          if (isFirst){
+            embed.addField("Sounds:", body);
+            isFirst = false;
+            body = "";
+          }else{
+            embed.addField("==============================", body);
+            body = "";
+          }
         }
+        body = body + nextsound.name + "\n"
+        results_number += 1;
       }
     }
     if (results_number){
-      if (results_number == 1){
-        Output = Output + "```*1 result*";
+      if (isFirst){
+        embed.addField("Sounds:", body);
       }else{
-        Output = Output + "```*" + results_number + " results*";
+        embed.addField("==============================", body);
+      }
+      if (results_number == 1){
+        embed.setFooter("1 result " + search_criteria);
+      }else{
+        embed.setFooter(results_number + " results " + search_criteria);
       }
     }else{
-      Output = Output + "No Results" + "```";
+      embed.addField("Sounds:", "No Results");
+      embed.setFooter("0 results " + search_criteria);
     }
-    message.author.send(Output);
+    message.author.send("", {embed: embed});
   }
 
   searchMediaForTags(media, tags, strict) {
@@ -204,17 +248,7 @@ class Util {
 
   getSongInfo(song_name){
     if (this.musicData.hasOwnProperty(song_name)){
-      var song = this.musicData[song_name];
-      var name = " - ";
-      var file = " - ";
-      var artists = " - ";
-      var tags = " - ";
-      if (song.name) name = song.name;
-      if (song.file) file = song.file;
-      if (song.artists.length) artists = song.artists.join(" | ");
-      if (song.tags.length) tags = song.tags.join(" | ");
-      var Output = "```\nSong Name:  " + name + "\nFile:       " + file + "\nArtists:    " + artists + "\nTags:       " + tags + "\n```";
-      return Output;
+      return this.musicData[song_name];
     }else{
       return null;
     }
@@ -222,17 +256,7 @@ class Util {
 
   getSoundInfo(sound_name) {
     if (this.soundData.hasOwnProperty(sound_name)){
-      var sound = this.soundData[sound_name];
-      var name = " - ";
-      var file = " - ";
-      var artists = " - ";
-      var tags = " - ";
-      if (sound.name) name = sound.name;
-      if (sound.file) file = sound.file;
-      if (sound.artists.length) artists = sound.artists.join(" | ");
-      if (sound.tags.length) tags = sound.tags.join(" | ");
-      var Output = "```\nSound Name: " + name + "\nFile:       " + file + "\nArtists:    " + artists + "\nTags:       " + tags + "\n```";
-      return Output;
+      return this.soundData[sound_name];
     }else{
       return null;
     }

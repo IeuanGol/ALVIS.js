@@ -525,7 +525,8 @@
             "rainbow6",
             "tachanka",
             "lord",
-            "chanka"
+            "chanka",
+            "siege"
         ]
     },
     "chickens": {
@@ -939,7 +940,7 @@
         "file": "faded.mp3",
         "extension": "mp3",
         "artists": [
-              "Alan Walker"
+            "Alan Walker"
         ],
         "aliases": [],
         "tags": [
@@ -1065,7 +1066,9 @@
         "name": "gangnam_style",
         "file": "gangnam_style.mp3",
         "extension": "mp3",
-        "artists": ["PSY"],
+        "artists": [
+            "PSY"
+        ],
         "aliases": [],
         "tags": [
             "music",
@@ -1279,7 +1282,8 @@
         "tags": [
             "joseph",
             "lucas",
-            "cancer"
+            "cancer",
+            "potato"
         ]
     },
     "hitler_has_won": {
@@ -1527,6 +1531,21 @@
             "siege"
         ]
     },
+    "jeff": {
+        "name": "jeff",
+        "file": "jeff.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": [
+			"my",
+			"name",
+			"jeff",
+			"22",
+			"jump",
+			"street"
+		]
+    },
     "joseph_cube": {
         "name": "joseph_cube",
         "file": "joseph_cube.mp3",
@@ -1596,8 +1615,8 @@
         "artists": [],
         "aliases": [],
         "tags": [
-              "song",
-              "parody"
+            "song",
+            "parody"
         ]
     },
     "kim_jong_un": {
@@ -1861,6 +1880,19 @@
         "tags": [
             "hanzo",
             "overwatch"
+        ]
+    },
+    "lucas_yes": {
+        "name": "lucas_yes",
+        "file": "lucas_yes.mp3",
+        "extension": "mp3",
+        "artists": [
+            "Lucas"
+        ],
+        "aliases": [],
+        "tags": [
+            "reaction",
+            "yes"
         ]
     },
     "make_the_terror": {
@@ -3320,7 +3352,11 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "crazy",
+            "batshit",
+            "retarded"
+        ]
     },
     "trolololo": {
         "name": "trolololo",

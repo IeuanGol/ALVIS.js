@@ -23,15 +23,16 @@ class DMHandler {
   	const arg1 = splitmessage[1];
   	const arg2 = splitmessage[2];
   	const arg3 = splitmessage[3];
+    var disallowed_command_message = "You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.";
 
     if (command === "addallmusic"){
-      message.reply("You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply();
     }else if (command === "addallsounds"){
-      message.reply("You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "addsong"){
-      message.reply("You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "addsound"){
-      message.reply("You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "about"){
       this.commandExecuter.aboutCommand(message);
     }else if (command === "flip"){
@@ -43,31 +44,31 @@ class DMHandler {
     }else if (command === "playsound"){
       this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
     }else if (command === "playstream"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "purgemusic"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "purgesounds"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "removesong"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "removesound"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "r6stats"){
       this.commandExecuter.r6statsCommand(message, arg1, arg2);
     }else if (command === "roll"){
       this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "setusersound"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "showusersounds"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else if (command === "songinfo"){
       this.commandExecuter.songinfoCommand(message, arg1);
     }else if (command === "soundinfo"){
       this.commandExecuter.soundinfoCommand(message, arg1);
     }else if (command === "stop"){
-      message.reply("You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.");
+      message.reply(disallowed_command_message);
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);
