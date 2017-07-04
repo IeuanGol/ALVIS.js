@@ -281,19 +281,16 @@ class Util {
   }
 
   playSound(voiceChannel, filepath, options) {
+    var discord_bot = this.bot;
     var stream_options = this.bot.basic.stream_options;
     if (options) stream_options = options;
-    if (voiceChannel.guild.voiceConnection) return;
     if (!voiceChannel.joinable || !voiceChannel.speakable || voiceChannel.full) return;
     if (voiceChannel == null || filepath == null) return;
     var dispatchers = this.bot.basic.dispatchers;
+    if (voiceChannel.guild.voiceConnection) return;
     voiceChannel.join().then((connection) => {
       dispatchers[voiceChannel.guild.id] = connection.playFile(filepath, stream_options);
       connection.on('error', () => {
-        this.logger("Connection with Discord voice servers has been interrupted.");
-        dispatchers[voiceChannel.guild.id].end();
-      });
-      connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
         dispatchers[voiceChannel.guild.id].end();
       });
@@ -307,18 +304,16 @@ class Util {
   }
 
   playStream(voiceChannel, url, options) {
+    var discord_bot = this.bot;
     var stream_options = this.bot.basic.stream_options;
     if (options) stream_options = options;
     if (voiceChannel == null || url == null) return;
     var dispatchers = this.bot.basic.dispatchers;
+    if (voiceChannel.guild.voiceConnection) return;
     voiceChannel.join().then((connection) => {
   		var stream = ytdl(url, {filter: 'audioonly'});
   		dispatchers[voiceChannel.guild.id] = connection.playStream(stream, stream_options);
       connection.on('error', () => {
-        this.logger("Connection with Discord voice servers has been interrupted.");
-        dispatchers[voiceChannel.guild.id].end();
-      });
-      connection.on('failed', () => {
         this.logger("Connection with Discord voice servers has been interrupted.");
         dispatchers[voiceChannel.guild.id].end();
       });
@@ -334,6 +329,14 @@ class Util {
   endDispatcher(server_id) {
     this.bot.basic.dispatchers[server_id].end();
     this.bot.messageCleanupQueue.expireTag("currentlyplaying" + server_id);
+  }
+
+  pauseDispatcher(server_id) {
+    this.bot.basic.dispatchers[server_id].pause();
+  }
+
+  resumeDispatcher(server_id) {
+    this.bot.basic.dispatchers[server_id].resume();
   }
 
   setLastSongEmbed(server_id, embed) {

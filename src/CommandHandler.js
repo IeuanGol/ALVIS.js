@@ -34,6 +34,8 @@ class CommandHandler {
       this.commandExecuter.flipCommand(message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
+    }else if (command === "operators"){
+      this.commandExecuter.operatorsCommand(message, arg1, arg2, arg3);
     }else if (command === "playmusic"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound"){

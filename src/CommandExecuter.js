@@ -156,6 +156,37 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
+  operatorsCommand(message, arg1, arg2, arg3) {
+    if (!arg3) arg3 = "OVERALL";
+    var discord_bot = this.bot;
+    var operator_data = require("./Services/siege_best_operators.json");
+    var attackers = operator_data[[arg1.toUpperCase(),arg2.toUpperCase().replace("_", " "),arg3.toUpperCase().replace("_", " "),"Attacker"].join(";")];
+    var defenders = operator_data[[arg1.toUpperCase(),arg2.toUpperCase().replace("_", " "),arg3.toUpperCase().replace("_", " "),"Defender"].join(";")];
+    var attacker_string = "";
+    var defender_string = "";
+    if (attackers && defenders){
+      var embed = new Discord.RichEmbed();
+      for (var i in attackers){
+        attacker_string = attacker_string + attackers[i].name + "\n";
+      }
+      for (var i in defenders){
+        defender_string = defender_string + defenders[i].name + "\n";
+      }
+      embed.setDescription("Calculated top 5 successful operators in platinum divison:");
+      embed.setFooter([arg1.toUpperCase(),arg2.toUpperCase(),arg3.toUpperCase()].join(" : "));
+      embed.setColor(parseInt(this.bot.colours.r6stats_embed_colour));
+      embed.setThumbnail("https://ubistatic19-a.akamaihd.net/resource/en-ca/game/rainbow6/siege/R6_logo-6.png");
+      embed.addField("Attackers", attacker_string, true);
+      embed.addField("Defenders", defender_string, true);
+      message.reply("", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
+      this.util.logStandardCommand(message, "operators");
+    }else{
+      message.author.send("I cannot find argumetns matching your provided arguments.");
+    }
+    this.util.cleanupMessage(message);
+  }
+
   playmusicCommand(message, arg1, arg2, body) {
     if (arg1 === "?"){
       if (arg2){

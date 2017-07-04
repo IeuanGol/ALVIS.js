@@ -33,7 +33,7 @@ class GooglePlayMusic {
           if (err) console.log(err);
           var voiceChannel = message.member.voiceChannel;
           streamUrl = streamUrl.replace("https", "http");
-          var file = fs.createWriteStream("./assets/" + message.guild.id + ".mp3");
+          var file = fs.createWriteStream("./assets/temp/" + message.guild.id + ".mp3");
           var request = http.get(streamUrl, function(response) {
             response.pipe(file);
             var duration = song.track.durationMillis/60000;
@@ -48,7 +48,7 @@ class GooglePlayMusic {
             discord_bot.util.setLastSongEmbed(message.guild.id, embed);
             message.channel.send("", {"embed": embed})
             .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id])});
-            discord_bot.util.playSound(message.member.voiceChannel, "./assets/" + message.guild.id + ".mp3", stream_options);
+            discord_bot.util.playSound(message.member.voiceChannel, "./assets/temp/" + message.guild.id + ".mp3", stream_options);
           });
         });
       }else{
@@ -62,7 +62,7 @@ class GooglePlayMusic {
 
   startCurrentlyCachedSong(message, response, stream_options) {
     var discord_bot = this.bot;
-    if (fs.existsSync("./assets/" + message.guild.id + ".mp3")) {
+    if (fs.existsSync("./assets/temp/" + message.guild.id + ".mp3")) {
       message.reply(response.result.fulfillment.speech)
       .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       var embed = discord_bot.util.getLastSongEmbed(message.guild.id);
@@ -72,7 +72,7 @@ class GooglePlayMusic {
         message.channel.send("", {"embed": embed})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id])});
       }
-      discord_bot.util.playSound(message.member.voiceChannel, "./assets/" + message.guild.id + ".mp3", stream_options);
+      discord_bot.util.playSound(message.member.voiceChannel, "./assets/temp/" + message.guild.id + ".mp3", stream_options);
     }else{
       message.reply("There is currently no song to replay.")
       .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});

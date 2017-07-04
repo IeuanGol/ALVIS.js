@@ -596,7 +596,8 @@
         "tags": [
             "jimmy",
             "neutron",
-            "cancer"
+            "cancer",
+            "earrape"
         ]
     },
     "cruel_ploy": {
@@ -993,6 +994,17 @@
             "anime"
         ]
     },
+    "feminism": {
+        "name": "feminism",
+        "file": "feminism.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": [
+            "pink",
+            "guy"
+        ]
+    },
     "fire_sale": {
         "name": "fire_sale",
         "file": "fire_sale.mp3",
@@ -1060,7 +1072,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "original"
+        ]
     },
     "gangnam_style": {
         "name": "gangnam_style",
@@ -1167,7 +1181,8 @@
         "aliases": [],
         "tags": [
             "meme",
-            "reaction"
+            "reaction",
+            "victory"
         ]
     },
     "got_you_in_my_sights": {
@@ -1538,12 +1553,28 @@
         "artists": [],
         "aliases": [],
         "tags": [
-			"my",
-			"name",
-			"jeff",
-			"22",
-			"jump",
-			"street"
+            "my",
+            "name",
+            "jeff",
+            "22",
+            "jump",
+            "street"
+        ]
+    },
+    "jingle_jangle": {
+        "name": "jingle_jangle",
+        "file": "jingle_jangle.mp3",
+        "extension": "mp3",
+        "artists": [
+			"Joseph"
+		],
+        "aliases": [],
+        "tags": [
+			"jingle",
+			"jangle",
+			"balls",
+			"around",
+			"joseph"
 		]
     },
     "joseph_cube": {
@@ -1762,7 +1793,12 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "jim",
+            "carrey",
+            "ace",
+            "ventura"
+        ]
     },
     "like_you": {
         "name": "like_you",
@@ -1999,6 +2035,18 @@
             "reaction"
         ]
     },
+    "mmm_damn": {
+        "name": "mmm_damn",
+        "file": "mmm_damn.mp3",
+        "extension": "mp3",
+        "artists": [],
+        "aliases": [],
+        "tags": [
+            "pink",
+            "guy",
+            "victory"
+        ]
+    },
     "mmm_what_you_say": {
         "name": "mmm_what_you_say",
         "file": "mmm_what_you_say.mp3",
@@ -2100,7 +2148,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "stealing"
+        ]
     },
     "nitro": {
         "name": "nitro",
@@ -2217,7 +2267,11 @@
             "Joseph"
         ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "joseph",
+            "juice",
+            "alcohol"
+        ]
     },
     "not_rick": {
         "name": "not_rick",
@@ -2286,7 +2340,8 @@
             "pink",
             "guy",
             "filthyfrank",
-            "reaction"
+            "reaction",
+            "victory"
         ]
     },
     "ode_to_salt": {
@@ -2403,7 +2458,10 @@
             "Tyler"
         ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "tyler",
+            "victory"
+        ]
     },
     "overwatch_theme": {
         "name": "overwatch_theme",
@@ -2413,7 +2471,10 @@
             "Lucas"
         ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "overwatch",
+            "cancer"
+        ]
     },
     "pants": {
         "name": "pants",
@@ -2553,7 +2614,14 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "r6",
+            "rainbow 6",
+            "siege",
+            "chanka",
+            "tachanka",
+            "lord"
+        ]
     },
     "pokemon_pg": {
         "name": "pokemon_pg",
@@ -2661,7 +2729,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "space",
+            "balls"
+        ]
     },
     "recruit": {
         "name": "recruit",
@@ -2703,7 +2774,9 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "rival"
+        ]
     },
     "roped": {
         "name": "roped",
@@ -2821,7 +2894,12 @@
             "Joseph"
         ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "screaming",
+            "joseph",
+            "reaction",
+            "amused"
+        ]
     },
     "scrumping": {
         "name": "scrumping",
@@ -2975,9 +3053,16 @@
         "name": "sign_with_my_nuts",
         "file": "sign_with_my_nuts.mp3",
         "extension": "mp3",
-        "artists": [],
+        "artists": [
+            "The Lonely Island"
+        ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "lonely",
+            "island",
+            "diaper",
+            "money"
+        ]
     },
     "skills": {
         "name": "skills",
@@ -3009,7 +3094,11 @@
             "Joseph"
         ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "joseph",
+            "slurping",
+            "juice"
+        ]
     },
     "smashing": {
         "name": "smashing",
@@ -3121,7 +3210,10 @@
         "extension": "mp3",
         "artists": [],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "park",
+            "ranger"
+        ]
     },
     "subspecies": {
         "name": "subspecies",
@@ -3164,9 +3256,15 @@
         "name": "sukhraj_watermelone",
         "file": "sukhraj_watermelone.mp3",
         "extension": "mp3",
-        "artists": [],
+        "artists": [
+            "Sukhraj"
+        ],
         "aliases": [],
-        "tags": []
+        "tags": [
+            "watermelon",
+            "sukhraj",
+            "discord"
+        ]
     },
     "sun_will_come_up": {
         "name": "sun_will_come_up",
@@ -3490,7 +3588,8 @@
         "tags": [
             "joseph",
             "cancer",
-            "filthyfrank"
+            "filthyfrank",
+            "zayd"
         ]
     },
     "wet_panties": {
