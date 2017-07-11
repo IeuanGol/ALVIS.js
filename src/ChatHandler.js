@@ -10,7 +10,6 @@ class ChatHandler {
       return;
     }
     if (message.isMentioned(this.bot.basic.user_id)){
-      console.log("hit1");
       this.bot.util.queryBotResponse(message);
       return;
     }

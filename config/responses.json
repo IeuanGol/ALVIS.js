@@ -15,15 +15,15 @@
   },
     {
     "name": "Add Song",
-    "syntax": "addsong <song_name> <file_name_with_extension>",
-    "description": "Adds a song to the local library, pointing to the file provided within the ./music folder. Will overwrite existing songs. \n*Admin Command*",
+    "syntax": "addsong [-f]",
+    "description": "Adds any attached audio files to the local music library. Adding '-f' tag will overwrite existing songs with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Add Sound",
-    "syntax": "addsound <sound_name> <file_name_with_extension>",
-    "description": "Adds a sound to the local library, pointing to the file provided within the ./sounds folder. Will overwrite existing sounds. \n*Admin Command*",
+    "syntax": "addsound [-f]",
+    "description": "Adds any attached audio files to the local sound library. Adding '-f' tag will overwrite existing sounds with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },

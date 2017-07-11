@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 const ResponseHandler = require('./AI/ResponseHandler.js');
+const https = require('https');
 
 class Util {
   constructor(bot) {
@@ -27,7 +28,7 @@ class Util {
 
   queryBotResponse(message) {
     var query_message = message.cleanContent;
-    if (message.channel instanceof Discord.TextChannel) query_message = query_message.replace(this.bot.basic.username, "").replace(/@/g, "");
+    if (message.channel instanceof Discord.TextChannel) query_message = query_message.replace("@" + this.bot.basic.username, "").replace("  ", "").replace(/@/g, "");
     if (query_message.length < 1) query_message = "?";
     var handler = this.responseHandler;
     var request = this.bot.chatbot.textRequest(query_message, {
@@ -119,7 +120,7 @@ class Util {
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
-        if (body.length + nextsong.name.length > charlimit){
+        if (body.length + nextsong.name.length >= charlimit){
           if (isFirst){
             embed.addField("Songs:", body);
             isFirst = false;
@@ -170,7 +171,7 @@ class Util {
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
-        if (body.length + nextsound.name.length > charlimit){
+        if (body.length + nextsound.name.length >= charlimit){
           if (isFirst){
             embed.addField("Sounds:", body);
             isFirst = false;
@@ -348,12 +349,90 @@ class Util {
     return embed;
   }
 
+  addSongs(message, force) {
+    message.attachments.forEach(attachment => this.addSong(message, attachment, force));
+  }
+
+  addSounds(message, force) {
+    message.attachments.forEach(attachment => this.addSound(message, attachment, force));
+  }
+
+  addSong(message, attachment, force) {
+    var discord_bot = this.bot;
+    const filename = attachment.filename.split('.')[0].split(" ")[0];
+    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
+    if (!discord_bot.basic.audio_formats.includes(extension)) {
+      message.author.send("The file '" + attachment.filename + "' is an invalid format.");
+      return;
+    }
+    if (attachment.filesize > discord_bot.config.max_upload_size) {
+      message.author.send("The file '" + attachment.filename + "' is too large.");
+      return;
+    }
+    if (fs.existsSync(discord_bot.basic.music_path + "/" + attachment.filename) && !force){
+      message.author.send("The file '" + attachment.filename + "' already exists in my music library.");
+      return;
+    }
+    const song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    https.get(attachment.url, (response) => {
+      const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + attachment.filename);
+      response.pipe(file);
+      message.author.send("Song '" + filename + "' added.");
+      discord_bot.util.setAudioData(discord_bot.util.musicData, discord_bot.basic.music_path + "/_music.json", song_obj);
+      discord_bot.util.musicData = require("." + discord_bot.basic.music_path + "/_music.json");
+    }).on('error', (error) => {
+      console.error(error);
+      message.author.send("Something went wrong when adding song '" + attachment.filename + "'.");
+    });
+  }
+
+  addSound(message, attachment, force) {
+    var discord_bot = this.bot;
+    const filename = attachment.filename.split('.')[0].split(" ")[0];
+    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
+    if (!discord_bot.basic.audio_formats.includes(extension)) {
+      message.author.send("The file '" + attachment.filename + "' is an invalid format.");
+      return;
+    }
+    if (attachment.filesize > discord_bot.config.max_upload_size) {
+      message.author.send("The file '" + attachment.filename + "' is too large.");
+      return;
+    }
+    if (fs.existsSync(discord_bot.basic.sound_path + "/" + attachment.filename) && !force){
+      message.author.send("The file '" + attachment.filename + "' already exists in my sound library.");
+      return;
+    }
+    const sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    https.get(attachment.url, (response) => {
+      const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
+      response.pipe(file);
+      message.author.send("Sound '" + filename + "' added.");
+      discord_bot.util.setAudioData(discord_bot.util.soundData, discord_bot.basic.sound_path + "/_sounds.json", sound_obj);
+      discord_bot.util.soundData = require("." + discord_bot.basic.sound_path + "/_sounds.json");
+    }).on('error', (error) => {
+      console.error(error);
+      message.author.send("Something went wrong when adding sound '" + attachment.filename + "'.");
+    });
+  }
+
   setIntegerVolume(integerVolume) {
     integerVolume = Math.floor(integerVolume/10);
     if (integerVolume > 10) integerVolume = 10;
     if (integerVolume < 1) integerVolume = 1;
     var volumeMap = [0.02, 0.04, 0.06, 0.09, 0.13, 0.20, 0.30, 0.45, 0.67, 1];
     this.setVolume(volumeMap[integerVolume - 1]);
+  }
+
+  getIntegerVolume() {
+    var volumeMap = [0.02, 0.04, 0.06, 0.09, 0.13, 0.20, 0.30, 0.45, 0.67, 1];
+    var length = volumeMap.length;
+    var volume = this.bot.basic.stream_options.volume;
+    for (var i = 0; i < length; i++){
+      if (volume == volumeMap[i]){
+        return (i + 1) * 10;
+      }
+    }
+    return -1;
   }
 
   setVolume(newVolume) {
@@ -431,7 +510,7 @@ class Util {
     }else{
       return false;
     }
-    fs.writeFile("./src/userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
+    fs.writeFile("./config/userSounds.json", JSON.stringify(this.bot.userSounds, null, 4), function(err){
       if (err) console.log(err);
     });
     return true;

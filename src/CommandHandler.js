@@ -25,17 +25,15 @@ class CommandHandler {
     }else if (command === "addallsounds"){
       this.commandExecuter.addallsoundsCommand(message);
     }else if (command === "addsong"){
-      this.commandExecuter.addsongCommand(message, arg1, arg2);
+      this.commandExecuter.addsongCommand(message, arg1);
     }else if (command === "addsound"){
-      this.commandExecuter.addsoundCommand(message, arg1, arg2);
+      this.commandExecuter.addsoundCommand(message, arg1);
     }else if (command === "about"){
       this.commandExecuter.aboutCommand(message);
     }else if (command === "flip"){
       this.commandExecuter.flipCommand(message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
-    }else if (command === "operators"){
-      this.commandExecuter.operatorsCommand(message, arg1, arg2, arg3);
     }else if (command === "playmusic"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound"){

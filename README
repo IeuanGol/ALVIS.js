@@ -69,14 +69,14 @@ Bot Commands:
 
   Admin Commands:
     Add Song
-      Adds a song to the local library, pointing to the file provided within the ./music folder.
-      Will overwrite existing songs.
-      !addsong <song_name> <file_name_with_extension>
+      Adds any attached audio files to the local music library.
+      Adding '-f' tag will overwrite existing songs with same name.
+      !addsong [-f]
 
     Add Sound
-      Adds a sound to the local library, pointing to the file provided within the ./sounds folder.
-      Will overwrite existing sounds.
-      !addsound <sound_name> <file_name_with_extension>
+      Adds any attached audio files to the local sounds library.
+      Adding '-f' tag will overwrite existing sounds with same name.
+      !addsound [-f]
 
     Remove Song
       Deletes a song from the local library structure. Does not delete the file from disk.

@@ -76,64 +76,48 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  addsongCommand(message, arg1, arg2) {
+  addsongCommand(message, arg1) {
+    var force = false;
     if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
-    if (arg1 == null || arg2 == null){
-      message.author.send("It appears your command is missing some required argument(s).");
+    if (message.attachments.size <= 0){
+      message.author.send("It appears you have not attached any audio file(s) to your command message.");
       this.util.cleanupMessage(message);
       return;
     }
-    if (!fs.existsSync(this.bot.basic.music_path + "/" + arg2)){
-      message.author.send("The file '" + arg2 + "' you specified does not exist.");
-      this.util.cleanupMessage(message);
-      return;
+    if (arg1){
+      if (arg1.toLowerCase() == "-f"){
+        force = true;
+      }
     }
-    var name = arg1.toLowerCase();
-    var sound = arg2.split("/");
-    sound = sound[sound.length - 1];
-    sound = arg2.split("\\");
-    sound = sound[sound.length - 1];
-    var ext = arg2.split(".");
-    ext = ext[ext.length - 1];
-    const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-    this.util.setAudioData(this.util.musicData, this.bot.basic.music_path + "/_music.json", sound_obj);
-    this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
-    this.util.logStandardCommand(message, "addmusic");
-    this.util.cleanupMessage(message);
+    this.util.addSongs(message, force);
+    this.util.logStandardCommand(message, "addsong");
+    this.bot.messageCleanupQueue.add(message, 0.15, true);
   }
 
-  addsoundCommand(message, arg1, arg2) {
+  addsoundCommand(message, arg1) {
+    var force = false;
     if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
-    if (arg1 == null || arg2 == null){
-      message.author.send("It appears your command is missing some required argument(s).");
+    if (message.attachments.size <= 0){
+      message.author.send("It appears you have not attached any audio file(s) to your command message.");
       this.util.cleanupMessage(message);
       return;
     }
-    if (!fs.existsSync(this.bot.basic.sound_path + "/" + arg2)){
-      message.author.send("The file '" + arg2 + "' you specified does not exist.");
-      this.util.cleanupMessage(message);
-      return;
+    if (arg1){
+      if (arg1.toLowerCase() == "-f"){
+        force = true;
+      }
     }
-    var name = arg1.toLowerCase();
-    var sound = arg2.split("/");
-    sound = sound[sound.length - 1];
-    sound = arg2.split("\\");
-    sound = sound[sound.length - 1];
-    var ext = arg2.split(".");
-    ext = ext[ext.length - 1];
-    const sound_obj = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-    this.util.setAudioData(this.util.soundData, this.bot.basic.sound_path + "/_sounds.json",sound_obj);
-    this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
+    this.util.addSounds(message, force);
     this.util.logStandardCommand(message, "addsound");
-    this.util.cleanupMessage(message);
+    this.bot.messageCleanupQueue.add(message, 0.15, true);
   }
 
   flipCommand(message) {
@@ -153,37 +137,6 @@ class CommandExecuter {
     }
     message.author.send("", {embed: embed});
     this.util.logStandardCommand(message, "help");
-    this.util.cleanupMessage(message);
-  }
-
-  operatorsCommand(message, arg1, arg2, arg3) {
-    if (!arg3) arg3 = "OVERALL";
-    var discord_bot = this.bot;
-    var operator_data = require("./Services/siege_best_operators.json");
-    var attackers = operator_data[[arg1.toUpperCase(),arg2.toUpperCase().replace("_", " "),arg3.toUpperCase().replace("_", " "),"Attacker"].join(";")];
-    var defenders = operator_data[[arg1.toUpperCase(),arg2.toUpperCase().replace("_", " "),arg3.toUpperCase().replace("_", " "),"Defender"].join(";")];
-    var attacker_string = "";
-    var defender_string = "";
-    if (attackers && defenders){
-      var embed = new Discord.RichEmbed();
-      for (var i in attackers){
-        attacker_string = attacker_string + attackers[i].name + "\n";
-      }
-      for (var i in defenders){
-        defender_string = defender_string + defenders[i].name + "\n";
-      }
-      embed.setDescription("Calculated top 5 successful operators in platinum divison:");
-      embed.setFooter([arg1.toUpperCase(),arg2.toUpperCase(),arg3.toUpperCase()].join(" : "));
-      embed.setColor(parseInt(this.bot.colours.r6stats_embed_colour));
-      embed.setThumbnail("https://ubistatic19-a.akamaihd.net/resource/en-ca/game/rainbow6/siege/R6_logo-6.png");
-      embed.addField("Attackers", attacker_string, true);
-      embed.addField("Defenders", defender_string, true);
-      message.reply("", {embed: embed})
-      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
-      this.util.logStandardCommand(message, "operators");
-    }else{
-      message.author.send("I cannot find argumetns matching your provided arguments.");
-    }
     this.util.cleanupMessage(message);
   }
 
@@ -209,7 +162,7 @@ class CommandExecuter {
       return;
     }
     if (!(message.channel instanceof Discord.TextChannel)){
-      message.reply("You cannot perform a **" + command_prefix + "playmusic** command with those arugments from within a Direct Message. **" +command_prefix + "playmusic ?** is allowed.");
+      message.reply("You cannot perform a **" + command_prefix + "playmusic** command with those arugments from within a Direct Message. **" + command_prefix + "playmusic ?** is allowed.");
       return;
     }
     var channel = message.member.voiceChannel;
@@ -291,7 +244,7 @@ class CommandExecuter {
       return;
     }
     if (!(message.channel instanceof Discord.TextChannel)){
-      message.reply("You cannot perform a **" + command_prefix + "playsound** command with those arugments from within a Direct Message. **" +command_prefix + "playsound ?** is allowed.");
+      message.reply("You cannot perform a **" + command_prefix + "playsound** command with those arugments from within a Direct Message. **" + command_prefix + "playsound ?** is allowed.");
       return;
     }
     var channel = message.member.voiceChannel;

@@ -7,6 +7,7 @@
         "masterToken": ""
     },
     "default_volume": 50,
+    "max_upload_size": 10000000,
     "bot_game": "by PacketCloud™",
     "bot_game_link": "",
     "deleteMessages": true
