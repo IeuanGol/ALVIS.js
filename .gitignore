@@ -1,4 +1,3 @@
-assets/sounds/*.mp3
-assets/sounds/*.json
-assets/music/*.mp3
-assets/music/*.json
+assets/sounds/*
+assets/music/*
+config/*
