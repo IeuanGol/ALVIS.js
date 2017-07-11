@@ -1,4 +1,5 @@
 assets/sounds/*
 assets/music/*
 assets/temp/*
+!assets/temp/.keep
 config/*
