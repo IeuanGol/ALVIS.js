@@ -16,14 +16,14 @@
     {
     "name": "Add Song",
     "syntax": "addsong [-f]",
-    "description": "Adds any attached audio files to the local music library. Adding '-f' tag will overwrite existing songs with same name. \n*Admin Command*",
+    "description": "Adds any attached audio files to the local music library. \nAdding '-f' tag will overwrite existing songs with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Add Sound",
     "syntax": "addsound [-f]",
-    "description": "Adds any attached audio files to the local sound library. Adding '-f' tag will overwrite existing sounds with same name. \n*Admin Command*",
+    "description": "Adds any attached audio files to the local sound library. \nAdding '-f' tag will overwrite existing sounds with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
