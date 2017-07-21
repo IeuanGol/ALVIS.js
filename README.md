@@ -1,7 +1,7 @@
 'ALVIS' Discord bot, by PacketCloud�
 Version: 1.7.5
 
-Setting Up The Bot:
+__**Setting Up The Bot:**__
     Before the bot will run, you must first set up a few values in the config files:
 
     Requirements:
@@ -18,107 +18,107 @@ Setting Up The Bot:
 
 
 
-Bot Commands:
-  Public Commands:
+__**Bot Commands:**__
+  **Public Commands:**
     About
-      Displays bot information.
+      *Displays bot information.*
       !about
 
     Flip
-      Flips a coin.
+      *Flips a coin.*
       !flip
 
     Help
-      Displays list of available commands.
+      *Displays list of available commands.*
       !help
 
     Play Music
-      Plays specific or random song matching provided search criteria.
-      '?' lists songs matching search criteria.
+      *Plays specific or random song matching provided search criteria.*
+      *'?' lists songs matching search criteria.*
       !playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]
 
     Play Sound
-      Plays specific or random sound matching provided search criteria.
-      '?' lists sounds matching search criteria.
+      *Plays specific or random sound matching provided search criteria.*
+      *'?' lists sounds matching search criteria.*
       !playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]
 
     Play Stream
-      Plays audio from the provided YouTube video.
+      *Plays audio from the provided YouTube video.*
       !playstream <Youtube_URL>
 
     R6 Stats
-      Generates a 'Rainbow Six Siege' Player Action Report.
+      *Generates a 'Rainbow Six Siege' Player Action Report.*
       !r6stats <username> [platform]
 
     Roll
-      Rolls a die.
+      *Rolls a die.*
       !roll
 
     Song Info
-      Displays information about a song.
+      *Displays information about a song.*
       !songinfo <song_name>
 
     Sound Info
-      Displays information about a sound.
+      *Displays information about a sound.*
       !soundinfo <sound_name>
 
     Stop
-      Stops audio playback on voice channel.
+      *Stops audio playback on voice channel.*
       !stop
 
 
-  Admin Commands:
+  **Admin Commands:**
     Add Song
-      Adds any attached audio files to the local music library.
-      Adding '-f' tag will overwrite existing songs with same name.
+      *Adds any attached audio files to the local music library.*
+      *Adding '-f' tag will overwrite existing songs with same name.*
       !addsong [-f]
 
     Add Sound
-      Adds any attached audio files to the local sounds library.
-      Adding '-f' tag will overwrite existing sounds with same name.
+      *Adds any attached audio files to the local sounds library.*
+      *Adding '-f' tag will overwrite existing sounds with same name.*
       !addsound [-f]
 
     Remove Song
-      Deletes a song from the local library structure. Does not delete the file from disk.
+      *Deletes a song from the local library structure. Does not delete the file from disk.*
       !removesong <song_name>
 
     Remove Sound
-      Deletes a sound from the local library structure. Does not delete the file from disk.
+      *Deletes a sound from the local library structure. Does not delete the file from disk.*
       !removesound <sound_name>
 
     Set User Sound
-      Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.
+      *Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.*
       !setusersound <@mention> [sound_name]
 
 
-  Manager Commands:
+  **Manager Commands:**
     Add All Music
-      Attempts to add all files in ./music folder to the local library under their filenames.
-      Does not overwrite.
+      *Attempts to add all files in ./music folder to the local library under their filenames.*
+      *Does not overwrite.*
       !addallmusic
 
     Add All Sounds
-      Attempts to add all files in ./sounds folder to the local library under their filenames.
-      Does not overwrite.
+      *Attempts to add all files in ./sounds folder to the local library under their filenames.*
+      *Does not overwrite.*
       !addallsounds
 
     Purge Music
-      Removes all songs from the local library.
+      *Removes all songs from the local library.*
       !purgemusic <confirmation>
 
     Purge Sounds
-      Removes all sounds from the local library.
+      *Removes all sounds from the local library.*
       !purgesounds <confirmation>
 
 To run commands, enter them into any text channel the bot has access to. Certain commands also work in Direct Messages with the bot.
 
 
 
-Changing Settings:
+__**Changing Settings:**__
     You can change bot settings manually in the configuration files within the 'config' folder.
     Please do not mess with other files unless you know what you are doing.
 
-Adding Sounds:
+__**Adding Sounds:**__
     You can add music and sounds simply by adding audio files to the 'music' and 'sounds' directories. They must be in a format supported by Discord; we recommend MP3 or WAV.
     New audio must then be added to the sound or music library with !addsound or !addmusic commands.
     Alternatively, you can add all audio in the respective folders to the library with !addallsounds or !addallmusic, but then the audio file names will be used (instead of custom ones).
@@ -127,8 +127,8 @@ Adding Sounds:
 NOTE:
 Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to all of these sounds.
 
-Package:
-  Organization:
+__**Package:**__
+  **Organization:**
     PacketCloud [https://packetcloud.com]
 
     Authors:
@@ -136,14 +136,14 @@ Package:
       Lucas Ciula
       Cody Mendoza
 
-  Repository:
+  **Repository:**
     GitHub [https://github.com/packetcloud/alvis]
 
-  License:
+  **License:**
     Type: MIT
     (see LICENSE file)
 
-  Credited Dependencies:
+  **Credited Dependencies:**
       Discord.js:
         We use the Discord Node.js API ('discord.js') for interfacing with Discord's servers.
         [https://discord.js.org]
@@ -160,7 +160,7 @@ Package:
 	  playsound:
 		Used to send search requests to Google Play Music for song lookup and stream URL retrieval, allowing for music playback.
 
-    Other Dependencies:
+    **Other Dependencies:**
       bufferutil: ^3.0.1
       libsodium: ^0.5.1
       libsodium-wrappers: ^0.5.1
