@@ -8,14 +8,14 @@
 Before the bot will run, you must first set up a few values in the config files:
 ### Requirements:
 You must have a Discord bot token and Google API.AI key for an agent with proper Intents and Entities.
-Please contact us if you need further information about the API.AI agent [https://packetcloud.com/about].  
+Please [contact us](https://packetcloud.com/about) if you need further information about the API.AI agent.  
 You will also need a Wolfram API key, though in the future this will be changed to be *optional*; adding support for Wolfram knowledgebase lookup in chat bot functionality. There will also be more modules like this to come; which will also be optional.
 
 ### Tokens:
-Enter your Discord bot token, API.AI agent key, and Wolfram API key into the config JSON file (./config/config.json).
+Enter your Discord bot token, API.AI agent key, and Wolfram API key into the config JSON file (*./config/config.json*).
 
 ### User Permissions:
-In the permissions JSON file (./config/permissions.json), add the names of the roles on your Discord server(s) that you want associated to bot permissions.
+In the permissions JSON file (*./config/permissions.json*), add the names of the roles on your Discord server(s) that you want associated to bot permissions.
 People with manager_role will be allowed to use all bot commands, admin_role grants administrative commands.
 Default_role is the name of the role you want the bot to assign all new users. This one is optional.
 
@@ -92,12 +92,12 @@ Assigns (or removes) a sound to a user. This sound plays when the user joins a p
  
 ### Manager Commands
 **Add All Music**  
-Attempts to add all files in ./music folder to the local library under their filenames.  
+Attempts to add all files in *./music* folder to the local library under their filenames.  
 *Does not overwrite.*  
 `!addallmusic`  
 
 **Add All Sounds**  
-Attempts to add all files in ./sounds folder to the local library under their filenames.  
+Attempts to add all files in *./sounds* folder to the local library under their filenames.  
 *Does not overwrite.*  
 `!addallsounds`  
 
@@ -124,7 +124,7 @@ Alternatively, you can add all audio in the respective folders to the library wi
 
 ## Package
 **Organization:**  
-PacketCloud [https://packetcloud.com]  
+[PacketCloud](https://packetcloud.com)  
 
 **Authors:**  
 Adrian Schuldhaus  
@@ -132,11 +132,11 @@ Lucas Ciula
 Cody Mendoza  
 
 **Repository:**  
-GitHub [https://github.com/packetcloud/alvis]  
+[GitHub](https://github.com/packetcloud/alvis)  
 
 **License:**  
 Type: MIT  
-(see LICENSE file)  
+(see [LICENSE file](https://github.com/PacketCloud/ALVIS/blob/master/LICENSE))  
 
 **Credited Dependencies:**  
 Discord.js:  
