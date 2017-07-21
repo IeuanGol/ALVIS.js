@@ -129,10 +129,10 @@ Sound files provided alongside this bot may come from copyrighted work. We do no
 **Organization:**  
 PacketCloud [https://packetcloud.com]  
 
-Authors:  
-  Adrian Schuldhaus  
-  Lucas Ciula  
-  Cody Mendoza  
+**Authors:**  
+Adrian Schuldhaus  
+Lucas Ciula  
+Cody Mendoza  
 
 **Repository:**  
 GitHub [https://github.com/packetcloud/alvis]  
@@ -143,20 +143,16 @@ Type: MIT
 
 **Credited Dependencies:**  
 Discord.js:  
-  We use the Discord Node.js API ('discord.js') for interfacing with Discord's servers.  
-  [https://discord.js.org]  
-
+  We use the [Discord Node.js API](https://discord.js.org) for interfacing with Discord's servers.  
+  
 API.AI:  
-  We make use of Google's Node.js 'apiai' package. This is used to interface with their servers to handle and classify bot chat queries.  
-  [https://api.ai]  
+  We make use of [Google's api.ai](https://api.ai) servers using the [apiai](https://www.npmjs.com/package/apiai) Node.js package. This is used to interface with Google's servers to handle and classify bot chat queries.  
 
 r6stats.com:  
-  We send web requests to api.r6stats.com to retrieve player stats for Rainbow Six Siege.  
-  [https://r6stats.com]  
-  [https://rainbow6.ubisoft.com]  
+  We send web requests to [api.r6stats.com](https://r6stats.com) to retrieve player stats for [Rainbow Six Siege](https://rainbow6.ubisoft.com).  
 
 playsound:  
-  Used to send search requests to Google Play Music for song lookup and stream URL retrieval, allowing for music playback.  
+  [playsound](https://www.npmjs.com/package/playmusic) Node.js package is used to send search requests to [Google Play Music](https://play.google.com/music/listen) for song lookup and stream URL retrieval, allowing for music playback.  
 
 **Other Dependencies:**  
 bufferutil: ^3.0.1  
