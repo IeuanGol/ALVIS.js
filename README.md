@@ -1,5 +1,5 @@
 # **ALVIS** 
-**Discord bot, by PacketCloud™**  
+**Discord bot, by [PacketCloud™](https://packetcloud.com)**  
 *Version: 1.7.5*  
 ## Description
 **ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*.
@@ -121,9 +121,6 @@ You can add music and sounds simply by adding audio files to the 'music' and 'so
 New audio must then be added to the sound or music library with `!addsound` or `!addmusic` commands.
 Alternatively, you can add all audio in the respective folders to the library with `!addallsounds` or `!addallmusic`, but then the audio file names will be used (instead of custom ones).
 `!purgesounds` or `!purgemusic` can be used to clear the database.
- 
-*NOTE:
-Sound files provided alongside this bot may come from copyrighted work. We do not claim to own rights to all of these sounds.*
 
 ## Package
 **Organization:**  
