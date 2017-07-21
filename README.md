@@ -16,8 +16,8 @@ Enter your Discord bot token, API.AI agent key, and Wolfram API key into the con
 
 ### User Permissions:
 In the permissions JSON file (*./config/permissions.json*), add the names of the roles on your Discord server(s) that you want associated to bot permissions.
-People with manager_role will be allowed to use all bot commands, admin_role grants administrative commands.
-Default_role is the name of the role you want the bot to assign all new users. This one is optional.
+People with *manager_role* will be allowed to use all bot commands, *admin_role* grants administrative commands.  
+The *default_role* is the name of the role you want the bot to assign all new users. This one is optional.
 
 ## Bot Commands
 ### Public Commands
