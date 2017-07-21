@@ -1,13 +1,18 @@
-# **ALVIS** Discord bot, by PacketCloud™
-*Version: 1.7.5*
+# **ALVIS** 
+**Discord bot, by PacketCloud™**  
+*Version: 1.7.5*  
+## Description
+**ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*.
+
 ## Setting Up The Bot
 Before the bot will run, you must first set up a few values in the config files:
 ### Requirements:
 You must have a Discord bot token and Google API.AI key for an agent with proper Intents and Entities.
-Please contact us if you need further information about the API.AI agent [https://packetcloud.com/about].
+Please contact us if you need further information about the API.AI agent [https://packetcloud.com/about].  
+You will also need a Wolfram API key, though in the future this will be changed to be *optional*; adding support for Wolfram knowledgebase lookup in chat bot functionality. There will also be more modules like this to come; which will also be optional.
 
 ### Tokens:
-Enter your Discord bot token and API.AI agent key into the config JSON file (./config/config.json).
+Enter your Discord bot token, API.AI agent key, and Wolfram API key into the config JSON file (./config/config.json).
 
 ### User Permissions:
 In the permissions JSON file (./config/permissions.json), add the names of the roles on your Discord server(s) that you want associated to bot permissions.
@@ -16,9 +21,9 @@ Default_role is the name of the role you want the bot to assign all new users. T
 
 ## Bot Commands
 ### Public Commands
-**About**\n
-Displays bot information.
-`!about`
+**About**  
+Displays bot information.  
+`!about`  
 
 **Flip**  
 Flips a coin.  
