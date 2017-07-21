@@ -5,6 +5,6 @@
   "command_prefix": "!",
   "sound_path": "./assets/sounds",
   "music_path": "./assets/music",
-  "audio_formats": ["mp3"],
+  "audio_formats": ["mp3", "wav"],
   "stream_options": {}
 }
