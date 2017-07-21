@@ -449,8 +449,12 @@ class CommandExecuter {
       return;
     }
     var user = message.mentions.users.first();
-    var id = user.id;
-    var username = user.username;
+    var id = null;
+    var username = null;
+    if (user){
+      id = user.id;
+      username = user.username;
+    }
     if (isNaN(id) || !(arg1.includes("<@") && arg1.includes(">"))){
       message.author.send("The first argument of that command is not a proper @mention of target user.");
     }else if (this.util.setUserSound(id, username, arg2)){

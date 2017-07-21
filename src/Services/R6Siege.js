@@ -24,9 +24,11 @@ class R6Siege {
       var playerData = JSON.parse(body).player;
       if (typeof playerData === "undefined"){
         if (noplatform){
-          message.reply("I could not locate player data. Are you sure the username is correct?");
+          message.reply("I could not locate player data. Are you sure the username is correct?")
+          .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
         }else{
-          message.reply("I could not locate player data. Are you sure the username is correct? If you are providing a platform, be sure it is also correct.");
+          message.reply("I could not locate player data. Are you sure the username is correct? If you are providing a platform, be sure it is also correct.")
+          .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
         }
         return;
       }

@@ -68,7 +68,7 @@ class Wolfram {
                 first = false;
               }
               has_value = true;
-              section_content = section_content + b.value + "\n";
+              section_content = (section_content + b.value + "\n").replace(/~~/g, "~");
             }
           }
           if (has_value == true){
