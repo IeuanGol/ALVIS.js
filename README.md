@@ -2,7 +2,7 @@
 **Discord bot, by [PacketCloud™](https://packetcloud.com)**  
 *Version: 1.7.5*  
 ## Description
-**ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*.
+**ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*. It utilizes Google's [API.AI](https://api.ai) servers to introduce natural language request processing to the bot. Allowing for communication in plain English - not just commands. We are constantly expanding ALVIS' modules, features and knowledge base. We also have plans to add voice support in the future.  
 
 ## Setting Up The Bot
 Before the bot will run, you must first set up a few values in the config files:
