@@ -104,7 +104,7 @@ class Util {
   sendMusicList(message, tags, strict, exact) {
     var search_criteria = "";
     if (tags){
-      search_criteria = tags.join(" ");
+      search_criteria = "\"" +tags.join("\", \"") + "\"";
       if (strict){
         search_criteria = "&" + search_criteria;
       }
@@ -155,7 +155,7 @@ class Util {
   sendSoundList(message, tags, strict, exact) {
     var search_criteria = "";
     if (tags){
-      search_criteria = tags.join(" ");
+      search_criteria = "\"" +tags.join("\", \"") + "\"";
       if (strict){
         search_criteria = "&" + search_criteria;
       }

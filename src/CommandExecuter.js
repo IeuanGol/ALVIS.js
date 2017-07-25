@@ -482,8 +482,8 @@ class CommandExecuter {
       var discord_bot = this.bot;
       var artists = "-";
       var tags = "-";
-      if (artists.length) artists = song.artists.join(" ");
-      if (tags.length) tags = song.tags.join(" ");
+      if (artists.length) artists = "\"" +song.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" +song.tags.join("\", \"") + "\"";
       var embed = new Discord.RichEmbed();
       embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
       embed.addField(song.name, "File: " + song.file + "\nArtists: " + artists + "\nTags: " + tags + "");
@@ -502,8 +502,8 @@ class CommandExecuter {
       var discord_bot = this.bot;
       var artists = "-";
       var tags = "-";
-      if (artists.length) artists = sound.artists.join(" ");
-      if (tags.length) tags = sound.tags.join(" ");
+      if (artists.length) artists = "\"" + sound.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" +sound.tags.join("\", \"") + "\"";
       var embed = new Discord.RichEmbed();
       embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
       embed.addField(sound.name, "File: " + sound.file + "\nArtists: " + artists + "\nTags: " + tags + "");
