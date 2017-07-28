@@ -122,7 +122,7 @@ New audio must then be added to the sound or music library with `!addsound` or `
 Alternatively, you can add all audio in the respective folders to the library with `!addallsounds` or `!addallmusic`, but then the audio file names will be used (instead of custom ones).
 `!purgesounds` or `!purgemusic` can be used to clear the database.
 
-## Package
+## Project Details
 **Organization:**  
 [PacketCloud](https://packetcloud.com)  
 
