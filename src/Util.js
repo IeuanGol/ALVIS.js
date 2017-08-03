@@ -27,11 +27,11 @@ class Util {
   }
 
   queryBotResponse(message) {
-    var query_message = message.cleanContent;
-    if (message.channel instanceof Discord.TextChannel) query_message = query_message.replace("@" + this.bot.basic.username, "").replace("  ", "").replace(/@/g, "");
-    if (query_message.length < 1) query_message = "?";
+    var query_content = message.cleanContent;
+    query_content = query_content.replace("@" + this.bot.basic.username, "").replace(/ {2,}/g, " ").replace(/@/g, "");
+    if (query_content.length < 1) query_content = "?";
     var handler = this.responseHandler;
-    var request = this.bot.chatbot.textRequest(query_message, {
+    var request = this.bot.chatbot.textRequest(query_content, {
       sessionId: message.author.id.toString()
     });
     request.on('response', function(response) {

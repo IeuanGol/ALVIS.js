@@ -8,6 +8,7 @@ class Wolfram {
 
   sendWolframResponse(message, response, header, colour, show_thumbnail, credit_wolfram, code_box, graph, enlarged_thumbnail) {
     var wolfram_logo = "http://i1.wp.com/seanshadmand.com/wp-content/uploads/2015/02/Wolfram-Alpha-icon.png";
+    var wolfram_logo_small = "https://1.f.ix.de/scale/geometry/743x453/q85/download/media/wolfram-alpha-fuer-android-und-ios-93624/wolfram-alpha-fuer-android-und-ios-_1-1-20.png";
     if (!colour) colour = parseInt(this.bot.colours.wolfram_embed_default_colour);
     var embed = new Discord.RichEmbed();
     if (response.result.fulfillment.speech) message.reply(response.result.fulfillment.speech)
@@ -55,7 +56,7 @@ class Wolfram {
                   thumbnail_set = true;
                 }
               }
-            }else if ((title == "plot" || title.includes("plots") || title.includes("visual representation")) && graph && !image_set && first){
+            }else if ((title == "plot" || title.includes("plots") || title.includes("3d plot") || title.includes("visual representation")) && graph && !image_set && first){
               if (b.image != ""){
                 first = false;
                 image = b.image;
@@ -85,6 +86,7 @@ class Wolfram {
           embed.setImage(image);
         }
         embed.setColor(colour);
+        embed.setFooter("Results courtesy of Wolfram Alpha | ©2017 Wolfram Alpha LLC", wolfram_logo_small);
         message.reply(header, {"embed": embed, "split": true})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 10)});
       }else{

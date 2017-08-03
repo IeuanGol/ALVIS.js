@@ -17,6 +17,7 @@ class GooglePlayMusic {
   }
 
   startStreamFromSearch(message, search_string, stream_options) {
+    var gpm_logo = "https://s3.amazonaws.com/playstoresales.com/wp-content/uploads/2016/08/05184213/Google-Play-Music.png";
     var discord_bot = this.bot;
     var play_music = this.pm;
     var found_track = false;
@@ -43,7 +44,8 @@ class GooglePlayMusic {
             .setDescription("Now playing in #" + message.member.voiceChannel.name + ":")
             .addField(song.track.title, song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
             .setThumbnail(song.track.albumArtRef[0].url)
-            .setColor(parseInt(discord_bot.colours.google_play_music_embed_colour));
+            .setColor(parseInt(discord_bot.colours.google_play_music_embed_colour))
+            .setFooter("Playing from Google Play Music | ©2017 Google", gpm_logo);
             embed.duration = duration;
             discord_bot.util.setLastSongEmbed(message.guild.id, embed);
             message.channel.send("", {"embed": embed})

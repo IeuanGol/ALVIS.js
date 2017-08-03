@@ -4,6 +4,7 @@ const ytdl = require('ytdl-core');
 
 const Util = require('./Util.js');
 const R6Siege = require('./Services/R6Siege.js');
+const WeatherUnderground = require('./Services/WeatherUnderground.js');
 
 var command_prefix = "";
 
@@ -13,6 +14,7 @@ class CommandExecuter {
     //this.util = new Util(bot);
     this.util = bot.util;
     this.r6Siege = new R6Siege(this.bot);
+    this.weatherUnderground = new WeatherUnderground(this.bot);
     command_prefix = this.bot.basic.command_prefix;
   }
 

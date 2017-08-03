@@ -19,7 +19,8 @@ class R6Siege {
     var rank_converter = this.convertRank;
     var request = require('request');
     var discord_bot = this.bot;
-    var profile_picture_url = "https://ubistatic19-a.akamaihd.net/resource/en-ca/game/rainbow6/siege/R6_logo-6.png";
+    var r6_logo = "https://ubistatic19-a.akamaihd.net/resource/en-ca/game/rainbow6/siege/R6_logo-6.png";
+    var profile_picture_url = r6_logo;
     request("https://api.r6stats.com/api/v1/players/" + username + "?platform=" + platform, function (error, response, body) {
       var playerData = JSON.parse(body).player;
       if (typeof playerData === "undefined"){
@@ -51,6 +52,7 @@ class R6Siege {
           embed.addField("Season", "```\nRank:     " + rank + "\nWins:     " + season.wins +"\nLosses:   " + season.losses + "\nAbandons: " + season.abandons + "\nSkill:    " + Math.round(season.ranking.mean) + " ± " + season.ranking.stdev + "```", true);
         }
         embed.setThumbnail(profile_picture_url);
+        embed.setFooter("Results courtesy of R6Stats | ©2016 R6Stats", r6_logo);
         embed.setColor(parseInt(discord_bot.colours.r6stats_embed_colour));
         message.reply("Here you go:", {"embed": embed})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 10)});
