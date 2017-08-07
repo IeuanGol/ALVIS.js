@@ -63,6 +63,7 @@ class DiscordBot extends Discord.Client {
 
   addEventListeners() {
     this.on('ready', this.readyListener);
+    this.on('error', this.errorListener);
     this.on('message', this.messageListener);
     this.on('disconnect', this.disconnectListener);
     this.on('reconnecting', this.reconnectingListener);
@@ -76,6 +77,12 @@ class DiscordBot extends Discord.Client {
     this.basic.user_id = this.user.id;
     this.util.logger("Logged in to Discord as '" + this.basic.username + "'");
     this.user.setGame(this.config.bot_game, this.config.bot_game_link);
+  }
+
+  errorListener() {
+    this.util.logger('Error in connection to Discord');
+    this.util.logger('Attempting to establish new connection to Discord');
+    this.login(this.config.discord_token);
   }
 
   messageListener(message) {
