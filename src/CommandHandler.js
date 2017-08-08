@@ -20,11 +20,7 @@ class CommandHandler {
   	const arg2 = splitmessage[2];
   	const arg3 = splitmessage[3];
 
-    if (command === "addallmusic"){
-      this.commandExecuter.addallmusicCommand(message);
-    }else if (command === "addallsounds"){
-      this.commandExecuter.addallsoundsCommand(message);
-    }else if (command === "addsong"){
+    if (command === "addsong"){
       this.commandExecuter.addsongCommand(message, arg1);
     }else if (command === "addsound"){
       this.commandExecuter.addsoundCommand(message, arg1);
@@ -34,9 +30,13 @@ class CommandHandler {
       this.commandExecuter.flipCommand(message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
-    }else if (command === "playmusic"){
+    }else if (command === "importmusic"){
+      this.commandExecuter.importmusicCommand(message);
+    }else if (command === "importsounds"){
+      this.commandExecuter.importsoundsCommand(message);
+    }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
-    }else if (command === "playsound"){
+    }else if (command === "playsound" || command === "ps"){
       this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
     }else if (command === "playstream"){
       this.commandExecuter.playstreamCommand(message, arg1);

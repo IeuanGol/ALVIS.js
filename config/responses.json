@@ -113,9 +113,9 @@
   },
   {
     "name": "Set User Sound",
-    "syntax": "setusersound <@mention> [sound_name]",
+    "syntax": "setusersound [@mention] [sound_name]",
     "description": "Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel. \n*Admin Command*",
-    "admin_command": true,
+    "admin_command": false,
     "manager_command": false
   },
   {

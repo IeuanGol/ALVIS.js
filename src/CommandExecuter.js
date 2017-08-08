@@ -24,60 +24,6 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  addallmusicCommand(message) {
-    if (!this.util.isManager(message.member)){
-      message.author.send("You do not have permission to use that command.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    var file_list = fs.readdirSync(this.bot.basic.music_path);
-    for (var i in file_list){
-      var sound = file_list[i];
-      var ext = sound.split(".");
-      ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1).toLowerCase();
-      if (!this.util.musicData.hasOwnProperty(name)){
-        if (ext != "json"){
-          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-        }
-      }
-    }
-    this.util.musicData = this.util.alphabetizeByKey(this.util.musicData);
-    var file = this.bot.basic.music_path + "/_music.json";
-    fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
-      return;
-    });
-    this.util.logStandardCommand(message, "addallmusic");
-    this.util.cleanupMessage(message);
-  }
-
-  addallsoundsCommand(message) {
-    if (!this.util.isManager(message.member)){
-      message.author.send("You do not have permission to use that command.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    var file_list = fs.readdirSync(this.bot.basic.sound_path);
-    for (var i in file_list){
-      var sound = file_list[i];
-      var ext = sound.split(".");
-      ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1).toLowerCase();
-      if (!this.util.soundData.hasOwnProperty(name)){
-        if (ext != "json"){
-          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
-        }
-      }
-    }
-    this.util.soundData = this.util.alphabetizeByKey(this.util.soundData);
-    var file = this.bot.basic.sound_path + "/_sounds.json";
-    fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
-      return;
-    });
-    this.util.logStandardCommand(message, "addallsounds");
-    this.util.cleanupMessage(message);
-  }
-
   addsongCommand(message, arg1) {
     var force = false;
     if (!this.util.isAdmin(message.member)){
@@ -139,6 +85,60 @@ class CommandExecuter {
     }
     message.author.send("", {embed: embed});
     this.util.logStandardCommand(message, "help");
+    this.util.cleanupMessage(message);
+  }
+
+  importmusicCommand(message) {
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    var file_list = fs.readdirSync(this.bot.basic.music_path);
+    for (var i in file_list){
+      var sound = file_list[i];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
+      if (!this.util.musicData.hasOwnProperty(name)){
+        if (ext != "json"){
+          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+        }
+      }
+    }
+    this.util.musicData = this.util.alphabetizeByKey(this.util.musicData);
+    var file = this.bot.basic.music_path + "/_music.json";
+    fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
+      return;
+    });
+    this.util.logStandardCommand(message, "importmusic");
+    this.util.cleanupMessage(message);
+  }
+
+  importsoundsCommand(message) {
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    var file_list = fs.readdirSync(this.bot.basic.sound_path);
+    for (var i in file_list){
+      var sound = file_list[i];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
+      if (!this.util.soundData.hasOwnProperty(name)){
+        if (ext != "json"){
+          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+        }
+      }
+    }
+    this.util.soundData = this.util.alphabetizeByKey(this.util.soundData);
+    var file = this.bot.basic.sound_path + "/_sounds.json";
+    fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
+      return;
+    });
+    this.util.logStandardCommand(message, "importsounds");
     this.util.cleanupMessage(message);
   }
 
@@ -339,7 +339,7 @@ class CommandExecuter {
       this.util.logStandardCommand(message, "purgemusic");
       this.util.cleanupMessage(message);
     }else{
-      message.author.send("Are you sure you want to do this? The entire music library structure will be deleted.\nIf you know what you are doing, run **!purgemusic DELETE** to confirm.");
+      message.author.send("Are you sure you want to do this? The entire music library structure will be deleted but the files will remain on disk.\nIf you know what you are doing, run **!purgemusic DELETE** to confirm.");
       this.util.cleanupMessage(message);
     }
   }
@@ -359,7 +359,7 @@ class CommandExecuter {
       this.util.logStandardCommand(message, "purgesounds");
       this.util.cleanupMessage(message);
     }else{
-      message.author.send("Are you sure you want to do this? The entire sound library structure will be deleted.\nIf you know what you are doing, run **!purgesounds DELETE** to confirm.");
+      message.author.send("Are you sure you want to do this? The entire sound library structure will be deleted but the files will remain on disk.\nIf you know what you are doing, run **!purgesounds DELETE** to confirm.");
       this.util.cleanupMessage(message);
     }
   }
@@ -389,13 +389,21 @@ class CommandExecuter {
       return;
     }
     var json_data = this.util.musicData;
-    delete json_data[arg1];
-    var file = this.bot.basic.music_path + "/_music.json";
-    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
-      return;
-    });
-    this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
-    this.util.logStandardCommand(message, "purgemusic");
+    var song = json_data[arg1];
+    if (song){
+      var filename = sound.file;
+      fs.unlink(this.bot.basic.music_path + "/" + filename, function(){});
+      delete json_data[arg1];
+      var file = this.bot.basic.music_path + "/_music.json";
+      fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
+        return;
+      });
+      this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
+      this.util.logStandardCommand(message, "purgemusic");
+      this.util.logStandardCommand(message, "removesong");
+    }else{
+      message.author.send("The song '" + arg1 + "' does not exist.");
+    }
     this.util.cleanupMessage(message);
   }
 
@@ -407,12 +415,20 @@ class CommandExecuter {
       return;
     }
     var json_data = this.util.soundData;
-    delete json_data[arg1];
-    var file = this.bot.basic.sound_path + "/_sounds.json";
-    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
-      return;
-    });
-    this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
+    var sound = json_data[arg1];
+    if (sound){
+      var filename = sound.file;
+      fs.unlink(this.bot.basic.sound_path + "/" + filename, function(){});
+      delete json_data[arg1];
+      var file = this.bot.basic.sound_path + "/_sounds.json";
+      fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
+        return;
+      });
+      this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
+      this.util.logStandardCommand(message, "removesound");
+    }else{
+      message.author.send("The sound '" + arg1 + "' does not exist.");
+    }
     this.util.cleanupMessage(message);
   }
 
@@ -440,8 +456,33 @@ class CommandExecuter {
   }
 
   setusersoundCommand(message, arg1, arg2) {
-    if (!this.util.isAdmin(message.member)){
-      message.author.send("You do not have permission to use that command.");
+    var user = message.mentions.users.first();
+    var id = null;
+    var username = null;
+    if (user){
+      id = user.id;
+      username = user.username;
+      if (user.bot){
+        message.author.send("You can not change the sounds of bot accounts.");
+        this.util.cleanupMessage(message);
+        return;
+      }
+    }else{
+      id = message.author.id;
+      username = message.author.username;
+    }
+    if (!arg2 && !user){
+      if (this.util.setUserSound(id, username, arg1)){
+        message.author.send("Your user sound has been successfully changed.");
+        this.util.logStandardCommand(message, "setusersound");
+      }else{
+        message.author.send("The sound '" + arg1 + "' does not exist.");
+      }
+      this.util.cleanupMessage(message);
+      return;
+    }
+    if (!this.util.isAdmin(message.member) && id != message.author.id){
+      message.author.send("You do not have permission to change the sounds of other users.");
       this.util.cleanupMessage(message);
       return;
     }
@@ -450,19 +491,13 @@ class CommandExecuter {
       this.util.cleanupMessage(message);
       return;
     }
-    var user = message.mentions.users.first();
-    var id = null;
-    var username = null;
-    if (user){
-      id = user.id;
-      username = user.username;
-    }
     if (isNaN(id) || !(arg1.includes("<@") && arg1.includes(">"))){
       message.author.send("The first argument of that command is not a proper @mention of target user.");
     }else if (this.util.setUserSound(id, username, arg2)){
+      message.author.send("The sound for " + username + " has been successfully changed.");
       this.util.logStandardCommand(message, "setusersound");
     }else{
-      message.author.send("The Sound '" + arg2 + "' requested in your command does not exist.");
+      message.author.send("The sound '" + arg2 + "' does not exist.");
     }
     this.util.cleanupMessage(message);
   }
