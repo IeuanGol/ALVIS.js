@@ -2,6 +2,7 @@
     "discord_token": "YOUR_DISCORD_BOT_TOKEN",
     "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN",
     "wolfram_key": "YOUR_WOLFRAM_API_KEY",
+    "weather_underground_key": "YOUR_WEATHER_UNDERGROUND_KEY",
     "google_credentials": {
         "androidId": "",
         "masterToken": ""
