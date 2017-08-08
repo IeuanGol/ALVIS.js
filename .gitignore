@@ -4,3 +4,4 @@ assets/temp/*
 !assets/temp/.keep
 config/*
 !config/responses.json
+!config/config.json
