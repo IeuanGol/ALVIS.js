@@ -20,6 +20,10 @@ class StartupCheck {
       this.setDefaultConfig();
       return false;
     }
+    if (!this.bot.config.hasOwnProperty("weather_underground_key") || typeof this.bot.config.weather_underground_key !== 'string'){
+      this.setDefaultConfig();
+      return false;
+    }
     if (!this.bot.config.hasOwnProperty("google_credentials")){
       this.setDefaultConfig();
       return false;
@@ -81,7 +85,7 @@ class StartupCheck {
   }
 
   setDefaultConfig() {
-    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "default_volume": 50, "max_upload_size": 10000000, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
+    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "weather_underground_key": "YOUR_WEATHER_UNDERGROUND_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "default_volume": 50, "max_upload_size": 10000000, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
     fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
       if (err) console.log(err);
     });
