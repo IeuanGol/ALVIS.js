@@ -55,6 +55,10 @@ Generates a 'Rainbow Six Siege' Player Action Report.
 Rolls a die.  
 `!roll`  
 
+**Set User Sound**  
+Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.  
+`!setusersound [@mention] [sound_name]`  
+
 **Song Info**  
 Displays information about a song.  
 `!songinfo <song_name>`  
@@ -85,21 +89,17 @@ Deletes a song from the local library structure. Does not delete the file from d
 **Remove Sound**  
 Deletes a sound from the local library structure. Does not delete the file from disk.  
 `!removesound <sound_name>`  
-
-**Set User Sound**  
-Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.  
-`!setusersound <@mention> [sound_name]`  
  
 ### Manager Commands
-**Add All Music**  
+**Import Music**  
 Attempts to add all files in *./music* folder to the local library under their filenames.  
 *Does not overwrite.*  
-`!addallmusic`  
+`!importmusic`  
 
-**Add All Sounds**  
+**Import Sounds**  
 Attempts to add all files in *./sounds* folder to the local library under their filenames.  
 *Does not overwrite.*  
-`!addallsounds`  
+`!importsounds`  
 
 **Purge Music**  
 Removes all songs from the local library.  
