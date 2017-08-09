@@ -516,10 +516,12 @@ class CommandExecuter {
   songinfoCommand(message, body) {
     var args = body.split(" ");
     var arg1 = args[0];
+    args = args.slice(1);
     var song = this.util.getSongInfo(arg1.toLowerCase());
     if (song) {
       if (this.util.isAdmin(message.member)){
-        //TODO: Apply changes to song info based on command arguments
+        song = this.util.modifyAudioData(song, args);
+        this.util.updateAudioData("music", song);
       }
       var discord_bot = this.bot;
       var artists = "-";
@@ -541,10 +543,12 @@ class CommandExecuter {
   soundinfoCommand(message, body) {
     var args = body.split(" ");
     var arg1 = args[0];
+    args = args.slice(1);
     var sound = this.util.getSoundInfo(arg1.toLowerCase());
     if (sound) {
       if (this.util.isAdmin(message.member)){
-        //TODO: Apply changes to sound info based on command arguments
+        sound = this.util.modifyAudioData(sound, args);
+        this.util.updateAudioData("sounds", sound);
       }
       var discord_bot = this.bot;
       var artists = "-";

@@ -120,14 +120,14 @@
   },
   {
     "name": "Song Info",
-    "syntax": "songinfo",
+    "syntax": "songinfo <song_name> [edits ...]",
     "description": "Displays information about a song.",
     "admin_command": false,
     "manager_command": false
   },
   {
     "name": "Sound Info",
-    "syntax": "soundinfo",
+    "syntax": "soundinfo <sound_name> [edits ...]",
     "description": "Displays information about a sound",
     "admin_command": false,
     "manager_command": false

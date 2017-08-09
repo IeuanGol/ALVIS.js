@@ -1,6 +1,6 @@
 # **ALVIS** 
 **Discord bot, by [PacketCloud™](https://packetcloud.com)**  
-*Version: 1.7.5*  
+*Version: 1.7.6*  
 ## Description
 **ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*. It utilizes Google's [API.AI](https://api.ai) servers to introduce natural language request processing to the bot. Allowing for communication in plain English - not just commands. We are constantly expanding ALVIS' modules, features and knowledge base. We also have plans to add voice support in the future.  
 
@@ -60,12 +60,12 @@ Assigns (or removes) a sound to a user. This sound plays when the user joins a p
 `!setusersound [@mention] [sound_name]`  
 
 **Song Info**  
-Displays information about a song.  
-`!songinfo <song_name>`  
+Displays information about a song. Admins can edit the tags and artists.  
+`!songinfo <song_name> [edits ...]`  
 
 **Sound Info**  
-Displays information about a sound.  
- `!soundinfo <sound_name>`  
+Displays information about a sound. Admins can edit the tags and artists.  
+ `!soundinfo <sound_name> [edits ...]`  
 
 **Stop**  
 Stops audio playback on voice channel.  

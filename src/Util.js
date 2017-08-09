@@ -419,114 +419,77 @@ class Util {
     });
   }
 
-  addSoundTag(sound_name, tag) {
-    if (soundData[sound_name]){
-      if (soundData[sound_name].tags.includes(tag)) return false;
-      soundData[sound_name].tags.push(tag);
-      writeAudioData(soundData, this.bot.basic.sound_path + "/_sounds.json");
-      return true;
+  addAudioTag(audio_data, tag) {
+    if (audio_data.tags.includes(tag)) return audio_data;
+    audio_data.tags.push(tag);
+    return audio_data;
+  }
+
+  removeAudioTag(audio_data, tag) {
+    var index = audio_data.tags.indexOf(tag);
+    if (index == -1){
+      return audio_data;
     }else{
-      return false;
+      audio_data.tags.splice(index, 1);
+      return audio_data;
     }
   }
 
-  removeSoundTag(sound_name, tag) {
-    if (soundData[sound_name]){
-      var index = soundData[sound_name].tags.indexOf(tag);
+  addAudioArtist(audio_data, artist) {
+    if (audio_data.artists.includes(artist)) return audio_data;
+    audio_data.artists.push(artist);
+    return audio_data;
+  }
+
+  removeAudioArtist(audio_data, artist) {
+    var index = audio_data.artists.indexOf(artist);
       if (index == -1){
-        return false;
-      }else{
-        soundData[sound_name].tags.splice(index, 1);
-        writeAudioData(soundData, this.bot.basic.sound_path + "/_sounds.json");
-        return true;
-      }
+      return audio_data;
     }else{
-      return false;
+      audio_data.artists.splice(index, 1);
+      return audio_data;
     }
   }
 
-  addSongTag(song_name, tag) {
-    if (musicData[song_name]){
-      if (musicData[song_name].tags.includes(tag)) return false;
-      musicData[song_name].tags.push(tag);
-      writeAudioData(musicData, this.bot.basic.music_path + "/_music.json");
+  updateAudioData(database, audio_data) {
+    if (database == "music"){
+      var id = audio_data.name;
+      this.musicData[id] = audio_data;
+      writeAudioData(this.musicData, this.bot.basic.music_path + "/_music.json");
       return true;
-    }else{
-      return false;
-    }
-  }
-
-  removeSongTag(song_name, tag) {
-    if (musicData[song_name]){
-      var index = musicData[song_name].tags.indexOf(tag);
-      if (index == -1){
-        return false;
-      }else{
-        musicData[song_name].tags.splice(index, 1);
-        writeAudioData(musicData, this.bot.basic.music_path + "/_music.json");
-        return true;
-      }
-    }else{
-      return false;
-    }
-  }
-
-  addSoundArtist(sound_name, artist) {
-    if (soundData[sound_name]){
-      if (soundData[sound_name].artists.includes(artist)) return false;
-      soundData[sound_name].artists.push(artist);
-      writeAudioData(soundData, this.bot.basic.sound_path + "/_sounds.json");
+    }else if (database == "sounds"){
+      var id = audio_data.name;
+      this.soundData[id] = audio_data;
+      writeAudioData(this.soundData, this.bot.basic.sound_path + "/_sounds.json");
       return true;
-    }else{
-      return false;
     }
-  }
-
-  removeSoundArtist(sound_name, artist) {
-    if (soundData[sound_name]){
-      var index = soundData[sound_name].artists.indexOf(artist);
-      if (index == -1){
-        return false;
-      }else{
-        soundData[sound_name].artists.splice(index, 1);
-        writeAudioData(soundData, this.bot.basic.sound_path + "/_sounds.json");
-        return true;
-      }
-    }else{
-      return false;
-    }
-  }
-
-  addSongArtist(song_name, artist) {
-    if (musicData[song_name]){
-      if (musicData[song_name].artists.includes(artist)) return false;
-      musicData[song_name].artists.push(artist);
-      writeAudioData(musicData, this.bot.basic.music_path + "/_music.json");
-      return true;
-    }else{
-      return false;
-    }
-  }
-
-  removeSongArtist(song_name, artist) {
-    if (musicData[song_name]){
-      var index = musicData[song_name].artists.indexOf(artist);
-      if (index == -1){
-        return false;
-      }else{
-        musicData[song_name].artists.splice(index, 1);
-        writeAudioData(musicData, this.bot.basic.music_path + "/_music.json");
-        return true;
-      }
-    }else{
-      return false;
-    }
+    return false;
   }
 
   writeAudioData(data, file) {
     fs.writeFile(file, JSON.stringify(musicData, null, 4), function(err){
       console.log(err);
     });
+  }
+
+  modifyAudioData(audio_data, edits) {
+    for (int i = 0; i < edits.length; i++){
+      var edit = edits[i];
+      if (edit.startsWith("+&")){
+        edit = edit.substring(2).replace(/_/g, " ");
+        audio_data = addAudioArtist(audio_data, edit);
+      }else if (edit.StartsWith("-&")){
+        edit = edit.substring(2).replace(/_/g, " ");
+        audio_data = removeAudioArtist(audio_data, edit);
+      }else if (edit.startsWith("+")){
+        edit = edit.substring(1).tolowerCase().replace(/_/g, " ");
+        audio_data = addAudioTag(audio_data, edit);
+      }else if (edit.startsWith("-")){
+        edit = edit.substring(1).tolowerCase().replace(/_/g, " ");
+        audio_data = removeAudioTag(audio_data, edit);
+      }
+    }
+    return audio_data;
   }
 
   setIntegerVolume(integerVolume) {
