@@ -59,9 +59,9 @@ class CommandHandler {
     }else if (command === "showusersounds"){
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "songinfo"){
-      this.commandExecuter.songinfoCommand(message, arg1);
+      this.commandExecuter.songinfoCommand(message, body);
     }else if (command === "soundinfo"){
-      this.commandExecuter.soundinfoCommand(message, arg1);
+      this.commandExecuter.soundinfoCommand(message, body);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
     }else{

@@ -145,16 +145,16 @@ class CommandExecuter {
   playmusicCommand(message, arg1, arg2, body) {
     if (arg1 === "?"){
       if (arg2){
-        if (arg2.startsWith("&")){
+        if (arg2.startsWith("-")){
           var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendMusicList(message, search_tags, true, false);
+          this.util.sendMusicList(message, search_tags, false, false);
         }else{
-          if (arg2.startsWith("-")){
+          if (arg2.startsWith("+")){
             var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
           }else{
             var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
           }
-          this.util.sendMusicList(message, search_tags, false, false);
+          this.util.sendMusicList(message, search_tags, true, false);
         }
       }else{
         this.util.sendMusicList(message, null);
@@ -185,7 +185,7 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.musicData[random_key].file);
         this.util.logStandardCommand(message, "playmusic");
-      }else if (arg1.startsWith("&")){
+      }else if (arg1.startsWith("+")){
         var tags = body.substring(1).split(" ");
         var collection = this.util.createMediaSubCollection(this.util.musicData, tags, true, false);
         if (this.util.objectIsEmpty(collection)){
@@ -209,7 +209,7 @@ class CommandExecuter {
         }
       }else{
         var tags = body.split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, false, true);
+        var collection = this.util.createMediaSubCollection(this.util.musicData, tags, true, true);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no songs matching your query.");
         }else{
@@ -227,16 +227,16 @@ class CommandExecuter {
     var stream_options = {};
     if (arg1 === "?"){
       if (arg2){
-        if (arg2.startsWith("&")){
+        if (arg2.startsWith("-")){
           var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
-          this.util.sendSoundList(message, search_tags, true, false);
+          this.util.sendSoundList(message, search_tags, false, false);
         }else{
-          if (arg2.startsWith("-")){
+          if (arg2.startsWith("+")){
             var search_tags = body.substring(body.indexOf(" ") + 2).split(" ");
           }else{
             var search_tags = body.substring(body.indexOf(" ") + 1).split(" ");
           }
-          this.util.sendSoundList(message, search_tags, false, false);
+          this.util.sendSoundList(message, search_tags, true, false);
         }
       }else{
         this.util.sendSoundList(message, null);
@@ -267,7 +267,7 @@ class CommandExecuter {
         var random_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
         this.util.playSound(channel, path + "/" + this.util.soundData[random_key].file, stream_options);
         this.util.logStandardCommand(message, "playsound");
-      }else if (arg1.startsWith("&")){
+      }else if (arg1.startsWith("+")){
         var tags = body.substring(1).split(" ");
         var collection = this.util.createMediaSubCollection(this.util.soundData, tags, true, false);
         if (this.util.objectIsEmpty(collection)){
@@ -291,7 +291,7 @@ class CommandExecuter {
         }
       }else{
         var tags = body.split(" ");
-        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, false, true);
+        var collection = this.util.createMediaSubCollection(this.util.soundData, tags, true, true);
         if (this.util.objectIsEmpty(collection)){
           message.author.send("There are no sounds matching your query.");
         }else{
@@ -513,9 +513,14 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  songinfoCommand(message, arg1) {
+  songinfoCommand(message, body) {
+    var args = body.split(" ");
+    var arg1 = args[0];
     var song = this.util.getSongInfo(arg1.toLowerCase());
     if (song) {
+      if (this.util.isAdmin(message.member)){
+        //TODO: Apply changes to song info based on command arguments
+      }
       var discord_bot = this.bot;
       var artists = "-";
       var tags = "-";
@@ -533,9 +538,14 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  soundinfoCommand(message, arg1) {
+  soundinfoCommand(message, body) {
+    var args = body.split(" ");
+    var arg1 = args[0];
     var sound = this.util.getSoundInfo(arg1.toLowerCase());
     if (sound) {
+      if (this.util.isAdmin(message.member)){
+        //TODO: Apply changes to sound info based on command arguments
+      }
       var discord_bot = this.bot;
       var artists = "-";
       var tags = "-";
