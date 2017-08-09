@@ -106,7 +106,9 @@ class Util {
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
       if (strict){
-        search_criteria = "&" + search_criteria;
+        search_criteria = "+" + search_criteria;
+      }else{
+        search_criteria = "-" + search_criteria;
       }
       search_criteria = "| Tags: " + search_criteria;
     }
@@ -157,7 +159,9 @@ class Util {
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
       if (strict){
-        search_criteria = "&" + search_criteria;
+        search_criteria = "+" + search_criteria;
+      }else{
+        search_criteria = "-" + search_criteria;
       }
       search_criteria = "| Tags: " + search_criteria;
     }
