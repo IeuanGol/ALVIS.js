@@ -21,16 +21,17 @@ class DiscordBot extends Discord.Client {
     this.userSounds = require('../config/userSounds.json');
     this.webAssets = require('../assets/webAssets.json');
     this.colours = require('../assets/colours.json');
-    this.responseHandler = new ResponseHandler(this);
     this.util = new Util(this);
-    this.botMessageHandler = new BotMessageHandler(this);
-    this.messageCleanupQueue = new MessageCleanupQueue(this);
-    this.newMemberHandler = new NewMemberHandler(this);
-    this.commandHandler = new CommandHandler(this);
-    this.chatHandler = new ChatHandler(this);
-    this.dmHandler = new DMHandler(this);
 
     if (this.startupIntegrityCheck()){
+
+      this.responseHandler = new ResponseHandler(this);
+      this.botMessageHandler = new BotMessageHandler(this);
+      this.messageCleanupQueue = new MessageCleanupQueue(this);
+      this.newMemberHandler = new NewMemberHandler(this);
+      this.commandHandler = new CommandHandler(this);
+      this.chatHandler = new ChatHandler(this);
+      this.dmHandler = new DMHandler(this);
 
       this.chatbot = APIai(this.config.apiai_agent_token);
 

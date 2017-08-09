@@ -85,19 +85,19 @@ class StartupCheck {
   }
 
   setDefaultConfig() {
-    var json_data = {"discord_token": "YOUR_DISCORD_BOT_TOKEN", "apiai_agent_token": "YOUR_API.AI_AGENT_TOKEN", "wolfram_key": "YOUR_WOLFRAM_API_KEY", "weather_underground_key": "YOUR_WEATHER_UNDERGROUND_KEY", "google_credentials": {"androidId": "", "masterToken": ""}, "default_volume": 50, "max_upload_size": 10000000, "bot_game": "by PacketCloud™", "bot_game_link": "", "deleteMessages": true};
-    fs.writeFile("./config/config.json", JSON.stringify(json_data, null, 4), function(err){
+    this.bot.util.logger("ERROR: Missing fields in config file; resetting to default config values.");
+    var default_config = require("./Templates/default_config.json");
+    fs.writeFile("./config/config.json", JSON.stringify(default_config, null, 4), function(err){
       if (err) console.log(err);
     });
-    this.bot.util.logger("ERROR: Missing fields in config file; resetting to default config values.");
   }
 
   setDefaultPermissions() {
-    var json_data = {"manager_role": "", "admin_role": "", "default_role": ""};
-    fs.writeFile("./config/permissions.json", JSON.stringify(json_data, null, 4), function(err){
+    this.bot.util.logger("ERROR: Missing fields in permissions file; resetting to default permissions values.");
+    var default_permissions = require("./Templates/default_permissions.json");
+    fs.writeFile("./config/permissions.json", JSON.stringify(default_permissions, null, 4), function(err){
       if (err) console.log(err);
     });
-    this.bot.util.logger("ERROR: Missing fields in permissions file; resetting to default permissions values.");
   }
 }
 
