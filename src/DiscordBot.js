@@ -24,7 +24,6 @@ class DiscordBot extends Discord.Client {
     this.util = new Util(this);
 
     if (this.startupIntegrityCheck()){
-
       this.responseHandler = new ResponseHandler(this);
       this.botMessageHandler = new BotMessageHandler(this);
       this.messageCleanupQueue = new MessageCleanupQueue(this);
@@ -32,6 +31,7 @@ class DiscordBot extends Discord.Client {
       this.commandHandler = new CommandHandler(this);
       this.chatHandler = new ChatHandler(this);
       this.dmHandler = new DMHandler(this);
+      this.util = new Util(this);//yes, this is needing to be redefined
 
       this.chatbot = APIai(this.config.apiai_agent_token);
 
