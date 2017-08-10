@@ -455,38 +455,38 @@ class Util {
     if (database == "music"){
       var id = audio_data.name;
       this.musicData[id] = audio_data;
-      writeAudioData(this.musicData, this.bot.basic.music_path + "/_music.json");
+      this.writeAudioData(this.musicData, this.bot.basic.music_path + "/_music.json");
       return true;
     }else if (database == "sounds"){
       var id = audio_data.name;
       this.soundData[id] = audio_data;
-      writeAudioData(this.soundData, this.bot.basic.sound_path + "/_sounds.json");
+      this.writeAudioData(this.soundData, this.bot.basic.sound_path + "/_sounds.json");
       return true;
     }
     return false;
   }
 
   writeAudioData(data, file) {
-    fs.writeFile(file, JSON.stringify(musicData, null, 4), function(err){
+    fs.writeFile(file, JSON.stringify(data, null, 4), function(err){
       console.log(err);
     });
   }
 
   modifyAudioData(audio_data, edits) {
-    for (int i = 0; i < edits.length; i++){
+    for (var i = 0; i < edits.length; i++){
       var edit = edits[i];
       if (edit.startsWith("+&")){
         edit = edit.substring(2).replace(/_/g, " ");
-        audio_data = addAudioArtist(audio_data, edit);
-      }else if (edit.StartsWith("-&")){
+        audio_data = this.addAudioArtist(audio_data, edit);
+      }else if (edit.startsWith("-&")){
         edit = edit.substring(2).replace(/_/g, " ");
-        audio_data = removeAudioArtist(audio_data, edit);
+        audio_data = this.removeAudioArtist(audio_data, edit);
       }else if (edit.startsWith("+")){
-        edit = edit.substring(1).tolowerCase().replace(/_/g, " ");
-        audio_data = addAudioTag(audio_data, edit);
+        edit = edit.substring(1).toLowerCase().replace(/_/g, " ");
+        audio_data = this.addAudioTag(audio_data, edit);
       }else if (edit.startsWith("-")){
-        edit = edit.substring(1).tolowerCase().replace(/_/g, " ");
-        audio_data = removeAudioTag(audio_data, edit);
+        edit = edit.substring(1).toLowerCase().replace(/_/g, " ");
+        audio_data = this.removeAudioTag(audio_data, edit);
       }
     }
     return audio_data;
