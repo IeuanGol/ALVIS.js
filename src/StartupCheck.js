@@ -68,10 +68,6 @@ class StartupCheck {
       console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.");
       return false;
     }
-    if (this.bot.config.apiai_agent_token == "" || this.bot.config.apiai_agent_token == "YOUR_API.AI_AGENT_TOKEN"){
-      console.log("ERROR: API.AI agent token not configured. Please configure your token in './config/config.json'. See README for more information.");
-      return false;
-    }
     if (this.bot.permissions.manager_role == ""){
       console.log("ERROR: Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
@@ -80,6 +76,7 @@ class StartupCheck {
       console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
+    setEnabledServices();
     this.bot.util.logger("Startup Configuration Check PASSED");
     return true;
   }
@@ -98,6 +95,50 @@ class StartupCheck {
     fs.writeFile("./config/permissions.json", JSON.stringify(default_permissions, null, 4), function(err){
       if (err) console.log(err);
     });
+  }
+
+  setEnabledServices() {
+    for (var service in this.bot.basic.services){
+      if (this.bot.basic.services.hasOwnProperty(service)){
+        this.bot.basic.services[service].active = false;
+      }
+    }
+    if (this.bot.config.apiai_agent_token != "" && this.bot.config.apiai_agent_token != "YOUR_API.ai_AGENT_TOKEN"){
+      enableService("APIai");
+    }else{
+      disableService("APIai");
+    }
+    if (this.bot.config.google_credentials.androidId != "" && this.bot.config.google_credentials.masterToken != ""){
+      enableService("GooglePlayMusic");
+    }else{
+      disableService("GooglePlayMusic");
+    }
+    if (this.bot.config.wolfram_key != ""){
+      enableService("Wolfram")
+    }else{
+      disableService("Wolfram");
+    }
+    if (this.bot.config.weather_underground_key != ""){
+      enableService("WeatherUnderground");
+    }else{
+      disableService("WeatherUnderground");
+    }
+  }
+
+  enableService(service) {
+    if (this.bot.basic.services.hasOwnProperty(service)){
+      this.bot.basic.services[service].active = true;
+    }else{
+      this.bot.basic.services[service] = {"active": true};
+    }
+  }
+
+  disableService(service) {
+    if (this.bot.basic.services.hasOwnProperty(service)){
+      this.bot.basic.services[service].active = false;
+    }else{
+      this.bot.basic.services[service] = {"active": false};
+    }
   }
 }
 

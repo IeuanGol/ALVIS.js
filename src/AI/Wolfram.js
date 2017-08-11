@@ -5,10 +5,16 @@ const DefaultResponse = require('./DefaultResponse.js');
 class Wolfram extends DefaultResponse {
   constructor(bot) {
     super(bot);
+    this.service = "Wolfram";
+    if (this.bot.basic.services[service].active)
     this.wolframService = new WolframService(this.bot);
   }
 
   handle(message, response) {
+    if (!this.bot.basic.services[this.service].active){
+      this.disabledServiceHandler(message, this.service);
+      return;
+    }
     var action = response.result.action;
     var actionType = action.split(".")[1];
     if (actionType == "topic_search"){

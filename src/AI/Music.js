@@ -5,10 +5,17 @@ const GooglePlayMusic = require('../Services/GooglePlayMusic.js');
 class Music extends DefaultResponse {
   constructor(bot) {
     super(bot);
-    this.pm = new GooglePlayMusic(bot);
+    this.service = "GooglePlayMusic";
+    if (this.bot.basic.services[this.service].active){
+      this.pm = new GooglePlayMusic(bot);
+    }
   }
 
   handle(message, response) {
+    if (!this.bot.basic.services[this.service].active){
+      this.disabledServiceHandler(message, this.service);
+      return;
+    }
     var discord_bot = this.bot;
     var action = response.result.action;
     var actionType = action.split(".")[1];

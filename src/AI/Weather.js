@@ -5,10 +5,17 @@ const WeatherUnderground = require('../Services/WeatherUnderground.js');
 class Weather extends DefaultResponse {
   constructor(bot) {
     super(bot);
-    this.wu = new WeatherUnderground(bot);
+    this.service = "WeatherUnderground";
+    if (this.bot.basic.services[this.service].active){
+      this.wu = new WeatherUnderground(bot);
+    }
   }
 
   handle(message, response) {
+    if (!this.bot.basic.services[this.service].active){
+      this.disabledServiceHandler(message, this.service);
+      return;
+    }
     var discord_bot = this.bot;
     var action = response.result.action;
     if (action.split(".")[1]){
