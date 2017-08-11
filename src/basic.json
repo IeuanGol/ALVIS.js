@@ -7,10 +7,5 @@
   "music_path": "./assets/music",
   "audio_formats": ["mp3", "wav"],
   "stream_options": {},
-  "services": {
-    "APIai": {},
-    "GooglePlayMusic": {},
-    "WolframAlpha": {},
-    "WeatherUnderground": {}
-  }
+  "services": {}
 }
