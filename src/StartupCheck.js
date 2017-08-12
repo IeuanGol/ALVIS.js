@@ -76,7 +76,7 @@ class StartupCheck {
       console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
-    setEnabledServices();
+    this.setEnabledServices();
     this.bot.util.logger("Startup Configuration Check PASSED");
     return true;
   }
@@ -104,24 +104,24 @@ class StartupCheck {
       }
     }
     if (this.bot.config.apiai_agent_token != "" && this.bot.config.apiai_agent_token != "YOUR_API.ai_AGENT_TOKEN"){
-      enableService("APIai");
+      this.enableService("APIai");
     }else{
-      disableService("APIai");
+      this.disableService("APIai");
     }
     if (this.bot.config.google_credentials.androidId != "" && this.bot.config.google_credentials.masterToken != ""){
-      enableService("GooglePlayMusic");
+      this.enableService("GooglePlayMusic");
     }else{
-      disableService("GooglePlayMusic");
+      this.disableService("GooglePlayMusic");
     }
     if (this.bot.config.wolfram_key != ""){
-      enableService("Wolfram")
+      this.enableService("Wolfram")
     }else{
-      disableService("Wolfram");
+      this.disableService("Wolfram");
     }
     if (this.bot.config.weather_underground_key != ""){
-      enableService("WeatherUnderground");
+      this.enableService("WeatherUnderground");
     }else{
-      disableService("WeatherUnderground");
+      this.disableService("WeatherUnderground");
     }
   }
 

@@ -13,7 +13,7 @@ class Weather extends DefaultResponse {
 
   handle(message, response) {
     if (!this.bot.basic.services[this.service].active){
-      this.disabledServiceHandler(message, this.service);
+      this.disabledServiceHandler(message, response, this.service);
       return;
     }
     var discord_bot = this.bot;

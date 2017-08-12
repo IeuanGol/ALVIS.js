@@ -6,13 +6,13 @@ class Wolfram extends DefaultResponse {
   constructor(bot) {
     super(bot);
     this.service = "Wolfram";
-    if (this.bot.basic.services[service].active)
+    if (this.bot.basic.services[this.service].active)
     this.wolframService = new WolframService(this.bot);
   }
 
   handle(message, response) {
     if (!this.bot.basic.services[this.service].active){
-      this.disabledServiceHandler(message, this.service);
+      this.disabledServiceHandler(message, response, this.service);
       return;
     }
     var action = response.result.action;

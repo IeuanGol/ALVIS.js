@@ -1,6 +1,6 @@
-assets/sounds/*
-assets/music/*
-assets/temp/*
+!assets/sounds/*
+!assets/music/*
+!assets/temp/*
 !assets/temp/.keep
-config/*
+!config/*
 !config/responses.json

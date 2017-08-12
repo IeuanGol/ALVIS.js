@@ -1,0 +1,15 @@
+{
+    "discord_token": "YOUR_DISCORD_BOT_TOKEN",
+    "apiai_agent_token": "YOUR_API.ai_AGENT_TOKEN",
+    "google_credentials": {
+        "androidId": "",
+        "masterToken": ""
+    },
+    "wolfram_key": "",
+    "weather_underground_key": "",
+    "default_volume": 50,
+    "max_upload_size": 10000000,
+    "bot_game": "by PacketCloud™",
+    "bot_game_link": "",
+    "deleteMessages": true
+}
