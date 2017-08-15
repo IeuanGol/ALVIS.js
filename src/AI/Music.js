@@ -87,21 +87,6 @@ class Music extends DefaultResponse {
         this.pm.startCurrentlyCachedSong(message, response, this.bot.basic.stream_options);
       }
       discord_bot.messageCleanupQueue.add(message, 1, true);
-    }else if(actionType == "stop"){
-      if (message.channel instanceof Discord.TextChannel){
-        if (message.guild.voiceConnection && message.member.voiceChannel){
-          if (message.guild.voiceConnection.channel.id == message.member.voiceChannel.id){
-            message.reply(response.result.fulfillment.speech)
-            .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-            discord_bot.util.endDispatcher(message.guild.id);
-            discord_bot.messageCleanupQueue.add(message, 1, true);
-            return;
-          }
-        }
-      }
-      message.reply("There is currently no audio for me to stop.")
-      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      discord_bot.messageCleanupQueue.add(message, 1, true);
     }else{
       this.defaultHandler(message, response);
     }

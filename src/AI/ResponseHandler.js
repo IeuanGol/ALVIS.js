@@ -1,9 +1,11 @@
 const Discord = require('discord.js');
 const Util = require('../Util.js');
 const DefaultResponse = require('./DefaultResponse.js');
+const DiscordCommand = require('./DiscordCommand.js');
 const Music = require('./Music.js');
 const NativeCommand = require('./NativeCommand.js');
 const News = require('./News.js');
+const Playback = require('./Playback.js');
 const R6Siege = require('./R6Siege.js');
 const Smalltalk = require('./Smalltalk.js');
 const Translate = require('./Translate.js');
@@ -15,9 +17,11 @@ class ResponseHandler {
     this.bot = bot;
     this.util = new Util(bot);
     this.defaultresponse = new DefaultResponse(this.bot);
+    this.discordcommand = new DiscordCommand(this.bot);
     this.music = new Music(this.bot);
     this.nativecommand = new NativeCommand(this.bot);
     this.news = new News(this.bot);
+    this.playback = new Playback(this.bot);
     this.r6siege = new R6Siege(this.bot);
     this.smalltalk = new Smalltalk(this.bot);
     this.translate = new Translate(this.bot);
@@ -28,12 +32,16 @@ class ResponseHandler {
   handle(message, response) {
     var action = response.result.action;
     var actionType = action.split(".")[0];
-    if (actionType == "music"){
+    if (actionType == "discordcommand"){
+      this.discordcommand.hanlde(message, response);
+    }else if (actionType == "music"){
       this.music.handle(message, response);
     }else if (actionType == "nativecommand"){
       this.nativecommand.handle(message, response);
     }else if (actionType == "news"){
       this.news.handle(message, response);
+    }else if (actionType == "playback"){
+      this.playback.handle(message, response);
     }else if (actionType == "r6siege"){
       this.r6siege.handle(message, response);
     }else if (actionType == "smalltalk"){

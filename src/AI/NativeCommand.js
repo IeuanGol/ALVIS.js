@@ -38,39 +38,6 @@ class NativeCommand extends DefaultResponse {
       }
     }else if (actionType == "roll_die"){
       this.roll_die(message, response.result.parameters.number);
-    }else if (actionType == "set_volume"){
-      if (message.channel instanceof Discord.DMChannel){
-        message.reply("You cannot change my playback volume from within a DM channel.");
-        return;
-      }
-      var subType = action.split(".")[2];
-      if (subType == "value"){
-        var newVolume = parseInt(response.result.parameters.number);
-        if (isNaN(newVolume)){
-          var currentVolume = discord_bot.util.getIntegerVolume();
-          message.reply("My playback volume is currently at " + currentVolume + "%.")
-          .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-          discord_bot.messageCleanupQueue.add(message, 1, true);
-          return;
-        }
-        newVolume = Math.floor(newVolume/10);
-        if (newVolume > 10) newVolume = 10;
-        if (newVolume < 1) newVolume = 1;
-        this.bot.util.setIntegerVolume(newVolume*10);
-        message.reply("My playback volume is now at " + newVolume*10 + "%.")
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }else if (subType == "increase"){
-        var newVolume = this.bot.util.increaseVolume();
-        message.reply("My playback volume is now at " + newVolume + "%.")
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }else if (subType == "decrease"){
-        var newVolume = this.bot.util.decreaseVolume();
-        message.reply("My playback volume is now at " + newVolume + "%.")
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }else{
-        this.defaultHandler(message, response);
-      }
-      discord_bot.messageCleanupQueue.add(message, 1, true);
     }else{
       this.defaultHandler(message, response);
     }

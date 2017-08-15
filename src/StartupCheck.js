@@ -6,7 +6,7 @@ class StartupCheck {
     this.bot = bot;
   }
 
-  runCheck() {
+  runConfigCheck() {
     this.bot.util.logger("Startup Configuration Check INITIATED");
     if (!this.bot.config.hasOwnProperty("discord_token") || typeof this.bot.config.discord_token !== 'string'){
       this.setDefaultConfig();
@@ -66,14 +66,6 @@ class StartupCheck {
     }
     if (this.bot.config.discord_token == "" || this.bot.config.discord_token == "YOUR_DISCORD_BOT_TOKEN"){
       console.log("ERROR: Discord bot token not configured. Please configure your token in './config/config.json'. See README for more information.");
-      return false;
-    }
-    if (this.bot.permissions.manager_role == ""){
-      console.log("ERROR: Manager role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
-      return false;
-    }
-    if (this.bot.permissions.admin_role == ""){
-      console.log("ERROR: Admin role not configured. Please configure bot-permission roles in './config/permissions.json'. See README for more information.");
       return false;
     }
     this.setEnabledServices();

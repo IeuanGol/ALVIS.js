@@ -65,12 +65,14 @@ class Util {
   }
 
   isManager(member) {
+    if (this.bot.permissions.manager_role == "") return false;
   	if (member.roles.find("name", this.bot.permissions.manager_role)) return true;
   	return false;
   }
 
   isAdmin(member) {
     if (this.isManager(member)) return true;
+    if (this.bot.permissions.admin_role == "") return false;
   	if (member.roles.find("name", this.bot.permissions.admin_role)) return true;
   	return false;
   }

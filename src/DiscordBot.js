@@ -41,7 +41,7 @@ class DiscordBot extends Discord.Client {
 
       this.setVolumeToDefault();
 
-      this.login(this.config.discord_token);
+      this.login(this.config.discord_token).then(this.serverConfigCheck());
 
     }else{
       this.util.logger("Startup Configuration Check FAILED! Ensure settings are configured correctly then try again.");
@@ -49,8 +49,7 @@ class DiscordBot extends Discord.Client {
   }
 
   startupIntegrityCheck() {
-    if (new StartupCheck(this).runCheck()) return true;
-    return false;
+    return new StartupCheck(this).runConfigCheck());
   }
 
   setVolumeToDefault() {
