@@ -420,7 +420,7 @@ class Util {
       message.author.send("The file '" + attachment.filename + "' already exists in my sound library.");
       return;
     }
-    const sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    var sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
       response.pipe(file);

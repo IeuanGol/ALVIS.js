@@ -70,7 +70,7 @@ class DiscordCommand extends DefaultResponse {
       message.reply("I can't seem to find the user you mentioned.");
       return;
     }
-    var role = message.guild.roles.find(var => var.name.toLowerCase() == role_name.toLowerCase());
+    var role = message.guild.roles.find(obj => obj.name.toLowerCase() == role_name.toLowerCase());
     if (!role){
       message.reply("I can't seem to find that role.");
       return;
@@ -92,7 +92,7 @@ class DiscordCommand extends DefaultResponse {
     var role_name = response.result.parameters["discord-role"];
     var requester = message.member;
     var target = message.member;
-    var role = message.guild.roles.find(var => var.name.toLowerCase() == role_name.toLowerCase());
+    var role = message.guild.roles.find(obj => obj.name.toLowerCase() == role_name.toLowerCase());
     if (!role){
       message.reply("I can't seem to find that role.");
       return;

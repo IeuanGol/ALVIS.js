@@ -67,7 +67,7 @@ class CommandExecuter {
         force = true;
       }
     }
-    this.util.addSounds(message, body, force);
+    this.util.addSounds(message, force, args);
     this.util.logStandardCommand(message, "addsound");
     this.bot.messageCleanupQueue.add(message, 0.15, true);
   }
