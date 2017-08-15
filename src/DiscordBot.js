@@ -81,8 +81,9 @@ class DiscordBot extends Discord.Client {
 
   errorListener() {
     this.util.logger('Error in connection to Discord');
-    this.util.logger('Attempting to establish new connection to Discord');
-    this.login(this.config.discord_token);
+    try{
+      this.login(this.config.discord_token);
+    }catch(err){}
   }
 
   messageListener(message) {

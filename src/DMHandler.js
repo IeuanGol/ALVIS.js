@@ -25,11 +25,8 @@ class DMHandler {
   	const arg3 = splitmessage[3];
     var disallowed_command_message = "You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.";
 
-    if (command === "addallmusic"){
-      message.reply();
-    }else if (command === "addallsounds"){
-      message.reply(disallowed_command_message);
-    }else if (command === "addsong"){
+
+    if (command === "addsong"){
       message.reply(disallowed_command_message);
     }else if (command === "addsound"){
       message.reply(disallowed_command_message);
@@ -39,9 +36,13 @@ class DMHandler {
       this.commandExecuter.flipCommand(message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
-    }else if (command === "playmusic"){
+    }else if (command === "importmusic"){
+        message.reply(disallowed_command_message);
+    }else if (command === "importsounds"){
+        message.reply(disallowed_command_message);
+    }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
-    }else if (command === "playsound"){
+    }else if (command === "playsound" || command === "ps"){
       this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
     }else if (command === "playstream"){
       message.reply(disallowed_command_message);
@@ -64,9 +65,9 @@ class DMHandler {
     }else if (command === "showusersounds"){
       message.reply(disallowed_command_message);
     }else if (command === "songinfo"){
-      this.commandExecuter.songinfoCommand(message, arg1);
+      message.reply(disallowed_command_message);
     }else if (command === "soundinfo"){
-      this.commandExecuter.soundinfoCommand(message, arg1);
+      message.reply(disallowed_command_message);
     }else if (command === "stop"){
       message.reply(disallowed_command_message);
     }else{
