@@ -21,9 +21,9 @@ class CommandHandler {
   	const arg3 = splitmessage[3];
 
     if (command === "addsong"){
-      this.commandExecuter.addsongCommand(message, arg1);
+      this.commandExecuter.addsongCommand(message, body);
     }else if (command === "addsound"){
-      this.commandExecuter.addsoundCommand(message, arg1);
+      this.commandExecuter.addsoundCommand(message, body);
     }else if (command === "about"){
       this.commandExecuter.aboutCommand(message);
     }else if (command === "flip"){

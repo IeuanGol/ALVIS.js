@@ -1,4 +1,4 @@
-# **ALVIS** 
+# **ALVIS**
 **Discord bot, by [PacketCloud™](https://packetcloud.com)**  
 *Version: 1.7.6*  
 ## Description
@@ -70,17 +70,17 @@ Displays information about a sound. Admins can edit the tags and artists.
 **Stop**  
 Stops audio playback on voice channel.  
  `!stop`  
-  
+
 ### Admin Commands
 **Add Song**  
 Adds any attached audio files to the local music library.  
-*Adding '-f' tag will overwrite existing songs with same name.*  
-`!addsong [-f]`  
+*Adding 'force' argument will overwrite existing songs with same name.*  
+`!addsong [force] [info ...]`  
 
 **Add Sound**  
 Adds any attached audio files to the local sounds library.  
-*Adding '-f' tag will overwrite existing sounds with same name.*  
-`!addsound [-f]`  
+*Adding 'force' argument will overwrite existing sounds with same name.*  
+`!addsound [force] [info ...]`  
 
 **Remove Song**  
 Deletes a song from the local library structure. Does not delete the file from disk.  
@@ -89,7 +89,7 @@ Deletes a song from the local library structure. Does not delete the file from d
 **Remove Sound**  
 Deletes a sound from the local library structure. Does not delete the file from disk.  
 `!removesound <sound_name>`  
- 
+
 ### Manager Commands
 **Import Music**  
 Attempts to add all files in *./music* folder to the local library under their filenames.  
@@ -141,7 +141,7 @@ Type: MIT
 **Credited Dependencies:**  
 Discord.js:  
   We use the [Discord Node.js API](https://discord.js.org) for interfacing with Discord's servers.  
-  
+
 API.AI:  
   We make use of [Google's api.ai](https://api.ai) servers using the [apiai](https://www.npmjs.com/package/apiai) Node.js package. This is used to interface with Google's servers to handle and classify bot chat queries.  
 

@@ -355,15 +355,15 @@ class Util {
     return embed;
   }
 
-  addSongs(message, force) {
-    message.attachments.forEach(attachment => this.addSong(message, attachment, force));
+  addSongs(message, force, args) {
+    message.attachments.forEach(attachment => this.addSong(message, attachment, force, args));
   }
 
-  addSounds(message, force) {
-    message.attachments.forEach(attachment => this.addSound(message, attachment, force));
+  addSounds(message, force, args) {
+    message.attachments.forEach(attachment => this.addSound(message, attachment, force, args));
   }
 
-  addSong(message, attachment, force) {
+  addSong(message, attachment, force, args) {
     var discord_bot = this.bot;
     const filename = attachment.filename.split('.')[0].split(" ")[0];
     const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
@@ -379,20 +379,32 @@ class Util {
       message.author.send("The file '" + attachment.filename + "' already exists in my music library.");
       return;
     }
-    const song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    var song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + attachment.filename);
       response.pipe(file);
-      message.author.send("Song '" + filename + "' added.");
       discord_bot.util.setAudioData(discord_bot.util.musicData, discord_bot.basic.music_path + "/_music.json", song_obj);
       discord_bot.util.musicData = require("." + discord_bot.basic.music_path + "/_music.json");
+      if (args){
+        song_obj = discord_bot.util.modifyAudioData(song_obj, args);
+        discord_bot.util.updateAudioData("music", song_obj);
+      }
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+      embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("Song added:", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
     }).on('error', (error) => {
       console.error(error);
       message.author.send("Something went wrong when adding song '" + attachment.filename + "'.");
     });
   }
 
-  addSound(message, attachment, force) {
+  addSound(message, attachment, force, args) {
     var discord_bot = this.bot;
     const filename = attachment.filename.split('.')[0].split(" ")[0];
     const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
@@ -412,9 +424,21 @@ class Util {
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
       response.pipe(file);
-      message.author.send("Sound '" + filename + "' added.");
       discord_bot.util.setAudioData(discord_bot.util.soundData, discord_bot.basic.sound_path + "/_sounds.json", sound_obj);
       discord_bot.util.soundData = require("." + discord_bot.basic.sound_path + "/_sounds.json");
+      if (args){
+        sound_obj = discord_bot.util.modifyAudioData(sound_obj, args);
+        discord_bot.util.updateAudioData("sounds", sound_obj);
+      }
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" + sound_obj.tags.join("\", \"") + "\"";
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+      embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("Sound added:", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
     }).on('error', (error) => {
       console.error(error);
       message.author.send("Something went wrong when adding sound '" + attachment.filename + "'.");

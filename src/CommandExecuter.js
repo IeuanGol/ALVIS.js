@@ -24,8 +24,10 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  addsongCommand(message, arg1) {
+  addsongCommand(message, body) {
     var force = false;
+    var args = body.split(" ");
+    var arg1 = args[0];
     if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
@@ -37,17 +39,19 @@ class CommandExecuter {
       return;
     }
     if (arg1){
-      if (arg1.toLowerCase() == "-f"){
+      if (arg1.toLowerCase() == "force"){
         force = true;
       }
     }
-    this.util.addSongs(message, force);
+    this.util.addSongs(message, force, args);
     this.util.logStandardCommand(message, "addsong");
     this.bot.messageCleanupQueue.add(message, 0.15, true);
   }
 
-  addsoundCommand(message, arg1) {
+  addsoundCommand(message, body) {
     var force = false;
+    var args = body.split(" ");
+    var arg1 = args[0];
     if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
@@ -59,11 +63,11 @@ class CommandExecuter {
       return;
     }
     if (arg1){
-      if (arg1.toLowerCase() == "-f"){
+      if (arg1.toLowerCase() == "force"){
         force = true;
       }
     }
-    this.util.addSounds(message, force);
+    this.util.addSounds(message, body, force);
     this.util.logStandardCommand(message, "addsound");
     this.bot.messageCleanupQueue.add(message, 0.15, true);
   }

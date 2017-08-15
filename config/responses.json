@@ -1,29 +1,15 @@
 {
   "cmdList": [{
-    "name": "Add All Music",
-    "syntax": "addallmusic",
-    "description": "Attempts to add all files in ./music folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
-    "admin_command": false,
-    "manager_command": true
-  },
-  {
-    "name": "Add All Sounds",
-    "syntax": "addallsounds",
-    "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
-    "admin_command": false,
-    "manager_command": true
-  },
-    {
     "name": "Add Song",
-    "syntax": "addsong [-f]",
-    "description": "Adds any attached audio files to the local music library. \nAdding '-f' tag will overwrite existing songs with same name. \n*Admin Command*",
+    "syntax": "addsong [force] [info ...]",
+    "description": "Adds any attached audio files to the local music library. \nAdding 'force' force will overwrite existing songs with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Add Sound",
-    "syntax": "addsound [-f]",
-    "description": "Adds any attached audio files to the local sound library. \nAdding '-f' tag will overwrite existing sounds with same name. \n*Admin Command*",
+    "syntax": "addsound [force] [info ...]",
+    "description": "Adds any attached audio files to the local sound library. \nAdding 'force' argument will overwrite existing sounds with same name. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
@@ -47,6 +33,20 @@
     "description": "Displays a list of available commands.",
     "admin_command": false,
     "manager_command": false
+  },
+  {
+    "name": "Import Music",
+    "syntax": "importmusic",
+    "description": "Attempts to add all files in ./music folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "Import Sounds",
+    "syntax": "importsounds",
+    "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
   },
   {
     "name": "Play Music",
