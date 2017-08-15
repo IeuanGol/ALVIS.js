@@ -14,10 +14,18 @@ class DiscordCommand extends DefaultResponse {
       var subType = action.split(".")[2];
       if (subType == "assign_role"){
         var subType2 = action.split(".")[3];
+        if (message.channel instanceof Discord.DMChannel){
+          message.reply("I'm sorry. I cannot accept server managment tasks from a DM channel.");
+          return;
+        }
+        if (!(message.channel instanceof Discord.TextChannel)){
+          message.reply("I'm sorry. I cannot accept server managment tasks from here. Ask me again in a public text channel.")
+          return;
+        }
         if (subType2 == "self"){
-          this.attemptAssignRoleSelf(message, response);
+          this.attemptManageRoleSelf(message, response, "add");
         }else if (subType2 == "others"){
-          this.attemptAssignRoleOthers(message, response);
+          this.attemptManageRoleOthers(message, response, "add");
         }else{
           this.defaultHandler(message, response);
         }
@@ -25,9 +33,9 @@ class DiscordCommand extends DefaultResponse {
       }else if (subType == "remove_role"){
         var subType2 = action.split(".")[3];
         if (subType2 == "self"){
-          this.attemptRemoveRoleSelf(message, response);
+          this.attemptManageRoleSelf(message, response, "remove");
         }else if (subType2 == "others"){
-          this.attemptRemoveRoleOthers(message, response);
+          this.attemptManageRoleOthers(message, response, "remove");
         }else{
           this.defaultHandler(message, response);
         }
