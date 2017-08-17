@@ -33,7 +33,7 @@ class ResponseHandler {
     var action = response.result.action;
     var actionType = action.split(".")[0];
     if (actionType == "discordcommand"){
-      this.discordcommand.hanlde(message, response);
+      this.discordcommand.handle(message, response);
     }else if (actionType == "music"){
       this.music.handle(message, response);
     }else if (actionType == "nativecommand"){
