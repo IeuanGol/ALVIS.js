@@ -606,7 +606,6 @@ class Util {
 
   setUserSound(id, username, sound) {
     if (sound == null){
-      console.log("null");
       delete this.bot.userSounds[id];
     }else if (this.soundData[sound]){
       this.bot.userSounds[id] = {"id": id, "username":username,"sound": sound};
@@ -636,6 +635,15 @@ class Util {
     }
     Output = Output + "```";
     message.author.send(Output);
+  }
+
+  getMemberFromString(members, string) {
+    var memeber = null;
+    member = members.find(val => val.displayName == string);
+    if (!member){
+      var member = members.find(val => val.user.username == string);
+    }
+    return member;
   }
 }
 
