@@ -24,6 +24,10 @@ class StartupCheck {
       this.setDefaultConfig();
       return false;
     }
+    if (!this.bot.config.hasOwnProperty("news_api_key") || typeof this.bot.config.news_api_key !== 'string'){
+      this.setDefaultConfig();
+      return false;
+    }
     if (!this.bot.config.hasOwnProperty("google_credentials")){
       this.setDefaultConfig();
       return false;
@@ -90,11 +94,6 @@ class StartupCheck {
   }
 
   setEnabledServices() {
-    for (var service in this.bot.basic.services){
-      if (this.bot.basic.services.hasOwnProperty(service)){
-        this.bot.basic.services[service].active = false;
-      }
-    }
     if (this.bot.config.apiai_agent_token != "" && this.bot.config.apiai_agent_token != "YOUR_API.ai_AGENT_TOKEN"){
       this.enableService("APIai");
     }else{
@@ -112,6 +111,11 @@ class StartupCheck {
     }
     if (this.bot.config.weather_underground_key != ""){
       this.enableService("WeatherUnderground");
+    }else{
+      this.disableService("WeatherUnderground");
+    }
+    if (this.bot.config.new_api_key != ""){
+      this.enableService("NewsAPI");
     }else{
       this.disableService("WeatherUnderground");
     }
