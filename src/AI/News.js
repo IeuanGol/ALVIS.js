@@ -9,65 +9,6 @@ class News extends DefaultResponse {
     if (this.bot.basic.services[this.service].active){
       this.newsAPI = new NewsAPI(bot);
     }
-    this.curated_sources = {
-      "general": [
-        "associated-press",
-        "bbc-news",
-        "cnn",
-        "google-news",
-        "independent",
-        "newsweek",
-        "reddit-r-all",
-        "the-huffington-post",
-        "the-new-york-times",
-        "the-telegraph",
-        "time",
-        "usa-today"
-      ],
-      "business": [
-        "bloomberg",
-        "business-insider",
-        "fortune",
-        "the-economist",
-        "the-wall-street-journal"
-      ],
-      "entertainment": [
-        "buzzfeed",
-        "daily-mail",
-        "entertainment-weekly",
-        "mashable"
-      ],
-      "gaming": [
-        "ign",
-        "polygon"
-      ],
-      "music": [
-        "mtv-news",
-        "mtv-news-uk"
-      ],
-      "politics": [
-        "breitbart-news"
-      ],
-      "science-and-nature": [
-        "national-geographic",
-        "new-scientist"
-      ],
-      "sport": [
-        "bbc-sport",
-        "espn",
-        "fox-sports",
-        "nfl-news"
-      ],
-      "technology": [
-        "ars-technica",
-        "engadget",
-        "hacker-news",
-        "techcrunch",
-        "techradar",
-        "the-next-web",
-        "the-verge"
-      ]
-    }
   }
 
   handle(message, response) {
