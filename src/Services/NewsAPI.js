@@ -109,18 +109,18 @@ class NewsAPI {
           embed.setDescription("I could not load this article from `" + source + "`.");
           message.channel.send("", {"embed": embed});
           .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
-          return;
+        }else{
+          var article = sourceData.articles[discord_bot.util.getRandomInt(0, sourceData.articles.length - 1)];
+          var embed = new RichEmbed();
+          embed.setTitle(article.title);
+          embed.setDescription(article.description);
+          embed.setURL(article.url);
+          embed.setThumbnail(article.urlToImage);
+          embed.setFooter("Result courtesy of News API | ©2017 News API | " + article.publishedAt, "https://newsapi.org/images/newsapi-logo.png");
+          embed.setColor(parseInt(discord_bot.colours.news_api_embed_colour));
+          message.channel.send("", {"embed": embed});
+          .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
         }
-        var article = sourceData.articles[discord_bot.util.getRandomInt(0, sourceData.articles.length - 1)];
-        var embed = new RichEmbed();
-        embed.setTitle(article.title);
-        embed.setDescription(article.description);
-        embed.setURL(article.url);
-        embed.setThumbnail(article.urlToImage);
-        embed.setFooter("Result courtesy of News API | ©2017 News API | " + article.publishedAt, "https://newsapi.org/images/newsapi-logo.png");
-        embed.setColor(parseInt(discord_bot.colours.news_api_embed_colour));
-        message.channel.send("", {"embed": embed});
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
       });
     }
   }
