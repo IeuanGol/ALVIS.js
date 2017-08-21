@@ -130,7 +130,7 @@ class Util {
             isFirst = false;
             body = "";
           }else{
-            embed.addField("==============================", body);
+            embed.addField('\u200B', body);
             body = "";
           }
         }
@@ -142,7 +142,7 @@ class Util {
       if (isFirst){
         embed.addField("Songs:", body);
       }else{
-        embed.addField("==============================", body);
+        embed.addField('\u200B', body);
       }
       if (results_number == 1){
         embed.setFooter("1 result " + search_criteria);
@@ -183,7 +183,7 @@ class Util {
             isFirst = false;
             body = "";
           }else{
-            embed.addField("==============================", body);
+            embed.addField('\u200B', body);
             body = "";
           }
         }
@@ -195,7 +195,7 @@ class Util {
       if (isFirst){
         embed.addField("Sounds:", body);
       }else{
-        embed.addField("==============================", body);
+        embed.addField('\u200B', body);
       }
       if (results_number == 1){
         embed.setFooter("1 result " + search_criteria);

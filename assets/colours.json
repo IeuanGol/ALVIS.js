@@ -3,5 +3,6 @@
   "wolfram_embed_default_colour": "0xb32400",
   "google_play_music_embed_colour": "0xe65c00",
   "r6stats_embed_colour": "0x730099",
-  "weather_underground_embed_colour": "0x68ccf9"
+  "weather_underground_embed_colour": "0x68ccf9",
+  "news_api_embed_colour": "0x71cecb"
 }
