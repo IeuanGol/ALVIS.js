@@ -84,8 +84,20 @@ class NewsAPI {
     var length = sources.lenth;
     var baseURL = "https://newsapi.org/v1/articles?source=";
 
-    message.reply("Alright. Let me find the ")
+    if (category == "general") var topicDescription = "Here are some of the " + sort + " stories:";
+    else if (category == "business") var topicDescription = "Here are the the " + sort + " stories in *business* news:";
+    else if (category == "entertainment") var topicDescription = "Here are the " + sort + " stories in *entertainment*:"
+    else if (category == "gaming") var topicDescription = "Here are the " + sort + " stories in *gaming* news:";
+    else if (category == "music") var topicDescription = "Here are the " + sort + " stories in *music* news:";
+    else if (category == "politics") var topicDescription = "Here are the " + sort + " stories in *politics*:";
+    else if (category == "science-and-nature") var topicDescription = "Here are the " + sort + " in *science and nature*:";
+    else if (category == "sport") var topicDescription = "Here are the " + sort + " stories in *sports* news:";
+    else if (category == "technology") var topicDescription = "Here are the " + sort + " stories in *tech*:";
+    else var topicDescription = "Here are the " + sort + " stories in *" + category + "*:";
+
+    message.reply(topicDescription)
     .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
+    if (message.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(message, 5, true);
     for (var i = 0; i < length; i++){
       var source = sources[i];
       var requestURL = baseURL + source + "&sortBy=" + sort + "&apiKey=" + this.apiKey;
@@ -105,7 +117,7 @@ class NewsAPI {
         embed.setDescription(article.description);
         embed.setURL(article.url);
         embed.setThumbnail(article.urlToImage);
-        embed.setFooter("Result courtesy of News API | ©2017 News API | " + article.publishedAt);
+        embed.setFooter("Result courtesy of News API | ©2017 News API | " + article.publishedAt, "https://newsapi.org/images/newsapi-logo.png");
         embed.setColor(parseInt(discord_bot.colours.news_api_embed_colour));
         message.channel.send("", {"embed": embed});
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});
