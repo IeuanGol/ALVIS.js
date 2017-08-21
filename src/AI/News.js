@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const DefaultResponse = require('./DefaultResponse.js');
-const News = require('./News.js');
+const NewsAPI = require('../Services/NewsAPI.js');
 
 class News extends DefaultResponse {
   constructor(bot) {
     super(bot);
     this.service = "NewsAPI";
     if (this.bot.basic.services[this.service].active){
-      this.news = new News(bot);
+      this.newsAPI = new NewsAPI(bot);
     }
     this.curated_sources = {
       "general": [
@@ -84,7 +84,7 @@ class News extends DefaultResponse {
     }
     var handler = this;
     if (actionType == "search"){
-      this.news.sendSearchResultsFromResponse(message, response, 5);
+      this.newsAPI.sendSearchResultsFromResponse(message, response, 5);
     }else{
       this.defaultHandler(message, response);
     }

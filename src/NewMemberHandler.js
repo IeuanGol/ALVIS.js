@@ -34,9 +34,9 @@ class NewMemberHandler {
     }
     embed.addField("Welcome to the server, " + newMember.displayName + "!", embed_content);
     defaultChannel.send(message_content, {embed: embed});
-    if (defaultRole){
-      newMember.addRole(defaultRole);
-      this.bot.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name + " and gave them " + this.bot.permissions.default_role + " role");
+    if (default_role){
+      newMember.addRole(default_role);
+      this.bot.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name + " and gave them " + default_role.name + " role");
       return;
     }
     this.bot.util.logger("Welcomed " + newMember.user.username + " to " + newMember.guild.name);
