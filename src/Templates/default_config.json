@@ -8,7 +8,7 @@
     "wolfram_key": "",
     "weather_underground_key": "",
     "news_api_key": "",
-    "default_volume": 50,
+    "default_volume": 80,
     "max_upload_size": 10000000,
     "bot_game": "by PacketCloud™",
     "bot_game_link": "",

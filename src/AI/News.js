@@ -25,7 +25,7 @@ class News extends DefaultResponse {
     }
     var handler = this;
     if (actionType == "search"){
-      this.newsAPI.sendSearchResultsFromResponse(message, response, 5);
+      this.newsAPI.sendSearchResultsFromResponse(message, response, 4);
     }else{
       this.defaultHandler(message, response);
     }

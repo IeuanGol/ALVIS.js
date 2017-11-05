@@ -26,14 +26,10 @@ class CommandHandler {
       this.commandExecuter.addsoundCommand(message, body);
     }else if (command === "about"){
       this.commandExecuter.aboutCommand(message);
-    }else if (command === "flip"){
-      this.commandExecuter.flipCommand(message);
+    }else if (command === "console"){
+      this.commandExecuter.consoleCommand(message, body);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
-    }else if (command === "importmusic"){
-      this.commandExecuter.importmusicCommand(message);
-    }else if (command === "importsounds"){
-      this.commandExecuter.importsoundsCommand(message);
     }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound" || command === "ps"){
@@ -48,14 +44,10 @@ class CommandHandler {
       this.commandExecuter.removesongCommand(message, arg1);
     }else if (command === "removesound"){
       this.commandExecuter.removesoundCommand(message, arg1);
-    }else if (command === "r6stats"){
-      this.commandExecuter.r6statsCommand(message, arg1, arg2);
-    }else if (command === "roll"){
-      this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){
       this.commandExecuter.sayCommand(message);
-    }else if (command === "setusersound"){
-      this.commandExecuter.setusersoundCommand(message, arg1, arg2);
+    }else if (command === "setbotgame"){
+      this.commandExecuter.setbotgameCommand(message, arg1, arg2);
     }else if (command === "showusersounds"){
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "songinfo"){
@@ -64,6 +56,10 @@ class CommandHandler {
       this.commandExecuter.soundinfoCommand(message, body);
     }else if (command === "stop"){
       this.commandExecuter.stopCommand(message);
+    }else if (command === "updatemusic"){
+      this.commandExecuter.updatemusicCommand(message);
+    }else if (command === "updatesounds"){
+      this.commandExecuter.updatesoundsCommand(message);
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);

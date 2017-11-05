@@ -1,6 +1,6 @@
 # **ALVIS**
 **Discord bot, by [PacketCloud™](https://packetcloud.com)**  
-*Version: 1.7.6*  
+*Version: 0.7.7*  
 ## Description
 **ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*. It utilizes Google's [API.AI](https://api.ai) servers to introduce natural language request processing to the bot. Allowing for communication in plain English - not just commands. We are constantly expanding ALVIS' modules, features and knowledge base. We also have plans to add voice support in the future.  
 
@@ -23,11 +23,7 @@ The *default_role* is the name of the role you want the bot to assign all new us
 ### Public Commands
 **About**  
 Displays bot information.  
-`!about`  
-
-**Flip**  
-Flips a coin.  
-`!flip`  
+`!about`   
 
 **Help**  
 Displays list of available commands.  
@@ -46,18 +42,6 @@ Plays specific or random sound matching provided search criteria.
 **Play Stream**  
 Plays audio from the provided YouTube video.  
 `!playstream <Youtube_URL>`  
-
-**R6 Stats**  
-Generates a 'Rainbow Six Siege' Player Action Report.  
-`!r6stats <username> [platform]`  
-
-**Roll**  
-Rolls a die.  
-`!roll`  
-
-**Set User Sound**  
-Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel.  
-`!setusersound [@mention] [sound_name]`  
 
 **Song Info**  
 Displays information about a song. Admins can edit the tags and artists.  
@@ -82,25 +66,23 @@ Adds any attached audio files to the local sounds library.
 *Adding 'force' argument will overwrite existing sounds with same name.*  
 `!addsound [force] [info ...]`  
 
+**Console**  
+Executes command in colsole.  
+`!console <command> [parameters ...]`  
+
 **Remove Song**  
-Deletes a song from the local library structure. Does not delete the file from disk.  
+Deletes a song from the local library.  
 `!removesong <song_name>`  
 
 **Remove Sound**  
-Deletes a sound from the local library structure. Does not delete the file from disk.  
+Deletes a sound from the local library.  
 `!removesound <sound_name>`  
 
+**Show User Sounds**  
+Lists users with their user sounds.  
+`!showusersounds`  
+
 ### Manager Commands
-**Import Music**  
-Attempts to add all files in *./music* folder to the local library under their filenames.  
-*Does not overwrite.*  
-`!importmusic`  
-
-**Import Sounds**  
-Attempts to add all files in *./sounds* folder to the local library under their filenames.  
-*Does not overwrite.*  
-`!importsounds`  
-
 **Purge Music**  
 Removes all songs from the local library.  
 `!purgemusic <confirmation>`  
@@ -108,6 +90,20 @@ Removes all songs from the local library.
 **Purge Sounds**  
 Removes all sounds from the local library.  
 `!purgesounds <confirmation>`  
+
+**Set Bot Game**  
+Sets the bot's playing or streaming status.  
+`!setbotgame [game_name] [twitch_stream_url]`  
+
+**Update Music**  
+Attempts to add all files in *./music* folder to the local library under their filenames. Removes any songs not found on disk from the library.  
+*Does not overwrite.*  
+`!updatemusic`  
+
+**Update Sounds**  
+Attempts to add all files in *./sounds* folder to the local library under their filenames. Removes any sounds not found on disk from the library.  
+*Does not overwrite.*  
+`!updatesounds`  
 
 *Note:
 To run commands, enter them into any text channel the bot has access to. Certain commands also work in Direct Messages with the bot.*

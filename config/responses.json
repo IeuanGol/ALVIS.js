@@ -13,7 +13,7 @@
     "admin_command": true,
     "manager_command": false
   },
-    {
+  {
     "name": "About",
     "syntax": "about",
     "description": "Displays bot information.",
@@ -21,11 +21,11 @@
     "manager_command": false
   },
   {
-    "name": "Flip",
-    "syntax": "flip",
-    "description": "Flips a coin.",
+    "name": "Console",
+    "syntax": "console <command> [parameters ...]",
+    "description": "Executes command in console.",
     "admin_command": false,
-    "manager_command": false
+    "manager_command": true
   },
   {
     "name": "Help",
@@ -33,20 +33,6 @@
     "description": "Displays a list of available commands.",
     "admin_command": false,
     "manager_command": false
-  },
-  {
-    "name": "Import Music",
-    "syntax": "importmusic",
-    "description": "Attempts to add all files in ./music folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
-    "admin_command": false,
-    "manager_command": true
-  },
-  {
-    "name": "Import Sounds",
-    "syntax": "importsounds",
-    "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Does not overwrite. \n*Manager Command*",
-    "admin_command": false,
-    "manager_command": true
   },
   {
     "name": "Play Music",
@@ -84,38 +70,31 @@
     "manager_command": true
   },
   {
-    "name": "R6 Stats",
-    "syntax": "r6stats <username> [platform]",
-    "description": "Generates a [Rainbow Six Siege](https://rainbow6.ubisoft.com/siege/) Player Action Report.",
-    "admin_command": false,
-    "manager_command": false
-  },
-  {
     "name": "Remove Song",
     "syntax": "removesong <song_name>",
-    "description": "Deletes a song from the local library structure. Does not delete the file from disk. \n*Admin Command*",
+    "description": "Deletes a song from the local library. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
     "name": "Remove Sound",
     "syntax": "removesound <sound_name>",
-    "description": "Deletes a sound from the local library strcuture. Does not delete the file from disk. \n*Admin Command*",
+    "description": "Deletes a sound from the local library. \n*Admin Command*",
     "admin_command": true,
     "manager_command": false
   },
   {
-    "name": "Roll",
-    "syntax": "roll",
-    "description": "Rolls a die.",
+    "name": "Set Bot Game",
+    "syntax": "setbotgame [game_name] [twitch_stream_url]",
+    "description": "Sets the bot's playing or streaming status. \n*Manager Command*",
     "admin_command": false,
-    "manager_command": false
+    "manager_command": true
   },
   {
-    "name": "Set User Sound",
-    "syntax": "setusersound [@mention] [sound_name]",
-    "description": "Assigns (or removes) a sound to a user. This sound plays when the user joins a populated voice channel. \n*Admin Command*",
-    "admin_command": false,
+    "name": "Show User Sounds",
+    "syntax": "showusersounds",
+    "description": "Lists users with their user sounds. \n*Admin Command*",
+    "admin_command": true,
     "manager_command": false
   },
   {
@@ -138,7 +117,21 @@
     "description": "Stops audio playback on voice channel.",
     "admin_command": false,
     "manager_command": false
+  },
+  {
+    "name": "Update Music",
+    "syntax": "updatemusic",
+    "description": "Attempts to add all files in ./music folder to the local library under their filenames. Removes any songs not found on disk from the library. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "Update Sounds",
+    "syntax": "updatesounds",
+    "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Removes any sounds not found on disk from the library. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
   }],
-  "aboutBot": "Greetings! I am ALVIS (Asynchronous Learning Virtual Intelligence System). I am currently under development by [PacketCloud™](https://packetcloud.com). \nMy code is available on [GitHub](https://github.com/packetcloud/alvis). \n\nPlease put up with my bugs, as I am still in development.\n\nYou can **@mention** or **DM** me for assistance, or type `!help` for a list of commands.\n\n",
+  "aboutBot": "Greetings! I am ALVIS (Asynchronous Learning Virtual Intelligence System); a custom management and utility bot. I am currently under development by [PacketCloud™](https://packetcloud.com). \nMy code is available on [GitHub](https://github.com/packetcloud/alvis). \n\nPlease put up with my bugs, as I am still in development.\n\nYou can **@mention** or **DM** me for assistance, or type `!help` for a list of functionality.\n\n",
   "overheardNameResponse": "I heard my name! \nAnything I can do to help? \n\n*@mention or DM me to get my attention.*"
 }

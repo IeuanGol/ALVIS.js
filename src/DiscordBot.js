@@ -6,10 +6,12 @@ const BotMessageHandler = require('./BotMessageHandler.js');
 const ResponseHandler = require('./AI/ResponseHandler.js');
 const NewMemberHandler = require('./NewMemberHandler.js');
 const CommandHandler = require('./CommandHandler.js');
+const ConsoleHandler = require('./ConsoleHandler.js');
 const StartupCheck = require('./StartupCheck.js');
 const ChatHandler = require('./ChatHandler.js');
 const DMHandler = require('./DMHandler.js');
 const Util = require('./Util.js');
+const GoogleAssistant = require('./GoogleAssistant.js');
 
 class DiscordBot extends Discord.Client {
   constructor() {
@@ -29,9 +31,11 @@ class DiscordBot extends Discord.Client {
       this.messageCleanupQueue = new MessageCleanupQueue(this);
       this.newMemberHandler = new NewMemberHandler(this);
       this.commandHandler = new CommandHandler(this);
+      this.consoleHandler = new ConsoleHandler(this);
       this.chatHandler = new ChatHandler(this);
       this.dmHandler = new DMHandler(this);
       this.util = new Util(this);//yes, this is needing to be redefined
+      this.googleAssistant = new GoogleAssistant(this);
 
       this.chatbot = APIai(this.config.apiai_agent_token);
 
@@ -42,6 +46,11 @@ class DiscordBot extends Discord.Client {
       this.setVolumeToDefault();
 
       this.login(this.config.discord_token);
+
+      var stdin = process.openStdin();
+      var bot = this;
+      stdin.addListener("data", function(d){
+        bot.consoleHandler.handle(d.toString().trim())});
 
     }else{
       this.util.logger("Startup Configuration Check FAILED! Ensure settings are configured correctly then try again.");
@@ -76,7 +85,8 @@ class DiscordBot extends Discord.Client {
     this.basic.username = this.user.username;
     this.basic.user_id = this.user.id;
     this.util.logger("Logged in to Discord as '" + this.basic.username + "'");
-    this.user.setGame(this.config.bot_game, this.config.bot_game_link);
+    if (this.config.bot_game_link) this.user.setGame(this.config.bot_game, this.config.bot_game_link);
+    else this.user.setPresence(this.config.bot_game);
   }
 
   errorListener() {

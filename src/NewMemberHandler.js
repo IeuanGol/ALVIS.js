@@ -14,7 +14,9 @@ class NewMemberHandler {
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     embed.setThumbnail(newMember.user.avatarURL);
-    var embed_content = "I have set up your basic permissions. Feel free to **@mention** or **DM** me for further assistance.\nUse **" + this.bot.basic.command_prefix + "help** for a list of commands.\n";
+    embed.setAuthor(newMember.guild.name, this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetCloud_website);
+    embed.setURL(this.bot.webAssets.packetcloud_website);
+    var embed_content = "I have set up your basic permissions. Feel free to **@mention** or **DM** me for further assistance.\nUse **" + this.bot.basic.command_prefix + "help** for a list of my functions.\n";
     var message_content = "<@" + newMember.id + ">";
     if (admin_role || manager_role){
       embed_content += "\n";

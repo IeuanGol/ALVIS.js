@@ -25,21 +25,16 @@ class DMHandler {
   	const arg3 = splitmessage[3];
     var disallowed_command_message = "You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.";
 
-
     if (command === "addsong"){
       message.reply(disallowed_command_message);
     }else if (command === "addsound"){
       message.reply(disallowed_command_message);
     }else if (command === "about"){
       this.commandExecuter.aboutCommand(message);
-    }else if (command === "flip"){
-      this.commandExecuter.flipCommand(message);
+    }else if (command === "console"){
+      message.reply(disallowed_command_message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
-    }else if (command === "importmusic"){
-        message.reply(disallowed_command_message);
-    }else if (command === "importsounds"){
-        message.reply(disallowed_command_message);
     }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound" || command === "ps"){
@@ -54,13 +49,9 @@ class DMHandler {
       message.reply(disallowed_command_message);
     }else if (command === "removesound"){
       message.reply(disallowed_command_message);
-    }else if (command === "r6stats"){
-      this.commandExecuter.r6statsCommand(message, arg1, arg2);
-    }else if (command === "roll"){
-      this.commandExecuter.rollCommand(message, arg1);
     }else if (command === "say"){
       message.reply(disallowed_command_message);
-    }else if (command === "setusersound"){
+    }else if (command === "setbotgame"){
       message.reply(disallowed_command_message);
     }else if (command === "showusersounds"){
       message.reply(disallowed_command_message);
@@ -70,6 +61,10 @@ class DMHandler {
       message.reply(disallowed_command_message);
     }else if (command === "stop"){
       message.reply(disallowed_command_message);
+    }else if (command === "updatemusic"){
+        message.reply(disallowed_command_message);
+    }else if (command === "updatesounds"){
+        message.reply(disallowed_command_message);
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);

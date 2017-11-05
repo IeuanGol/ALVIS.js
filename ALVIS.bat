@@ -1,0 +1,1 @@
+start /b "" cmd /c start /B "" bot.js

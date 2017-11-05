@@ -72,11 +72,16 @@ class CommandExecuter {
     this.bot.messageCleanupQueue.add(message, 0.15, true);
   }
 
-  flipCommand(message) {
-    const outcome = ["heads", "tails"];
-    message.reply("You flipped " + outcome[this.util.getRandomInt(0, 1)] + ".");
-    this.util.logStandardCommand(message, "flip");
+  consoleCommand(message, body) {
     this.util.cleanupMessage(message);
+    if (!this.util.isAdmin(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      return;
+    }
+    var sudo = false;
+    if (this.util.isManager(message.member)) sudo = true;
+    this.util.logger("Console input from " + message.author.username + ":");
+    this.bot.consoleHandler.handle(body, message, sudo);
   }
 
   helpCommand(message) {
@@ -92,12 +97,15 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  importmusicCommand(message) {
+  updatemusicCommand(message) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
+    var discord_bot = this.bot;
+    var addedSongs = [];
+    var removedSongs = [];
     var file_list = fs.readdirSync(this.bot.basic.music_path);
     for (var i in file_list){
       var sound = file_list[i];
@@ -106,8 +114,45 @@ class CommandExecuter {
       var name = sound.slice(0, -ext.length - 1).toLowerCase();
       if (!this.util.musicData.hasOwnProperty(name)){
         if (ext != "json"){
-          this.util.musicData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+          var newSongObject = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+          this.util.musicData[name] = newSongObject;
+          addedSongs.push(newSongObject);
         }
+      }
+    }
+    for (var i in this.util.musicData){
+      var sound = this.util.musicData[i];
+      if (!file_list.includes(sound.file)){
+        removedSongs.push(sound);
+        delete this.util.musicData[i];
+      }
+    }
+    if (addedSongs.length){
+      for (var i in addedSongs){
+        var song_obj = addedSongs[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Song added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    if (removedSongs.length){
+      for (var i in removedSongs){
+        var song_obj = removedSongs[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Song removed:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }
     }
     this.util.musicData = this.util.alphabetizeByKey(this.util.musicData);
@@ -115,16 +160,19 @@ class CommandExecuter {
     fs.writeFile(file, JSON.stringify(this.util.musicData, null, 4), function(err){
       return;
     });
-    this.util.logStandardCommand(message, "importmusic");
+    this.util.logStandardCommand(message, "updatemusic");
     this.util.cleanupMessage(message);
   }
 
-  importsoundsCommand(message) {
+  updatesoundsCommand(message) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
+    var discord_bot = this.bot;
+    var addedSounds = [];
+    var removedSounds = [];
     var file_list = fs.readdirSync(this.bot.basic.sound_path);
     for (var i in file_list){
       var sound = file_list[i];
@@ -133,8 +181,45 @@ class CommandExecuter {
       var name = sound.slice(0, -ext.length - 1).toLowerCase();
       if (!this.util.soundData.hasOwnProperty(name)){
         if (ext != "json"){
-          this.util.soundData[name] = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+          var newSoundObject = {"name": name, "file": sound, "extension": ext, "artists": [], "aliases": [], "tags": []};
+          this.util.soundData[name] = newSoundObject;
+          addedSounds.push(newSoundObject);
         }
+      }
+    }
+    for (var i in this.util.soundData){
+      var sound = this.util.soundData[i];
+      if (!file_list.includes(sound.file)){
+        removedSounds.push(sound);
+        delete this.util.soundData[i];
+      }
+    }
+    if (addedSounds.length){
+      for (var i in addedSounds){
+        var song_obj = addedSounds[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Sound added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    if (removedSounds.length){
+      for (var i in removedSounds){
+        var song_obj = removedSounds[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Sound removed:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }
     }
     this.util.soundData = this.util.alphabetizeByKey(this.util.soundData);
@@ -142,7 +227,7 @@ class CommandExecuter {
     fs.writeFile(file, JSON.stringify(this.util.soundData, null, 4), function(err){
       return;
     });
-    this.util.logStandardCommand(message, "importsounds");
+    this.util.logStandardCommand(message, "updatesounds");
     this.util.cleanupMessage(message);
   }
 
@@ -368,25 +453,8 @@ class CommandExecuter {
     }
   }
 
-  r6statsCommand(message, arg1, arg2) {
-    if (arg1 == null) {
-      message.author.send("Please provide a username in your command for me to search up.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (arg2 == "xbox") arg2 = "xone";
-    if (arg2 == "pc") arg2 = "uplay";
-    if (arg2 && arg2 != "xone" && arg2 != "uplay" && arg2 != "ps4"){
-      message.author.send("You provided an invalid platform argument in your command.\nValid platforms include: `pc`, or `uplay`; `xbox`, or `xone`; `ps4`. Leaving it blank will default to `pc`");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    this.r6Siege.getStats(message, arg1, arg2);
-    this.util.logStandardCommand(message, "r6stats");
-    this.util.cleanupMessage(message);
-  }
-
   removesongCommand(message, arg1) {
+    var discord_bot = this.bot;
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
@@ -395,7 +463,7 @@ class CommandExecuter {
     var json_data = this.util.musicData;
     var song = json_data[arg1];
     if (song){
-      var filename = sound.file;
+      var filename = song.file;
       fs.unlink(this.bot.basic.music_path + "/" + filename, function(){});
       delete json_data[arg1];
       var file = this.bot.basic.music_path + "/_music.json";
@@ -403,7 +471,15 @@ class CommandExecuter {
         return;
       });
       this.util.musicData = require("." + this.bot.basic.music_path + "/_music.json");
-      this.util.logStandardCommand(message, "purgemusic");
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = "\"" + song.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" + song.tags.join("\", \"") + "\"";
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+      embed.addField(song.name, "File: " + song.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("Song removed:", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       this.util.logStandardCommand(message, "removesong");
     }else{
       message.author.send("The song '" + arg1 + "' does not exist.");
@@ -412,6 +488,7 @@ class CommandExecuter {
   }
 
   removesoundCommand(message, arg1) {
+    var discord_bot = this.bot;
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.logStandardCommand(message, "removesound");
@@ -429,22 +506,19 @@ class CommandExecuter {
         return;
       });
       this.util.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
+      var artists = "-";
+      var tags = "-";
+      if (artists.length) artists = "\"" + sound.artists.join("\", \"") + "\"";
+      if (tags.length) tags = "\"" + sound.tags.join("\", \"") + "\"";
+      var embed = new Discord.RichEmbed();
+      embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+      embed.addField(sound.name, "File: " + sound.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+      message.reply("Sound removed:", {embed: embed})
+      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       this.util.logStandardCommand(message, "removesound");
     }else{
       message.author.send("The sound '" + arg1 + "' does not exist.");
     }
-    this.util.cleanupMessage(message);
-  }
-
-  rollCommand(message, arg1) {
-    arg1 = parseInt(arg1);
-    if (isNaN(arg1)){
-      arg1 = 6;
-    }else{
-      arg1 = Math.round(arg1);
-    }
-    message.reply("You rolled a " + this.util.getRandomInt(1, arg1));
-    this.util.logStandardCommand(message, "roll");
     this.util.cleanupMessage(message);
   }
 
@@ -459,50 +533,20 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  setusersoundCommand(message, arg1, arg2) {
-    var user = message.mentions.users.first();
-    var id = null;
-    var username = null;
-    if (user){
-      id = user.id;
-      username = user.username;
-      if (user.bot){
-        message.author.send("You can not change the sounds of bot accounts.");
-        this.util.cleanupMessage(message);
-        return;
-      }
+  setbotgameCommand(message, arg1, arg2){
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    if (!arg1){
+      if (this.bot.config.bot_game_link) this.bot.user.setGame(this.bot.config.bot_game, this.bot.config.bot_game_link);
+      else this.bot.user.setGame(this.bot.config.bot_game);
     }else{
-      id = message.author.id;
-      username = message.author.username;
+      if (arg2) this.bot.user.setGame(arg1.replace(/_/g," "), arg2);
+      else this.bot.user.setGame(arg1.replace(/_/g," "));
     }
-    if (!arg2 && !user){
-      if (this.util.setUserSound(id, username, arg1)){
-        message.author.send("Your user sound has been successfully changed.");
-        this.util.logStandardCommand(message, "setusersound");
-      }else{
-        message.author.send("The sound '" + arg1 + "' does not exist.");
-      }
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (!this.util.isAdmin(message.member) && id != message.author.id){
-      message.author.send("You do not have permission to change the sounds of other users.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (!arg1) {
-      message.author.send("Your command is missing an @mention of the target user.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (isNaN(id) || !(arg1.includes("<@") && arg1.includes(">"))){
-      message.author.send("The first argument of that command is not a proper @mention of target user.");
-    }else if (this.util.setUserSound(id, username, arg2)){
-      message.author.send("The sound for " + username + " has been successfully changed.");
-      this.util.logStandardCommand(message, "setusersound");
-    }else{
-      message.author.send("The sound '" + arg2 + "' does not exist.");
-    }
+    this.util.logStandardCommand(message, "setbotgame");
     this.util.cleanupMessage(message);
   }
 

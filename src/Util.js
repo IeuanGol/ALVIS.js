@@ -16,6 +16,7 @@ class Util {
     const currentTime = new Date();
   	const time = "[" + ("0" + currentTime.getHours()).slice(-2) + ":" + ("0" + currentTime.getMinutes()).slice(-2) + ":" + ("0" + currentTime.getSeconds()).slice(-2) + "] ";
   	console.log(time + string);
+    return time + string;
   }
 
   logStandardCommand(message, command) {
@@ -38,7 +39,7 @@ class Util {
       handler.handle(message, response);
     });
     request.on('error', function(error) {
-      console.log(error);
+      if (error) console.log(error);
     });
     request.end();
   }
@@ -82,6 +83,7 @@ class Util {
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
+    embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
     embed.addField("About ALVIS", aboutBot + "v" + this.bot.basic.version);
     return embed;
   }
@@ -90,9 +92,10 @@ class Util {
     var prefix = this.bot.basic.command_prefix;
     var cmdList = this.bot.responses.cmdList;
     var embed = new Discord.RichEmbed();
-    embed.setFooter("Alternatively you can @mention or DM me, and we can converse.");
+    embed.setFooter("Alternatively you can @mention or DM me for additional functionality.");
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
-    embed.setAuthor("Available Commands:", null, this.bot.webAssets.alvis_github);
+    embed.setTitle("Available Commands:");
+    embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
     embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
     for (var i = 0; i < cmdList.length; i++){
       var cmd = cmdList[i];
@@ -104,6 +107,7 @@ class Util {
   }
 
   sendMusicList(message, tags, strict, exact) {
+    this.musicData = this.alphabetizeByKey(this.musicData);
     var search_criteria = "";
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
@@ -116,21 +120,32 @@ class Util {
     }
     var collection = this.createMediaSubCollection(this.musicData, tags, strict, exact);
     const charlimit = 1024;
+    const embedlimit = 6000;
     var isFirst = true;
     var body = "";
+    var total_length = 0;
     var results_number = 0
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsong = collection[key];
+        if (total_length + body.length >= embedlimit){
+          message.author.send("", {embed: embed});
+          embed = new Discord.RichEmbed();
+          embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+          body = "";
+          total_length = 0;
+        }
         if (body.length + nextsong.name.length >= charlimit){
           if (isFirst){
             embed.addField("Songs:", body);
             isFirst = false;
+            total_length += body.length + 10;
             body = "";
           }else{
             embed.addField('\u200B', body);
+            total_length += body.length + 1;
             body = "";
           }
         }
@@ -157,6 +172,7 @@ class Util {
   }
 
   sendSoundList(message, tags, strict, exact) {
+    this.soundData = this.alphabetizeByKey(this.soundData);
     var search_criteria = "";
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
@@ -169,21 +185,32 @@ class Util {
     }
     var collection = this.createMediaSubCollection(this.soundData, tags, strict, exact);
     const charlimit = 1024;
+    const embedlimit = 6000;
     var isFirst = true;
     var body = "";
+    var total_length = 0;
     var results_number = 0
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
     for (var key in collection){
       if (collection.hasOwnProperty(key)){
         var nextsound = collection[key];
+        if (total_length + body.length >= embedlimit){
+          message.author.send("", {embed: embed});
+          embed = new Discord.RichEmbed();
+          embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
+          body = "";
+          total_length = 0;
+        }
         if (body.length + nextsound.name.length >= charlimit){
           if (isFirst){
             embed.addField("Sounds:", body);
             isFirst = false;
+            total_length += body.length + 10;
             body = "";
           }else{
             embed.addField('\u200B', body);
+            total_length += body.length + 1;
             body = "";
           }
         }
@@ -330,6 +357,7 @@ class Util {
   	}).catch((error) => {
       this.logger("An error occured in stream playback:");
       console.log(error.message);
+      voiceChannel.leave();
     });
   }
 
@@ -382,24 +410,24 @@ class Util {
     var song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + attachment.filename);
-      response.pipe(file);
-      discord_bot.util.setAudioData(discord_bot.util.musicData, discord_bot.basic.music_path + "/_music.json", song_obj);
-      discord_bot.util.musicData = require("." + discord_bot.basic.music_path + "/_music.json");
-      if (args){
-        song_obj = discord_bot.util.modifyAudioData(song_obj, args);
+      var stream = response.pipe(file);
+      stream.on('close', function(){
+        if (args){
+          song_obj = discord_bot.util.modifyAudioData(song_obj, args);
+        }
         discord_bot.util.updateAudioData("music", song_obj);
-      }
-      var artists = "-";
-      var tags = "-";
-      if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
-      if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
-      var embed = new Discord.RichEmbed();
-      embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-      embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
-      message.reply("Song added:", {embed: embed})
-      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Song added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      });
     }).on('error', (error) => {
-      console.error(error);
+      if (error) console.error(error);
       message.author.send("Something went wrong when adding song '" + attachment.filename + "'.");
     });
   }
@@ -423,24 +451,24 @@ class Util {
     var sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
-      response.pipe(file);
-      discord_bot.util.setAudioData(discord_bot.util.soundData, discord_bot.basic.sound_path + "/_sounds.json", sound_obj);
-      discord_bot.util.soundData = require("." + discord_bot.basic.sound_path + "/_sounds.json");
-      if (args){
-        sound_obj = discord_bot.util.modifyAudioData(sound_obj, args);
+      var stream = response.pipe(file);
+      stream.on('close', function(){
+        if (args){
+          sound_obj = discord_bot.util.modifyAudioData(sound_obj, args);
+        }
         discord_bot.util.updateAudioData("sounds", sound_obj);
-      }
-      var artists = "-";
-      var tags = "-";
-      if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
-      if (tags.length) tags = "\"" + sound_obj.tags.join("\", \"") + "\"";
-      var embed = new Discord.RichEmbed();
-      embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-      embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
-      message.reply("Sound added:", {embed: embed})
-      .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" + sound_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        message.reply("Sound added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      });
     }).on('error', (error) => {
-      console.error(error);
+      if (error) console.error(error);
       message.author.send("Something went wrong when adding sound '" + attachment.filename + "'.");
     });
   }
@@ -481,12 +509,12 @@ class Util {
     if (database == "music"){
       var id = audio_data.name;
       this.musicData[id] = audio_data;
-      this.writeAudioData(this.musicData, this.bot.basic.music_path + "/_music.json");
+      this.writeAudioData(this.alphabetizeByKey(this.musicData), this.bot.basic.music_path + "/_music.json");
       return true;
     }else if (database == "sounds"){
       var id = audio_data.name;
       this.soundData[id] = audio_data;
-      this.writeAudioData(this.soundData, this.bot.basic.sound_path + "/_sounds.json");
+      this.writeAudioData(this.alphabetizeByKey(this.soundData), this.bot.basic.sound_path + "/_sounds.json");
       return true;
     }
     return false;
@@ -494,7 +522,7 @@ class Util {
 
   writeAudioData(data, file) {
     fs.writeFile(file, JSON.stringify(data, null, 4), function(err){
-      console.log(err);
+      if (err) console.log(err);
     });
   }
 
@@ -578,18 +606,6 @@ class Util {
     return -1;
   }
 
-  getAudioData(json_file, sound_name) {
-    return json_file.sound_name;
-  }
-
-  setAudioData(json_data, file, sound_obj) {
-    json_data[sound_obj.name] = sound_obj;
-    json_data = this.alphabetizeByKey(json_data);
-    fs.writeFile(file, JSON.stringify(json_data, null, 4), function(err){
-      console.log(err);
-    });
-  }
-
   alphabetizeByKey(object) {
     var newObject = {};
     var keys = Object.keys(object);
@@ -644,6 +660,10 @@ class Util {
       var member = members.find(val => val.user.username == string);
     }
     return member;
+  }
+
+  save() {
+    this.logger("Saving");
   }
 }
 
