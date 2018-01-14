@@ -21,7 +21,7 @@ class GooglePlayMusic {
     var discord_bot = this.bot;
     var play_music = this.pm;
     var found_track = false;
-    play_music.search(search_string, 5, function(err, data) {
+    play_music.search(search_string, 100, function(err, data) {
       for (var i in data.entries){
         if (data.entries[i].type == 1){
           var song = data.entries[i];

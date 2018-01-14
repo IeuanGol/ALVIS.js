@@ -48,6 +48,8 @@ class CommandHandler {
       this.commandExecuter.sayCommand(message);
     }else if (command === "setbotgame"){
       this.commandExecuter.setbotgameCommand(message, arg1, arg2);
+    }else if (command === "setbotstatus"){
+      this.commandExecuter.setbotstatusCommand(message, arg1);
     }else if (command === "showusersounds"){
       this.commandExecuter.showusersoundsCommand(message);
     }else if (command === "songinfo"){

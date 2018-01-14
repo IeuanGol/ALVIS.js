@@ -50,13 +50,16 @@ class Music extends DefaultResponse {
         if (response.result.parameters.artist[0]){
           search_string = search_string + response.result.parameters.artist.join(" ") + " ";
         }
+        if (response.result.parameters.album){
+          search_string = search_string + response.result.parameters.album + " ";
+        }
         if (response.result.parameters.song){
           search_string = search_string + response.result.parameters.song + " ";
         }
         if (response.result.parameters.genre){
           search_string = search_string + response.result.parameters.genre;
         }
-        if (search_string.length < 3) search_string = response.result.resolvedQuery;
+        if (search_string.length < 4) search_string = response.result.resolvedQuery;
         this.pm.startStreamFromSearch(message, search_string, this.bot.basic.stream_options);
       }
       discord_bot.messageCleanupQueue.add(message, 1, true);

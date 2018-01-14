@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const Util = require('../Util.js');
 const DefaultResponse = require('./DefaultResponse.js');
+const ConsoleCommand = require('./ConsoleCommand.js');
 const DiscordCommand = require('./DiscordCommand.js');
 const Music = require('./Music.js');
 const NativeCommand = require('./NativeCommand.js');
@@ -17,6 +18,7 @@ class ResponseHandler {
     this.bot = bot;
     this.util = new Util(bot);
     this.defaultresponse = new DefaultResponse(this.bot);
+    this.consolecommand = new ConsoleCommand(this.bot);
     this.discordcommand = new DiscordCommand(this.bot);
     this.music = new Music(this.bot);
     this.nativecommand = new NativeCommand(this.bot);
@@ -32,7 +34,9 @@ class ResponseHandler {
   handle(message, response) {
     var action = response.result.action;
     var actionType = action.split(".")[0];
-    if (actionType == "discordcommand"){
+    if (actionType == "console"){
+      this.consolecommand.handle(message, response);
+    }else if (actionType == "discordcommand"){
       this.discordcommand.handle(message, response);
     }else if (actionType == "music"){
       this.music.handle(message, response);

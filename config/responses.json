@@ -91,6 +91,13 @@
     "manager_command": true
   },
   {
+    "name": "Set Bot Status",
+    "syntax": "setbotstatus [online|idle|invisible|dnd]",
+    "description": "Sets the bot's status. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
     "name": "Show User Sounds",
     "syntax": "showusersounds",
     "description": "Lists users with their user sounds. \n*Admin Command*",

@@ -53,6 +53,8 @@ class DMHandler {
       message.reply(disallowed_command_message);
     }else if (command === "setbotgame"){
       message.reply(disallowed_command_message);
+    }else if (command === "setbotstatus"){
+      message.reply(disallowed_command_message);
     }else if (command === "showusersounds"){
       message.reply(disallowed_command_message);
     }else if (command === "songinfo"){

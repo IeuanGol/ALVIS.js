@@ -19,6 +19,8 @@ class DiscordBot extends Discord.Client {
     this.config = require('../config/config.json');
     this.responses = require('../config/responses.json');
     this.basic = require('./basic.json');
+    this.basic.musicData = require("." + this.basic.music_path + "/_music.json");
+    this.basic.soundData = require("." + this.basic.sound_path + "/_sounds.json");
     this.permissions = require('../config/permissions.json');
     this.userSounds = require('../config/userSounds.json');
     this.webAssets = require('../assets/webAssets.json');
@@ -86,7 +88,8 @@ class DiscordBot extends Discord.Client {
     this.basic.user_id = this.user.id;
     this.util.logger("Logged in to Discord as '" + this.basic.username + "'");
     if (this.config.bot_game_link) this.user.setGame(this.config.bot_game, this.config.bot_game_link);
-    else this.user.setPresence(this.config.bot_game);
+    else this.user.setGame(this.config.bot_game);
+    this.user.setAvatar("./assets/avatar.png");
   }
 
   errorListener() {
@@ -133,7 +136,7 @@ class DiscordBot extends Discord.Client {
   voiceStateUpdateListener(oldMember, newMember) {
     if (newMember.voiceChannel && !oldMember.voiceChannel){
       if (newMember.voiceChannel.joinable && !newMember.voiceChannel.full && newMember.voiceChannel.speakable && (newMember.voiceChannel.members.array().length > 1) && this.userSounds[newMember.id] && !newMember.guild.voiceConnection){
-        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.util.soundData[this.userSounds[newMember.id].sound].file, {});
+        this.util.playSound(newMember.voiceChannel, this.basic.sound_path + "/" + this.basic.soundData[this.userSounds[newMember.id].sound].file, {});
         this.util.logger("Played user sound for " + newMember.user.username + " on " + newMember.guild.name + ":" + newMember.voiceChannel.name);
       }
     }

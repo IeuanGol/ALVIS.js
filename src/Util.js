@@ -8,8 +8,6 @@ class Util {
   constructor(bot) {
     this.bot = bot;
     this.responseHandler = bot.responseHandler;
-    this.musicData = require("." + this.bot.basic.music_path + "/_music.json");
-    this.soundData = require("." + this.bot.basic.sound_path + "/_sounds.json");
   }
 
   logger(string) {
@@ -82,7 +80,7 @@ class Util {
     var aboutBot = this.bot.responses.aboutBot;
     var embed = new Discord.RichEmbed();
     embed.setColor(parseInt(this.bot.colours.bot_embed_colour));
-    embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
+    embed.setThumbnail(this.bot.user.avatarURL);
     embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
     embed.addField("About ALVIS", aboutBot + "v" + this.bot.basic.version);
     return embed;
@@ -106,8 +104,10 @@ class Util {
     return embed;
   }
 
-  sendMusicList(message, tags, strict, exact) {
-    this.musicData = this.alphabetizeByKey(this.musicData);
+  sendMusicList(message, tags, strict, exact, sort) {
+    var sortString = "";
+    if (sort) sortString = " | Sort: " + sort;
+    var musicData = this.sortByProperty(this.bot.basic.musicData, sort);
     var search_criteria = "";
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
@@ -118,7 +118,7 @@ class Util {
       }
       search_criteria = "| Tags: " + search_criteria;
     }
-    var collection = this.createMediaSubCollection(this.musicData, tags, strict, exact);
+    var collection = this.createMediaSubCollection(musicData, tags, strict, exact);
     const charlimit = 1024;
     const embedlimit = 6000;
     var isFirst = true;
@@ -160,19 +160,21 @@ class Util {
         embed.addField('\u200B', body);
       }
       if (results_number == 1){
-        embed.setFooter("1 result " + search_criteria);
+        embed.setFooter("1 result " + search_criteria + sortString);
       }else{
-        embed.setFooter(results_number + " results " + search_criteria);
+        embed.setFooter(results_number + " results " + search_criteria + sortString);
       }
     }else{
       embed.addField("Songs:", "No Results");
-      embed.setFooter("0 results " + search_criteria);
+      embed.setFooter("0 results " + search_criteria + sortString);
     }
     message.author.send("", {embed: embed});
   }
 
-  sendSoundList(message, tags, strict, exact) {
-    this.soundData = this.alphabetizeByKey(this.soundData);
+  sendSoundList(message, tags, strict, exact, sort) {
+    var sortString = "";
+    if (sort) sortString = " | Sort: " + sort;
+    var soundData = this.sortByProperty(this.bot.basic.soundData, sort);
     var search_criteria = "";
     if (tags){
       search_criteria = "\"" +tags.join("\", \"") + "\"";
@@ -183,7 +185,7 @@ class Util {
       }
       search_criteria = "| Tags: " + search_criteria;
     }
-    var collection = this.createMediaSubCollection(this.soundData, tags, strict, exact);
+    var collection = this.createMediaSubCollection(soundData, tags, strict, exact);
     const charlimit = 1024;
     const embedlimit = 6000;
     var isFirst = true;
@@ -225,13 +227,13 @@ class Util {
         embed.addField('\u200B', body);
       }
       if (results_number == 1){
-        embed.setFooter("1 result " + search_criteria);
+        embed.setFooter("1 result " + search_criteria + sortString);
       }else{
-        embed.setFooter(results_number + " results " + search_criteria);
+        embed.setFooter(results_number + " results " + search_criteria + sortString);
       }
     }else{
       embed.addField("Sounds:", "No Results");
-      embed.setFooter("0 results " + search_criteria);
+      embed.setFooter("0 results " + search_criteria + sortString);
     }
     message.author.send("", {embed: embed});
   }
@@ -253,9 +255,6 @@ class Util {
         for (j = 0; j < media.tags.length; j++){
           if (media.tags[j].toLowerCase().includes(tag)) hit = true;
         }
-        for (j = 0; j < media.aliases.length; j++){
-          if (media.aliases[j].toLowerCase().includes(tag)) hit = true;
-        }
         if (!hit) return 0;
       }
       return 1;
@@ -272,25 +271,22 @@ class Util {
         for (j = 0; j < media.tags.length; j++){
           if (media.tags[j].toLowerCase().includes(tag)) return 1;
         }
-        for (j = 0; j < media.aliases.length; j++){
-          if (media.aliases[j].toLowerCase().includes(tag)) return 1;
-        }
       }
       return 0;
     }
   }
 
   getSongInfo(song_name){
-    if (this.musicData.hasOwnProperty(song_name)){
-      return this.musicData[song_name];
+    if (this.bot.basic.musicData.hasOwnProperty(song_name)){
+      return this.bot.basic.musicData[song_name];
     }else{
       return null;
     }
   }
 
   getSoundInfo(sound_name) {
-    if (this.soundData.hasOwnProperty(sound_name)){
-      return this.soundData[sound_name];
+    if (this.bot.basic.soundData.hasOwnProperty(sound_name)){
+      return this.bot.basic.soundData[sound_name];
     }else{
       return null;
     }
@@ -362,7 +358,9 @@ class Util {
   }
 
   endDispatcher(server_id) {
-    this.bot.basic.dispatchers[server_id].end();
+    try{
+      this.bot.basic.dispatchers[server_id].end();
+    }catch(exception){}//Takes care of crashes if Discord throws a connection error and the dispatcher is undefined.
     this.bot.messageCleanupQueue.expireTag("currentlyplaying" + server_id);
   }
 
@@ -407,7 +405,8 @@ class Util {
       message.author.send("The file '" + attachment.filename + "' already exists in my music library.");
       return;
     }
-    var song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    var currentDate = new Date();
+    var song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + attachment.filename);
       var stream = response.pipe(file);
@@ -422,7 +421,7 @@ class Util {
         if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
         var embed = new Discord.RichEmbed();
         embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + song_obj.uploaded + "\nUploader: " + song_obj.uploader_username);
         message.reply("Song added:", {embed: embed})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       });
@@ -448,7 +447,9 @@ class Util {
       message.author.send("The file '" + attachment.filename + "' already exists in my sound library.");
       return;
     }
-    var sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "aliases": [], "tags": []};
+    var embed = new Discord.RichEmbed();
+    var currentDate = new Date();
+    var sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
     https.get(attachment.url, (response) => {
       const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
       var stream = response.pipe(file);
@@ -463,7 +464,7 @@ class Util {
         if (tags.length) tags = "\"" + sound_obj.tags.join("\", \"") + "\"";
         var embed = new Discord.RichEmbed();
         embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "");
+        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
         message.reply("Sound added:", {embed: embed})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       });
@@ -508,13 +509,13 @@ class Util {
   updateAudioData(database, audio_data) {
     if (database == "music"){
       var id = audio_data.name;
-      this.musicData[id] = audio_data;
-      this.writeAudioData(this.alphabetizeByKey(this.musicData), this.bot.basic.music_path + "/_music.json");
+      this.bot.basic.musicData[id] = audio_data;
+      this.writeAudioData(this.sortByProperty(this.bot.basic.musicData, "name"), this.bot.basic.music_path + "/_music.json");
       return true;
     }else if (database == "sounds"){
       var id = audio_data.name;
-      this.soundData[id] = audio_data;
-      this.writeAudioData(this.alphabetizeByKey(this.soundData), this.bot.basic.sound_path + "/_sounds.json");
+      this.bot.basic.soundData[id] = audio_data;
+      this.writeAudioData(this.sortByProperty(this.bot.basic.soundData, "name"), this.bot.basic.sound_path + "/_sounds.json");
       return true;
     }
     return false;
@@ -528,6 +529,7 @@ class Util {
 
   modifyAudioData(audio_data, edits) {
     for (var i = 0; i < edits.length; i++){
+      audio_data.modified = new Date().toJSON();
       var edit = edits[i];
       if (edit.startsWith("+&")){
         edit = edit.substring(2).replace(/_/g, " ");
@@ -606,16 +608,47 @@ class Util {
     return -1;
   }
 
-  alphabetizeByKey(object) {
-    var newObject = {};
+  sortByProperty(object, property) {
+    if (!property) property = "name";
+    function propertyCompare(a, b, property) {
+      if (a[property] < b[property]) return -1;
+      if (a[property] > b[property]) return 1;
+      return 0;
+    }
+    function invertPropertyCompare(a, b, property) {
+      if (a[property] > b[property]) return -1;
+      if (a[property] < b[property]) return 1;
+      return 0;
+    }
+    function nameCompare(a, b){
+      return propertyCompare(a, b, "name");
+    }
+    function addedCompare(a, b){
+      return propertyCompare(a, b, "uploaded");
+    }
+    function modifiedCompare(a, b){
+      return propertyCompare(a, b, "modified");
+    }
+    function uploaderCompare(a, b){
+      return propertyCompare(a, b, "uploader");
+    }
+    function latestCompare(a, b){
+      return invertPropertyCompare(a, b, "uploaded");
+    }
     var keys = Object.keys(object);
     var len = keys.length;
-
-    keys.sort();
-
-    for (var i = 0; i < len; i++) {
-      var k = keys[i];
-      newObject[k] = object[k];
+    var array = [];
+    for (var i = 0; i < len; i++){
+      array.push(object[keys[i]]);
+    }
+    if (property == "name") array.sort(nameCompare);
+    else if (property == "uploaded" || property == "added") array.sort(addedCompare);
+    else if (property == "modified" || property == "changed") array.sort(modifiedCompare);
+    else if (property == "uploader" || property == "creator" || property == "user") array.sort(uploaderCompare);
+    else if (property == "latest" || property == "newest") array.sort(latestCompare);
+    var newObject = {};
+    for (var i = 0; i < len; i++){
+      newObject[array[i].name] = object[array[i].name];
     }
     return newObject;
   }
@@ -623,7 +656,7 @@ class Util {
   setUserSound(id, username, sound) {
     if (sound == null){
       delete this.bot.userSounds[id];
-    }else if (this.soundData[sound]){
+    }else if (this.bot.basic.soundData[sound]){
       this.bot.userSounds[id] = {"id": id, "username":username,"sound": sound};
     }else{
       return false;
