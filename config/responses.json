@@ -35,6 +35,20 @@
     "manager_command": false
   },
   {
+    "name": "Pause",
+    "syntax": "pause",
+    "description": "Pauses audio playback.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
+    "name": "Play",
+    "syntax": "play [Youtube_URL|search_query...]",
+    "description": "Plays audio from the provided YouTube video URL or searches Google Play Music for query and starts playback of best track result. \nResumes paused playback if no arguments are provided.",
+    "admin_command": false,
+    "manager_command": false
+  },
+  {
     "name": "Play Music",
     "syntax": "playmusic [song_name|[-|&]tag [...]|? [[-|&]tag [...]]]",
     "description": "Plays specific or random song matching provided search criteria. \n'?' lists songs matching search criteria.",
@@ -49,13 +63,6 @@
     "manager_command": false
   },
   {
-    "name": "Play Stream",
-    "syntax": "playstream <Youtube_URL>",
-    "description": "Plays audio from the provided YouTube video.",
-    "admin_command": false,
-    "manager_command": false
-  },
-  {
     "name": "Purge Music",
     "syntax": "purgemusic <confirmation>",
     "description": "Removes all songs from the local library. \n*Manager Command*",
@@ -64,10 +71,17 @@
   },
   {
     "name": "Purge Sounds",
-    "syntax": "purgemusic <confirmation>",
+    "syntax": "purgesounds <confirmation>",
     "description": "Removes all sounds from the local library. \n*Manager Command*",
     "admin_command": false,
     "manager_command": true
+  },
+  {
+    "name": "Resume",
+    "syntax": "resume",
+    "description": "Resumes paused audio playback.",
+    "admin_command": false,
+    "manager_command": false
   },
   {
     "name": "Remove Song",
@@ -84,9 +98,16 @@
     "manager_command": false
   },
   {
-    "name": "Set Bot Game",
-    "syntax": "setbotgame [game_name] [twitch_stream_url]",
-    "description": "Sets the bot's playing or streaming status. \n*Manager Command*",
+    "name": "Set Bot Activity",
+    "syntax": "setbotactivity [activity_name] [activity_type] [twitch_stream_url]",
+    "description": "Sets the bot's currently displayed activity. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "Set Bot Avatar",
+    "syntax": "setbotavatar",
+    "description": "Sets the bot's avatar to 'avatar.png' in the assets folder. \n*Manager Command*",
     "admin_command": false,
     "manager_command": true
   },
@@ -136,6 +157,13 @@
     "name": "Update Sounds",
     "syntax": "updatesounds",
     "description": "Attempts to add all files in ./sounds folder to the local library under their filenames. Removes any sounds not found on disk from the library. Does not overwrite. \n*Manager Command*",
+    "admin_command": false,
+    "manager_command": true
+  },
+  {
+    "name": "YouTube Download",
+    "syntax": "ytdl <YouTube_URL>",
+    "description": "Provides download links for the YouTube video at the URL provided.",
     "admin_command": false,
     "manager_command": true
   }],

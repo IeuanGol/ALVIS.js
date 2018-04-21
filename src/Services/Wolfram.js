@@ -86,7 +86,7 @@ class Wolfram {
           embed.setImage(image);
         }
         embed.setColor(colour);
-        embed.setFooter("Results courtesy of Wolfram Alpha | ©2017 Wolfram Alpha LLC", wolfram_logo_small);
+        embed.setFooter("Results courtesy of Wolfram Alpha | ©2018 Wolfram Alpha LLC", wolfram_logo_small);
         message.reply(header, {"embed": embed, "split": true})
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 10)});
       }else{

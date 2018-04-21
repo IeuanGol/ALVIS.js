@@ -5,7 +5,7 @@ class MessageCleanupQueue {
     this.bot = bot;
     this.queue = {};
     var timer;
-    this.setTimer(timer, this, 10000);
+    this.setTimer(timer, this, 1000);
     this.expired_tags = [];
   }
 

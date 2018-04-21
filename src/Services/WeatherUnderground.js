@@ -73,7 +73,7 @@ class WeatherUndergound {
         embed.addField("Today - " + today.date.weekday_short, today.conditions + "\n**" + today.high.celsius + "** °C | *" + today.low.celsius + "* °C\nPrecipitation: " + today.pop + "%\nHumidity: " + today.avehumidity + "%\nWind: " + today.avewind.kph + " km/h " + today.avewind.dir, true);
         embed.addField("Tomorrow - " + tomorrow.date.weekday_short, tomorrow.conditions + "\n**" + tomorrow.high.celsius + "** °C | *" + tomorrow.low.celsius + "* °C\nPrecipitation: " + tomorrow.pop + "%\nHumidity: " + tomorrow.avehumidity + "%\nWind: " + tomorrow.avewind.kph + " km/h " + tomorrow.avewind.dir, true);
         embed.setColor(parseInt(discord_bot.colours.weather_underground_embed_colour));
-        embed.setFooter("Results courtesy of Weather Underground | ©2017 The Weather Company LLC | " + weatherData.current_observation.observation_time, weatherData.current_observation.image.url);
+        embed.setFooter("Results courtesy of Weather Underground | ©2018 The Weather Company LLC | " + weatherData.current_observation.observation_time, weatherData.current_observation.image.url);
         embed.setURL(weatherData.current_observation.ob_url);
         embed.setImage(satellite_url);
         if (custom_content){

@@ -113,7 +113,7 @@ class NewsAPI {
           embed.setURL(article.url);
           embed.setThumbnail(article.urlToImage);
           embed.setAuthor(localSource.name, localSource.icon, localSource.icon);
-          embed.setFooter("Result courtesy of News API | ©2017 News API", "https://newsapi.org/images/newsapi-logo.png");
+          embed.setFooter("Result courtesy of News API | ©2018 News API", "https://newsapi.org/images/newsapi-logo.png");
           embed.setColor(parseInt(discord_bot.colours.news_api_embed_colour));
           message.channel.send("", {"embed": embed})
           .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 5, true)});

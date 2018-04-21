@@ -12,7 +12,7 @@ class Playback extends DefaultResponse {
     var action = response.result.action;
     var actionType = action.split(".")[1];
     var handler = this;
-    
+
     if(actionType == "stop"){
       if (message.channel instanceof Discord.TextChannel){
         if (message.guild.voiceConnection && message.member.voiceChannel){
@@ -48,14 +48,17 @@ class Playback extends DefaultResponse {
         if (newVolume > 10) newVolume = 10;
         if (newVolume < 1) newVolume = 1;
         this.bot.util.setIntegerVolume(newVolume*10);
+        if (message.guild.voiceConnection) message.guild.voiceConnection.dispatcher.setVolumeLogarithmic(newVolume/10);
         message.reply("My playback volume is now at " + newVolume*10 + "%.")
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else if (subType == "increase"){
         var newVolume = this.bot.util.increaseVolume();
+        if (message.guild.voiceConnection) message.guild.voiceConnection.dispatcher.setVolumeLogarithmic(newVolume/100);
         message.reply("My playback volume is now at " + newVolume + "%.")
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else if (subType == "decrease"){
         var newVolume = this.bot.util.decreaseVolume();
+        if (message.guild.voiceConnection) message.guild.voiceConnection.dispatcher.setVolumeLogarithmic(newVolume/100);
         message.reply("My playback volume is now at " + newVolume + "%.")
         .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       }else{

@@ -5,17 +5,22 @@ const MessageCleanupQueue = require('./MessageCleanupQueue.js');
 const BotMessageHandler = require('./BotMessageHandler.js');
 const ResponseHandler = require('./AI/ResponseHandler.js');
 const NewMemberHandler = require('./NewMemberHandler.js');
+const ReactionHandler = require('./ReactionHandler.js');
 const CommandHandler = require('./CommandHandler.js');
 const ConsoleHandler = require('./ConsoleHandler.js');
 const StartupCheck = require('./StartupCheck.js');
 const ChatHandler = require('./ChatHandler.js');
 const DMHandler = require('./DMHandler.js');
 const Util = require('./Util.js');
-const GoogleAssistant = require('./GoogleAssistant.js');
 
 class DiscordBot extends Discord.Client {
   constructor() {
     super();
+    if (!fs.existsSync('./config/config.json')) {
+      this.util = new Util(this);
+      new StartupCheck(this).setDefaultConfig(true);
+      return;
+    }
     this.config = require('../config/config.json');
     this.responses = require('../config/responses.json');
     this.basic = require('./basic.json');
@@ -32,12 +37,12 @@ class DiscordBot extends Discord.Client {
       this.botMessageHandler = new BotMessageHandler(this);
       this.messageCleanupQueue = new MessageCleanupQueue(this);
       this.newMemberHandler = new NewMemberHandler(this);
+      this.reactionHandler = new ReactionHandler(this);
       this.commandHandler = new CommandHandler(this);
       this.consoleHandler = new ConsoleHandler(this);
       this.chatHandler = new ChatHandler(this);
       this.dmHandler = new DMHandler(this);
       this.util = new Util(this);//yes, this is needing to be redefined
-      this.googleAssistant = new GoogleAssistant(this);
 
       this.chatbot = APIai(this.config.apiai_agent_token);
 
@@ -81,15 +86,15 @@ class DiscordBot extends Discord.Client {
     this.on('messageDelete', this.messageDeleteListener);
     this.on('guildMemberAdd', this.guildMemberAddListener);
     this.on('voiceStateUpdate', this.voiceStateUpdateListener);
+    this.on('messageReactionAdd', this.messageReactionListener);
   }
 
   readyListener() {
     this.basic.username = this.user.username;
     this.basic.user_id = this.user.id;
     this.util.logger("Logged in to Discord as '" + this.basic.username + "'");
-    if (this.config.bot_game_link) this.user.setGame(this.config.bot_game, this.config.bot_game_link);
-    else this.user.setGame(this.config.bot_game);
-    this.user.setAvatar("./assets/avatar.png");
+    if (this.config.bot_activity_url) this.user.setActivity(this.config.bot_activity, {"url": this.config.bot_activity_url, "type": this.config.bot_activity_type});
+    else this.user.setActivity(this.config.bot_activity, {"type": this.config.bot_activity_type});
   }
 
   errorListener() {
@@ -127,6 +132,10 @@ class DiscordBot extends Discord.Client {
 
   messageDeleteListener(message) {
     this.messageCleanupQueue.remove(message.id);
+  }
+
+  messageReactionListener(messageReaction, user) {
+    this.reactionHandler.handle(messageReaction, user);
   }
 
   guildMemberAddListener(newMember) {

@@ -10,7 +10,14 @@
     "news_api_key": "",
     "default_volume": 80,
     "max_upload_size": 10000000,
-    "bot_game": "by PacketCloud™",
-    "bot_game_link": "",
-    "deleteMessages": true
+    "bot_activity_type": "PLAYING",
+    "bot_activity": "by PacketCloud™",
+    "bot_activity_url": "",
+    "deleteMessages": true,
+    "message_report_threshold": 3,
+    "announce_new_members": true,
+    "new_member_notify_admins": true,
+    "new_member_announcement_channel": "general",
+    "welcome_dm": true,
+    "assistOnNameOverheard": false
 }

@@ -23,7 +23,7 @@ class DMHandler {
   	const arg1 = splitmessage[1];
   	const arg2 = splitmessage[2];
   	const arg3 = splitmessage[3];
-    var disallowed_command_message = "You cannot perform an **" + command_prefix + command + "** command from within a Direct Message.";
+    var disallowed_command_message = "You cannot perform a **" + command_prefix + command + "** command from within a Direct Message.";
 
     if (command === "addsong"){
       message.reply(disallowed_command_message);
@@ -35,12 +35,12 @@ class DMHandler {
       message.reply(disallowed_command_message);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
+    }else if (command === "play"){
+      message.reply(disallowed_command_message);
     }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound" || command === "ps"){
       this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
-    }else if (command === "playstream"){
-      message.reply(disallowed_command_message);
     }else if (command === "purgemusic"){
       message.reply(disallowed_command_message);
     }else if (command === "purgesounds"){
@@ -51,7 +51,7 @@ class DMHandler {
       message.reply(disallowed_command_message);
     }else if (command === "say"){
       message.reply(disallowed_command_message);
-    }else if (command === "setbotgame"){
+    }else if (command === "setbotactivity"){
       message.reply(disallowed_command_message);
     }else if (command === "setbotstatus"){
       message.reply(disallowed_command_message);
@@ -67,6 +67,8 @@ class DMHandler {
         message.reply(disallowed_command_message);
     }else if (command === "updatesounds"){
         message.reply(disallowed_command_message);
+    }else if (command === "ytdl"){
+      this.commandExecuter.ytdlCommand(message, arg1);
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);

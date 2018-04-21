@@ -17,7 +17,7 @@ class GooglePlayMusic {
   }
 
   startStreamFromSearch(message, search_string, stream_options) {
-    var gpm_logo = "https://s3.amazonaws.com/playstoresales.com/wp-content/uploads/2016/08/05184213/Google-Play-Music.png";
+    var gpm_logo = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Play_music_triangle.svg/1200px-Play_music_triangle.svg.png";
     var discord_bot = this.bot;
     var play_music = this.pm;
     var found_track = false;
@@ -41,15 +41,18 @@ class GooglePlayMusic {
             var duration_minutes = Math.floor(duration);
             var duration_seconds = ("0" + Math.floor((duration - duration_minutes) * 60)).slice(-2);
             var embed = new Discord.RichEmbed()
-            .setDescription("Now playing in #" + message.member.voiceChannel.name + ":")
-            .addField(song.track.title, song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
+            .setAuthor("Now playing in #" + message.member.voiceChannel.name + ":")
+            .setTitle(song.track.title)
+            .setDescription(song.track.artist + " **-** *" + song.track.album + "*\n`" + duration_minutes + ":" + duration_seconds + "`")
             .setThumbnail(song.track.albumArtRef[0].url)
             .setColor(parseInt(discord_bot.colours.google_play_music_embed_colour))
-            .setFooter("Playing from Google Play Music | ©2017 Google", gpm_logo);
+            .setFooter("Playing from Google Play Music | ©2018 Google", gpm_logo);
             embed.duration = duration;
             discord_bot.util.setLastSongEmbed(message.guild.id, embed);
-            message.channel.send("", {"embed": embed})
-            .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id])});
+            message.channel.send("", {"embed": embed}).then((msg) => {
+              if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id]);
+              discord_bot.util.attachMediaControlReactions(msg);
+            });
             discord_bot.util.playSound(message.member.voiceChannel, "./assets/temp/" + message.guild.id + ".mp3", stream_options);
           });
         });
@@ -69,10 +72,13 @@ class GooglePlayMusic {
       .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
       var embed = discord_bot.util.getLastSongEmbed(message.guild.id);
       if (embed){
-        embed.setDescription("Now playing in #" + message.member.voiceChannel.name + ":");
+        embed.setDescription("Now playing in " + message.member.voiceChannel + ":");
         var duration = embed.duration;
         message.channel.send("", {"embed": embed})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id])});
+        .then((msg) => {
+          if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, duration, true, ["currentlyplaying" + msg.guild.id]);
+          discord_bot.util.attachMediaControlReactions(msg);
+        });
       }
       discord_bot.util.playSound(message.member.voiceChannel, "./assets/temp/" + message.guild.id + ".mp3", stream_options);
     }else{

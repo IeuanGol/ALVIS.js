@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ytdl = require('ytdl-core');
 
+const YouTube = require('./Services/YouTube.js');
 const Util = require('./Util.js');
 const R6Siege = require('./Services/R6Siege.js');
 const WeatherUnderground = require('./Services/WeatherUnderground.js');
@@ -11,8 +12,8 @@ var command_prefix = "";
 class CommandExecuter {
   constructor(bot) {
     this.bot = bot;
-    //this.util = new Util(bot);
     this.util = bot.util;
+    this.youTube = new YouTube(this.bot);
     this.r6Siege = new R6Siege(this.bot);
     this.weatherUnderground = new WeatherUnderground(this.bot);
     command_prefix = this.bot.basic.command_prefix;
@@ -97,139 +98,43 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
-  updatemusicCommand(message) {
-    if (!this.util.isManager(message.member)){
-      message.author.send("You do not have permission to use that command.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    var discord_bot = this.bot;
-    var addedSongs = [];
-    var removedSongs = [];
-    var file_list = fs.readdirSync(this.bot.basic.music_path);
-    for (var i in file_list){
-      var sound = file_list[i];
-      var ext = sound.split(".");
-      ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1).toLowerCase();
-      if (!this.bot.basic.musicData.hasOwnProperty(name)){
-        if (ext != "json"){
-          var currentDate = new Date();
-          var newSongObject = {"name": name, "file": sound, "extension": ext, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
-          this.bot.basic.musicData[name] = newSongObject;
-          addedSongs.push(newSongObject);
+  pauseCommand(message) {
+    if (message.guild.voiceConnection && message.member.voiceChannel){
+      if (message.guild.voiceConnection.channel.id == message.member.voiceChannelID){
+        if (!this.bot.basic.dispatchers[message.guild.id].paused){
+          this.bot.util.pauseDispatcher(message.guild.id);
+          this.util.logStandardCommand(message, "play");
         }
       }
     }
-    for (var i in this.bot.basic.musicData){
-      var sound = this.bot.basic.musicData[i];
-      if (!file_list.includes(sound.file)){
-        removedSongs.push(sound);
-        delete this.bot.basic.musicData[i];
-      }
-    }
-    if (addedSongs.length){
-      for (var i in addedSongs){
-        var song_obj = addedSongs[i];
-        var artists = "-";
-        var tags = "-";
-        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
-        if (tags.length) tags = "\"" +sound_obj.tags.join("\", \"") + "\"";
-        var embed = new Discord.RichEmbed();
-        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(song_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
-        message.reply("Song added:", {embed: embed})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }
-    }
-    if (removedSongs.length){
-      for (var i in removedSongs){
-        var song_obj = removedSongs[i];
-        var artists = "-";
-        var tags = "-";
-        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
-        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
-        var embed = new Discord.RichEmbed();
-        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(song_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
-        message.reply("Song removed:", {embed: embed})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }
-    }
-    this.bot.basic.musicData = this.util.sortByProperty(this.bot.basic.musicData, "name");
-    var file = this.bot.basic.music_path + "/_music.json";
-    fs.writeFile(file, JSON.stringify(this.bot.basic.musicData, null, 4), function(err){
-      return;
-    });
-    this.util.logStandardCommand(message, "updatemusic");
     this.util.cleanupMessage(message);
   }
 
-  updatesoundsCommand(message) {
-    if (!this.util.isManager(message.member)){
-      message.author.send("You do not have permission to use that command.");
+  playCommand(message, arg1, body) {
+    var query = body.replace(this.bot.basic.command_prefix, "").replace("play", "");
+    if (message.member.voiceChannel == null){
+      message.author.send("You need to be in a voice channel for me to play media.");
       this.util.cleanupMessage(message);
       return;
     }
-    var discord_bot = this.bot;
-    var addedSounds = [];
-    var removedSounds = [];
-    var file_list = fs.readdirSync(this.bot.basic.sound_path);
-    for (var i in file_list){
-      var sound = file_list[i];
-      var ext = sound.split(".");
-      ext = ext[ext.length - 1];
-      var name = sound.slice(0, -ext.length - 1).toLowerCase();
-      if (!this.bot.basic.soundData.hasOwnProperty(name)){
-        if (ext != "json"){
-          var currentDate = new Date();
-          var newSoundObject = {"name": name, "file": sound, "extension": ext, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
-          this.bot.basic.soundData[name] = newSoundObject;
-          addedSounds.push(newSoundObject);
-        }
-      }
-    }
-    for (var i in this.bot.basic.soundData){
-      var sound = this.bot.basic.soundData[i];
-      if (!file_list.includes(sound.file)){
-        removedSounds.push(sound);
-        delete this.bot.basic.soundData[i];
-      }
-    }
-    if (addedSounds.length){
-      for (var i in addedSounds){
-        var sound_obj = addedSounds[i];
-        var artists = "-";
-        var tags = "-";
-        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
-        if (tags.length) tags = "\"" +sound_obj.tags.join("\", \"") + "\"";
-        var embed = new Discord.RichEmbed();
-        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
-        message.reply("Sound added:", {embed: embed})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }
-    }
-    if (removedSounds.length){
-      for (var i in removedSounds){
-        var sound_obj = removedSounds[i];
-        var artists = "-";
-        var tags = "-";
-        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
-        if (tags.length) tags = "\"" +sound_obj.tags.join("\", \"") + "\"";
-        var embed = new Discord.RichEmbed();
-        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
-        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
-        message.reply("Sound removed:", {embed: embed})
-        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
-      }
-    }
-    this.bot.basic.soundData = this.util.sortByProperty(this.bot.basic.soundData, "name");
-    var file = this.bot.basic.sound_path + "/_sounds.json";
-    fs.writeFile(file, JSON.stringify(this.bot.basic.soundData, null, 4), function(err){
+    if (!message.member.voiceChannel.joinable){
+      message.author.send("I am not allowed to join that channel to play media.");
+      this.util.cleanupMessage(message);
       return;
-    });
-    this.util.logStandardCommand(message, "updatesounds");
+    }
+    if (!message.guild.voiceConnection){
+      if (arg1){
+        if (this.youTube.validateURL(arg1)){
+          this.youTube.startStreamWithEmbed(message, message.member.voiceChannel, arg1);
+        }else{
+          this.bot.responseHandler.music.pm.startStreamFromSearch(message, query, this.bot.basic.stream_options);
+        }
+        this.util.logStandardCommand(message, "play");
+      }
+    }else{
+      this.resumeCommand(message);
+      return;
+    }
     this.util.cleanupMessage(message);
   }
 
@@ -262,7 +167,7 @@ class CommandExecuter {
       return;
     }
     if (!(message.channel instanceof Discord.TextChannel)){
-      message.reply("You cannot perform a **" + command_prefix + "playmusic** command with those arugments from within a Direct Message. **" + command_prefix + "playmusic ?** is allowed.");
+      message.reply("You cannot perform a **" + command_prefix + "playmusic** command with those arguments from within a Direct Message. **" + command_prefix + "playmusic ?** is allowed.");
       return;
     }
     var channel = message.member.voiceChannel;
@@ -351,7 +256,7 @@ class CommandExecuter {
       return;
     }
     if (!(message.channel instanceof Discord.TextChannel)){
-      message.reply("You cannot perform a **" + command_prefix + "playsound** command with those arugments from within a Direct Message. **" + command_prefix + "playsound ?** is allowed.");
+      message.reply("You cannot perform a **" + command_prefix + "playsound** command with those arguments from within a Direct Message. **" + command_prefix + "playsound ?** is allowed.");
       return;
     }
     var channel = message.member.voiceChannel;
@@ -406,25 +311,6 @@ class CommandExecuter {
           this.util.logStandardCommand(message, "playsound");
         }
       }
-    }
-    this.util.cleanupMessage(message);
-  }
-
-  playstreamCommand(message, arg1) {
-    const channel = message.member.voiceChannel;
-    if (channel == null){
-      message.author.send("You need to be in a voice channel for me to play your requested stream.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (!channel.joinable){
-      message.author.send("I am not allowed to join that channel to play sounds.");
-      this.util.cleanupMessage(message);
-      return;
-    }
-    if (!message.guild.voiceConnection){
-      this.util.playStream(channel, arg1);
-      this.util.logStandardCommand(message, "playstream");
     }
     this.util.cleanupMessage(message);
   }
@@ -538,31 +424,62 @@ class CommandExecuter {
     this.util.cleanupMessage(message);
   }
 
+  resumeCommand(message) {
+    if (message.guild.voiceConnection && message.member.voiceChannel){
+      if (message.guild.voiceConnection.channel.id == message.member.voiceChannelID){
+        if (this.bot.basic.dispatchers[message.guild.id].paused){
+          this.bot.util.resumeDispatcher(message.guild.id);
+          this.util.logStandardCommand(message, "resume");
+        }
+      }
+    }
+    this.util.cleanupMessage(message);
+  }
+
   sayCommand(message) {
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
-    message.channel.send(message.content.replace("!say ", ""));
+    message.channel.send(message.content.replace(this.bot.basic.command_prefix + "say ", ""));
     this.util.logStandardCommand(message, "say");
     this.util.cleanupMessage(message);
   }
 
-  setbotgameCommand(message, arg1, arg2){
+  setbotactivityCommand(message, arg1, arg2, arg3){
     if (!this.util.isManager(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
     }
     if (!arg1){
-      if (this.bot.config.bot_game_link) this.bot.user.setGame(this.bot.config.bot_game, this.bot.config.bot_game_link);
-      else this.bot.user.setGame(this.bot.config.bot_game);
+      if (this.bot.config.bot_activity_url) this.bot.user.setActivity(this.bot.config.bot_activity, {"url": this.bot.config.bot_activity_URL, "type": this.bot.config.bot_activity_type});
+      else this.bot.user.setActivity(this.bot.config.bot_activity);
     }else{
-      if (arg2) this.bot.user.setGame(arg1.replace(/_/g," "), arg2);
-      else this.bot.user.setGame(arg1.replace(/_/g," "));
+      if (arg2){
+          if (arg2 == "playing" || arg2 == "watching" || arg2 == "listening"){
+            this.bot.user.setActivity(arg1.replace(/_/g," "), {"type": arg2});
+          }else if (arg2 == "streaming"){
+            this.bot.user.setActivity(arg1.replace(/_/g," "), {"type": arg2, "url": arg3});
+          }else{
+            this.bot.user.setActivity(arg1.replace(/_/g," "), {"type": "streaming", "url": arg2});
+          }
+      }
+      else this.bot.user.setActivity(arg1.replace(/_/g," "));
     }
-    this.util.logStandardCommand(message, "setbotgame");
+    this.util.logStandardCommand(message, "setbotactivity");
+    this.util.cleanupMessage(message);
+  }
+
+  setbotavatarCommand(message){
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    this.bot.user.setAvatar("./assets/avatar.png");
+    this.util.logStandardCommand(message, "setbotavatar");
     this.util.cleanupMessage(message);
   }
 
@@ -652,12 +569,159 @@ class CommandExecuter {
         if (message.guild.voiceConnection.channel.id == message.member.voiceChannel.id){
           this.util.endDispatcher(message.guild.id);
           this.util.logStandardCommand(message, "stop");
-          this.util.cleanupMessage(message);
-          return;
         }
       }
     }
-    message.author.send("There is currently no audio for me to stop.");
+    this.util.cleanupMessage(message);
+  }
+
+  updatemusicCommand(message) {
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    var discord_bot = this.bot;
+    var addedSongs = [];
+    var removedSongs = [];
+    var file_list = fs.readdirSync(this.bot.basic.music_path);
+    for (var i in file_list){
+      var sound = file_list[i];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
+      if (!this.bot.basic.musicData.hasOwnProperty(name)){
+        if (ext != "json"){
+          var currentDate = new Date();
+          var newSongObject = {"name": name, "file": sound, "extension": ext, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
+          this.bot.basic.musicData[name] = newSongObject;
+          addedSongs.push(newSongObject);
+        }
+      }
+    }
+    for (var i in this.bot.basic.musicData){
+      var sound = this.bot.basic.musicData[i];
+      if (!file_list.includes(sound.file)){
+        removedSongs.push(sound);
+        delete this.bot.basic.musicData[i];
+      }
+    }
+    if (addedSongs.length){
+      for (var i in addedSongs){
+        var song_obj = addedSongs[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + song_obj.uploaded + "\nUploader: " + song_obj.uploader_username);
+        message.reply("Song added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    if (removedSongs.length){
+      for (var i in removedSongs){
+        var song_obj = removedSongs[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + song_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +song_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(song_obj.name, "File: " + song_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + song_obj.uploaded + "\nUploader: " + song_obj.uploader_username);
+        message.reply("Song removed:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    this.bot.basic.musicData = this.util.sortByProperty(this.bot.basic.musicData, "name");
+    var file = this.bot.basic.music_path + "/_music.json";
+    fs.writeFile(file, JSON.stringify(this.bot.basic.musicData, null, 4), function(err){
+      return;
+    });
+    this.util.logStandardCommand(message, "updatemusic");
+    this.util.cleanupMessage(message);
+  }
+
+  updatesoundsCommand(message) {
+    if (!this.util.isManager(message.member)){
+      message.author.send("You do not have permission to use that command.");
+      this.util.cleanupMessage(message);
+      return;
+    }
+    var discord_bot = this.bot;
+    var addedSounds = [];
+    var removedSounds = [];
+    var file_list = fs.readdirSync(this.bot.basic.sound_path);
+    for (var i in file_list){
+      var sound = file_list[i];
+      var ext = sound.split(".");
+      ext = ext[ext.length - 1];
+      var name = sound.slice(0, -ext.length - 1).toLowerCase();
+      if (!this.bot.basic.soundData.hasOwnProperty(name)){
+        if (ext != "json"){
+          var currentDate = new Date();
+          var newSoundObject = {"name": name, "file": sound, "extension": ext, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
+          this.bot.basic.soundData[name] = newSoundObject;
+          addedSounds.push(newSoundObject);
+        }
+      }
+    }
+    for (var i in this.bot.basic.soundData){
+      var sound = this.bot.basic.soundData[i];
+      if (!file_list.includes(sound.file)){
+        removedSounds.push(sound);
+        delete this.bot.basic.soundData[i];
+      }
+    }
+    if (addedSounds.length){
+      for (var i in addedSounds){
+        var sound_obj = addedSounds[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +sound_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
+        message.reply("Sound added:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    if (removedSounds.length){
+      for (var i in removedSounds){
+        var sound_obj = removedSounds[i];
+        var artists = "-";
+        var tags = "-";
+        if (artists.length) artists = "\"" + sound_obj.artists.join("\", \"") + "\"";
+        if (tags.length) tags = "\"" +sound_obj.tags.join("\", \"") + "\"";
+        var embed = new Discord.RichEmbed();
+        embed.setColor(parseInt(discord_bot.colours.bot_embed_colour));
+        embed.addField(sound_obj.name, "File: " + sound_obj.file + "\nArtists: " + artists + "\nTags: " + tags + "\nUploaded: " + sound_obj.uploaded + "\nUploader: " + sound_obj.uploader_username);
+        message.reply("Sound removed:", {embed: embed})
+        .then((msg) => {if (msg.channel instanceof Discord.TextChannel) discord_bot.messageCleanupQueue.add(msg, 1, true)});
+      }
+    }
+    this.bot.basic.soundData = this.util.sortByProperty(this.bot.basic.soundData, "name");
+    var file = this.bot.basic.sound_path + "/_sounds.json";
+    fs.writeFile(file, JSON.stringify(this.bot.basic.soundData, null, 4), function(err){
+      return;
+    });
+    this.util.logStandardCommand(message, "updatesounds");
+    this.util.cleanupMessage(message);
+  }
+
+  ytdlCommand(message, arg1) {
+    if (arg1){
+      if (this.youTube.validateURL(arg1)){
+        this.youTube.getVideoMP3DownloadURL(message, arg1);
+        this.util.logStandardCommand(message, "ytdl");
+      }else{
+        message.author.send("That does not appear to be a valid YouTube video URL.");
+      }
+    }else{
+      message.author.send("That does not appear to be a valid YouTube video URL.");
+    }
     this.util.cleanupMessage(message);
   }
 }

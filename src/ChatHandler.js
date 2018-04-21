@@ -15,7 +15,7 @@ class ChatHandler {
     }
     const rawcontent = message.content.toLowerCase();
     var username = this.bot.basic.username;
-    if (rawcontent.includes(username.toLowerCase()) && !rawcontent.includes("\\" + username.toLowerCase())){
+    if (rawcontent.includes(username.toLowerCase()) && !rawcontent.includes("\\" + username.toLowerCase()) && this.bot.config.assistOnNameOverheard){
       var response = this.bot.responses.overheardNameResponse;
       message.reply(response)
       .then((msg) => {this.bot.messageCleanupQueue.add(msg, 0.5, true)});

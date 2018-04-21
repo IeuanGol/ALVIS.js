@@ -12,6 +12,7 @@ class CommandHandler {
     if (!message.content.startsWith(this.bot.basic.command_prefix)){
       return;
     }
+
     const splitmessage = message.content.split(" ");
     const command_prefix = this.bot.basic.command_prefix;
   	const command = splitmessage[0].slice(command_prefix.length).toLowerCase();;
@@ -30,12 +31,14 @@ class CommandHandler {
       this.commandExecuter.consoleCommand(message, body);
     }else if (command === "help"){
       this.commandExecuter.helpCommand(message);
+    }else if (command === "pause"){
+      this.commandExecuter.pauseCommand(message);
+    }else if (command === "play"){
+      this.commandExecuter.playCommand(message, arg1, body);
     }else if (command === "playmusic" || command === "pm"){
       this.commandExecuter.playmusicCommand(message, arg1, arg2, body);
     }else if (command === "playsound" || command === "ps"){
       this.commandExecuter.playsoundCommand(message, arg1, arg2, body);
-    }else if (command === "playstream"){
-      this.commandExecuter.playstreamCommand(message, arg1);
     }else if (command === "purgemusic"){
       this.commandExecuter.purgemusicCommand(message, arg1);
     }else if (command === "purgesounds"){
@@ -44,10 +47,14 @@ class CommandHandler {
       this.commandExecuter.removesongCommand(message, arg1);
     }else if (command === "removesound"){
       this.commandExecuter.removesoundCommand(message, arg1);
+    }else if (command === "resume"){
+      this.commandExecuter.resumeCommand(message);
     }else if (command === "say"){
       this.commandExecuter.sayCommand(message);
-    }else if (command === "setbotgame"){
-      this.commandExecuter.setbotgameCommand(message, arg1, arg2);
+    }else if (command === "setbotactivity"){
+      this.commandExecuter.setbotactivityCommand(message, arg1, arg2, arg3);
+    }else if (command === "setbotavatar"){
+      this.commandExecuter.setbotavatarCommand(message);
     }else if (command === "setbotstatus"){
       this.commandExecuter.setbotstatusCommand(message, arg1);
     }else if (command === "showusersounds"){
@@ -62,6 +69,8 @@ class CommandHandler {
       this.commandExecuter.updatemusicCommand(message);
     }else if (command === "updatesounds"){
       this.commandExecuter.updatesoundsCommand(message);
+    }else if (command === "ytdl"){
+      this.commandExecuter.ytdlCommand(message, arg1);
     }else{
       message.author.send("Sorry. I do not recognize that command. Use **" + command_prefix + "help** for a list of commands.");
       this.bot.util.cleanupMessage(message);

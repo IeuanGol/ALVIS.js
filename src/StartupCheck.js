@@ -44,15 +44,39 @@ class StartupCheck {
       this.setDefaultConfig();
       return false;
     }
-    if (!this.bot.config.hasOwnProperty("bot_game") || typeof this.bot.config.bot_game !== 'string'){
+    if (!this.bot.config.hasOwnProperty("bot_activity_type") || typeof this.bot.config.bot_activity_type !== 'string'){
       this.setDefaultConfig();
       return false;
     }
-    if (!this.bot.config.hasOwnProperty("bot_game_link") || typeof this.bot.config.bot_game_link !== 'string'){
+    if (!this.bot.config.hasOwnProperty("bot_activity") || typeof this.bot.config.bot_activity !== 'string'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("bot_activity_url") || typeof this.bot.config.bot_activity_url !== 'string'){
       this.setDefaultConfig();
       return false;
     }
     if (!this.bot.config.hasOwnProperty("deleteMessages") || typeof this.bot.config.deleteMessages !== 'boolean'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("message_report_threshold")){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("announce_new_members") || typeof this.bot.config.announce_new_members !== 'boolean'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("new_member_notify_admins") || typeof this.bot.config.new_member_notify_admins !== 'boolean'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("new_member_announcement_channel") || typeof this.bot.config.new_member_announcement_channel !== 'string'){
+      this.setDefaultConfig();
+      return false;
+    }
+    if (!this.bot.config.hasOwnProperty("welcome_dm") || typeof this.bot.config.welcome_dm !== 'boolean'){
       this.setDefaultConfig();
       return false;
     }
@@ -77,8 +101,9 @@ class StartupCheck {
     return true;
   }
 
-  setDefaultConfig() {
-    this.bot.util.logger("ERROR: Missing fields in config file; resetting to default config values.");
+  setDefaultConfig(file_missing) {
+    if (file_missing) this.bot.util.logger("ERROR: No config file found! Generating new one with default values. Ensure settings are configured correctly then try again.");
+    else this.bot.util.logger("ERROR: Missing fields in config file; resetting to default config values.");
     var default_config = require("./Templates/default_config.json");
     fs.writeFile("./config/config.json", JSON.stringify(default_config, null, 4), function(err){
       if (err) console.log(err);

@@ -17,11 +17,13 @@ class Util {
     return time + string;
   }
 
-  logStandardCommand(message, command) {
-    if (message.channel instanceof Discord.TextChannel) {
-			this.logger("Responded to " + command + " command from " + message.author.username + " on " + message.guild.name + ":" + message.channel.name);
-		}else {
-      this.logger("Responded to " + command + " command from " + message.author.username);
+  logStandardCommand(message, command, user) {
+    if (user) var username = user.username;
+    else var username = message.author.username;
+    if (message.channel instanceof Discord.TextChannel){
+      this.logger("Responded to " + command + " command from " + username + " on " + message.guild.name + ":" + message.channel.name);
+    }else {
+      this.logger("Responded to " + command + " command from " + username);
     }
   }
 
@@ -139,12 +141,16 @@ class Util {
         }
         if (body.length + nextsong.name.length >= charlimit){
           if (isFirst){
+            embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+            embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
             embed.addField("Songs:", body);
+            embed.setURL(this.bot.webAssets.packetcloud_website);
             isFirst = false;
             total_length += body.length + 10;
             body = "";
           }else{
             embed.addField('\u200B', body);
+            embed.setURL(this.bot.webAssets.packetcloud_website);
             total_length += body.length + 1;
             body = "";
           }
@@ -155,9 +161,13 @@ class Util {
     }
     if (results_number){
       if (isFirst){
+        embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+        embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
         embed.addField("Songs:", body);
+        embed.setURL(this.bot.webAssets.packetcloud_website);
       }else{
         embed.addField('\u200B', body);
+        embed.setURL(this.bot.webAssets.packetcloud_website);
       }
       if (results_number == 1){
         embed.setFooter("1 result " + search_criteria + sortString);
@@ -165,6 +175,9 @@ class Util {
         embed.setFooter(results_number + " results " + search_criteria + sortString);
       }
     }else{
+      embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+      embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
+      embed.setURL(this.bot.webAssets.packetcloud_website);
       embed.addField("Songs:", "No Results");
       embed.setFooter("0 results " + search_criteria + sortString);
     }
@@ -206,12 +219,16 @@ class Util {
         }
         if (body.length + nextsound.name.length >= charlimit){
           if (isFirst){
+            embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+            embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
             embed.addField("Sounds:", body);
+            embed.setURL(this.bot.webAssets.packetcloud_website);
             isFirst = false;
             total_length += body.length + 10;
             body = "";
           }else{
             embed.addField('\u200B', body);
+            embed.setURL(this.bot.webAssets.packetcloud_website);
             total_length += body.length + 1;
             body = "";
           }
@@ -222,9 +239,13 @@ class Util {
     }
     if (results_number){
       if (isFirst){
+        embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+        embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
         embed.addField("Sounds:", body);
+        embed.setURL(this.bot.webAssets.packetcloud_website);
       }else{
         embed.addField('\u200B', body);
+        embed.setURL(this.bot.webAssets.packetcloud_website);
       }
       if (results_number == 1){
         embed.setFooter("1 result " + search_criteria + sortString);
@@ -232,7 +253,10 @@ class Util {
         embed.setFooter(results_number + " results " + search_criteria + sortString);
       }
     }else{
+      embed.setAuthor("PacketCloud", this.bot.webAssets.packetcloud_icon, this.bot.webAssets.packetcloud_website);
+      embed.setThumbnail(this.bot.webAssets.packetcloud_icon);
       embed.addField("Sounds:", "No Results");
+      embed.setURL(this.bot.webAssets.packetcloud_website);
       embed.setFooter("0 results " + search_criteria + sortString);
     }
     message.author.send("", {embed: embed});
@@ -330,6 +354,8 @@ class Util {
     }).catch((error) => {
       this.logger("An error occured in sound playback:");
       console.log(error.message);
+      if (dispatchers[voiceChannel.guild.id]) discord_bot.util.endDispatcher(voiceChannel.guild.id);
+      if (voiceChannel.guild.voiceConnection) voiceChannel.guild.voiceConnection.disconnect();
     })
   }
 
@@ -353,7 +379,8 @@ class Util {
   	}).catch((error) => {
       this.logger("An error occured in stream playback:");
       console.log(error.message);
-      voiceChannel.leave();
+      if (dispatchers[voiceChannel.guild.id]) discord_bot.util.endDispatcher(voiceChannel.guild.id);
+      if (voiceChannel.guild.voiceConnection) voiceChannel.guild.voiceConnection.disconnect();
     });
   }
 
@@ -391,8 +418,9 @@ class Util {
 
   addSong(message, attachment, force, args) {
     var discord_bot = this.bot;
-    const filename = attachment.filename.split('.')[0].split(" ")[0];
-    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
+    const name = attachment.filename.split('.')[0].replace(/ /g, "_").toLowerCase();
+    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1].toLowerCase();
+    const filename = name + "." + extension;
     if (!discord_bot.basic.audio_formats.includes(extension)) {
       message.author.send("The file '" + attachment.filename + "' is an invalid format.");
       return;
@@ -406,9 +434,9 @@ class Util {
       return;
     }
     var currentDate = new Date();
-    var song_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
+    var song_obj = {"name": name, "file": filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
     https.get(attachment.url, (response) => {
-      const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + attachment.filename);
+      const file = fs.createWriteStream(discord_bot.basic.music_path + "/" + filename);
       var stream = response.pipe(file);
       stream.on('close', function(){
         if (args){
@@ -433,8 +461,9 @@ class Util {
 
   addSound(message, attachment, force, args) {
     var discord_bot = this.bot;
-    const filename = attachment.filename.split('.')[0].split(" ")[0];
-    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1];
+    const name = attachment.filename.split('.')[0].replace(/ /g, "_").toLowerCase();
+    const extension = attachment.filename.split('.')[attachment.filename.split('.').length - 1].toLowerCase();
+    const filename = name + "." + extension;
     if (!discord_bot.basic.audio_formats.includes(extension)) {
       message.author.send("The file '" + attachment.filename + "' is an invalid format.");
       return;
@@ -449,9 +478,9 @@ class Util {
     }
     var embed = new Discord.RichEmbed();
     var currentDate = new Date();
-    var sound_obj = {"name": filename, "file": attachment.filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
+    var sound_obj = {"name": name, "file": filename, "extension": extension, "artists": [], "tags": [], "uploaded": currentDate.toJSON(), "modified": currentDate.toJSON(), "uploader": message.author.id, "uploader_username": message.author.username};
     https.get(attachment.url, (response) => {
-      const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + attachment.filename);
+      const file = fs.createWriteStream(discord_bot.basic.sound_path + "/" + filename);
       var stream = response.pipe(file);
       stream.on('close', function(){
         if (args){
@@ -693,6 +722,38 @@ class Util {
       var member = members.find(val => val.user.username == string);
     }
     return member;
+  }
+
+  attachMediaControlReactions(message, buttons){
+    const DELAY = 500;
+
+    function repeat(){message.react("🔁")};
+    function previous(){message.react("⏮")};
+    function playpause(){message.react("⏯")};
+    function stop(){message.react("⏹")};
+    function next(){message.react("⏭")};
+    function shuffle(){message.react("🔀")};
+    function mute(){message.react("🔇")};
+    function volumedown(){message.react("🔉")};
+    function volumeup(){message.react("🔊")};
+    if (buttons){
+      var functions = [];
+      if (buttons.repeat) functions.push(repeat);
+      if (buttons.previous) functions.push(previous);
+      if (buttons.playpause) functions.push(playpause);
+      if (buttons.stop) functions.push(stop);
+      if (buttons.next) functions.push(next);
+      if (buttons.shuffle) functions.push(shuffle);
+      if (buttons.mute) functions.push(mute);
+      if (buttons.volumedown) functions.push(volumendown);
+      if (buttons.volumeup) functions.push(volumeup);
+    }else{
+      var functions = [playpause, stop, mute, volumedown, volumeup];
+    }
+
+    for (var i = 0; i < functions.length; i++){
+      setTimeout(functions[i], DELAY*i);
+    }
   }
 
   save() {
