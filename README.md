@@ -1,8 +1,8 @@
-# **ALVIS**
+# **ALVIS.js**
 **Discord bot, by [PacketCloud™](https://packetcloud.com)**  
-*Version: 0.7.7*  
+*Version: 0.7.8*  
 ## Description
-**ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*. It utilizes Google's [API.AI](https://api.ai) servers to introduce natural language request processing to the bot. Allowing for communication in plain English - not just commands. We are constantly expanding ALVIS' modules, features and knowledge base. We also have plans to add voice support in the future.  
+**ALVIS** (**A**synchronous **L**earning **V**irtual **I**ntelligence **S**ystem) is a server management and utility bot built for the voice and text chat service, *[Discord](https://discordapp.com)*. It utilizes Google's [DialogFlow](https://dialogflow.com) servers to introduce natural language request processing to the bot. Allowing for communication in plain English - not just commands. We are constantly expanding ALVIS' modules, features and knowledge base. We also have plans to add voice support in the future.  
 
 ## Setting Up The Bot
 Before the bot will run, you must first set up a few values in the config files:
@@ -29,6 +29,14 @@ Displays bot information.
 Displays list of available commands.  
 `!help`  
 
+**Pause**  
+Pauses audio playback.  
+`!pause`  
+
+**Play**  
+Plays audio from the provided YouTube video URL or searches Google Play Music for query and starts playback of best track result. Resumes paused playback if no arguments are provided.  
+`!play [YouTube_URL|search_query...]`  
+
 **Play Music**  
 Plays specific or random song matching provided search criteria.  
 *'?' lists songs matching search criteria.*  
@@ -37,11 +45,11 @@ Plays specific or random song matching provided search criteria.
 **Play Sound**  
 Plays specific or random sound matching provided search criteria.  
 *'?' lists sounds matching search criteria.*  
-`!playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]`  
+`!playsound [sound_name|[-|&]tag [...]|? [[-|&]tag [...]]`   
 
-**Play Stream**  
-Plays audio from the provided YouTube video.  
-`!playstream <Youtube_URL>`  
+**Resume**  
+Resumes paused audio playback.  
+`!resume`  
 
 **Song Info**  
 Displays information about a song. Admins can edit the tags and artists.  
@@ -54,6 +62,10 @@ Displays information about a sound. Admins can edit the tags and artists.
 **Stop**  
 Stops audio playback on voice channel.  
  `!stop`  
+ 
+ **YouTube Download**  
+ Provides download links for the YouTube video at the URL provided.  
+ `!ytdl <YouTube_URL>`  
 
 ### Admin Commands
 **Add Song**  
@@ -91,9 +103,17 @@ Removes all songs from the local library.
 Removes all sounds from the local library.  
 `!purgesounds <confirmation>`  
 
-**Set Bot Game**  
-Sets the bot's playing or streaming status.  
-`!setbotgame [game_name] [twitch_stream_url]`  
+**Set Bot Activity**  
+Sets the bot's currently displayed activity.  
+`!setbotactivity [activity_name] [activity_type] [twitch_stream_url]`  
+
+**Set Bot Avatar**  
+Sets the bot's avatar to 'avatar.png' in the assets folder.   
+`!setbotavatar`  
+
+**Set Bot Status**  
+Sets the bot's status.  
+`!setbotstatus [online|idle|invisibile|dnd]`  
 
 **Update Music**  
 Attempts to add all files in *./music* folder to the local library under their filenames. Removes any songs not found on disk from the library.  
@@ -138,8 +158,8 @@ Type: MIT
 Discord.js:  
   We use the [Discord Node.js API](https://discord.js.org) for interfacing with Discord's servers.  
 
-API.AI:  
-  We make use of [Google's api.ai](https://api.ai) servers using the [apiai](https://www.npmjs.com/package/apiai) Node.js package. This is used to interface with Google's servers to handle and classify bot chat queries.  
+DialogFlow:  
+  We make use of [Google's DialogFlow](https://dialogflow.com) servers using the [apiai](https://www.npmjs.com/package/apiai) Node.js package. This is used to interface with Google's servers to handle and classify bot chat queries.  
 
 r6stats.com:  
   We send web requests to [api.r6stats.com](https://r6stats.com) to retrieve player stats for [Rainbow Six Siege](https://rainbow6.ubisoft.com).  
