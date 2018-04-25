@@ -24,8 +24,8 @@
     "name": "Console",
     "syntax": "console <command> [parameters ...]",
     "description": "Executes command in console.",
-    "admin_command": false,
-    "manager_command": true
+    "admin_command": true,
+    "manager_command": false
   },
   {
     "name": "Help",
@@ -43,7 +43,7 @@
   },
   {
     "name": "Play",
-    "syntax": "play [Youtube_URL|search_query...]",
+    "syntax": "play [YouTube_URL|search_query...]",
     "description": "Plays audio from the provided YouTube video URL or searches Google Play Music for query and starts playback of best track result. \nResumes paused playback if no arguments are provided.",
     "admin_command": false,
     "manager_command": false
