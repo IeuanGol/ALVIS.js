@@ -12,8 +12,8 @@ class NewMemberHandler {
     }else{
       notificationChannel = newMember.guild.channels.find("name", "general");
     }
-    var admin_role = newMember.guild.roles.find("name", this.bot.permissions.admin_role);
-    var manager_role = newMember.guild.roles.find("name", this.bot.permissions.manager_role);
+    var admin_role = newMember.guild.roles.find("name", this.bot.permissions.server_admin_role);
+    var manager_role = newMember.guild.roles.find("name", this.bot.permissions.server_manager_role);
     var default_role = newMember.guild.roles.find("name", this.bot.permissions.default_role);
 
     if (this.bot.config.announce_new_members){

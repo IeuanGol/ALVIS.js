@@ -8,7 +8,7 @@ class R6Siege {
   getStats(message, username, platform) {
     var noplatform = false;
     var region = "ncsa";
-    var currentSeason = "8";
+    var currentSeason = "9";
     if (!message) return;
     if (!platform){
       platform = "uplay";

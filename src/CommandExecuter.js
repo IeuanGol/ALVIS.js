@@ -357,7 +357,7 @@ class CommandExecuter {
 
   removesongCommand(message, arg1) {
     var discord_bot = this.bot;
-    if (!this.util.isManager(message.member)){
+    if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.cleanupMessage(message);
       return;
@@ -391,7 +391,7 @@ class CommandExecuter {
 
   removesoundCommand(message, arg1) {
     var discord_bot = this.bot;
-    if (!this.util.isManager(message.member)){
+    if (!this.util.isAdmin(message.member)){
       message.author.send("You do not have permission to use that command.");
       this.util.logStandardCommand(message, "removesound");
       this.util.cleanupMessage(message);
